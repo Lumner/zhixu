@@ -1,0 +1,72 @@
+{
+  "pages": [
+    "pages/tasks/index",
+    "pages/knowledge/index",
+    "pages/focus/index",
+    "pages/stats/index",
+    "pages/account/index",
+    "pages/detail/index",
+    "pages/editor/index",
+    "pages/gallery/index",
+    "pages/pending/index",
+    "pages/migrate/index",
+    "pages/knowledge-detail/index",
+    "pages/knowledge-editor/index",
+    "pages/focus-history/index",
+    "pages/public-lab/index",
+    "pages/task-compose/index",
+    "pages/drafts/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "学伴 · 兼容与可用性",
+    "navigationBarBackgroundColor": "#f4f7fb",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#64748b",
+    "selectedColor": "#16794b",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/tasks/index",
+        "text": "云端任务"
+      },
+      {
+        "pagePath": "pages/knowledge/index",
+        "text": "知识库"
+      },
+      {
+        "pagePath": "pages/focus/index",
+        "text": "专注"
+      },
+      {
+        "pagePath": "pages/stats/index",
+        "text": "统计"
+      },
+      {
+        "pagePath": "pages/account/index",
+        "text": "身份与环境"
+      }
+    ]
+  },
+  "renderer": "webview",
+  "sitemapLocation": "sitemap.json",
+  "subpackages": [
+    {
+      "root": "packageLab",
+      "name": "lab",
+      "pages": [
+        "pages/editor-lab/index",
+        "pages/clock-lab/index",
+        "pages/stats-lab/index",
+        "pages/platform/index",
+        "pages/quality-lab/index",
+        "pages/performance/index",
+        "pages/image-lab/index",
+        "pages/compatibility/index",
+        "pages/accessibility/index"
+      ]
+    }
+  ],
+  "lazyCodeLoading": "requiredComponents"
+}

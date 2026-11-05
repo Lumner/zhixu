@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="知序：可持续扩展的计算机教程知识库，从基础语法到完整项目，循序渐进地学习。">
+  <meta name="color-scheme" content="light dark">
+  <title>知序 · 计算机教程知识库</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="assets/style.css">
+  <script src="data/catalog.js" defer></script>
+  <script src="assets/core.js" defer></script>
+  <script src="assets/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <div id="app"><div class="initial-state">正在整理你的知识地图…</div></div>
+  <dialog id="search-dialog" class="search-dialog" aria-labelledby="search-title">
+    <div class="search-box">
+      <label id="search-title" class="visually-hidden" for="search-input">搜索教程与知识点</label>
+      <span id="search-icon" aria-hidden="true"></span>
+      <input id="search-input" type="search" placeholder="搜索课程、章节或知识点…" autocomplete="off">
+      <button type="button" class="key-button" data-search-close aria-label="关闭搜索">Esc</button>
+    </div>
+    <div id="search-results" class="search-results" aria-live="polite"></div>
+    <div class="search-footer"><span>在已收录的课程中搜索</span><span><kbd>↑</kbd> <kbd>↓</kbd> 选择　<kbd>Enter</kbd> 打开</span></div>
+  </dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <noscript><p class="initial-state">请启用JavaScript以浏览课程。教材原文和源码位于网站的files目录。</p></noscript>
+</body>
+</html>

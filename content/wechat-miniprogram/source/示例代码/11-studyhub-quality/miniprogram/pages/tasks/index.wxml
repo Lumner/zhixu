@@ -1,0 +1,20 @@
+<view class="page">
+  <network-banner />
+  <feedback-panel feedback="{{feedback}}" bind:action="onFeedback" />
+  <text class="title">云端学习任务</text>
+  <text class="muted">数据经云函数按当前身份隔离；本版不自动导入本地缓存。</text>
+  <button class="spaced" type="primary" disabled="{{status === 'loading' || status === 'error'}}" bindtap="onCreate">新建云端任务</button>
+  <view class="actions">
+    <button size="mini" data-filter="all" bindtap="onFilter">全部</button>
+    <button size="mini" data-filter="pending" bindtap="onFilter">待完成</button>
+    <button size="mini" data-filter="done" bindtap="onFilter">已完成</button>
+    <button size="mini" bindtap="refresh">刷新</button>
+  </view>
+  <text class="muted">当前筛选：{{filter}}；按 ID 升序，不表示创建时间顺序。</text>
+  <empty-state wx:if="{{status === 'loading'}}" title="正在读取云端任务" />
+
+  <empty-state wx:if="{{status === 'empty'}}" title="当前条件下没有任务" message="也请确认环境和微信账号是否正确" />
+  <task-card wx:for="{{items}}" wx:key="id" task="{{item}}" disabled="{{actionBusy}}" bind:open="onOpen" bind:toggle="onToggle" />
+
+  <button wx:if="{{hasMore}}" loading="{{loadingMore}}" disabled="{{loadingMore}}" bindtap="onMore">加载下一页</button>
+</view>

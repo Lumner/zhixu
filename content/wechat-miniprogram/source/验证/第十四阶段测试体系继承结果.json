@@ -1,0 +1,202 @@
+{
+  "date": "2026-11-03",
+  "project": "15-studyhub-release",
+  "passed": 50,
+  "inheritedPassed": 450,
+  "totalPassed": 500,
+  "realCloud": false,
+  "realWechat": false,
+  "node": "v24.15.0",
+  "sourceDigest": "2ef7ba2d47f3834dc274f72fa11751033444a7e961341a452c72fa4183c7f636",
+  "businessFilesByteIdentical": 200,
+  "changedBusinessFiles": [
+    "miniprogram/app.json",
+    "miniprogram/config/privacy.js",
+    "miniprogram/content/data-notice.js",
+    "miniprogram/packageLab/pages/platform/index.js",
+    "miniprogram/packageLab/pages/platform/index.wxml",
+    "miniprogram/packageLab/pages/privacy/index.js",
+    "miniprogram/packageLab/pages/privacy/index.json",
+    "miniprogram/packageLab/pages/privacy/index.wxml",
+    "miniprogram/packageLab/pages/privacy/index.wxss",
+    "miniprogram/pages/account/index.js",
+    "miniprogram/pages/account/index.wxml",
+    "miniprogram/pages/gallery/index.js",
+    "miniprogram/pages/gallery/index.wxml",
+    "miniprogram/services/images.js",
+    "miniprogram/services/platform-api.js",
+    "miniprogram/services/privacy-core.js",
+    "miniprogram/services/privacy.js",
+    "miniprogram/services/report-files.js"
+  ],
+  "expectedNegativePaths": 3,
+  "fixedMutantsDetected": 3,
+  "extraChecksIncludedIn500": false,
+  "componentRenderingExecuted": false,
+  "devtoolsAutomationExecuted": false,
+  "ciExecuted": false,
+  "coverage": {
+    "scope": "本轮加载且匹配miniprogram筛选的JS，不是全项目/云端/原生覆盖率",
+    "totals": {
+      "totalLineCount": 618,
+      "totalBranchCount": 398,
+      "totalFunctionCount": 148,
+      "coveredLineCount": 478,
+      "coveredBranchCount": 308,
+      "coveredFunctionCount": 117,
+      "coveredLinePercent": 77.34627831715211,
+      "coveredBranchPercent": 77.38693467336684,
+      "coveredFunctionPercent": 79.05405405405406
+    },
+    "files": [
+      {
+        "path": "miniprogram/components/feedback-panel/index.js",
+        "totalLineCount": 4,
+        "coveredLineCount": 4,
+        "coveredLinePercent": 100
+      },
+      {
+        "path": "miniprogram/components/task-card/index.js",
+        "totalLineCount": 25,
+        "coveredLineCount": 25,
+        "coveredLinePercent": 100
+      },
+      {
+        "path": "miniprogram/constants/index.js",
+        "totalLineCount": 4,
+        "coveredLineCount": 4,
+        "coveredLinePercent": 100
+      },
+      {
+        "path": "miniprogram/packageLab/pages/accessibility/index.js",
+        "totalLineCount": 19,
+        "coveredLineCount": 18,
+        "coveredLinePercent": 94.73684210526315
+      },
+      {
+        "path": "miniprogram/services/invoke-core.js",
+        "totalLineCount": 25,
+        "coveredLineCount": 25,
+        "coveredLinePercent": 100
+      },
+      {
+        "path": "miniprogram/services/read-controller.js",
+        "totalLineCount": 35,
+        "coveredLineCount": 35,
+        "coveredLinePercent": 100
+      },
+      {
+        "path": "miniprogram/services/task-draft-core.js",
+        "totalLineCount": 66,
+        "coveredLineCount": 66,
+        "coveredLinePercent": 100
+      },
+      {
+        "path": "miniprogram/services/task-session.js",
+        "totalLineCount": 180,
+        "coveredLineCount": 163,
+        "coveredLinePercent": 90.55555555555556
+      },
+      {
+        "path": "miniprogram/shared/focus-contract.js",
+        "totalLineCount": 26,
+        "coveredLineCount": 7,
+        "coveredLinePercent": 26.923076923076923
+      },
+      {
+        "path": "miniprogram/shared/stats-core.js",
+        "totalLineCount": 87,
+        "coveredLineCount": 28,
+        "coveredLinePercent": 32.18390804597701
+      },
+      {
+        "path": "miniprogram/utils/accessibility.js",
+        "totalLineCount": 24,
+        "coveredLineCount": 19,
+        "coveredLinePercent": 79.16666666666666
+      },
+      {
+        "path": "miniprogram/utils/canonical-json.js",
+        "totalLineCount": 12,
+        "coveredLineCount": 12,
+        "coveredLinePercent": 100
+      },
+      {
+        "path": "miniprogram/utils/compatibility.js",
+        "totalLineCount": 42,
+        "coveredLineCount": 13,
+        "coveredLinePercent": 30.952380952380953
+      },
+      {
+        "path": "miniprogram/utils/feedback.js",
+        "totalLineCount": 18,
+        "coveredLineCount": 18,
+        "coveredLinePercent": 100
+      },
+      {
+        "path": "miniprogram/utils/task-view.js",
+        "totalLineCount": 21,
+        "coveredLineCount": 20,
+        "coveredLinePercent": 95.23809523809523
+      },
+      {
+        "path": "miniprogram/utils/task.js",
+        "totalLineCount": 30,
+        "coveredLineCount": 21,
+        "coveredLinePercent": 70
+      }
+    ]
+  },
+  "scenarios": [
+    "async: 同键进行中复用同一Promise与一次读取",
+    "async: 新条件先完成后旧响应不能覆盖",
+    "async: 1999毫秒仍等待到2000才标超时",
+    "async: 超时后底层迟到成功不覆盖错误",
+    "async: 同条件刷新失败保留旧数据并标过期",
+    "async: 销毁不再发状态且释放等待计时器",
+    "async: 损坏列表是协议错误而非空列表成功",
+    "async: 云未配置时没有底层调用或计时器",
+    "async: 云业务拒绝保留错误代码并清理期限",
+    "async: 云等待超时不重发，迟到回调不会变成功",
+    "async: 成功调用携带明确环境和数据并清理计时器",
+    "async: 启动前取消不会调用读取适配器",
+    "component: 查看按钮方法发出open和稳定ID",
+    "component: 完成按钮方法发出toggle而不直接写云",
+    "component: 禁用时两个方法均不发出事件",
+    "component: 缺少任务时不会伪造ID事件",
+    "component: 观察器显式调用只更新变化的meta",
+    "component: feedback方法只转发允许的动作字段",
+    "component: 两个实例的数据与事件记录互不污染",
+    "page-method: 无效输入保留具体错误且未添加记录",
+    "page-method: checkbox按ID同步可复核文字汇总",
+    "page-method: 隐藏后迟到焦点回调不更新界面",
+    "flow: 编辑停顿600毫秒才持久化草稿",
+    "flow: 连续输入重设保存期限并只存最新内容",
+    "flow: 关闭先补存输入再释放定时器",
+    "flow: 未提交草稿重开先比较，不自动恢复或发出",
+    "flow: 放弃未提交草稿采用初始内容且没有写请求",
+    "flow: 首次投递前已有封存编号，成功后清理",
+    "flow: 响应丢失保留原编号，重放同一假服务回执",
+    "flow: 重开封存草稿不生成新编号或先读取任务",
+    "flow: 本地保存失败不发送未封存指令",
+    "flow: 身份变化阻止发送，原范围输入仍保留",
+    "flow: 快速两次提交只运行一个投递",
+    "flow: 旧基础版本必须明确选择采用当前版本",
+    "flow: 云回执已知但清理失败时只重试本地清理",
+    "flow: 同槽另一页面更新后不能覆盖其新草稿",
+    "unit: 完整有效字段返回空错误",
+    "unit: 标题40边界可用而41拒绝",
+    "unit: 空白标题拒绝而不依赖真假值",
+    "unit: 备注1000边界与1001拒绝",
+    "unit: 闰年日期与不存在日期区分",
+    "unit: 分类必须来自允许列表",
+    "unit: 字符串false不是布尔false",
+    "unit: 写入字段投影排除身份版本且不改输入",
+    "unit: 数字版本比较由手算结果校验",
+    "unit: 合并去重保留先出现顺序且不改原数组",
+    "unit: 身份变化投影清除私人字段而原模型仍保留",
+    "unit: 对比度用黑白与同色两个独立基准",
+    "unit: UTC加八跨日边界前后由日历手算",
+    "unit: 七日窗口包含开始而排除第八日起点"
+  ]
+}

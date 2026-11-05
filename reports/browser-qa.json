@@ -1,0 +1,50 @@
+{
+  "date": "2026-11-03",
+  "desktop": {
+    "viewport": "1280x720",
+    "home": true,
+    "courseOverview": true,
+    "numericResourceOrder": true,
+    "emptyCategory": true,
+    "reader": true,
+    "codeHighlight": true,
+    "table": true,
+    "codeCopySuccessMessage": true,
+    "themeSwitch": true,
+    "bookmarkPersistsAfterReload": true,
+    "completionPersistsAfterReload": true,
+    "bookshelf": true,
+    "fullTextSearchAndSectionJump": true,
+    "renderedDiagram": true
+  },
+  "mobile": {
+    "viewport": "390x844",
+    "menuOpenAndClose": true,
+    "learningPaths": true,
+    "readerWithoutPageOverflow": true,
+    "sectionToc": true,
+    "searchResults": 12,
+    "hiddenSidebarNotFocusable": true
+  },
+  "consoleErrors": [],
+  "viewportReset": true,
+  "qaBookmarkAndCompletionRemoved": true,
+  "offlineFileMode": "Not automatically verified: in-app browser permits HTTP/HTTPS only. No policy bypass attempted.",
+  "fullZip": {
+    "bytes": 13756316,
+    "sha256": "d8f3b0b687a304153d14c11450bb737a08fdd1cb492b1ae4dadc40162ff7ea63"
+  },
+  "screenshots": [
+    "screenshots/home.jpg",
+    "screenshots/mobile-reader.jpg"
+  ],
+  "deliveredDirectoryHttp": {
+    "path": "C:\\Users\\17597\\Desktop\\tutorial",
+    "status": 200,
+    "home": true,
+    "courseOverview": true,
+    "capstoneReader": true,
+    "consoleErrors": []
+  },
+  "copiedFilesVerified": 4965
+}

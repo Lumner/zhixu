@@ -1,0 +1,132 @@
+{
+  "id": "operating-systems",
+  "title": "操作系统：从零到系统实践",
+  "shortTitle": "操作系统",
+  "category": "systems",
+  "summary": "零基础详细版分批重写中：01—16章已完成，包含C语言起步、内存文件、系统调用、进程管道、信号与调度；17—36章暂为待重写简稿。",
+  "level": "零基础",
+  "duration": "按阶段学习 · 第四批42–59小时",
+  "status": "ongoing",
+  "updatedAt": "2026-11-05",
+  "tags": [
+    "C语言入门",
+    "Linux / POSIX",
+    "系统原理",
+    "Shell项目"
+  ],
+  "source": "source",
+  "download": "downloads/操作系统从零到系统实践-36章.zip",
+  "stats": {
+    "chapters": 36,
+    "examples": 23
+  },
+  "edition": {
+    "name": "零基础详细版",
+    "detailedChapters": [
+      "01",
+      "02",
+      "03",
+      "04",
+      "05",
+      "06",
+      "07",
+      "08",
+      "09",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16"
+    ],
+    "nextBatch": [
+      "17",
+      "18",
+      "19",
+      "20"
+    ]
+  },
+  "cover": {
+    "eyebrow": "OPERATING SYSTEMS / FROM ZERO",
+    "lines": [
+      "操作系统",
+      "零基础详细教程"
+    ],
+    "icon": "layers"
+  },
+  "groups": [
+    {
+      "id": "start",
+      "name": "认识计算机与终端",
+      "range": [
+        1,
+        2
+      ],
+      "summary": "分清应用与内核，准备自己的 Linux 实验环境。"
+    },
+    {
+      "id": "c-basics",
+      "name": "C语言从零入门",
+      "range": [
+        3,
+        10
+      ],
+      "summary": "从第一行代码到指针、动态内存、文件与调试。"
+    },
+    {
+      "id": "processes",
+      "name": "进程与CPU",
+      "range": [
+        11,
+        16
+      ],
+      "summary": "系统调用、程序启动、管道、信号与调度。"
+    },
+    {
+      "id": "concurrency",
+      "name": "线程与并发",
+      "range": [
+        17,
+        20
+      ],
+      "summary": "用锁与等待条件管理共享，理解死锁和终止。"
+    },
+    {
+      "id": "memory",
+      "name": "内存管理",
+      "range": [
+        21,
+        24
+      ],
+      "summary": "理解虚拟地址、分页、置换、映射与局部性。"
+    },
+    {
+      "id": "storage",
+      "name": "文件与设备",
+      "range": [
+        25,
+        29
+      ],
+      "summary": "路径、权限、链接、缓存持久性与设备I/O。"
+    },
+    {
+      "id": "system-view",
+      "name": "系统全貌",
+      "range": [
+        30,
+        33
+      ],
+      "summary": "把启动、安全、网络、虚拟机与容器连成整体。"
+    },
+    {
+      "id": "practice",
+      "name": "观察与综合实践",
+      "range": [
+        34,
+        36
+      ],
+      "summary": "用证据定位问题，组合完成简易 Shell 并规划内核进阶。"
+    }
+  ]
+}

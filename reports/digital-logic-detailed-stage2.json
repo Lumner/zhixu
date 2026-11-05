@@ -1,0 +1,57 @@
+{
+  "date": "2026-11-05",
+  "courseId": "digital-logic",
+  "revision": "detailed-rewrite-stage-02",
+  "newDetailedChapters": [7, 8, 9, 10, 11, 12],
+  "completedDetailedChapters": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
+  "pendingDetailedChapters": [13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32],
+  "newLanguageLabs": 6,
+  "newSourceFilesSv": 12,
+  "embeddedCompleteCodeBlocksMatchingSource": 9,
+  "newPracticeQuestionsWithWorkedSolutions": 24,
+  "newLocalSvgDiagrams": 2,
+  "simulation": {
+    "tool": "Icarus Verilog 11.0",
+    "languageMode": "-g2012",
+    "passedLanguageExperiments": 6,
+    "combinationCasesInLab11": 4096,
+    "injectedFaultsDetected": 3,
+    "vcdSamplesChecked": 8,
+    "gtkWaveGuiExecuted": false,
+    "fpgaSynthesisVerified": false
+  },
+  "siteChecks": {
+    "buildPassed": true,
+    "npmTestPassed": true,
+    "checks": 655,
+    "brokenMarkdownLinks": 0
+  },
+  "browserQa": {
+    "passed": true,
+    "checks": [
+      "Course overview identifies chapters 01-12 as detailed and 13-32 as pending",
+      "Chapter 07 shows full programs, syntax highlighting and line explanations",
+      "Chapter 08 renders the independent module instances diagram legibly",
+      "Chapter 12 renders the eight-case waveform and time-axis explanation legibly",
+      "Stage 02 exercise page contains question 24 and worked solutions",
+      "Chapter 13 retains an explicit pending detailed rewrite notice",
+      "Search for blocking assignment opens chapter 11 section 11.3",
+      "Local page and updated ZIP return HTTP 200"
+    ]
+  },
+  "screenshots": [
+    "reports/screenshots/digital-logic-detailed-stage2-code.jpg",
+    "reports/screenshots/digital-logic-detailed-stage2-hierarchy.jpg",
+    "reports/screenshots/digital-logic-detailed-stage2-wave.jpg"
+  ],
+  "archive": {
+    "crcPassed": true,
+    "currentSourceAndManifestFilesMatched": 118,
+    "files": 121,
+    "svFiles": 42,
+    "svgFiles": 5,
+    "bytes": 202396,
+    "sha256": "8e95eec52ab35030e63020acaa3c537ac1e76e9e11bd0b83c8f483a0cd7ee9ef"
+  },
+  "nextBatch": "13-16: combinational logic design and independent verification"
+}

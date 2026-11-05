@@ -1,0 +1,14 @@
+{
+  "kind": "course-source-artifacts",
+  "compiled": false,
+  "deployed": false,
+  "releaseVersion": "",
+  "stage": "development",
+  "components": {
+    "client": {"sha256":""},
+    "cloud": {"sha256":""},
+    "controls": {"sha256":""}
+  },
+  "fingerprint": "",
+  "note": "待登记真实已验证旧候选，不把当前清单复制来冒充回退目标。"
+}

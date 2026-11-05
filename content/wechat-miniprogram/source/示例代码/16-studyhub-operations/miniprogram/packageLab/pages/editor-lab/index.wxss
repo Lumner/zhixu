@@ -1,0 +1,2 @@
+.editor { min-height: 360rpx; border: 1rpx solid #cbd5e1; background: white; padding: 20rpx; margin: 20rpx 0; }
+.code { display: block; white-space: pre-wrap; word-break: break-all; font-family: monospace; font-size: 24rpx; }

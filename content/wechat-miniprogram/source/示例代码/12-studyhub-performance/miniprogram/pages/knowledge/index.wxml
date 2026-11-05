@@ -1,0 +1,25 @@
+<view class="page">
+  <network-banner />
+  <feedback-panel feedback="{{feedback}}" bind:action="onFeedback" />
+  <text class="title">私人知识库</text>
+  <view class="actions"><button bindtap="onNewNote">写笔记</button><button bindtap="onNewLink">收藏资源</button></view>
+  <view class="panel">
+    <input class="input" maxlength="40" value="{{q}}" data-field="q" bindinput="onInput" placeholder="搜索标题、正文、标签或网址" />
+    <input class="input" maxlength="12" value="{{tag}}" data-field="tag" bindinput="onInput" placeholder="指定完整标签，可留空" />
+    <picker range="{{kinds}}" value="{{kindIndex}}" bindchange="onKind"><view class="picker">类型：{{kinds[kindIndex]}}</view></picker>
+    <view><text>只看星标</text><switch checked="{{favoriteOnly}}" bindchange="onFavorite" /></view>
+    <button bindtap="refresh">重新搜索</button>
+  </view>
+  <text wx:if="{{status === 'loading' || status === 'waiting'}}">正在查找……</text>
+  <text wx:if="{{status === 'searching'}}">目前还未找到，仍有内容可以继续查找。</text>
+  <text wx:if="{{status === 'empty'}}">当前检索范围已查完，没有符合条件的内容。</text>
+
+  <view class="panel" wx:for="{{items}}" wx:key="id" data-id="{{item.id}}" bindtap="onOpen">
+    <text class="section-title">{{item.favorite ? '★ ' : ''}}{{item.title}}</text>
+    <text class="muted">{{item.kind === 'note' ? '学习笔记' : '资源收藏'}} · {{item.assetCount}} 张图片</text>
+    <text class="excerpt">{{item.excerpt}}</text><text class="tags">{{item.tags}}</text>
+  </view>
+  <button wx:if="{{hasMore}}" disabled="{{loadingMore}}" loading="{{loadingMore}}" bindtap="onMore">继续查找 / 下一页</button>
+  <text class="muted" wx:if="{{!hasMore && items.length}}">当前检索范围已查完。内容变化后可重新搜索。</text>
+  <button class="spaced" bindtap="onLab">原生富文本编辑器练习</button>
+</view>

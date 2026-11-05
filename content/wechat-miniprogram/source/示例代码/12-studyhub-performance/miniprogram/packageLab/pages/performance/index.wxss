@@ -1,0 +1,1 @@
+.report { display:block; white-space:pre-wrap; overflow-wrap:anywhere; font-family:monospace; font-size:24rpx; margin-top:20rpx; } button { margin-top:20rpx; } .row { padding:20rpx; margin:12rpx 0; border-bottom:1px solid #e2e8f0; min-height:80rpx; }

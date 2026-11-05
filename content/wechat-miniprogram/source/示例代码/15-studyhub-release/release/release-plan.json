@@ -1,0 +1,50 @@
+{
+  "kind": "teaching-release-plan",
+  "targetVersion": "",
+  "expectedAppId": "",
+  "expectedEnvId": "",
+  "codeFingerprint": "",
+  "audience": "learning-only",
+  "evidence": {
+    "operator-account-category": {
+      "status": "pending",
+      "checkedAt": "",
+      "reference": ""
+    },
+    "filing-applicability": {
+      "status": "pending",
+      "checkedAt": "",
+      "reference": ""
+    },
+    "privacy-console": {
+      "status": "pending",
+      "checkedAt": "",
+      "reference": ""
+    },
+    "retention-and-rights": {
+      "status": "pending",
+      "checkedAt": "",
+      "reference": ""
+    },
+    "cloud-permissions-indexes": {
+      "status": "pending",
+      "checkedAt": "",
+      "reference": ""
+    },
+    "privacy-device-paths": {
+      "status": "pending",
+      "checkedAt": "",
+      "reference": ""
+    },
+    "review-materials": {
+      "status": "pending",
+      "checkedAt": "",
+      "reference": ""
+    },
+    "operations-and-rollback": {
+      "status": "pending",
+      "checkedAt": "",
+      "reference": ""
+    }
+  }
+}

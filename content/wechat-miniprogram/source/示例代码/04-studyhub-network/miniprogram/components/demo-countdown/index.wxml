@@ -1,0 +1,9 @@
+<view class="timer">
+  <text class="label">{{label}}</text>
+  <text class="hint">{{running ? '运行中：按结束时间重新计算' : '已暂停或尚未开始'}}</text>
+  <view class="buttons">
+    <button size="mini" disabled="{{running}}" bindtap="onStart">开始 / 继续</button>
+    <button size="mini" disabled="{{!running}}" bindtap="onPause">暂停</button>
+    <button size="mini" bindtap="onReset">重置</button>
+  </view>
+</view>

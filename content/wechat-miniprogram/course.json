@@ -1,0 +1,98 @@
+{
+  "id": "wechat-miniprogram",
+  "title": "微信小程序：从零到综合实践",
+  "shortTitle": "微信小程序开发",
+  "category": "frontend",
+  "summary": "从JavaScript基础出发，逐步完成任务、笔记、专注与统计组成的「学伴」小程序。",
+  "level": "零基础",
+  "duration": "120–200小时",
+  "status": "complete",
+  "updatedAt": "2026-11-03",
+  "tags": [
+    "JavaScript",
+    "WXML / WXSS",
+    "云开发",
+    "综合项目"
+  ],
+  "source": "source",
+  "download": "downloads/微信小程序从零开发教程-第01至36章.zip",
+  "featured": true,
+  "stats": {
+    "chapters": 36,
+    "books": 16,
+    "examples": 17
+  },
+  "groups": [
+    {
+      "id": "start",
+      "name": "起步与编程基础",
+      "range": [
+        1,
+        9
+      ],
+      "summary": "从第一行代码开始，做出本地任务板。"
+    },
+    {
+      "id": "pages",
+      "name": "页面与组件",
+      "range": [
+        10,
+        15
+      ],
+      "summary": "组织页面、表单与可复用的交互。"
+    },
+    {
+      "id": "network",
+      "name": "异步与网络",
+      "range": [
+        16,
+        19
+      ],
+      "summary": "理解请求、分页、错误和恢复。"
+    },
+    {
+      "id": "cloud",
+      "name": "云开发与数据安全",
+      "range": [
+        20,
+        25
+      ],
+      "summary": "身份、数据库、文件与幂等写入。"
+    },
+    {
+      "id": "project",
+      "name": "完整业务实践",
+      "range": [
+        26,
+        29
+      ],
+      "summary": "把笔记、专注、统计和平台能力连起来。"
+    },
+    {
+      "id": "quality",
+      "name": "质量、交付与维护",
+      "range": [
+        30,
+        35
+      ],
+      "summary": "体验、性能、测试、隐私与持续维护。"
+    },
+    {
+      "id": "extensions",
+      "name": "工具扩展与最终实践",
+      "range": [
+        36,
+        36
+      ],
+      "summary": "连接新工具，独立完成自己的作品。"
+    }
+  ],
+  "cover": {
+    "eyebrow": "MINI PROGRAM / DEVELOPMENT",
+    "lines": [
+      "微信小程序",
+      "从零到实践"
+    ],
+    "icon": "window"
+  }
+}

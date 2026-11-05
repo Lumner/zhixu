@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "七天专注统计",
+  "usingComponents": {
+    "week-report": "/components/week-report/index",
+    "feedback-panel": "/components/feedback-panel/index",
+    "network-banner": "/components/network-banner/index"
+  }
+}

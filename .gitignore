@@ -1,0 +1,10 @@
+node_modules/
+.cache/
+*.log
+.env*
+.tutorial-build.lock
+.build/
+*.vvp
+*.vcd
+*.fst
+/dist/

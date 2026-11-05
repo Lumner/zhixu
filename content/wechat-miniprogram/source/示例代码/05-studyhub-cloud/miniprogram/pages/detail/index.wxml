@@ -1,0 +1,13 @@
+<view class="page">
+  <view wx:if="{{status === 'ready'}}" class="panel">
+    <text class="title">{{task.title}}</text><text class="muted">{{meta}}</text>
+    <text class="muted">当前版本：{{task.version}} · {{task.done ? '已完成' : '待完成'}}</text>
+    <text class="description">{{task.description || '暂无备注'}}</text>
+    <button type="primary" disabled="{{busy}}" bindtap="onEdit">编辑</button>
+    <button class="spaced" disabled="{{busy}}" bindtap="onToggle">切换完成状态</button>
+    <button class="spaced" disabled="{{busy}}" bindtap="onRemove">删除</button>
+  </view>
+  <empty-state wx:elif="{{status === 'error'}}" title="无法读取任务" message="{{errorMessage}}" />
+  <text wx:else>正在读取……</text>
+  <button class="spaced" bindtap="onBack">返回</button>
+</view>

@@ -1,0 +1,32 @@
+[
+  {
+    "file": "01-计算机与程序从哪里开始.md",
+    "beforeCharacters": 1735,
+    "afterCharacters": 7003
+  },
+  {
+    "file": "02-二进制十六进制与位运算.md",
+    "beforeCharacters": 1713,
+    "afterCharacters": 7170
+  },
+  {
+    "file": "03-有符号整数补码与溢出.md",
+    "beforeCharacters": 1640,
+    "afterCharacters": 6264
+  },
+  {
+    "file": "04-内存地址字节序与字符编码.md",
+    "beforeCharacters": 1642,
+    "afterCharacters": 7745
+  },
+  {
+    "file": "第一阶段-练习与参考答案.md",
+    "beforeCharacters": 759,
+    "afterCharacters": 5607
+  },
+  {
+    "file": "第一阶段-学习记录与验收清单.md",
+    "beforeCharacters": 0,
+    "afterCharacters": 2296
+  }
+]

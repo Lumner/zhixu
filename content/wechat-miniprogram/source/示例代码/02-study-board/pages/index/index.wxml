@@ -1,0 +1,58 @@
+<view class="page">
+  <view class="intro">
+    <text class="title">学伴 · 从一个小目标开始</text>
+    <text class="subtitle">本地教学版：任务只保存在当前设备，尚未接入云同步。</text>
+  </view>
+
+  <view class="warning" wx:if="{{storageError}}">
+    <text>缓存读取失败。为避免覆盖原数据，已暂停修改。请按教程第 09 章排查。</text>
+    <button size="mini" bindtap="onReload">重新读取</button>
+  </view>
+
+  <view class="stats">
+    <view class="stat"><text class="number">{{total}}</text><text>全部任务</text></view>
+    <view class="stat"><text class="number">{{completed}}</text><text>已完成</text></view>
+    <view class="stat"><text class="number">{{remaining}}</text><text>待完成</text></view>
+  </view>
+
+  <view class="panel">
+    <text class="section-title">{{editingId ? '修改任务标题' : '添加学习任务'}}</text>
+    <input class="input" value="{{draft}}" placeholder="例如：用 25 分钟学习 WXML"
+      maxlength="40" disabled="{{storageError}}" bindinput="onDraftInput" />
+    <text class="hint">标题上限 40 个代码单元；本地教学版最多 200 项。</text>
+    <button type="primary" disabled="{{storageError}}" bindtap="onSave">
+      {{editingId ? '保存修改' : '添加任务'}}
+    </button>
+    <button wx:if="{{editingId}}" bindtap="onCancelEdit">取消编辑</button>
+  </view>
+
+  <view class="panel">
+    <input class="input" value="{{keyword}}" placeholder="搜索任务标题"
+      maxlength="100" bindinput="onKeywordInput" />
+    <view class="filters">
+      <button class="filter {{filter === 'all' ? 'filter--active' : ''}}"
+        size="mini" data-filter="all" bindtap="onFilterChange">全部</button>
+      <button class="filter {{filter === 'pending' ? 'filter--active' : ''}}"
+        size="mini" data-filter="pending" bindtap="onFilterChange">待完成</button>
+      <button class="filter {{filter === 'done' ? 'filter--active' : ''}}"
+        size="mini" data-filter="done" bindtap="onFilterChange">已完成</button>
+    </view>
+    <text class="hint">当前显示 {{visibleTasks.length}} 项；顶部统计始终按全部任务计算。</text>
+  </view>
+
+  <view class="empty" wx:if="{{!storageError && total === 0}}">还没有任务，先添加一个小目标吧。</view>
+  <view class="empty" wx:elif="{{!storageError && visibleTasks.length === 0}}">没有符合搜索和筛选条件的任务。</view>
+
+  <view class="task {{item.done ? 'task--done' : ''}}"
+    wx:for="{{visibleTasks}}" wx:key="id">
+    <text class="task-title">{{item.title}}</text>
+    <text class="status">{{item.done ? '已完成' : '待完成'}}</text>
+    <view class="actions">
+      <button size="mini" disabled="{{storageError}}" data-id="{{item.id}}"
+        bindtap="onToggle">{{item.done ? '恢复待办' : '标记完成'}}</button>
+      <button size="mini" disabled="{{storageError}}" data-id="{{item.id}}" bindtap="onEdit">编辑</button>
+      <button class="danger" size="mini" disabled="{{storageError}}"
+        data-id="{{item.id}}" bindtap="onRemove">删除</button>
+    </view>
+  </view>
+</view>

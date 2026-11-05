@@ -1,0 +1,5 @@
+{
+  "appid": "touristappid", "compileType": "miniprogram", "projectname": "studyhub-network",
+  "miniprogramRoot": "miniprogram/",
+  "setting": { "es6": true, "urlCheck": false }
+}

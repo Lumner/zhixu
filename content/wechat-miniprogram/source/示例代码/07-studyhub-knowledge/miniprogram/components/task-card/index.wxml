@@ -1,0 +1,7 @@
+<view wx:if="{{task}}" class="card {{task.done ? 'card--done' : ''}}" bindtap="onOpen">
+  <text class="title">{{task.title}}</text>
+  <text class="meta">{{meta}}</text>
+  <text class="status">{{task.done ? '已完成' : '待完成'}}</text>
+  <button size="mini" disabled="{{disabled}}" catchtap="onToggle">{{task.done ? '恢复待办' : '标记完成'}}</button>
+  <view class="extra"><slot /></view>
+</view>

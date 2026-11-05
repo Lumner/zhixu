@@ -1,0 +1,205 @@
+{
+  "date": "2026-11-05",
+  "tool": "Icarus Verilog version 11.0 (stable) ()",
+  "languageMode": "-g2012",
+  "passedCombinationalExperiments": 4,
+  "detectedInjectedFaults": 7,
+  "routingSelectedCases": 2048,
+  "aluDirectedCases": 9,
+  "parameterDataCases": 16644,
+  "parameterAddressChecks": 18,
+  "parameterDigitCases": 16,
+  "extendedAluBinaryInputCases": 2048,
+  "vcdSamples": [
+    {
+      "sampleNs": 113.5,
+      "a": 7,
+      "b": 1,
+      "op": 0,
+      "y": 8,
+      "carry": 0,
+      "overflow": 1,
+      "zero": 0,
+      "valid_op": 1
+    },
+    {
+      "sampleNs": 241.5,
+      "a": 15,
+      "b": 1,
+      "op": 0,
+      "y": 0,
+      "carry": 1,
+      "overflow": 0,
+      "zero": 1,
+      "valid_op": 1
+    },
+    {
+      "sampleNs": 136.5,
+      "a": 8,
+      "b": 8,
+      "op": 0,
+      "y": 0,
+      "carry": 1,
+      "overflow": 1,
+      "zero": 1,
+      "valid_op": 1
+    },
+    {
+      "sampleNs": 309.5,
+      "a": 3,
+      "b": 5,
+      "op": 1,
+      "y": 14,
+      "carry": 0,
+      "overflow": 0,
+      "zero": 0,
+      "valid_op": 1
+    },
+    {
+      "sampleNs": 385.5,
+      "a": 8,
+      "b": 1,
+      "op": 1,
+      "y": 7,
+      "carry": 1,
+      "overflow": 1,
+      "zero": 0,
+      "valid_op": 1
+    },
+    {
+      "sampleNs": 684.5,
+      "a": 10,
+      "b": 12,
+      "op": 2,
+      "y": 8,
+      "carry": 0,
+      "overflow": 0,
+      "zero": 0,
+      "valid_op": 1
+    },
+    {
+      "sampleNs": 1042.5,
+      "a": 1,
+      "b": 2,
+      "op": 4,
+      "y": 3,
+      "carry": 0,
+      "overflow": 0,
+      "zero": 0,
+      "valid_op": 1
+    },
+    {
+      "sampleNs": 1393.5,
+      "a": 7,
+      "b": 1,
+      "op": 5,
+      "y": 0,
+      "carry": 0,
+      "overflow": 0,
+      "zero": 1,
+      "valid_op": 0
+    }
+  ],
+  "results": [
+    {
+      "name": "13-routing",
+      "expectedFailure": false,
+      "compileExitCode": 0,
+      "compileMessages": "C:\\Users\\17597\\Desktop\\tutorial\\content\\digital-logic\\source\\组合实验\\13-routing\\design.sv:10: sorry: constant selects in always_* processes are not currently supported (all bits will be included).\r\nC:\\Users\\17597\\Desktop\\tutorial\\content\\digital-logic\\source\\组合实验\\13-routing\\design.sv:10: sorry: constant selects in always_* processes are not currently supported (all bits will be included).\r\nC:\\Users\\17597\\Desktop\\tutorial\\content\\digital-logic\\source\\组合实验\\13-routing\\design.sv:10: sorry: constant selects in always_* processes are not currently supported (all bits will be included).\r\nC:\\Users\\17597\\Desktop\\tutorial\\content\\digital-logic\\source\\组合实验\\13-routing\\design.sv:10: sorry: constant selects in always_* processes are not currently supported (all bits will be included).\r\n",
+      "exitCode": 0,
+      "output": "PASS routing: 2048 selected-data/control cases\r\n"
+    },
+    {
+      "name": "14-alu",
+      "expectedFailure": false,
+      "compileExitCode": 0,
+      "compileMessages": "C:\\Users\\17597\\Desktop\\tutorial\\content\\digital-logic\\source\\组合实验\\14-alu\\design.sv:8: sorry: constant selects in always_* processes are not currently supported (all bits will be included).\r\nC:\\Users\\17597\\Desktop\\tutorial\\content\\digital-logic\\source\\组合实验\\14-alu\\design.sv:8: sorry: constant selects in always_* processes are not currently supported (all bits will be included).\r\nC:\\Users\\17597\\Desktop\\tutorial\\content\\digital-logic\\source\\组合实验\\14-alu\\design.sv:8: sorry: constant selects in always_* processes are not currently supported (all bits will be included).\r\nC:\\Users\\17597\\Desktop\\tutorial\\content\\digital-logic\\source\\组合实验\\14-alu\\design.sv:8: sorry: constant selects in always_* processes are not currently supported (all bits will be included).\r\nC:\\Users\\17597\\Desktop\\tutorial\\content\\digital-logic\\source\\组合实验\\14-alu\\design.sv:8: sorry: constant selects in always_* processes are not currently supported (all bits will be included).\r\n",
+      "exitCode": 0,
+      "output": "PASS alu4: 9 directed arithmetic/flag cases\r\n"
+    },
+    {
+      "name": "15-parameter",
+      "expectedFailure": false,
+      "compileExitCode": 0,
+      "compileMessages": "",
+      "exitCode": 0,
+      "output": "PASS parameter: data=16644 address=18 digit=16; WIDTH=1/4/7 DEPTH=1/5/8\r\n"
+    },
+    {
+      "name": "16-alu-regression",
+      "expectedFailure": false,
+      "compileExitCode": 0,
+      "compileMessages": "C:\\Users\\17597\\Desktop\\tutorial\\content\\digital-logic\\source\\组合实验\\16-alu-regression\\design.sv:8: sorry: constant selects in always_* processes are not currently supported (all bits will be included).\r\nC:\\Users\\17597\\Desktop\\tutorial\\content\\digital-logic\\source\\组合实验\\16-alu-regression\\design.sv:8: sorry: constant selects in always_* processes are not currently supported (all bits will be included).\r\nC:\\Users\\17597\\Desktop\\tutorial\\content\\digital-logic\\source\\组合实验\\16-alu-regression\\design.sv:8: sorry: constant selects in always_* processes are not currently supported (all bits will be included).\r\nC:\\Users\\17597\\Desktop\\tutorial\\content\\digital-logic\\source\\组合实验\\16-alu-regression\\design.sv:8: sorry: constant selects in always_* processes are not currently supported (all bits will be included).\r\nC:\\Users\\17597\\Desktop\\tutorial\\content\\digital-logic\\source\\组合实验\\16-alu-regression\\design.sv:8: sorry: constant selects in always_* processes are not currently supported (all bits will be included).\r\n",
+      "exitCode": 0,
+      "output": "VCD info: dumpfile alu.vcd opened for output.\r\nPASS extended ALU: 2048 binary input cases including 3 reserved opcodes\r\n"
+    },
+    {
+      "name": "mutant-priority-reversed",
+      "expectedFailure": true,
+      "compileExitCode": 0,
+      "compileMessages": "C:\\Users\\17597\\Desktop\\tutorial\\.cache\\digital-logic-stage3\\mutations\\priority-reversed\\design.sv:10: sorry: constant selects in always_* processes are not currently supported (all bits will be included).\r\nC:\\Users\\17597\\Desktop\\tutorial\\.cache\\digital-logic-stage3\\mutations\\priority-reversed\\design.sv:10: sorry: constant selects in always_* processes are not currently supported (all bits will be included).\r\nC:\\Users\\17597\\Desktop\\tutorial\\.cache\\digital-logic-stage3\\mutations\\priority-reversed\\design.sv:10: sorry: constant selects in always_* processes are not currently supported (all bits will be included).\r\nC:\\Users\\17597\\Desktop\\tutorial\\.cache\\digital-logic-stage3\\mutations\\priority-reversed\\design.sv:10: sorry: constant selects in always_* processes are not currently supported (all bits will be included).\r\n",
+      "exitCode": 1,
+      "output": "FATAL: C:\\Users\\17597\\Desktop\\tutorial\\content\\digital-logic\\source\\组合实验\\13-routing\\tb.sv:42: routing p=0 sel=0 en=0 req=0011 actual=0000/0000/1/0 expected=0000/0000/1/1\r\n       Time: 4000 Scope: tb.$ivl_for_loop0.$ivl_for_loop1.$ivl_for_loop2.$ivl_for_loop3\r\n"
+    },
+    {
+      "name": "mutant-subtract-missing-one",
+      "expectedFailure": true,
+      "compileExitCode": 0,
+      "compileMessages": "C:\\Users\\17597\\Desktop\\tutorial\\.cache\\digital-logic-stage3\\mutations\\subtract-missing-one\\design.sv:8: sorry: constant selects in always_* processes are not currently supported (all bits will be included).\r\nC:\\Users\\17597\\Desktop\\tutorial\\.cache\\digital-logic-stage3\\mutations\\subtract-missing-one\\design.sv:8: sorry: constant selects in always_* processes are not currently supported (all bits will be included).\r\nC:\\Users\\17597\\Desktop\\tutorial\\.cache\\digital-logic-stage3\\mutations\\subtract-missing-one\\design.sv:8: sorry: constant selects in always_* processes are not currently supported (all bits will be included).\r\nC:\\Users\\17597\\Desktop\\tutorial\\.cache\\digital-logic-stage3\\mutations\\subtract-missing-one\\design.sv:8: sorry: constant selects in always_* processes are not currently supported (all bits will be included).\r\nC:\\Users\\17597\\Desktop\\tutorial\\.cache\\digital-logic-stage3\\mutations\\subtract-missing-one\\design.sv:8: sorry: constant selects in always_* processes are not currently supported (all bits will be included).\r\n",
+      "exitCode": 1,
+      "output": "FATAL: C:\\Users\\17597\\Desktop\\tutorial\\content\\digital-logic\\source\\组合实验\\14-alu\\tb.sv:20: 3-5 expected y=E C=0 V=0 Z=0\r\n       Time: 4000 Scope: tb\r\n"
+    },
+    {
+      "name": "mutant-address-boundary-inclusive",
+      "expectedFailure": true,
+      "compileExitCode": 0,
+      "compileMessages": "",
+      "exitCode": 1,
+      "output": "FATAL: C:\\Users\\17597\\Desktop\\tutorial\\content\\digital-logic\\source\\组合实验\\15-parameter\\tb.sv:55: DEPTH=1 addr=1\r\n       Time: 16646000 Scope: tb.$ivl_for_loop8\r\n"
+    },
+    {
+      "name": "mutant-overflow-is-carry",
+      "expectedFailure": true,
+      "compileExitCode": 0,
+      "compileMessages": "C:\\Users\\17597\\Desktop\\tutorial\\.cache\\digital-logic-stage3\\mutations\\overflow-is-carry\\design.sv:8: sorry: constant selects in always_* processes are not currently supported (all bits will be included).\r\nC:\\Users\\17597\\Desktop\\tutorial\\.cache\\digital-logic-stage3\\mutations\\overflow-is-carry\\design.sv:8: sorry: constant selects in always_* processes are not currently supported (all bits will be included).\r\nC:\\Users\\17597\\Desktop\\tutorial\\.cache\\digital-logic-stage3\\mutations\\overflow-is-carry\\design.sv:8: sorry: constant selects in always_* processes are not currently supported (all bits will be included).\r\nC:\\Users\\17597\\Desktop\\tutorial\\.cache\\digital-logic-stage3\\mutations\\overflow-is-carry\\design.sv:8: sorry: constant selects in always_* processes are not currently supported (all bits will be included).\r\nC:\\Users\\17597\\Desktop\\tutorial\\.cache\\digital-logic-stage3\\mutations\\overflow-is-carry\\design.sv:8: sorry: constant selects in always_* processes are not currently supported (all bits will be included).\r\n",
+      "exitCode": 1,
+      "output": "VCD info: dumpfile alu.vcd opened for output.\r\nFATAL: C:\\Users\\17597\\Desktop\\tutorial\\content\\digital-logic\\source\\组合实验\\16-alu-regression\\tb.sv:47: alu op=000 a=1 b=7 actual y/C/V/Z/valid=8/0/0/0/1 expected=8/0/1/0/1\r\n       Time: 24000 Scope: tb.$ivl_for_loop0.$ivl_for_loop1.$ivl_for_loop2\r\n"
+    },
+    {
+      "name": "mutant-borrow-inverted",
+      "expectedFailure": true,
+      "compileExitCode": 0,
+      "compileMessages": "C:\\Users\\17597\\Desktop\\tutorial\\.cache\\digital-logic-stage3\\mutations\\borrow-inverted\\design.sv:8: sorry: constant selects in always_* processes are not currently supported (all bits will be included).\r\nC:\\Users\\17597\\Desktop\\tutorial\\.cache\\digital-logic-stage3\\mutations\\borrow-inverted\\design.sv:8: sorry: constant selects in always_* processes are not currently supported (all bits will be included).\r\nC:\\Users\\17597\\Desktop\\tutorial\\.cache\\digital-logic-stage3\\mutations\\borrow-inverted\\design.sv:8: sorry: constant selects in always_* processes are not currently supported (all bits will be included).\r\nC:\\Users\\17597\\Desktop\\tutorial\\.cache\\digital-logic-stage3\\mutations\\borrow-inverted\\design.sv:8: sorry: constant selects in always_* processes are not currently supported (all bits will be included).\r\nC:\\Users\\17597\\Desktop\\tutorial\\.cache\\digital-logic-stage3\\mutations\\borrow-inverted\\design.sv:8: sorry: constant selects in always_* processes are not currently supported (all bits will be included).\r\n",
+      "exitCode": 1,
+      "output": "VCD info: dumpfile alu.vcd opened for output.\r\nFATAL: C:\\Users\\17597\\Desktop\\tutorial\\content\\digital-logic\\source\\组合实验\\16-alu-regression\\tb.sv:47: alu op=001 a=0 b=0 actual y/C/V/Z/valid=0/0/0/1/1 expected=0/1/0/1/1\r\n       Time: 257000 Scope: tb.$ivl_for_loop0.$ivl_for_loop1.$ivl_for_loop2\r\n"
+    },
+    {
+      "name": "mutant-or-written-as-and",
+      "expectedFailure": true,
+      "compileExitCode": 0,
+      "compileMessages": "C:\\Users\\17597\\Desktop\\tutorial\\.cache\\digital-logic-stage3\\mutations\\or-written-as-and\\design.sv:8: sorry: constant selects in always_* processes are not currently supported (all bits will be included).\r\nC:\\Users\\17597\\Desktop\\tutorial\\.cache\\digital-logic-stage3\\mutations\\or-written-as-and\\design.sv:8: sorry: constant selects in always_* processes are not currently supported (all bits will be included).\r\nC:\\Users\\17597\\Desktop\\tutorial\\.cache\\digital-logic-stage3\\mutations\\or-written-as-and\\design.sv:8: sorry: constant selects in always_* processes are not currently supported (all bits will be included).\r\nC:\\Users\\17597\\Desktop\\tutorial\\.cache\\digital-logic-stage3\\mutations\\or-written-as-and\\design.sv:8: sorry: constant selects in always_* processes are not currently supported (all bits will be included).\r\nC:\\Users\\17597\\Desktop\\tutorial\\.cache\\digital-logic-stage3\\mutations\\or-written-as-and\\design.sv:8: sorry: constant selects in always_* processes are not currently supported (all bits will be included).\r\n",
+      "exitCode": 1,
+      "output": "VCD info: dumpfile alu.vcd opened for output.\r\nFATAL: C:\\Users\\17597\\Desktop\\tutorial\\content\\digital-logic\\source\\组合实验\\16-alu-regression\\tb.sv:47: alu op=100 a=0 b=1 actual y/C/V/Z/valid=0/0/0/1/1 expected=1/0/0/0/1\r\n       Time: 1026000 Scope: tb.$ivl_for_loop0.$ivl_for_loop1.$ivl_for_loop2\r\n"
+    },
+    {
+      "name": "mutant-reserved-op-accepted",
+      "expectedFailure": true,
+      "compileExitCode": 0,
+      "compileMessages": "C:\\Users\\17597\\Desktop\\tutorial\\.cache\\digital-logic-stage3\\mutations\\reserved-op-accepted\\design.sv:8: sorry: constant selects in always_* processes are not currently supported (all bits will be included).\r\nC:\\Users\\17597\\Desktop\\tutorial\\.cache\\digital-logic-stage3\\mutations\\reserved-op-accepted\\design.sv:8: sorry: constant selects in always_* processes are not currently supported (all bits will be included).\r\nC:\\Users\\17597\\Desktop\\tutorial\\.cache\\digital-logic-stage3\\mutations\\reserved-op-accepted\\design.sv:8: sorry: constant selects in always_* processes are not currently supported (all bits will be included).\r\nC:\\Users\\17597\\Desktop\\tutorial\\.cache\\digital-logic-stage3\\mutations\\reserved-op-accepted\\design.sv:8: sorry: constant selects in always_* processes are not currently supported (all bits will be included).\r\nC:\\Users\\17597\\Desktop\\tutorial\\.cache\\digital-logic-stage3\\mutations\\reserved-op-accepted\\design.sv:8: sorry: constant selects in always_* processes are not currently supported (all bits will be included).\r\n",
+      "exitCode": 1,
+      "output": "VCD info: dumpfile alu.vcd opened for output.\r\nFATAL: C:\\Users\\17597\\Desktop\\tutorial\\content\\digital-logic\\source\\组合实验\\16-alu-regression\\tb.sv:47: alu op=101 a=0 b=0 actual y/C/V/Z/valid=0/0/0/1/1 expected=0/0/0/1/0\r\n       Time: 1281000 Scope: tb.$ivl_for_loop0.$ivl_for_loop1.$ivl_for_loop2\r\n"
+    }
+  ],
+  "fpgaSynthesisVerified": false,
+  "gtkWaveGuiExecuted": false,
+  "sourceHashes": {
+    "组合实验\\13-routing\\design.sv": "9005221aeed12c3a18a78c6e8d68521e2dd6984db0179ca95e62a60447e2efe5",
+    "组合实验\\13-routing\\tb.sv": "0c4b82263df7c871562cabc6bc034b38cfddfdd590ed51b3cc72f68da06c66a8",
+    "组合实验\\14-alu\\design.sv": "4386105347dec25c188ce447054f9d536bf4bd71cc17146453c2047332c47360",
+    "组合实验\\14-alu\\tb.sv": "f00da4209ed5ec93b6384d76a6bc4cd8ff2a17219b80f671fa2d8f9ba7364634",
+    "组合实验\\15-parameter\\design.sv": "68342f41cb33142b5f2eebfc388afca56f19ac74b9f49ba03d0ea2554bea5f78",
+    "组合实验\\15-parameter\\tb.sv": "094346765a1df30ddf87c69d3d2e733d1885368d084ea389b4a147e23ea976e0",
+    "组合实验\\16-alu-regression\\design.sv": "2333d78860d92a70e822babdb1e8623ac39ab6abaf12493b773cf22d861e1164",
+    "组合实验\\16-alu-regression\\tb.sv": "976be9923da68832157009deff9edb6045cb008d13fb95667cc2557f4c5eba5a"
+  }
+}

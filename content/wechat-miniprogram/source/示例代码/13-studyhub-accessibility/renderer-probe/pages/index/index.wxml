@@ -1,0 +1,7 @@
+<view class="probe" style="height:{{windowHeight}}px">
+<view class="top-reserved" style="height:{{top}}px"></view>
+<scroll-view class="probe-scroll" scroll-y="{{true}}" style="height:{{windowHeight - top}}px">
+<view class="probe-content"><text class="probe-title">{{heading}}</text><text class="probe-text">实际页面renderer：{{rendererText}}。配置值不是运行结果，回退时也要核对。</text><text class="probe-text">顶部保留状态栏/胶囊区域，标题与操作置于其下。本页无云、无身份、无私人记录。</text>
+<view wx:for="{{rows}}" wx:key="id" class="probe-row"><text>{{item.title}}</text></view>
+<text class="probe-text">完成后用右上角菜单关闭。请另导入主项目，不从这里跳往私人业务。</text></view>
+</scroll-view></view>

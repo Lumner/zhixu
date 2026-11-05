@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-04",
+  "courseId": "computer-organization-riscv",
+  "mode": "Local HTTP desktop browser",
+  "courseOverview": {"chapters": 32, "stages": 8, "examples": 8, "downloadLinkVisible": true},
+  "pagesViewed": ["00", "09", "27"],
+  "search": {"query": "TLB", "resultCourse": "computer-organization-riscv", "openedChapter": "27"},
+  "screenshot": "reports/riscv-course.jpg",
+  "automatedSiteChecksPassed": 633,
+  "localModelScenariosPassed": 61,
+  "courseSourceLinksChecked": 164,
+  "generatedCourseDocuments": 53,
+  "limits": ["No fresh mobile viewport check", "file:// mode not browser-tested", "RARS and Ripes not executed", "Not every chapter manually viewed"]
+}

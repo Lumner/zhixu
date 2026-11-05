@@ -1,0 +1,2 @@
+.summary { display: block; margin: 20rpx 0; word-break: break-all; }
+.notice { margin-bottom: 20rpx; padding: 16rpx; background: #fff4dc; color: #7a4b00; border-radius: 12rpx; font-size: 26rpx; }

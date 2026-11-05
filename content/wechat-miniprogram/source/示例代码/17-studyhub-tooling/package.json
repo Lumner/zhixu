@@ -1,0 +1,14 @@
+{
+  "name": "studyhub-tooling-course",
+  "version": "0.0.0",
+  "private": true,
+  "description": "第36章独立电脑端TypeScript与固定身份HTTP实验，不是微信工程或生产后端",
+  "engines": {"node": ">=24.15.0"},
+  "scripts": {
+    "check": "node tools/compile.cjs --check",
+    "build": "node tools/compile.cjs",
+    "start": "node server/index.cjs",
+    "test": "node tools/verify.cjs"
+  },
+  "devDependencies": {"typescript": "5.9.3"}
+}

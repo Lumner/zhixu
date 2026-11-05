@@ -1,0 +1,10 @@
+<view class="page">
+  <text class="title">原生富文本编辑器实验</text><text class="muted">本页不保存云端；离开后输入会丢失。先输入文字，再选中一段并加粗。</text>
+  <editor id="editor" class="editor" placeholder="在这里输入" bindready="onEditorReady" bindinput="onInput" />
+  <view class="actions"><button disabled="{{!ready}}" bindtap="onBold">加粗选区</button><button disabled="{{!ready}}" bindtap="onRead">读取三种结果</button></view>
+  <button disabled="{{!ready}}" bindtap="onSeed">用示例文本替换当前输入</button>
+  <text>当前 text.length：{{count}}</text><text class="error">{{errorMessage}}</text>
+  <view class="panel"><text>text（仅显示前 2000 单元）</text><text class="code">{{text}}</text></view>
+  <view class="panel"><text>HTML（仅显示前 3000 单元）</text><text class="code">{{html}}</text></view>
+  <view class="panel"><text>Delta JSON（仅显示前 3000 单元）</text><text class="code">{{deltaText}}</text></view>
+</view>

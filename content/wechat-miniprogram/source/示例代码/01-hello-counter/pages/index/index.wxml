@@ -1,0 +1,7 @@
+<view class="card">
+  <text class="title">我的第一个小程序</text>
+  <text class="hint">今天已经学习了</text>
+  <text class="count">{{count}}</text>
+  <button type="primary" bindtap="onIncrease">学习一次 +1</button>
+  <button bindtap="onReset">重新开始</button>
+</view>

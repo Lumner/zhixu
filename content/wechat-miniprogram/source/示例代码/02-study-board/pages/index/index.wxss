@@ -1,0 +1,26 @@
+.page { max-width: 960rpx; margin: 0 auto; padding: 32rpx 24rpx 80rpx; }
+.intro { margin-bottom: 24rpx; }
+.title { display: block; font-size: 38rpx; font-weight: 700; }
+.subtitle { display: block; margin-top: 12rpx; color: #64748b; font-size: 26rpx; }
+.stats { display: flex; padding: 24rpx 12rpx; background: #ffffff; border-radius: 20rpx; }
+.stat { flex: 1; text-align: center; font-size: 24rpx; color: #64748b; }
+.number { display: block; font-size: 48rpx; color: #16794b; font-weight: 700; }
+.panel, .task { margin-top: 24rpx; padding: 24rpx; border-radius: 20rpx; background: #ffffff; }
+.section-title { display: block; margin-bottom: 16rpx; font-weight: 700; }
+.input { width: 100%; height: 88rpx; padding: 16rpx; border: 1px solid #cbd5e1; border-radius: 12rpx; background: #ffffff; }
+.hint { display: block; color: #64748b; font-size: 24rpx; margin: 12rpx 0 20rpx; }
+.panel button { margin-top: 16rpx; }
+.filters { display: flex; flex-wrap: wrap; margin-top: 16rpx; }
+.filters .filter { margin: 0 12rpx 12rpx 0; font-size: 26rpx; }
+.filter--active { color: #ffffff; background: #16794b; }
+.empty { margin: 40rpx 0; padding: 32rpx; text-align: center; color: #64748b; }
+.task--done { background: #edf7ef; }
+.task-title { display: block; font-weight: 700; overflow-wrap: break-word; word-break: break-all; }
+.task--done .task-title { text-decoration: line-through; color: #64748b; }
+.status { display: block; margin-top: 12rpx; color: #64748b; font-size: 24rpx; }
+.actions { display: flex; flex-wrap: wrap; margin-top: 20rpx; }
+.actions button { margin: 0 12rpx 12rpx 0; font-size: 24rpx; }
+.danger { color: #b42318; }
+.warning { margin-bottom: 24rpx; padding: 24rpx; background: #fff4dc; border-radius: 16rpx; color: #7a4b00; }
+.warning text { display: block; }
+.warning button { margin-top: 16rpx; }

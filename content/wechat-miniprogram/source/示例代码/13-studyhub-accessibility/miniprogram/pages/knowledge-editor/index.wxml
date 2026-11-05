@@ -1,0 +1,28 @@
+<view class="page">
+  <text class="title">笔记与资源收藏</text><text wx:if="{{loading}}">正在读取……</text><text class="error">{{errorMessage}}</text>
+  <text wx:if="{{recoveryRequired}}" class="error">原操作与草稿已保留，请到待处理页核对；冲突时比较最新内容后再选择。</text>
+  <form wx:if="{{!loading && !blocked && !saved}}" bindsubmit="onSubmit">
+    <view class="panel">
+      <picker range="{{kinds}}" value="{{kindIndex}}" disabled="{{saving || recoveryRequired}}" bindchange="onKind"><view class="picker">类型：{{kinds[kindIndex]}}</view></picker>
+      <input class="input" value="{{title}}" maxlength="60" disabled="{{saving || recoveryRequired}}" data-field="title" bindinput="onText" placeholder="标题" />
+      <textarea class="body-input" value="{{content}}" maxlength="8000" disabled="{{saving || recoveryRequired}}" data-field="content" bindinput="onText" placeholder="正文：# 空格表示标题，- 空格表示列表项" />
+      <text class="muted">学习笔记需要正文。资源收藏需要 HTTPS 网址，可附摘要；此处仅支持两种行首排版标记。</text>
+      <input class="input" value="{{tagsInput}}" maxlength="130" disabled="{{saving || recoveryRequired}}" data-field="tagsInput" bindinput="onText" placeholder="标签，用逗号分隔，最多五个" />
+      <input class="input" value="{{url}}" maxlength="800" disabled="{{saving || recoveryRequired}}" data-field="url" bindinput="onText" placeholder="资源网址（HTTPS）" />
+      <view><text>加星标</text><switch checked="{{favorite}}" disabled="{{saving || recoveryRequired}}" bindchange="onFavorite" /></view>
+      <view wx:if="{{taskId}}"><text>关联任务：{{taskTitle}}</text><button disabled="{{saving || recoveryRequired}}" bindtap="onUnlinkTask">解除任务关联</button></view>
+    </view>
+    <view class="panel">
+      <text>已选图片：{{assetIds.length}} / 3</text>
+      <button wx:for="{{selected}}" wx:key="id" data-id="{{item.id}}" disabled="{{saving || recoveryRequired}}" bindtap="onAsset">移除：{{item.caption}}</button>
+      <text class="muted">从私人图库中选择，移除关联不会删除原图。</text><text class="error">{{assetError}}</text>
+      <button wx:for="{{assetRows}}" wx:key="id" data-id="{{item.id}}" disabled="{{saving || recoveryRequired}}" bindtap="onAsset">{{item.selected ? '已选择：' : '选择：'}}{{item.caption}}</button>
+      <button wx:if="{{hasMoreAssets}}" disabled="{{loadingAssets}}" bindtap="onMoreAssets">继续读取图库</button>
+      <button disabled="{{loadingAssets}}" bindtap="onRefreshAssets">刷新图库选项</button><button bindtap="onGallery">去图库上传图片</button>
+    </view>
+    <button bindtap="onPreview">预览正文排版</button><view class="panel"><rich-text nodes="{{nodes}}" /></view>
+    <button type="primary" form-type="submit" loading="{{saving}}" disabled="{{saving || recoveryRequired}}">保存到私人知识库</button>
+  </form>
+  <button bindtap="onPending">待处理与冲突草稿</button><button bindtap="onBack">返回</button>
+  <text class="muted">未提交的输入不自动保存。离开页面不会取消已经发出的云端写入。</text>
+</view>

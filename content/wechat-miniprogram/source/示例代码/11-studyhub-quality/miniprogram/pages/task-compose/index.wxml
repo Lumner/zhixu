@@ -1,0 +1,24 @@
+<view class="page"><text class="title">可恢复的任务表单</text><network-banner />
+<feedback-panel feedback="{{feedback}}" bind:action="onFeedback" /><text class="muted">{{message}}</text>
+<text wx:if="{{status === 'loading'}}">正在确认身份并读取初始内容……</text>
+<view wx:if="{{status === 'choice'}}" class="panel"><text class="section-title">先比较，再选择恢复</text>
+<text class="muted">本地草稿：</text><text class="comparison" selectable="{{true}}">{{draftPreview}}</text>
+<text class="muted">当前读取内容：</text><text class="comparison" selectable="{{true}}">{{cloudPreview}}</text>
+<text wx:if="{{draftStale}}" class="error">基础版本已变化，恢复时需要明确确认采用当前版本。</text>
+<button bindtap="onRestore">比较后恢复草稿</button><button bindtap="onDiscard">舍弃未提交草稿，采用读取内容</button></view>
+<form wx:if="{{status === 'editing'}}" bindsubmit="onSubmit">
+<view class="panel"><input class="input" value="{{fields.title}}" maxlength="40" disabled="{{busy}}" data-field="title" bindinput="onText" placeholder="标题，可先留空保存草稿" />
+<textarea class="textarea" value="{{fields.description}}" maxlength="1000" disabled="{{busy}}" data-field="description" bindinput="onText" placeholder="备注" />
+<picker range="{{categories}}" range-key="label" value="{{categoryIndex}}" disabled="{{busy}}" bindchange="onCategory"><view class="picker">分类：{{categories[categoryIndex].label}}</view></picker>
+<picker range="{{priorities}}" range-key="label" value="{{priorityIndex}}" disabled="{{busy}}" bindchange="onPriority"><view class="picker">优先级：{{priorities[priorityIndex].label}}</view></picker>
+<picker mode="date" value="{{fields.dueDate}}" start="2000-01-01" end="2099-12-31" disabled="{{busy}}" bindchange="onDate"><view class="picker">{{fields.dueDate || '选择截止日期'}}</view></picker>
+<button disabled="{{busy}}" bindtap="onClearDate">清除日期</button><view><text>已完成</text><switch checked="{{fields.done}}" disabled="{{busy}}" bindchange="onDone" /></view>
+<text class="muted">本地状态：{{localState}}；与初始内容{{dirty ? '有差异' : '相同'}}。输入停顿600毫秒尝试保存，隐藏/返回时同步补存。</text></view>
+<button disabled="{{busy}}" bindtap="onSaveLocal">立即保存本地草稿</button><button type="primary" form-type="submit" disabled="{{busy}}" loading="{{busy}}">封存原编号并提交云端</button></form>
+<view wx:if="{{status === 'sealed'}}" class="panel"><text class="section-title">原输入与操作编号已封存</text><text class="comparison" selectable="{{true}}">{{fieldsPreview}}</text>
+<text class="muted" selectable="{{true}}">{{opId}}</text><button disabled="{{busy}}" loading="{{busy}}" bindtap="onReplay">使用原编号核对 / 重试</button>
+<button disabled="{{busy}}" bindtap="onFinishSealed">核对后结束此表单草稿</button></view>
+<view wx:if="{{confirmed}}" class="panel"><text>已取得原操作回执；当前云端状态请返回列表读取。</text><button wx:if="{{localState === 'error'}}" bindtap="onCleanup">只重试本地清理</button></view>
+<button wx:if="{{status !== 'identityChanged' && status !== 'loading'}}" bindtap="onCopy">主动复制当前输入</button>
+<button bindtap="onPending">待处理与冲突核对</button><button bindtap="onBack">返回</button>
+<text class="muted">本章先为任务表单落地持久草稿；知识库原编辑器仍按第26章协议运行。缓存按已确认身份分区，属于本地明文，不能当作云备份。</text></view>

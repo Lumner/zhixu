@@ -1,0 +1,326 @@
+{
+  "name": "empty",
+  "report": {
+    "policyVersion": "focus-end-day-v1",
+    "timezone": "UTC+08:00",
+    "consistency": "paged-read",
+    "complete": true,
+    "dateFrom": "2026-10-27",
+    "dateTo": "2026-11-02",
+    "asOf": 1793592000000,
+    "startAt": 1793030400000,
+    "endExclusive": 1793635200000,
+    "cutoffExclusive": 1793592000001,
+    "maxSessions": 500,
+    "sessionCount": 0,
+    "days": [
+      {
+        "date": "2026-10-27",
+        "totalSeconds": 0,
+        "completedSessions": 0,
+        "stoppedSessions": 0,
+        "finishedSessions": 0
+      },
+      {
+        "date": "2026-10-28",
+        "totalSeconds": 0,
+        "completedSessions": 0,
+        "stoppedSessions": 0,
+        "finishedSessions": 0
+      },
+      {
+        "date": "2026-10-29",
+        "totalSeconds": 0,
+        "completedSessions": 0,
+        "stoppedSessions": 0,
+        "finishedSessions": 0
+      },
+      {
+        "date": "2026-10-30",
+        "totalSeconds": 0,
+        "completedSessions": 0,
+        "stoppedSessions": 0,
+        "finishedSessions": 0
+      },
+      {
+        "date": "2026-10-31",
+        "totalSeconds": 0,
+        "completedSessions": 0,
+        "stoppedSessions": 0,
+        "finishedSessions": 0
+      },
+      {
+        "date": "2026-11-01",
+        "totalSeconds": 0,
+        "completedSessions": 0,
+        "stoppedSessions": 0,
+        "finishedSessions": 0
+      },
+      {
+        "date": "2026-11-02",
+        "totalSeconds": 0,
+        "completedSessions": 0,
+        "stoppedSessions": 0,
+        "finishedSessions": 0
+      }
+    ],
+    "totals": {
+      "totalSeconds": 0,
+      "completedSessions": 0,
+      "stoppedSessions": 0,
+      "finishedSessions": 0,
+      "activeDays": 0,
+      "longestActiveDays": 0
+    }
+  },
+  "plan": {
+    "width": 343,
+    "height": 230,
+    "left": 42,
+    "top": 24,
+    "plotWidth": 289,
+    "plotHeight": 172,
+    "axisMax": 60,
+    "ticks": [
+      {
+        "y": 196,
+        "label": "0.0"
+      },
+      {
+        "y": 110,
+        "label": "0.5"
+      },
+      {
+        "y": 24,
+        "label": "1.0"
+      }
+    ],
+    "bars": [
+      {
+        "x": 51.082857142857144,
+        "y": 196,
+        "width": 23.12,
+        "height": 0,
+        "labelX": 62.64285714285714,
+        "label": "10-27",
+        "value": 0
+      },
+      {
+        "x": 92.36857142857141,
+        "y": 196,
+        "width": 23.12,
+        "height": 0,
+        "labelX": 103.92857142857143,
+        "label": "10-28",
+        "value": 0
+      },
+      {
+        "x": 133.65428571428572,
+        "y": 196,
+        "width": 23.12,
+        "height": 0,
+        "labelX": 145.21428571428572,
+        "label": "10-29",
+        "value": 0
+      },
+      {
+        "x": 174.94,
+        "y": 196,
+        "width": 23.12,
+        "height": 0,
+        "labelX": 186.5,
+        "label": "10-30",
+        "value": 0
+      },
+      {
+        "x": 216.22571428571428,
+        "y": 196,
+        "width": 23.12,
+        "height": 0,
+        "labelX": 227.78571428571428,
+        "label": "10-31",
+        "value": 0
+      },
+      {
+        "x": 257.51142857142855,
+        "y": 196,
+        "width": 23.12,
+        "height": 0,
+        "labelX": 269.07142857142856,
+        "label": "11-01",
+        "value": 0
+      },
+      {
+        "x": 298.7971428571429,
+        "y": 196,
+        "width": 23.12,
+        "height": 0,
+        "labelX": 310.35714285714283,
+        "label": "11-02",
+        "value": 0
+      }
+    ]
+  },
+  "operations": [
+    {
+      "type": "clear",
+      "args": [
+        0,
+        0,
+        343,
+        230
+      ]
+    },
+    {
+      "type": "rect",
+      "args": [
+        0,
+        0,
+        343,
+        230
+      ],
+      "color": "#ffffff"
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          42,
+          196
+        ],
+        [
+          331,
+          196
+        ]
+      ],
+      "color": "#e2e8f0"
+    },
+    {
+      "type": "text",
+      "text": "0.0",
+      "x": 36,
+      "y": 196,
+      "color": "#64748b",
+      "align": "right",
+      "font": "11px sans-serif"
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          42,
+          110
+        ],
+        [
+          331,
+          110
+        ]
+      ],
+      "color": "#e2e8f0"
+    },
+    {
+      "type": "text",
+      "text": "0.5",
+      "x": 36,
+      "y": 110,
+      "color": "#64748b",
+      "align": "right",
+      "font": "11px sans-serif"
+    },
+    {
+      "type": "line",
+      "points": [
+        [
+          42,
+          24
+        ],
+        [
+          331,
+          24
+        ]
+      ],
+      "color": "#e2e8f0"
+    },
+    {
+      "type": "text",
+      "text": "1.0",
+      "x": 36,
+      "y": 24,
+      "color": "#64748b",
+      "align": "right",
+      "font": "11px sans-serif"
+    },
+    {
+      "type": "text",
+      "text": "分钟",
+      "x": 2,
+      "y": 10,
+      "color": "#64748b",
+      "align": "left",
+      "font": "11px sans-serif"
+    },
+    {
+      "type": "text",
+      "text": "10-27",
+      "x": 62.64285714285714,
+      "y": 214,
+      "color": "#475569",
+      "align": "center",
+      "font": "11px sans-serif"
+    },
+    {
+      "type": "text",
+      "text": "10-28",
+      "x": 103.92857142857143,
+      "y": 214,
+      "color": "#475569",
+      "align": "center",
+      "font": "11px sans-serif"
+    },
+    {
+      "type": "text",
+      "text": "10-29",
+      "x": 145.21428571428572,
+      "y": 214,
+      "color": "#475569",
+      "align": "center",
+      "font": "11px sans-serif"
+    },
+    {
+      "type": "text",
+      "text": "10-30",
+      "x": 186.5,
+      "y": 214,
+      "color": "#475569",
+      "align": "center",
+      "font": "11px sans-serif"
+    },
+    {
+      "type": "text",
+      "text": "10-31",
+      "x": 227.78571428571428,
+      "y": 214,
+      "color": "#475569",
+      "align": "center",
+      "font": "11px sans-serif"
+    },
+    {
+      "type": "text",
+      "text": "11-01",
+      "x": 269.07142857142856,
+      "y": 214,
+      "color": "#475569",
+      "align": "center",
+      "font": "11px sans-serif"
+    },
+    {
+      "type": "text",
+      "text": "11-02",
+      "x": 310.35714285714283,
+      "y": 214,
+      "color": "#475569",
+      "align": "center",
+      "font": "11px sans-serif"
+    }
+  ]
+}

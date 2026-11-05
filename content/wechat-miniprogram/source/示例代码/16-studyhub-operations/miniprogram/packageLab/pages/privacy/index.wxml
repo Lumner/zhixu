@@ -1,0 +1,7 @@
+<view class="privacy-page"><text class="privacy-title">{{notice.title}}</text><text class="privacy-warning">{{notice.warning}}</text>
+<view wx:for="{{notice.sections}}" wx:key="id" class="privacy-section"><text class="privacy-heading">{{item.title}}</text><text>{{item.body}}</text></view>
+<text class="privacy-heading">微信平台指引</text><text>声明核对状态：{{configured ? '已填写课程配置，仍须真实后台核对' : '未完成，相关读取入口默认停止'}}。</text>
+<button disabled="{{busy}}" bindtap="onOpenContract">查看平台隐私保护指引</button><button disabled="{{busy}}" bindtap="onInspect">主动查询平台隐私状态</button>
+<text class="privacy-status">{{statusText}}</text><text>{{contractName}}</text>
+<button wx:if="{{needAuthorization === true && configured}}" id="privacy-agree" open-type="agreePrivacyAuthorization" bindagreeprivacyauthorization="onAgree" disabled="{{busy}}">阅读后同意平台隐私指引</button>
+<button bindtap="onDecline">本次不继续授权</button><text class="privacy-status">{{message}}</text><text>不同意不触发本次读取。系统相机/相册权限、订阅许可和具体上传仍分别决定；本页不提供伪造的撤回或“一键全删”。</text><button bindtap="onAccount">返回身份与环境页</button></view>

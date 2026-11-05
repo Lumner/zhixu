@@ -1,0 +1,19 @@
+{
+  "pages": [
+    "pages/index/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "渲染器隔离实验"
+  },
+  "renderer": "skyline",
+  "componentFramework": "glass-easel",
+  "lazyCodeLoading": "requiredComponents",
+  "rendererOptions": {
+    "skyline": {
+      "defaultDisplayBlock": true,
+      "defaultContentBox": true,
+      "disableABTest": true
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,7 @@
+{
+  "additionalCollections": ["studyhub_notice_attempts"],
+  "clientPermissions": { "read": false, "write": false },
+  "primaryLookup": "文档 ID：SHA256(APPID、OPENID、UTC+08:00 日期、固定事件类型)",
+  "manualDeployment": true,
+  "note": "原 collections-plan.json 的八集合保留；本章消息另增一集合，合计九个。先应用拒绝客户端直连规则；配置函数调用权限、服务角色和 OpenAPI 权限并真实验收。"
+}

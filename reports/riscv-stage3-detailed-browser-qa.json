@@ -1,0 +1,43 @@
+{
+  "date": "2026-11-05",
+  "course": "computer-organization-riscv",
+  "edition": "detailed-rewrite-stage3",
+  "observations": {
+    "chaptersOpened": [
+      "09",
+      "10",
+      "11",
+      "12"
+    ],
+    "chapter09": "终端命令换行、完整hello、源码链接已呈现。",
+    "chapter10": "详细版17个分节与寄存器追踪内容已呈现。",
+    "chapter11": "详细版20个分节、运算与伪指令内容已呈现。",
+    "chapter12": "窄存储四字节变化表呈现，目录12.12定位成功。",
+    "stage3Exercises": {
+      "questions": 32,
+      "answerSections": 32
+    },
+    "courseOverview": "累计01—12章详细版完成，13—32章待重写；阶段三卡片进入第09章成功。"
+  },
+  "screenshot": "reports/riscv-stage3-detailed.jpg",
+  "archive": {
+    "filesComparedToSource": 91,
+    "allMatched": true,
+    "authorRuntimeExcluded": true
+  },
+  "checks": {
+    "officialRarsScenariosPassed": 40,
+    "rarsInvocations": 27,
+    "independentStage3Programs": 7,
+    "inlineProgramsMatchSource": 4,
+    "siteChecksPassed": 661,
+    "sourceMarkdown": 60,
+    "sourceInternalLinks": 238,
+    "generatedCourseDocuments": 59
+  },
+  "limits": [
+    "网页检查限于选定桌面页面、目录与入口，未逐屏复查全部正文。",
+    "未进行移动端专项检查。",
+    "RARS实际验证为命令行，GUI操作、Ripes与真机未执行。"
+  ]
+}

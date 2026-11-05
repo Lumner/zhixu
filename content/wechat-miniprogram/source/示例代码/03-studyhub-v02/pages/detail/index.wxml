@@ -1,0 +1,21 @@
+<view class="page">
+  <block wx:if="{{status === 'ready'}}">
+    <view class="panel">
+      <text class="title task-title">{{task.title}}</text>
+      <text class="muted">{{meta}}</text>
+      <text class="section-title">{{task.done ? '已完成' : '待完成'}}</text>
+      <text class="description" user-select="{{true}}">{{task.description || '暂无备注'}}</text>
+    </view>
+    <button type="primary" bindtap="onEdit">编辑任务</button>
+    <button class="spaced" bindtap="onToggle">{{task.done ? '恢复待办' : '标记完成'}}</button>
+    <button class="spaced" bindtap="onDelete">删除任务</button>
+  </block>
+  <empty-state wx:elif="{{status === 'missing'}}" title="任务已不存在" message="它可能已被删除，请返回列表确认">
+    <button slot="action" bindtap="onGoList">回到任务列表</button>
+  </empty-state>
+  <empty-state wx:elif="{{status === 'error'}}" title="无法打开任务" message="{{errorMessage}}">
+    <button slot="action" bindtap="onGoList">回到任务列表</button>
+  </empty-state>
+  <text wx:else>正在读取任务……</text>
+  <button class="spaced" bindtap="onBack">返回</button>
+</view>

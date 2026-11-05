@@ -1,0 +1,14 @@
+{
+  "name": "zhixu-tutorial-library",
+  "version": "1.0.0",
+  "private": true,
+  "description": "可扩展的本地计算机教程知识库",
+  "scripts": {
+    "build": "node tools/build.cjs",
+    "start": "node server.cjs",
+    "test": "node tools/check.cjs",
+    "test:extension": "node tools/check-extension.cjs"
+  },
+  "engines": {"node": ">=20"},
+  "devDependencies": {"marked": "15.0.12", "highlight.js": "11.11.1"}
+}

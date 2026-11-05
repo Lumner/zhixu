@@ -1,0 +1,5 @@
+{
+  "*": { "invoke": false },
+  "helloCloud": { "invoke": "auth != null" },
+  "studyhub": { "invoke": "auth != null" }
+}

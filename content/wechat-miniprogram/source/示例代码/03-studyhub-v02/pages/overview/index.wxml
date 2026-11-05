@@ -1,0 +1,18 @@
+<view class="page">
+  <view class="panel">
+    <text class="title">学习概览</text>
+    <text wx:if="{{errorMessage}}" class="error">{{errorMessage}}</text>
+    <block wx:else><text>全部 {{total}} · 已完成 {{completed}} · 待完成 {{remaining}}</text></block>
+    <text class="muted">切回此标签时会重新读取本地任务。</text>
+  </view>
+  <view class="panel">
+    <text class="section-title">组件生命周期实验</text>
+    <text class="muted">这是 10 / 20 秒演示，不保存学习记录。切换标签会停止界面轮询，返回后按结束时间校正；移除组件后重新创建会重置。</text>
+    <view class="actions">
+      <button size="mini" bindtap="onToggleTimer">{{showTimer ? '移除计时组件' : '重新创建组件'}}</button>
+      <button size="mini" bindtap="onChangeDuration">切换时长（{{duration}} 秒）</button>
+    </view>
+    <demo-countdown wx:if="{{showTimer}}" duration="{{duration}}" bind:finish="onFinish" />
+    <text class="muted">本页本次运行收到完成事件：{{finishedCount}} 次</text>
+  </view>
+</view>

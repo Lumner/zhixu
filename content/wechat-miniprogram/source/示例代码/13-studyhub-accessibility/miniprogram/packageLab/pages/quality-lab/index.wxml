@@ -1,0 +1,10 @@
+<view class="page"><text class="title">读取体验与故障实验</text><network-banner />
+<view class="panel"><text class="muted">所有列表均是本地固定数据，不调用云。flaky模式奇数次成功、偶数次失败；慢响应三秒，界面等待期限两秒。</text>
+<view class="actions"><button data-mode="normal" bindtap="onMode">有数据</button><button data-mode="empty" bindtap="onMode">空数据</button><button data-mode="error" bindtap="onMode">读取失败</button><button data-mode="flaky" bindtap="onMode">交替失败</button><button data-mode="slow" bindtap="onMode">慢响应</button><button data-mode="never" bindtap="onMode">不返回</button></view>
+<text>模式：{{mode}}；状态：{{status}}；底层读取次数：{{requests}}</text><button bindtap="onRefresh">手动刷新同一条件</button></view>
+<text wx:if="{{status === 'loading'}}">正在读取……</text><text wx:if="{{status === 'refreshing'}}">正在刷新，下面仍是上一次成功内容。</text>
+<text wx:if="{{stale}}" class="muted">旧结果仅供参考，未将本次刷新失败解释为零数据。</text>
+<feedback-panel feedback="{{feedback}}" bind:action="onFeedback" />
+<view wx:if="{{status === 'empty'}}" class="panel"><text>本次读取成功，确实没有结果。</text><button data-mode="normal" bindtap="onMode">切回有数据</button></view>
+<view class="panel" wx:for="{{items}}" wx:key="id"><text>{{item.title}}</text></view>
+<view class="panel"><text class="muted">超时或页面失效，只结束本轮界面等待，不代表真实云调用被取消。重复点同一在途条件会合并等待；不同条件让旧响应失效。</text><button bindtap="onCompose">打开需要真实身份的任务草稿表单</button></view></view>

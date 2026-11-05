@@ -1,0 +1,62 @@
+{
+  "date": "2026-11-04",
+  "courseId": "digital-logic",
+  "revision": "detailed-rewrite-stage-01",
+  "completedChapters": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "chapterCharacters": {
+    "01-从电压到比特.md": 5208,
+    "02-二进制与编码.md": 5996,
+    "03-补码与有限位宽运算.md": 5620,
+    "04-逻辑门与布尔代数.md": 5533,
+    "05-从需求到真值表.md": 5746,
+    "06-卡诺图与组合逻辑边界.md": 5260
+  },
+  "pendingChapterNotices": 26,
+  "practiceQuestions": 20,
+  "workedSolutionGroups": 4,
+  "localSvgDiagrams": 3,
+  "sourceLinksChecked": 129,
+  "mathAndLogicExamplesChecked": 35,
+  "siteChecks": {
+    "date": "2026-11-04",
+    "checks": 643,
+    "courses": 4,
+    "chapters": 136,
+    "documents": 309,
+    "localDocumentAndFileLinks": 582,
+    "diagrams": 25,
+    "browserQA": false
+  },
+  "browserQa": {
+    "passed": true,
+    "checks": [
+      "course overview states only 01–06 rewritten",
+      "chapter 01 detailed text and loaded signal diagram",
+      "chapter 02 loaded bit-weight diagram",
+      "chapter 06 nineteen sections and readable vertical groups diagram",
+      "practice page contains question 20 and worked solutions",
+      "chapter 07 retains explicit pending notice",
+      "search 位权卡片法 opens chapter 02 section 2.5"
+    ]
+  },
+  "screenshots": [
+    "reports/screenshots/digital-logic-detailed-stage1.jpg",
+    "reports/screenshots/digital-logic-detailed-kmap.jpg"
+  ],
+  "archive": {
+    "crcPassed": true,
+    "matchesCurrentSource": true,
+    "sourceFiles": 98,
+    "bytes": 155841,
+    "sha256": "99872f81ad280b01fa79e1b4ec34493a5a91a29f129677b757231e2765fe34dc"
+  },
+  "hdlValidation": "本批未修改HDL；30份设计与测试文件已与上次ZIP逐字节比较，未重复运行旧仿真。",
+  "nextBatch": "07–12: SystemVerilog detailed introduction"
+}

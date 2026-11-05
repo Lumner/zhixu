@@ -1,0 +1,28 @@
+<view class="page">
+  <text class="title">专注计时</text><text class="muted">后台继续计时；需要休息时请主动暂停。返回后会重新核对云端。</text>
+  <view class="panel clock-panel">
+    <text class="state">{{label}}</text><text class="countdown">{{countdown}}</text>
+    <text>累计计时{{session && session.state === 'running' ? '（显示估算）' : ''}}：{{elapsed}}</text>
+    <text wx:if="{{session}}" class="muted">{{session.taskTitle || '未关联任务'}}{{session.isDemo ? ' · 实验会话' : ''}}</text>
+    <text wx:if="{{awaiting}}" class="muted">显示已到零，等待云端确认本轮结果。</text>
+    <text wx:if="{{!synced}}" class="muted">当前显示尚待核对，操作暂不可用。</text>
+  </view>
+  <text class="error">{{errorMessage}}</text>
+  <text wx:if="{{pendingCount}}" class="error">有 {{pendingCount}} 条专注操作待核对，请先处理原指令。</text>
+  <button disabled="{{busy || loading}}" loading="{{loading}}" bindtap="onSync">核对当前专注</button>
+  <block wx:if="{{session && (session.state === 'running' || session.state === 'paused')}}">
+    <button wx:if="{{session.state === 'running'}}" disabled="{{!canWrite || busy}}" bindtap="onPause">暂停</button>
+    <button wx:else disabled="{{!canWrite || busy}}" bindtap="onResume">继续</button>
+    <button disabled="{{!canWrite || busy}}" bindtap="onStop">提前结束</button>
+  </block>
+  <view wx:else class="panel">
+    <picker range="{{durations}}" value="{{durationIndex}}" disabled="{{busy}}" bindchange="onDuration"><view class="picker">下一轮：{{durations[durationIndex]}}</view></picker>
+    <text class="muted">{{taskId ? '下一轮关联：' + taskTitle : '可从任务详情选择要专注的任务'}}</text>
+    <button wx:if="{{taskId}}" disabled="{{busy}}" bindtap="onClearTask">解除下一轮任务关联</button>
+    <button type="primary" disabled="{{!canWrite || busy}}" loading="{{busy}}" bindtap="onStart">开始新一轮</button>
+  </view>
+  <view class="panel"><text>此页计时中保持屏幕常亮</text><switch checked="{{keepAwake}}" bindchange="onScreen" /><text class="muted">{{screenMessage}}</text></view>
+  <button bindtap="onHistory">专注记录</button><button bindtap="onPending">待处理与结果核对</button>
+  <button bindtap="onLab">本地五秒计时练习</button>
+  <text class="muted">计时记录表示按约定累计的时间，不验证实际注意力。10 秒选项用于实验。</text>
+</view>

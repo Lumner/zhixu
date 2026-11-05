@@ -1,0 +1,14 @@
+.card {
+  margin: 48rpx 32rpx;
+  padding: 40rpx;
+  background: #ffffff;
+  border-radius: 24rpx;
+}
+.title, .hint, .count {
+  display: block;
+  text-align: center;
+}
+.title { font-size: 40rpx; font-weight: bold; }
+.hint { margin-top: 32rpx; color: #64748b; }
+.count { margin: 24rpx 0; font-size: 96rpx; color: #16794b; }
+button { margin-top: 24rpx; }

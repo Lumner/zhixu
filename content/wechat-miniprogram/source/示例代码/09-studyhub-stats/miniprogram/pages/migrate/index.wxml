@@ -1,0 +1,14 @@
+<view class="page">
+  <text class="title">先预览，再手动导入</text>
+  <text class="muted">同一 AppID 在本设备的旧缓存可读取；另一个测试 AppID 的缓存不会自动出现。全新设备没有旧缓存属于正常情况。</text>
+  <button disabled="{{busy}}" bindtap="onPreview">读取快照并核对当前账号</button>
+  <text class="error">{{errorMessage}}</text>
+  <view wx:if="{{ready}}" class="panel">
+    <text class="muted">目标：{{owner}}</text><text>来源：{{sourceKey}}，{{count}} 条</text>
+    <button disabled="{{busy}}" bindtap="onBackup">复制原始快照备份</button>
+    <text wx:for="{{titles}}" wx:key="id" class="task-row">{{item.id}}：{{item.title}}</text>
+    <button type="primary" disabled="{{busy || !count}}" loading="{{busy}}" bindtap="onRun">确认归属后逐条导入</button>
+    <text>本次已确认 {{completed}} / {{count}} 条</text>
+  </view>
+  <button bindtap="onPending">查看待处理记录</button>
+</view>

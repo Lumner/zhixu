@@ -1,0 +1,11 @@
+<view class="lab-page">
+<text class="lab-title">兼容与适配核对</text>
+<text class="lab-note">只读取允许的应用/窗口信息，不申请系统权限，不读取设备ID、型号或私人内容。缺失字段保持未知。配置不证明实际运行能力。</text>
+<button bindtap="onRefresh">重新读取当前环境</button><button bindtap="onMissingDemo">观察缺失能力的固定模拟</button>
+<text class="lab-note">窗口监听：{{watchStatus}}。不支持监听时可手动刷新。</text><text class="lab-note">{{versionText}}</text>
+<text class="lab-report" selectable="{{true}}">{{reportText}}</text><text class="lab-report" selectable="{{true}}">{{note}}</text>
+<text class="lab-title">实验配色的静态计算</text><text class="lab-note">以下仅比较不透明颜色值。4.5:1是课程普通文本设计目标，不是整个应用已经通过无障碍认证。</text>
+<view wx:for="{{palette}}" wx:key="key" class="palette-row"><text>{{item.theme}} / {{item.name}}：{{item.ratioText}}:1，{{item.meetsTeachingTarget ? '达到本项设计目标' : '需调整'}}</text></view>
+<button bindtap="onAccessibility">进入可访问表单与大字实验</button>
+<text class="lab-note">Skyline隔离工程位于本示例的renderer-probe目录，需单独导入。主项目继续WebView。不要把入口开关当成编译兼容方案。</text>
+</view>

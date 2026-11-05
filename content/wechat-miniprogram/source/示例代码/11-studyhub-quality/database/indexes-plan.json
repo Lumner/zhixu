@@ -1,0 +1,13 @@
+{
+  "note": "这是手动建索引的教学计划，不是平台自动部署配置。仅传统文档型数据库。",
+  "collection": "studyhub_tasks",
+  "indexes": [
+    { "name": "owner_id_page", "fields": [
+      { "name": "ownerAppId", "order": "asc" }, { "name": "ownerId", "order": "asc" }, { "name": "_id", "order": "asc" }
+    ] },
+    { "name": "owner_done_id_page", "fields": [
+      { "name": "ownerAppId", "order": "asc" }, { "name": "ownerId", "order": "asc" },
+      { "name": "done", "order": "asc" }, { "name": "_id", "order": "asc" }
+    ] }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "pages": ["pages/tasks/index", "pages/account/index", "pages/detail/index", "pages/editor/index", "pages/gallery/index", "pages/pending/index", "pages/migrate/index"],
+  "window": { "navigationBarTitleText": "学伴 · 云同步", "navigationBarBackgroundColor": "#f4f7fb", "navigationBarTextStyle": "black" },
+  "tabBar": { "color": "#64748b", "selectedColor": "#16794b", "backgroundColor": "#ffffff",
+    "list": [{ "pagePath": "pages/tasks/index", "text": "云端任务" }, { "pagePath": "pages/account/index", "text": "身份与环境" }] },
+  "renderer": "webview", "sitemapLocation": "sitemap.json"
+}

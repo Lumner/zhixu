@@ -1,0 +1,7 @@
+{
+  "appid": "touristappid",
+  "compileType": "miniprogram",
+  "projectname": "hello-counter",
+  "miniprogramRoot": "./",
+  "setting": { "es6": true }
+}

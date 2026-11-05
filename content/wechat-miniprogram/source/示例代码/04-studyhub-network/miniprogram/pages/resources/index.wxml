@@ -1,0 +1,41 @@
+<view class="page">
+  <view class="panel">
+    <text class="title">网络资源实验</text>
+    <text class="muted">先运行本地教学服务。资源来自网络，学习任务仍保存在本设备。</text>
+    <input class="input" value="{{keyword}}" maxlength="80" placeholder="搜索，例如 WXML、HTTP、Promise" bindinput="onKeyword" />
+    <picker range="{{categories}}" range-key="label" value="{{categoryIndex}}" bindchange="onCategory">
+      <view class="picker">分类：{{categories[categoryIndex].label}}</view>
+    </picker>
+    <picker range="{{modes}}" range-key="label" value="{{modeIndex}}" bindchange="onMode">
+      <view class="picker">实验模式：{{modes[modeIndex].label}}</view>
+    </picker>
+    <text class="muted">搜索防抖 300ms；GET 最多自动重试 1 次；支持页面下拉刷新。</text>
+  </view>
+  <view wx:if="{{fromCache}}" class="notice">正在显示 30 秒内的第一页缓存，请留意网络更新状态。</view>
+  <view wx:if="{{refreshing}}" class="notice">正在更新第一页……</view>
+  <view wx:if="{{error && items.length > 0}}" class="panel">
+    <text class="error">更新失败，保留已有内容：{{error}}</text>
+    <button size="mini" bindtap="onRetry">重试更新</button>
+  </view>
+  <empty-state wx:if="{{status === 'loading'}}" title="正在加载" message="正在等待资源接口" />
+  <empty-state wx:elif="{{status === 'error'}}" title="读取失败" message="{{error}}">
+    <button slot="action" bindtap="onRetry">重试</button>
+  </empty-state>
+  <empty-state wx:elif="{{status === 'empty'}}" title="没有匹配资源" message="调整关键词或分类再试" />
+  <text wx:elif="{{status === 'idle'}}" class="muted">输入后稍候开始搜索。</text>
+  <view class="panel" wx:for="{{items}}" wx:key="id">
+    <text class="section-title">{{item.title}}</text>
+    <text class="muted">{{item.category}} · 建议 {{item.minutes}} 分钟</text>
+    <text class="summary">{{item.summary}}</text>
+    <button size="mini" data-id="{{item.id}}" bindtap="onAddTask">加入学习任务</button>
+  </view>
+  <view wx:if="{{items.length > 0}}" class="panel">
+    <text wx:if="{{moreError}}" class="error">加载下一页失败：{{moreError}}</text>
+    <text wx:if="{{refreshing}}" class="muted">正在校正第一页，暂不加载下一页。</text>
+    <button wx:elif="{{hasMore}}" loading="{{loadingMore}}" disabled="{{loadingMore || refreshing}}" bindtap="onMore">
+      {{loadingMore ? '正在加载' : moreError ? '重试下一页' : '加载更多'}}
+    </button>
+    <text wx:elif="{{error}}" class="muted">第一页更新未完成，请先重试更新。</text>
+    <text wx:else class="muted">已经到底了，共显示 {{items.length}} 项。</text>
+  </view>
+</view>

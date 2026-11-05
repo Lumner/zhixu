@@ -1,0 +1,33 @@
+<view class="page">
+  <text class="title">{{editing ? '编辑任务' : '新建任务'}}</text>
+  <text wx:if="{{formError}}" class="error">{{formError}}</text>
+  <view wx:if="{{saved}}" class="panel"><text>已经保存。如未自动返回，请点击下面的返回按钮。</text></view>
+  <form wx:elif="{{!blocked}}" bindsubmit="onSubmit">
+    <view class="panel spaced">
+      <text class="section-title">标题</text>
+      <input class="input" name="title" value="{{title}}" maxlength="40" data-field="title"
+        placeholder="输入学习目标" bindinput="onTextInput" />
+      <text class="muted">{{title.length}} / 40</text>
+      <text class="section-title">备注</text>
+      <textarea class="textarea" name="description" value="{{description}}" maxlength="1000"
+        data-field="description" placeholder="补充具体步骤" bindinput="onTextInput" />
+      <text class="section-title">分类</text>
+      <picker range="{{categories}}" range-key="label" value="{{categoryIndex}}" bindchange="onCategory">
+        <view class="picker">{{categories[categoryIndex].label}}</view>
+      </picker>
+      <text class="section-title">优先级</text>
+      <picker range="{{priorities}}" range-key="label" value="{{priorityIndex}}" bindchange="onPriority">
+        <view class="picker">{{priorities[priorityIndex].label}}</view>
+      </picker>
+      <text class="section-title">截止日期（可选）</text>
+      <picker mode="date" value="{{dueDate}}" start="2000-01-01" end="2099-12-31" bindchange="onDate">
+        <view class="picker">{{dueDate || '点击选择日期'}}</view>
+      </picker>
+      <button size="mini" bindtap="onClearDate">清除日期</button>
+      <view class="switch-row"><text>已经完成</text><switch name="done" checked="{{done}}" bindchange="onDone" /></view>
+    </view>
+    <button type="primary" form-type="submit" loading="{{saving}}" disabled="{{saving}}">保存任务</button>
+  </form>
+  <button class="spaced" bindtap="onBack">{{saved ? '返回' : '取消并返回'}}</button>
+  <text class="muted spaced">本阶段草稿不自动保存；离开未提交的页面会放弃本次修改。</text>
+</view>

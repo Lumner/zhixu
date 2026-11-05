@@ -1,0 +1,130 @@
+{
+  "date": "2026-11-05",
+  "tool": "Icarus Verilog version 11.0 (stable) ()",
+  "languageMode": "-g2012",
+  "passedLanguageExperiments": 6,
+  "detectedInjectedFaults": 3,
+  "vcdSamples": [
+    {
+      "sampleNs": 5,
+      "input": "000",
+      "y": 0
+    },
+    {
+      "sampleNs": 15,
+      "input": "001",
+      "y": 0
+    },
+    {
+      "sampleNs": 25,
+      "input": "010",
+      "y": 0
+    },
+    {
+      "sampleNs": 35,
+      "input": "011",
+      "y": 1
+    },
+    {
+      "sampleNs": 45,
+      "input": "100",
+      "y": 0
+    },
+    {
+      "sampleNs": 55,
+      "input": "101",
+      "y": 1
+    },
+    {
+      "sampleNs": 65,
+      "input": "110",
+      "y": 1
+    },
+    {
+      "sampleNs": 75,
+      "input": "111",
+      "y": 1
+    }
+  ],
+  "results": [
+    {
+      "name": "07-first",
+      "expectedFailure": false,
+      "exitCode": 0,
+      "compileMessages": "",
+      "output": "a=0 b=0 and=0 xor=0\na=0 b=1 and=0 xor=1\na=1 b=0 and=0 xor=1\na=1 b=1 and=1 xor=0\nPASS first: 4 input combinations\n"
+    },
+    {
+      "name": "08-hierarchy",
+      "expectedFailure": false,
+      "exitCode": 0,
+      "compileMessages": "",
+      "output": "PASS hierarchy: two independent instances, 4 directed cases\n"
+    },
+    {
+      "name": "09-values",
+      "expectedFailure": false,
+      "exitCode": 0,
+      "compileMessages": "",
+      "output": "data=a6 swapped=6a zero=0e sign=fe odd=0\nstates: unknown=x undriven=z bit=0\nPASS values: slices, extensions, parity, X/Z and bit default\n"
+    },
+    {
+      "name": "10-operators",
+      "expectedFailure": false,
+      "exitCode": 0,
+      "compileMessages": "",
+      "output": "PASS operators: 4 directed cases, bitwise/logical/reduction, width, signedness, shifts\n"
+    },
+    {
+      "name": "11-comb",
+      "expectedFailure": false,
+      "exitCode": 0,
+      "compileMessages": "",
+      "output": "PASS comb: 4096 input combinations\n"
+    },
+    {
+      "name": "12-majority",
+      "expectedFailure": false,
+      "exitCode": 0,
+      "compileMessages": "",
+      "output": "VCD info: dumpfile majority.vcd opened for output.\nt=10 ns input=000 ones=0 y=0\nt=20 ns input=001 ones=1 y=0\nt=30 ns input=010 ones=1 y=0\nt=40 ns input=011 ones=2 y=1\nt=50 ns input=100 ones=1 y=0\nt=60 ns input=101 ones=2 y=1\nt=70 ns input=110 ones=2 y=1\nt=80 ns input=111 ones=3 y=1\nPASS majority: 8 input combinations\n"
+    },
+    {
+      "name": "mutant-gate-and-to-or",
+      "expectedFailure": true,
+      "exitCode": 1,
+      "compileMessages": "",
+      "output": "a=0 b=0 and=0 xor=0\nFATAL: C:\\Users\\17597\\Desktop\\tutorial\\content\\digital-logic\\source\\����ʵ��\\07-first\\tb.sv:12: AND failed at 01\n       Time: 2000 Scope: tb\n"
+    },
+    {
+      "name": "mutant-missing-combination-assignments",
+      "expectedFailure": true,
+      "exitCode": 1,
+      "compileMessages": "",
+      "output": "FATAL: C:\\Users\\17597\\Desktop\\tutorial\\content\\digital-logic\\source\\����ʵ��\\11-comb\\tb.sv:22: comb a=0 b=0 clear=0 sel=0 op=00\n       Time: 1000 Scope: tb.$ivl_for_loop0.$ivl_for_loop1.$ivl_for_loop2\n"
+    },
+    {
+      "name": "mutant-majority-to-any",
+      "expectedFailure": true,
+      "exitCode": 1,
+      "compileMessages": "",
+      "output": "VCD info: dumpfile majority.vcd opened for output.\nt=10 ns input=000 ones=0 y=0\nFATAL: C:\\Users\\17597\\Desktop\\tutorial\\content\\digital-logic\\source\\����ʵ��\\12-majority\\tb.sv:18: majority input=001 actual=1 expected=0\n       Time: 20000 Scope: tb.$ivl_for_loop0\n"
+    }
+  ],
+  "gtkWaveGuiExecuted": false,
+  "fpgaSynthesisVerified": false,
+  "sourceHashes": {
+    "语言实验\\07-first\\design.sv": "be89a2c32d7123fa02b30339f041f9bfe290f9fe700042e6af88e3a27e84bc89",
+    "语言实验\\07-first\\tb.sv": "2d8ad7b336f27763e750de02e68e9e419ab2ff4b0b2d5e8d7b5bc612de334c5f",
+    "语言实验\\08-hierarchy\\design.sv": "b76586c8da1f8c0bcd0e0d0b5f5114a36d5a769eb8e18f2a07105f158749e659",
+    "语言实验\\08-hierarchy\\tb.sv": "21e45af5570a4b3a64e494a67874d41185c7ed89294a442374f7e109b3f48c20",
+    "语言实验\\09-values\\design.sv": "1870bacfdffc93b5fb06a87e4e3f0caa96a6ec7f29598aff0c63ca6065b9128b",
+    "语言实验\\09-values\\tb.sv": "2224201af6e34ac0b4f256e969e8fe6783c51d58c6eb0101778f70e37bc3449a",
+    "语言实验\\10-operators\\design.sv": "46b6661205f7f6bc0a7eb1972e715e96a57aea61da111bcaa068bc942a19a364",
+    "语言实验\\10-operators\\tb.sv": "89e6346141d0be91bf5f676d77d573709766071d15c5b23ebf832189d0bdab05",
+    "语言实验\\11-comb\\design.sv": "bf9752f7b700f2237c7edd4e031fc59042d662ec47997978386eabf80f39e007",
+    "语言实验\\11-comb\\tb.sv": "ba9e3f13431e3e03c46f50655d81a2f621dd599bba055e67f24bc2c08ee83cbd",
+    "语言实验\\12-majority\\design.sv": "e934fbf5667db93ca1b7cd31e1a556c8542935ee03bb9374e157891c442a0073",
+    "语言实验\\12-majority\\tb.sv": "1ac8c123f91fe5862e2d589c93f6b7e8907ac4b80857a1db99e12dfc993de47d"
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "appid": "touristappid", "compileType": "miniprogram", "projectname": "studyhub-v02",
+  "miniprogramRoot": "./", "setting": { "es6": true }
+}

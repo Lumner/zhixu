@@ -1,0 +1,21 @@
+{
+  "date": "2026-11-05",
+  "courseId": "operating-systems",
+  "edition": "零基础详细版",
+  "batch": 3,
+  "mode": "local HTTP, in-app browser, default desktop viewport, DOM/accessibility",
+  "functionalChecksPassed": true,
+  "checks": [
+    "Course overview explicitly shows 01-10 completed and 11-36 pending",
+    "Third detailed batch worksheet appears in exercise links",
+    "Worksheet opens with ten sections and records=4 total=135 project result",
+    "Chapter 08 loads the detailed notice, twenty sections and pointer relationship diagrams",
+    "Chapter 10 loads twenty-one sections, GDB steps and the Makefile",
+    "No page-level horizontal overflow in DOM measurements for the three tested documents"
+  ],
+  "limits": [
+    "No new screenshot visual verification; screenshot capture was unavailable in the preceding batch",
+    "No mobile viewport test",
+    "No file-mode browser test"
+  ]
+}

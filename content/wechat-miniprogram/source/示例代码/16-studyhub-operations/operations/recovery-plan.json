@@ -1,0 +1,16 @@
+{
+  "mode": "learning-only",
+  "owner": "",
+  "stage": "development",
+  "expectedEnvId": "",
+  "expectedCurrentFingerprint": "",
+  "expectedTargetFingerprint": "",
+  "cloudCompatibility": "unknown",
+  "dataCompatibility": "unknown",
+  "evidence": {
+    "backup": {"status":"pending","checkedAt":"","reference":""},
+    "restoreDrill": {"status":"pending","checkedAt":"","reference":""},
+    "stopWrites": {"status":"pending","checkedAt":"","reference":""},
+    "review": {"status":"pending","checkedAt":"","reference":""}
+  }
+}

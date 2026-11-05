@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-04",
+  "courseId": "operating-systems",
+  "edition": "零基础详细版",
+  "batch": 1,
+  "mode": "local HTTP, in-app browser, desktop",
+  "passed": true,
+  "checks": [
+    "Course overview explicitly states chapters 01-03 are detailed and chapters 04-36 await rewriting",
+    "Course overview exposes the new detailed batch 01 exercise document",
+    "C foundation stage opens the rewritten chapter 03",
+    "Chapter 03 renders 20 sections and 21 code blocks",
+    "Chapter 03 opening explains prerequisites, recommended sessions and learning goals",
+    "Desktop screenshot inspected: chapter body and long section navigation are readable",
+    "Chapter 03 has no page-level horizontal overflow in tested desktop viewport",
+    "Chapter 04 begins with the pending detailed rewrite notice and guide link"
+  ],
+  "limits": [
+    "No new mobile viewport test",
+    "No file-mode browser test",
+    "No nano keystroke automation or fresh WSL installation"
+  ]
+}

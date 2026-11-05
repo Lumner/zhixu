@@ -1,0 +1,83 @@
+{
+  "date": "2026-11-02",
+  "jsonModel": {
+    "fixtureRows": 120,
+    "updates": 40,
+    "baseline": {
+      "strategy": "full",
+      "calls": 40,
+      "updateJsonBytes": 562180,
+      "initialJsonBytes": 14075
+    },
+    "optimized": {
+      "strategy": "path",
+      "calls": 40,
+      "updateJsonBytes": 1070,
+      "initialJsonBytes": 14075
+    },
+    "sameFinalState": true,
+    "dtoJsonBytes": 56195,
+    "viewJsonBytes": 14075,
+    "note": "JSON UTF-8近似数据量；不是原生桥实际字节、帧率、渲染耗时或网络流量。"
+  },
+  "formModel": {
+    "emittedStates": 33,
+    "baselineCalls": 33,
+    "baselineJsonBytes": 125944,
+    "optimized": {
+      "calls": 28,
+      "bytes": 2975,
+      "skipped": 5,
+      "failures": 0
+    },
+    "visibleProjectionEquivalent": true,
+    "note": "实际task-session的固定输入流；比较第30章完整快照发送方式与当前视图适配器。无真实原生渲染计时。"
+  },
+  "packageSources": {
+    "before": {
+      "groups": {
+        "main": {
+          "files": 152,
+          "rawBytes": 203089
+        }
+      },
+      "pageCount": 21,
+      "mainPages": 21,
+      "subpackagePages": 0,
+      "note": "源码树原始字节；不等于开发者工具编译、压缩、上传或微信实际下载包。云函数/server/tools不计入客户端清单。"
+    },
+    "after": {
+      "groups": {
+        "main": {
+          "files": 138,
+          "rawBytes": 197553
+        },
+        "packageLab": {
+          "files": 30,
+          "rawBytes": 60293
+        }
+      },
+      "pageCount": 23,
+      "mainPages": 16,
+      "subpackagePages": 7,
+      "note": "源码树原始字节；不等于开发者工具编译、压缩、上传或微信实际下载包。云函数/server/tools不计入客户端清单。"
+    }
+  },
+  "imageFixtures": [
+    {
+      "name": "small",
+      "width": 160,
+      "height": 120,
+      "pngBytes": 472,
+      "rgba8EstimateBytes": 76800
+    },
+    {
+      "name": "large",
+      "width": 1280,
+      "height": 960,
+      "pngBytes": 30976,
+      "rgba8EstimateBytes": 4915200
+    }
+  ],
+  "nativeWechatMeasured": false
+}

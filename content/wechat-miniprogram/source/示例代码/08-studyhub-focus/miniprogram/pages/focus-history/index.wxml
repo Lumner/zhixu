@@ -1,0 +1,10 @@
+<view class="page">
+  <text class="title">专注记录</text><text class="muted">时间按设备本地显示；按记录 ID 分页，排列不代表开始时间先后。</text>
+  <button disabled="{{loading}}" loading="{{loading}}" bindtap="refresh">重新读取</button><text class="error">{{errorMessage}}</text>
+  <text wx:if="{{!loading && !items.length && !errorMessage}}">还没有专注记录。</text>
+  <view class="panel" wx:for="{{items}}" wx:key="id">
+    <text class="section-title">{{item.taskTitle || '自由专注'}} · {{item.label}}</text><text class="muted">{{item.isDemo ? '实验会话' : '普通会话'}} · 计划 {{item.plannedSeconds}} 秒</text>
+    <text class="time">开始：{{item.startedText}}</text><text class="time">结束：{{item.endedText}}</text><text>有效计时：{{item.effectiveText}}</text>
+  </view>
+  <button wx:if="{{hasMore}}" loading="{{loadingMore}}" disabled="{{loadingMore}}" bindtap="onMore">下一页</button><button bindtap="onFocus">回到专注</button>
+</view>

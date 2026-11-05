@@ -1,0 +1,1 @@
+.image-row { min-height:340rpx; padding:24rpx; margin:24rpx 0; background:#fff; border-radius:16rpx; } .fixture { display:block; width:480rpx; height:360rpx; max-width:100%; background:#e2e8f0; } button { margin:12rpx; }

@@ -1,0 +1,26 @@
+{
+  "kind": "course-source-artifacts",
+  "compiled": false,
+  "deployed": false,
+  "releaseVersion": "0.0.0",
+  "stage": "development",
+  "components": {
+    "client": {
+      "sha256": "a9f12c1f21f0292e4feeb23e5f541febeb6046fa2d6ee33d2b076ab996172bfb",
+      "files": 197,
+      "bytes": 295227
+    },
+    "cloud": {
+      "sha256": "cb2be59c89bd468029dde1a46f0d6f97cfc70098cdf1fcf5aed513effab0eb39",
+      "files": 21,
+      "bytes": 57751
+    },
+    "controls": {
+      "sha256": "c0ff98b8cb091fa32581d49ee434ba57191f5b3a99e5384bfc92a0ebebff9fb1",
+      "files": 7,
+      "bytes": 2909
+    }
+  },
+  "fingerprint": "77a3dd6f7e773861d851431668a1e4d893950cf17362b2ccc85b37314ad5273b",
+  "scope": "客户端、云函数及规则计划源码；不是微信编译包、部署证明、签名或数据备份。"
+}

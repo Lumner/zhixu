@@ -1,0 +1,32 @@
+[
+  {
+    "file": "05-逻辑门与布尔代数.md",
+    "beforeCharacters": 1453,
+    "afterCharacters": 6132
+  },
+  {
+    "file": "06-组合电路加法器与ALU.md",
+    "beforeCharacters": 1576,
+    "afterCharacters": 5374
+  },
+  {
+    "file": "07-时序电路寄存器与时钟.md",
+    "beforeCharacters": 1405,
+    "afterCharacters": 5721
+  },
+  {
+    "file": "08-整数乘除与浮点数.md",
+    "beforeCharacters": 1469,
+    "afterCharacters": 7714
+  },
+  {
+    "file": "第二阶段-练习与参考答案.md",
+    "beforeCharacters": 658,
+    "afterCharacters": 5350
+  },
+  {
+    "file": "第二阶段-学习记录与验收清单.md",
+    "beforeCharacters": 0,
+    "afterCharacters": 2621
+  }
+]

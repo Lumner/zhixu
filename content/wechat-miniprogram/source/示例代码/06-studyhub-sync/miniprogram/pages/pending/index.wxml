@@ -1,0 +1,19 @@
+<view class="page">
+  <text class="title">待处理操作与冲突草稿</text>
+  <text class="muted">pending 表示结果未确认，可用原编号重试；blocked 表示业务拒绝，需核对。网络恢复后由你手动重试。</text>
+  <text class="error">{{errorMessage}}</text>
+  <button disabled="{{busy}}" bindtap="refresh">刷新</button>
+  <view class="panel" wx:for="{{items}}" wx:key="opId">
+    <text>{{item.action}} · {{item.label}}</text><text class="muted">{{item.opId}} · {{item.state}}</text>
+    <text class="error">{{item.errorMessage}}</text>
+    <button wx:if="{{item.state === 'pending'}}" data-id="{{item.opId}}" disabled="{{busy}}" bindtap="onRetry">使用原编号重试</button>
+    <button wx:if="{{item.errorCode === 'CONFLICT' && item.action === 'update'}}" data-id="{{item.opId}}" disabled="{{busy}}" bindtap="onCompare">比较草稿与云端</button>
+    <button data-id="{{item.opId}}" disabled="{{busy}}" bindtap="onCopy">复制草稿备份</button>
+    <button wx:if="{{item.state === 'blocked'}}" data-id="{{item.opId}}" disabled="{{busy}}" bindtap="onDiscard">放弃被拒绝的草稿</button>
+  </view>
+  <view wx:if="{{conflictId}}" class="panel">
+    <text>本地保留的六个字段：</text><text class="code">{{localText}}</text>
+    <text>云端最新六个字段：</text><text class="code">{{cloudText}}</text>
+    <button type="primary" disabled="{{busy}}" bindtap="onRebase">核对后重新提交保留草稿</button>
+  </view>
+</view>

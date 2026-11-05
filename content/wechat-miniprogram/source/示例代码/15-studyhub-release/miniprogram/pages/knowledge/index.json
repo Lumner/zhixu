@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "私人知识库",
+  "usingComponents": {
+    "feedback-panel": "/components/feedback-panel/index",
+    "network-banner": "/components/network-banner/index"
+  }
+}

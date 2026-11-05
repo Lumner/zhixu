@@ -1,0 +1,5 @@
+.operations-page{padding:20px 16px;padding-bottom:calc(24px + env(safe-area-inset-bottom));background:#f4f7fb;color:#17212b;font-size:18px;line-height:1.6;}
+text{display:block;overflow-wrap:anywhere;white-space:normal;}
+.title{font-size:26px;font-weight:bold;}.heading{font-size:21px;font-weight:bold;margin-top:20px;}
+button{min-height:48px;height:auto;white-space:normal;margin:12px 0;font-size:18px;}
+.row{padding:12px;margin-top:10px;background:#fff;border:1px solid #64748b;border-radius:8px;}

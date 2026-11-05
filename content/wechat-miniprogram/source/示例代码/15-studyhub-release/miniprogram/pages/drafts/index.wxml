@@ -1,0 +1,6 @@
+<view class="page"><text class="title">任务草稿管理</text><text class="muted">每次先在线确认当前身份；最多六份。缓存损坏会明确报错，不自动清空。封存指令只从原表单核对。</text>
+<text wx:if="{{status === 'loading'}}">正在确认身份……</text><text wx:if="{{status === 'empty'}}">当前身份没有任务草稿。</text>
+<feedback-panel feedback="{{feedback}}" bind:action="onFeedback" /><button disabled="{{busy}}" bindtap="refresh">重新核对</button>
+<view class="panel" wx:for="{{items}}" wx:key="slot"><text class="section-title">{{item.title}}</text><text class="muted">{{item.phase === 'sealed' ? '已封存的原提交' : '尚未提交的输入'}} · 修订{{item.revision}}</text>
+<button data-slot="{{item.slot}}" bindtap="onOpen">打开原表单核对</button><button data-slot="{{item.slot}}" bindtap="onCopy">主动复制这份输入</button>
+<button wx:if="{{item.phase === 'editing'}}" data-slot="{{item.slot}}" disabled="{{busy}}" bindtap="onDiscard">删除这份未提交草稿</button></view></view>

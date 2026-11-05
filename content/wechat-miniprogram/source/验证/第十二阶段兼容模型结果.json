@@ -1,0 +1,166 @@
+{
+  "date": "2026-11-02",
+  "project": "13-studyhub-accessibility",
+  "kind": "fixedNodeModel",
+  "versionCases": [
+    {
+      "left": "2.10.0",
+      "right": "2.9.9",
+      "result": 1
+    },
+    {
+      "left": "2.20",
+      "right": "2.20.0",
+      "result": 0
+    },
+    {
+      "left": "unknown",
+      "right": "2.20.1",
+      "result": null
+    }
+  ],
+  "missingCapabilities": {
+    "app": {
+      "SDKVersion": "未知",
+      "version": "未知",
+      "language": "未知",
+      "fontSizeSetting": null,
+      "fontSizeScaleFactor": null
+    },
+    "window": {
+      "windowWidth": null,
+      "windowHeight": null,
+      "screenWidth": null,
+      "screenHeight": null,
+      "pixelRatio": null,
+      "statusBarHeight": null,
+      "bottomInsetEstimate": null
+    },
+    "renderer": "未知",
+    "capabilities": [
+      {
+        "name": "getWindowInfo",
+        "callable": false,
+        "declared": "missing"
+      },
+      {
+        "name": "getAppBaseInfo",
+        "callable": false,
+        "declared": "missing"
+      },
+      {
+        "name": "chooseMedia",
+        "callable": false,
+        "declared": "missing"
+      },
+      {
+        "name": "chooseImage",
+        "callable": false,
+        "declared": "missing"
+      },
+      {
+        "name": "getPerformance",
+        "callable": false,
+        "declared": "missing"
+      }
+    ],
+    "warnings": [
+      "getAppBaseInfo:missing",
+      "getWindowInfo:missing"
+    ]
+  },
+  "palette": [
+    {
+      "key": "light_正文",
+      "theme": "light",
+      "name": "正文",
+      "fg": "#1f2937",
+      "bg": "#ffffff",
+      "ratio": 14.67911847763172,
+      "meetsTeachingTarget": true
+    },
+    {
+      "key": "light_辅助文字",
+      "theme": "light",
+      "name": "辅助文字",
+      "fg": "#475569",
+      "bg": "#ffffff",
+      "ratio": 7.577663953533317,
+      "meetsTeachingTarget": true
+    },
+    {
+      "key": "light_错误",
+      "theme": "light",
+      "name": "错误",
+      "fg": "#b42318",
+      "bg": "#ffffff",
+      "ratio": 6.57428861557707,
+      "meetsTeachingTarget": true
+    },
+    {
+      "key": "light_主按钮",
+      "theme": "light",
+      "name": "主按钮",
+      "fg": "#ffffff",
+      "bg": "#125b3a",
+      "ratio": 8.129289762321452,
+      "meetsTeachingTarget": true
+    },
+    {
+      "key": "dark_正文",
+      "theme": "dark",
+      "name": "正文",
+      "fg": "#f9fafb",
+      "bg": "#111827",
+      "ratio": 16.97538624440406,
+      "meetsTeachingTarget": true
+    },
+    {
+      "key": "dark_辅助文字",
+      "theme": "dark",
+      "name": "辅助文字",
+      "fg": "#cbd5e1",
+      "bg": "#111827",
+      "ratio": 11.948333368856327,
+      "meetsTeachingTarget": true
+    },
+    {
+      "key": "dark_错误",
+      "theme": "dark",
+      "name": "错误",
+      "fg": "#fca5a5",
+      "bg": "#111827",
+      "ratio": 9.346689666859199,
+      "meetsTeachingTarget": true
+    },
+    {
+      "key": "dark_主按钮",
+      "theme": "dark",
+      "name": "主按钮",
+      "fg": "#052e16",
+      "bg": "#86efac",
+      "ratio": 10.615837047353068,
+      "meetsTeachingTarget": true
+    }
+  ],
+  "clientSource": {
+    "groups": {
+      "main": {
+        "files": 141,
+        "rawBytes": 204457
+      },
+      "packageLab": {
+        "files": 38,
+        "rawBytes": 70311
+      }
+    },
+    "pageCount": 25,
+    "mainPages": 16,
+    "subpackagePages": 9,
+    "note": "源码树原始字节；不等于开发者工具编译、压缩、上传或微信实际下载包。云函数/server/tools不计入客户端清单。"
+  },
+  "realWechat": false,
+  "screenReaderVerified": false,
+  "skylineCompiled": false,
+  "note": "固定Node模型，不代表当前手机环境。配色为不透明颜色计算，源码为原始字节；不是整应用无障碍合规、原生截图或实际编译包。"
+}

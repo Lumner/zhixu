@@ -1,0 +1,23 @@
+{
+  "kind": "local-recovery-review",
+  "decision": "blocked",
+  "canExecute": false,
+  "remoteVerified": false,
+  "dataRestored": false,
+  "errors": [
+    "TARGET_INVALID",
+    "LEARNING_ONLY",
+    "OWNER_MISSING",
+    "ENV_UNCONFIRMED",
+    "CURRENT_CHANGED",
+    "TARGET_UNCONFIRMED",
+    "CLOUD_COMPATIBILITY_UNKNOWN",
+    "DATA_COMPATIBILITY_UNKNOWN",
+    "EVIDENCE_PENDING:backup",
+    "EVIDENCE_PENDING:restoreDrill",
+    "EVIDENCE_PENDING:stopWrites",
+    "EVIDENCE_PENDING:review"
+  ],
+  "checkedAt": "2026-11-03",
+  "note": "仅核对本地登记。未验证材料真实性、停止写入、真实备份或兼容性；不部署、不删数据、不发送消息。"
+}

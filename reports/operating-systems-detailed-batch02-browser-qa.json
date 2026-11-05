@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-05",
+  "courseId": "operating-systems",
+  "edition": "零基础详细版",
+  "batch": 2,
+  "mode": "local HTTP, in-app browser, default desktop viewport",
+  "functionalChecksPassed": true,
+  "checks": [
+    "Course overview states chapters 01-07 are detailed and 08-36 await rewriting",
+    "Course overview exposes detailed batch 02 worksheet",
+    "Worksheet link opens the correct document with nine sections",
+    "Worksheet renders the project output days=7 active=5 total=170 max=60",
+    "Chapter 07 loads with the detailed edition notice and nineteen sections",
+    "Chapter 07 renders nine code blocks and the 30-byte complete-line protocol",
+    "No page-level horizontal overflow in DOM measurements for tested documents"
+  ],
+  "screenshotVerification": "unavailable: screenshot API failed after navigation; no claim of completed visual inspection",
+  "limits": [
+    "No mobile viewport test",
+    "No file-mode browser test",
+    "No new editor keystroke automation"
+  ]
+}

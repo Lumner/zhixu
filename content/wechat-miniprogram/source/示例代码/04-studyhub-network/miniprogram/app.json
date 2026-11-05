@@ -1,0 +1,35 @@
+{
+  "pages": [
+    "pages/tasks/index",
+    "pages/overview/index",
+    "pages/detail/index",
+    "pages/editor/index",
+    "pages/resources/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "学伴 · 网络实验",
+    "navigationBarBackgroundColor": "#f4f7fb",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#64748b",
+    "selectedColor": "#16794b",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/tasks/index",
+        "text": "任务"
+      },
+      {
+        "pagePath": "pages/overview/index",
+        "text": "概览"
+      },
+      {
+        "pagePath": "pages/resources/index",
+        "text": "资源"
+      }
+    ]
+  },
+  "renderer": "webview",
+  "sitemapLocation": "sitemap.json"
+}

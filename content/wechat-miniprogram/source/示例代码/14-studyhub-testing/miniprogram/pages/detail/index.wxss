@@ -1,0 +1,2 @@
+.description { display: block; white-space: pre-wrap; word-break: break-all; margin: 24rpx 0; }
+.title { word-break: break-all; }

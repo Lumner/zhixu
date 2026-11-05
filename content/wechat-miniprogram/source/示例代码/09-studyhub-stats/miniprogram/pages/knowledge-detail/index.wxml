@@ -1,0 +1,17 @@
+<view class="page">
+  <text wx:if="{{status === 'loading'}}">正在读取……</text><text class="error">{{errorMessage}}</text>
+  <block wx:if="{{status === 'ready' && note}}">
+    <text class="title">{{note.title}}</text><text class="muted">{{note.kind === 'note' ? '学习笔记' : '资源收藏'}} · 版本 {{note.version}}</text>
+    <text class="muted">标签：{{note.tags}}</text>
+    <view class="panel"><rich-text nodes="{{nodes}}" /></view>
+    <view wx:if="{{note.url}}" class="panel"><text class="url">{{note.url}}</text><button bindtap="onCopyLink">复制资源网址</button></view>
+    <view class="panel" wx:if="{{note.assetIds.length}}">
+      <text>关联图片</text><button wx:for="{{note.assetIds}}" wx:key="*this" data-id="{{item}}" disabled="{{busy}}" bindtap="onPreview">预览图片 {{index + 1}}</button>
+    </view>
+    <button wx:if="{{note.taskId}}" bindtap="onTask">查看关联任务</button>
+    <view class="actions"><button disabled="{{busy}}" bindtap="onStar">{{note.favorite ? '取消星标' : '加星标'}}</button><button disabled="{{busy}}" bindtap="onEdit">编辑</button></view>
+    <button disabled="{{busy}}" bindtap="onRemove">删除此内容</button>
+  </block>
+  <button disabled="{{busy}}" wx:if="{{status === 'error'}}" bindtap="refresh">重新读取</button>
+  <button bindtap="onPending">待处理与冲突草稿</button><button bindtap="onBack">返回</button>
+</view>

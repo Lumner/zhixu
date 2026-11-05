@@ -1,0 +1,125 @@
+{
+  "id": "digital-logic",
+  "title": "数字逻辑：从零到 SystemVerilog 实践",
+  "shortTitle": "数字逻辑与 SystemVerilog",
+  "category": "systems",
+  "summary": "零基础详细版已重写01–16章：从数字基础、SystemVerilog到组合电路，逐步推导选路、算术标志、参数与独立验证；17–32章待继续重写。",
+  "level": "零基础",
+  "duration": "前三阶段约52–79小时（含练习）",
+  "status": "ongoing",
+  "updatedAt": "2026-11-05",
+  "tags": [
+    "数字电路",
+    "SystemVerilog",
+    "仿真验证",
+    "FPGA入门"
+  ],
+  "source": "source",
+  "download": "downloads/digital-logic-systemverilog.zip",
+  "stats": {
+    "chapters": 32,
+    "examples": 25
+  },
+  "groups": [
+    {
+      "id": "bits",
+      "name": "数字世界的基础",
+      "range": [
+        1,
+        6
+      ],
+      "summary": "详细版已更新：从电压与比特开始，逐步推导进制、补码、逻辑门、真值表和卡诺图。"
+    },
+    {
+      "id": "language",
+      "name": "SystemVerilog 从第一行开始",
+      "range": [
+        7,
+        12
+      ],
+      "summary": "详细版已更新：从保存文件开始，逐行解释模块、信号与组合逻辑，配六组实际仿真实验。"
+    },
+    {
+      "id": "combinational",
+      "name": "组合电路与模块化设计",
+      "range": [
+        13,
+        16
+      ],
+      "summary": "详细版已更新：从功能表推导选路、算术与参数化，配四组实验、独立整数参考与故障定位。"
+    },
+    {
+      "id": "sequential",
+      "name": "时钟、状态与存储",
+      "range": [
+        17,
+        21
+      ],
+      "summary": "待详细重写：触发器、复位、使能、计数、PWM、移位与存储器。"
+    },
+    {
+      "id": "control",
+      "name": "状态机、缓冲与串行通信",
+      "range": [
+        22,
+        25
+      ],
+      "summary": "待详细重写：FSM、握手、同步 FIFO 与 UART 发送器。"
+    },
+    {
+      "id": "hardware",
+      "name": "从仿真走向 FPGA",
+      "range": [
+        26,
+        28
+      ],
+      "summary": "待详细重写：同步、消抖、综合、引脚约束与静态时序。"
+    },
+    {
+      "id": "capstone",
+      "name": "验证与综合项目",
+      "range": [
+        29,
+        32
+      ],
+      "summary": "待详细重写：参考模型、计时器、回归测试与工程交付。"
+    }
+  ],
+  "cover": {
+    "eyebrow": "DIGITAL LOGIC / SYSTEMVERILOG",
+    "lines": [
+      "数字逻辑",
+      "从 0 到电路设计"
+    ],
+    "icon": "layers"
+  },
+  "revision": {
+    "edition": "detailed-rewrite",
+    "completedChapters": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "nextChapters": [
+      17,
+      18,
+      19,
+      20,
+      21
+    ],
+    "note": "第17–32章为原简版，待按零基础详细标准重写。"
+  }
+}

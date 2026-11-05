@@ -1,0 +1,146 @@
+{
+  "kind": "local-release-readiness",
+  "localChecksPass": false,
+  "readyForPublicRelease": false,
+  "externalVerification": "notPerformed",
+  "errors": [
+    {
+      "code": "VERSION_MISSING",
+      "message": "填写课程约定的数字三段版本；这不是平台所有场景的格式定义。"
+    },
+    {
+      "code": "APPID_MISMATCH",
+      "message": "项目AppID须填写并与本次目标逐字核对。"
+    },
+    {
+      "code": "ENV_MISMATCH",
+      "message": "云环境须填写并与本次目标逐字核对。"
+    },
+    {
+      "code": "PRIVACY_SETUP",
+      "message": "运营者、联系方式、指引版本与人工核对标志未齐备。"
+    },
+    {
+      "code": "TEACHING_AUDIENCE",
+      "message": "当前计划仍为学习版本，未作为生产候选核对。"
+    },
+    {
+      "code": "FINGERPRINT_MISMATCH",
+      "message": "计划中的客户端/云函数摘要与当前输入不一致或未填写。"
+    },
+    {
+      "code": "EVIDENCE_PENDING:operator-account-category",
+      "message": "人工证据未齐备：operator-account-category"
+    },
+    {
+      "code": "EVIDENCE_PENDING:filing-applicability",
+      "message": "人工证据未齐备：filing-applicability"
+    },
+    {
+      "code": "EVIDENCE_PENDING:privacy-console",
+      "message": "人工证据未齐备：privacy-console"
+    },
+    {
+      "code": "EVIDENCE_PENDING:retention-and-rights",
+      "message": "人工证据未齐备：retention-and-rights"
+    },
+    {
+      "code": "EVIDENCE_PENDING:cloud-permissions-indexes",
+      "message": "人工证据未齐备：cloud-permissions-indexes"
+    },
+    {
+      "code": "EVIDENCE_PENDING:privacy-device-paths",
+      "message": "人工证据未齐备：privacy-device-paths"
+    },
+    {
+      "code": "EVIDENCE_PENDING:review-materials",
+      "message": "人工证据未齐备：review-materials"
+    },
+    {
+      "code": "EVIDENCE_PENDING:operations-and-rollback",
+      "message": "人工证据未齐备：operations-and-rollback"
+    },
+    {
+      "code": "DATA_LIFECYCLE:identity",
+      "message": "接收方/地域、期限与权利处理待确认：identity"
+    },
+    {
+      "code": "DATA_LIFECYCLE:tasks-notes",
+      "message": "接收方/地域、期限与权利处理待确认：tasks-notes"
+    },
+    {
+      "code": "DATA_LIFECYCLE:focus-stats",
+      "message": "接收方/地域、期限与权利处理待确认：focus-stats"
+    },
+    {
+      "code": "DATA_LIFECYCLE:draft-operations",
+      "message": "接收方/地域、期限与权利处理待确认：draft-operations"
+    },
+    {
+      "code": "DATA_LIFECYCLE:media",
+      "message": "接收方/地域、期限与权利处理待确认：media"
+    },
+    {
+      "code": "DATA_LIFECYCLE:clipboard",
+      "message": "接收方/地域、期限与权利处理待确认：clipboard"
+    },
+    {
+      "code": "DATA_LIFECYCLE:files",
+      "message": "接收方/地域、期限与权利处理待确认：files"
+    },
+    {
+      "code": "DATA_LIFECYCLE:public-share",
+      "message": "接收方/地域、期限与权利处理待确认：public-share"
+    },
+    {
+      "code": "DATA_LIFECYCLE:notice",
+      "message": "接收方/地域、期限与权利处理待确认：notice"
+    },
+    {
+      "code": "DATA_LIFECYCLE:diagnostics",
+      "message": "接收方/地域、期限与权利处理待确认：diagnostics"
+    },
+    {
+      "code": "RUNTIME_STAGE",
+      "message": "发布候选运行配置待核对：RUNTIME_STAGE"
+    },
+    {
+      "code": "RUNTIME_VERSION",
+      "message": "发布候选运行配置待核对：RUNTIME_VERSION"
+    },
+    {
+      "code": "RUNTIME_APP",
+      "message": "发布候选运行配置待核对：RUNTIME_APP"
+    },
+    {
+      "code": "RUNTIME_ENV",
+      "message": "发布候选运行配置待核对：RUNTIME_ENV"
+    }
+  ],
+  "warnings": [
+    {
+      "code": "LIMITED_SCAN",
+      "message": "有限字面调用/密钥特征与材料检查，不是完整数据流分析、后台检测或合规认证。"
+    },
+    {
+      "code": "REMOTE_UNKNOWN",
+      "message": "未读取远端模板、规则、备案、类目、隐私声明和审核状态；人工reference仅为登记，不验证真实性。"
+    }
+  ],
+  "codeFingerprint": "a7a1c8060d00ec4598d4543d18547155ac2dc207ef3e5c60d6b4348679cf6efb",
+  "findings": [
+    {
+      "api": "getClipboardData",
+      "path": "miniprogram/packageLab/pages/platform/index.js"
+    },
+    {
+      "api": "chooseMedia",
+      "path": "miniprogram/services/images.js"
+    },
+    {
+      "api": "chooseMessageFile",
+      "path": "miniprogram/services/report-files.js"
+    }
+  ],
+  "checkedAt": "2026-11-03"
+}

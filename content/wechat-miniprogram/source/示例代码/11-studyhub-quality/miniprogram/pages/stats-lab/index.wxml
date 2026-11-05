@@ -1,0 +1,5 @@
+<view class="page">
+  <text class="title">本地统计练习</text><text class="muted">固定教学数据，不读取你的记录、不写云端。当前：{{example}}。</text>
+  <view class="actions"><button bindtap="onNormal">有记录的例子</button><button bindtap="onEmpty">零数据例子</button></view>
+  <week-report wx:if="{{report}}" report="{{report}}" />
+</view>

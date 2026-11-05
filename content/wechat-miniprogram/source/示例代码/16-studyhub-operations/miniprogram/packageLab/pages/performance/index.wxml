@@ -1,0 +1,10 @@
+<view class="page"><text class="title">先测量，再优化</text><text class="muted">{{readyText}}</text>
+<view class="panel"><text class="section-title">固定JSON模型</text><text class="muted">120行、40次相同更新。只对照JSON近似数据量和最终状态，不给出真机速度结论。</text>
+<button disabled="{{busy}}" bindtap="onModel">生成可重复对照</button><text class="report" selectable="{{true}}">{{modelText}}</text></view>
+<view class="panel"><text class="section-title">在当前微信运行环境实际更新</text><text class="muted">每轮先初始化相同120行，再等待40次更新回调。请分别记录两种顺序，多轮比较；调试器、缓存和手机温度会影响结果。</text>
+<button data-mode="full" disabled="{{busy}}" bindtap="onNative">测量：整体数组更新</button><button data-mode="path" disabled="{{busy}}" bindtap="onNative">测量：单路径更新</button>
+<text class="report" selectable="{{true}}">{{nativeText}}</text></view>
+<view class="panel"><text class="section-title">应用最近公开性能条目</text><text class="muted">开发采样默认关闭，在config/performance.js启用后重启实验。最近40条未按页面筛选，无条目不等于零耗时；不采集URL或用户输入。</text>
+<button disabled="{{busy}}" bindtap="onEntries">读取当前采样缓冲</button><text class="report" selectable="{{true}}">{{entriesText}}</text></view>
+<button disabled="{{busy}}" bindtap="onImages">图片尺寸与原生懒加载实验</button><button disabled="{{busy}}" bindtap="onQuality">读取故障实验（同一分包）</button>
+<view class="row" wx:for="{{benchRows}}" wx:key="id"><text>{{item.done ? '✓' : '○'}} {{item.title}}</text><text class="muted">{{item.meta}}</text></view></view>

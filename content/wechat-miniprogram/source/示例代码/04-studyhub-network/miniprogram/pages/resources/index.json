@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "学伴 · 网络资源实验",
+  "enablePullDownRefresh": true,
+  "onReachBottomDistance": 100,
+  "usingComponents": { "empty-state": "/components/empty-state/index" }
+}

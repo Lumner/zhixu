@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-03",
+  "passed": true,
+  "checks": [
+    "second course discovery",
+    "independent category and cover",
+    "explicit nested chapter order",
+    "relative chapter links",
+    "syntax highlighting",
+    "search indexing",
+    "existing course preservation"
+  ],
+  "temporaryCourseRemoved": true
+}

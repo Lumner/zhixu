@@ -1,0 +1,22 @@
+# 模板；放到仓库根.github/workflows后才会生效。本交付未在GitHub执行。
+name: studyhub-local-tests
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  local:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: 微信小程序从零开发教程/示例代码/14-studyhub-testing
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24.15.0'
+          package-manager-cache: false
+      - run: node tests/run.cjs --coverage
+      - run: node tests/check-failure-path.cjs
+      - run: node tests/mutations.cjs

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 390" role="img" aria-labelledby="t d">
+<title id="t">四位二进制1101怎样表示13</title><desc id="d">四个位权从左到右为8、4、2、1。选中8、4、1，不选2，得到8加4加0加1等于13。</desc>
+<rect width="1000" height="390" rx="16" fill="#f7faf8"/>
+<g font-family="Microsoft YaHei,Arial,sans-serif" fill="#203a31">
+<text x="30" y="45" font-size="26" font-weight="bold">每个 1 都是在选中一张位权卡</text>
+<g stroke="#94b69e" stroke-width="2"><rect x="30" y="97" width="205" height="207" rx="14" fill="#dfefdf"/><rect x="275" y="97" width="205" height="207" rx="14" fill="#dfefdf"/><rect x="520" y="97" width="205" height="207" rx="14" fill="#fff"/><rect x="765" y="97" width="205" height="207" rx="14" fill="#dfefdf"/></g>
+<g text-anchor="middle" font-size="20"><text x="132" y="82">位编号 3</text><text x="377" y="82">位编号 2</text><text x="622" y="82">位编号 1</text><text x="867" y="82">位编号 0</text>
+<text x="132" y="139">位权 8</text><text x="377" y="139">位权 4</text><text x="622" y="139">位权 2</text><text x="867" y="139">位权 1</text>
+<g font-size="60" font-weight="bold"><text x="132" y="218">1</text><text x="377" y="218">1</text><text x="622" y="218" fill="#77857d">0</text><text x="867" y="218">1</text></g>
+<text x="132" y="275">贡献 8</text><text x="377" y="275">贡献 4</text><text x="622" y="275">贡献 0</text><text x="867" y="275">贡献 1</text></g>
+<text x="500" y="355" text-anchor="middle" font-size="29" font-weight="bold">1101₂ = 8 + 4 + 0 + 1 = 13₁₀</text></g>
+</svg>

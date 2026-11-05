@@ -1,0 +1,53 @@
+{
+  "date": "2026-11-03",
+  "sourceDigest": "2ef7ba2d47f3834dc274f72fa11751033444a7e961341a452c72fa4183c7f636",
+  "expectedNegativePaths": 3,
+  "checked": [
+    {
+      "kind": "failure",
+      "exitCode": 1,
+      "counts": {
+        "tests": 1,
+        "failed": 1,
+        "passed": 0,
+        "cancelled": 0,
+        "skipped": 0,
+        "todo": 0,
+        "topLevel": 1,
+        "suites": 0
+      },
+      "acceptedAsPass": false
+    },
+    {
+      "kind": "skipped",
+      "exitCode": 0,
+      "counts": {
+        "tests": 1,
+        "failed": 0,
+        "passed": 0,
+        "cancelled": 0,
+        "skipped": 1,
+        "todo": 0,
+        "topLevel": 1,
+        "suites": 0
+      },
+      "acceptedAsPass": false
+    },
+    {
+      "kind": "timeout",
+      "exitCode": 1,
+      "counts": {
+        "tests": 1,
+        "failed": 0,
+        "passed": 0,
+        "cancelled": 1,
+        "skipped": 0,
+        "todo": 0,
+        "topLevel": 1,
+        "suites": 0
+      },
+      "acceptedAsPass": false
+    }
+  ],
+  "notBusinessTestCount": true
+}

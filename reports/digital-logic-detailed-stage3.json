@@ -1,0 +1,111 @@
+{
+  "date": "2026-11-05",
+  "courseId": "digital-logic",
+  "revision": "detailed-rewrite-stage-03",
+  "newDetailedChapters": [
+    13,
+    14,
+    15,
+    16
+  ],
+  "completedDetailedChapters": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ],
+  "pendingDetailedChapters": [
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32
+  ],
+  "newCombinationalLabs": 4,
+  "matchingMainCompleteCodeBlocks": 8,
+  "extraParityModuleCompileExitCode": 0,
+  "newPracticeQuestionsWithWorkedSolutions": 24,
+  "newSvgDiagrams": 2,
+  "sourceLinksChecked": 231,
+  "simulation": {
+    "passedLabs": 4,
+    "rejectedFaultCopies": 7,
+    "extendedAluBinaryInputCases": 2048,
+    "routingSelectedDataCases": 2048,
+    "parameterDataCases": 16644,
+    "parameterAddressChecks": 18,
+    "parameterDigitCases": 16,
+    "vcdSamples": 8,
+    "gtkWaveGuiExecuted": false,
+    "fpgaSynthesisVerified": false
+  },
+  "siteChecks": {
+    "date": "2026-11-05",
+    "checks": 669,
+    "courses": 4,
+    "chapters": 136,
+    "documents": 322,
+    "localDocumentAndFileLinks": 754,
+    "diagrams": 27,
+    "browserQA": false
+  },
+  "browserQa": {
+    "passed": true,
+    "checks": [
+      "Course overview states 01-16 detailed, 17-32 pending, 25 example groups",
+      "Chapter 13 complete programs and syntax highlighting render",
+      "Chapter 13 routing diagram is loaded and visually legible",
+      "Chapter 14 carry-chain diagram is loaded and visually legible",
+      "Chapter 15 parameter boundary table and full examples render",
+      "Chapter 16 operation table keeps all 6 columns, including OR expression",
+      "Exercise link opens the page containing question 24 and worked solutions",
+      "Stage practice page contains an acceptance evidence table",
+      "Chapter 17 explicitly retains the pending detailed rewrite notice",
+      "Search opens chapter 14 section 14.4 from its matching result"
+    ]
+  },
+  "screenshots": [
+    "reports/screenshots/digital-logic-detailed-stage3-routing.jpg",
+    "reports/screenshots/digital-logic-detailed-stage3-carry.jpg",
+    "reports/screenshots/digital-logic-detailed-stage3-parameter.jpg"
+  ],
+  "archive": {
+    "crcPassed": true,
+    "currentSourceAndManifestMatches": 133,
+    "files": 136,
+    "svFiles": 50,
+    "svgFiles": 7,
+    "bytes": 255013,
+    "sha256": "ee3fb968f8c5215b541db56fe0eb54276519310b9d45e9c27e5aafce00d50eb4"
+  },
+  "nextDetailedBatch": [
+    17,
+    18,
+    19,
+    20,
+    21
+  ]
+}

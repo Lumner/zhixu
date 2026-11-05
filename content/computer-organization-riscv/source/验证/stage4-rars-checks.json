@@ -1,0 +1,872 @@
+{
+  "date": "2026-11-05",
+  "edition": "detailed-rewrite-stage4",
+  "passed": 58,
+  "independentPrograms": 9,
+  "rarsInvocations": 57,
+  "scope": "Official RARS v1.6 CLI, RV32, Default; GUI, physical timing and Ripes not executed",
+  "javaVersion": "openjdk version \"17.0.21\" 2026-10-20\r\nOpenJDK Runtime Environment Temurin-17.0.21+9 (build 17.0.21+9)\r\nOpenJDK 64-Bit Server VM Temurin-17.0.21+9 (build 17.0.21+9, mixed mode, sharing)",
+  "rarsSha256": "780f730eb457b1ba609e968accc2c8b77d8f92c3d9dbf30cc7fdb3cfb14e8c24",
+  "sourceFiles": [
+    {
+      "name": "abi-lab.s",
+      "sha256": "9786bd085b2b4c7a259cb9e9af64f0f1a390628033679e24895e4e78a124a37b"
+    },
+    {
+      "name": "bounded-strlen.s",
+      "sha256": "740f98db4bd11902f045a381b65c400b8a2ddd6acf6944c2ba2e46a86a2b7df8"
+    },
+    {
+      "name": "branch-demo.s",
+      "sha256": "ee49a7b365ffaf5801fabaa1239f920de79780c4b895cd1020749e1eb894846f"
+    },
+    {
+      "name": "functions.s",
+      "sha256": "874488d305a2576368d8170b9aafdc3972d6c5539eec84c7295015fc0932251f"
+    },
+    {
+      "name": "range-sum.s",
+      "sha256": "d7d24e0a43f2f98a822ba5b3df947b9f4ee8cad290dd40b3d25d1932e2fd012a"
+    },
+    {
+      "name": "stats.s",
+      "sha256": "08e484e924745018578bd4043f4c66f205bea8a1bc23f665d895ba253bfebe07"
+    },
+    {
+      "name": "strlen.s",
+      "sha256": "f4ea5236839f8155c283e99539ffb9c65855b177c055c2d7335072fdd0f9289f"
+    },
+    {
+      "name": "sum-index.s",
+      "sha256": "42c42e4569189c50a4a26eec22ea14e145b9794018c8796d2e8b89ccaf2b225b"
+    },
+    {
+      "name": "sum.s",
+      "sha256": "87564d8ef56f3cf5ad0f5501e798cbe8d0c8e697db02789b4164b49705b72d7b"
+    }
+  ],
+  "scenarios": [
+    "Fixed official RARS v1.6 artifact",
+    "branch choice -3",
+    "branch choice 0",
+    "branch choice 5",
+    "range sum N=0",
+    "range sum N=1",
+    "range sum N=5",
+    "range sum N=10",
+    "range sum N=1000",
+    "pointer sum length 0",
+    "index sum length 0",
+    "pointer sum length 1",
+    "index sum length 1",
+    "pointer sum length 3",
+    "index sum length 3",
+    "pointer sum length 5",
+    "index sum length 5",
+    "zero-terminated byte scan ascii",
+    "zero-terminated byte scan empty",
+    "zero-terminated byte scan digit-zero",
+    "zero-terminated byte scan embedded-zero",
+    "zero-terminated byte scan utf8-bytes",
+    "bounded byte scan no-nul",
+    "bounded byte scan last-nul",
+    "bounded byte scan middle-nul",
+    "bounded byte scan first-nul",
+    "bounded byte scan nul-outside-limit",
+    "bounded byte scan zero-capacity",
+    "nested function input 5",
+    "nested function input -3",
+    "nested function input 0",
+    "nested function input 7",
+    "caller and callee preservation input 5",
+    "caller and callee preservation input -3",
+    "stats complete demonstration output and saved tuple",
+    "stats tuple, preserved s registers and sp: default",
+    "stats tuple, preserved s registers and sp: all-negative",
+    "stats tuple, preserved s registers and sp: single-zero",
+    "stats tuple, preserved s registers and sp: single-positive",
+    "stats tuple, preserved s registers and sp: interior-zero",
+    "stats tuple, preserved s registers and sp: positive-wrap",
+    "stats tuple, preserved s registers and sp: negative-wrap",
+    "stats tuple, preserved s registers and sp: empty",
+    "stats tuple, preserved s registers and sp: equal-max",
+    "stats tuple, preserved s registers and sp: decreasing",
+    "stats tuple, preserved s registers and sp: mixed",
+    "stats nonpositive length 0 accepts unreadable base without load",
+    "stats nonpositive length -1 accepts unreadable base without load",
+    "fault detected: missing branch join jump",
+    "fault detected: range loses inclusive endpoint",
+    "fault detected: range missing progress reaches finite step limit",
+    "fault detected: caller fails to restore live t0",
+    "fault detected: callee fails to restore s0 despite correct printed result",
+    "fault detected: nested call loses outer return address",
+    "fault detected: zero initial max breaks all-negative input",
+    "fault detected: zero incorrectly counted positive",
+    "fault detected: repeated first array element still terminates",
+    "functions machine table exposes two jal links and ret expansion"
+  ],
+  "runs": [
+    {
+      "name": "branch--3",
+      "file": "source/示例代码/04-rars-programs/branch-demo.s",
+      "options": [
+        "a0"
+      ],
+      "exitCode": 0,
+      "stdout": "0",
+      "stderr": "\nProgram terminated by calling exit\r\na0\t0x00000000\r\n"
+    },
+    {
+      "name": "branch-0",
+      "file": ".cache/stage4-run/branch-0.s",
+      "options": [
+        "a0"
+      ],
+      "exitCode": 0,
+      "stdout": "0",
+      "stderr": "\nProgram terminated by calling exit\r\na0\t0x00000000\r\n"
+    },
+    {
+      "name": "branch-5",
+      "file": ".cache/stage4-run/branch-5.s",
+      "options": [
+        "a0"
+      ],
+      "exitCode": 0,
+      "stdout": "5",
+      "stderr": "\nProgram terminated by calling exit\r\na0\t0x00000005\r\n"
+    },
+    {
+      "name": "range-0",
+      "file": ".cache/stage4-run/range-0.s",
+      "options": [
+        "t0",
+        "t2"
+      ],
+      "exitCode": 0,
+      "stdout": "0",
+      "stderr": "\nProgram terminated by calling exit\r\nt0\t0x00000001\r\nt2\t0x00000000\r\n"
+    },
+    {
+      "name": "range-1",
+      "file": ".cache/stage4-run/range-1.s",
+      "options": [
+        "t0",
+        "t2"
+      ],
+      "exitCode": 0,
+      "stdout": "1",
+      "stderr": "\nProgram terminated by calling exit\r\nt0\t0x00000002\r\nt2\t0x00000001\r\n"
+    },
+    {
+      "name": "range-5",
+      "file": "source/示例代码/04-rars-programs/range-sum.s",
+      "options": [
+        "t0",
+        "t2"
+      ],
+      "exitCode": 0,
+      "stdout": "15",
+      "stderr": "\nProgram terminated by calling exit\r\nt0\t0x00000006\r\nt2\t0x0000000f\r\n"
+    },
+    {
+      "name": "range-10",
+      "file": ".cache/stage4-run/range-10.s",
+      "options": [
+        "t0",
+        "t2"
+      ],
+      "exitCode": 0,
+      "stdout": "55",
+      "stderr": "\nProgram terminated by calling exit\r\nt0\t0x0000000b\r\nt2\t0x00000037\r\n"
+    },
+    {
+      "name": "range-1000",
+      "file": ".cache/stage4-run/range-1000.s",
+      "options": [
+        "t0",
+        "t2"
+      ],
+      "exitCode": 0,
+      "stdout": "500500",
+      "stderr": "\nProgram terminated by calling exit\r\nt0\t0x000003e9\r\nt2\t0x0007a314\r\n"
+    },
+    {
+      "name": "sum-0",
+      "file": ".cache/stage4-run/sum-0.s",
+      "options": [
+        "t0",
+        "t1",
+        "t2"
+      ],
+      "exitCode": 0,
+      "stdout": "0",
+      "stderr": "\nProgram terminated by calling exit\r\nt0\t0x10010000\r\nt1\t0x00000000\r\nt2\t0x00000000\r\n"
+    },
+    {
+      "name": "sum-index-0",
+      "file": ".cache/stage4-run/sum-index-0.s",
+      "options": [
+        "t0",
+        "t1",
+        "t3"
+      ],
+      "exitCode": 0,
+      "stdout": "0",
+      "stderr": "\nProgram terminated by calling exit\r\nt0\t0x10010000\r\nt1\t0x00000000\r\nt3\t0x00000000\r\n"
+    },
+    {
+      "name": "sum-1",
+      "file": ".cache/stage4-run/sum-1.s",
+      "options": [
+        "t0",
+        "t1",
+        "t2"
+      ],
+      "exitCode": 0,
+      "stdout": "3",
+      "stderr": "\nProgram terminated by calling exit\r\nt0\t0x10010004\r\nt1\t0x00000000\r\nt2\t0x00000003\r\n"
+    },
+    {
+      "name": "sum-index-1",
+      "file": ".cache/stage4-run/sum-index-1.s",
+      "options": [
+        "t0",
+        "t1",
+        "t3"
+      ],
+      "exitCode": 0,
+      "stdout": "3",
+      "stderr": "\nProgram terminated by calling exit\r\nt0\t0x10010000\r\nt1\t0x00000001\r\nt3\t0x00000003\r\n"
+    },
+    {
+      "name": "sum-3",
+      "file": ".cache/stage4-run/sum-3.s",
+      "options": [
+        "t0",
+        "t1",
+        "t2"
+      ],
+      "exitCode": 0,
+      "stdout": "8",
+      "stderr": "\nProgram terminated by calling exit\r\nt0\t0x1001000c\r\nt1\t0x00000000\r\nt2\t0x00000008\r\n"
+    },
+    {
+      "name": "sum-index-3",
+      "file": ".cache/stage4-run/sum-index-3.s",
+      "options": [
+        "t0",
+        "t1",
+        "t3"
+      ],
+      "exitCode": 0,
+      "stdout": "8",
+      "stderr": "\nProgram terminated by calling exit\r\nt0\t0x10010000\r\nt1\t0x00000003\r\nt3\t0x00000008\r\n"
+    },
+    {
+      "name": "sum-5",
+      "file": "source/示例代码/04-rars-programs/sum.s",
+      "options": [
+        "t0",
+        "t1",
+        "t2"
+      ],
+      "exitCode": 0,
+      "stdout": "12",
+      "stderr": "\nProgram terminated by calling exit\r\nt0\t0x10010014\r\nt1\t0x00000000\r\nt2\t0x0000000c\r\n"
+    },
+    {
+      "name": "sum-index-5",
+      "file": "source/示例代码/04-rars-programs/sum-index.s",
+      "options": [
+        "t0",
+        "t1",
+        "t3"
+      ],
+      "exitCode": 0,
+      "stdout": "12",
+      "stderr": "\nProgram terminated by calling exit\r\nt0\t0x10010000\r\nt1\t0x00000005\r\nt3\t0x0000000c\r\n"
+    },
+    {
+      "name": "strlen-ascii",
+      "file": "source/示例代码/04-rars-programs/strlen.s",
+      "options": [],
+      "exitCode": 0,
+      "stdout": "6",
+      "stderr": "\nProgram terminated by calling exit\r\n"
+    },
+    {
+      "name": "strlen-empty",
+      "file": ".cache/stage4-run/strlen-empty.s",
+      "options": [],
+      "exitCode": 0,
+      "stdout": "0",
+      "stderr": "\nProgram terminated by calling exit\r\n"
+    },
+    {
+      "name": "strlen-digit-zero",
+      "file": ".cache/stage4-run/strlen-digit-zero.s",
+      "options": [],
+      "exitCode": 0,
+      "stdout": "1",
+      "stderr": "\nProgram terminated by calling exit\r\n"
+    },
+    {
+      "name": "strlen-embedded-zero",
+      "file": ".cache/stage4-run/strlen-embedded-zero.s",
+      "options": [],
+      "exitCode": 0,
+      "stdout": "1",
+      "stderr": "\nProgram terminated by calling exit\r\n"
+    },
+    {
+      "name": "strlen-utf8-bytes",
+      "file": ".cache/stage4-run/strlen-utf8-bytes.s",
+      "options": [],
+      "exitCode": 0,
+      "stdout": "3",
+      "stderr": "\nProgram terminated by calling exit\r\n"
+    },
+    {
+      "name": "bounded-no-nul",
+      "file": "source/示例代码/04-rars-programs/bounded-strlen.s",
+      "options": [],
+      "exitCode": 0,
+      "stdout": "3\n0\n",
+      "stderr": "\nProgram terminated by calling exit\r\n"
+    },
+    {
+      "name": "bounded-last-nul",
+      "file": ".cache/stage4-run/bounded-last-nul.s",
+      "options": [],
+      "exitCode": 0,
+      "stdout": "2\n1\n",
+      "stderr": "\nProgram terminated by calling exit\r\n"
+    },
+    {
+      "name": "bounded-middle-nul",
+      "file": ".cache/stage4-run/bounded-middle-nul.s",
+      "options": [],
+      "exitCode": 0,
+      "stdout": "1\n1\n",
+      "stderr": "\nProgram terminated by calling exit\r\n"
+    },
+    {
+      "name": "bounded-first-nul",
+      "file": ".cache/stage4-run/bounded-first-nul.s",
+      "options": [],
+      "exitCode": 0,
+      "stdout": "0\n1\n",
+      "stderr": "\nProgram terminated by calling exit\r\n"
+    },
+    {
+      "name": "bounded-nul-outside-limit",
+      "file": ".cache/stage4-run/bounded-nul-outside-limit.s",
+      "options": [],
+      "exitCode": 0,
+      "stdout": "2\n0\n",
+      "stderr": "\nProgram terminated by calling exit\r\n"
+    },
+    {
+      "name": "bounded-zero-capacity",
+      "file": ".cache/stage4-run/bounded-zero-capacity.s",
+      "options": [],
+      "exitCode": 0,
+      "stdout": "0\n0\n",
+      "stderr": "\nProgram terminated by calling exit\r\n"
+    },
+    {
+      "name": "functions-5",
+      "file": "source/示例代码/04-rars-programs/functions.s",
+      "options": [
+        "a0",
+        "sp"
+      ],
+      "exitCode": 0,
+      "stdout": "11",
+      "stderr": "\nProgram terminated by calling exit\r\na0\t0x0000000b\r\nsp\t0x7fffeff0\r\n"
+    },
+    {
+      "name": "functions--3",
+      "file": ".cache/stage4-run/functions--3.s",
+      "options": [
+        "a0",
+        "sp"
+      ],
+      "exitCode": 0,
+      "stdout": "-5",
+      "stderr": "\nProgram terminated by calling exit\r\na0\t0xfffffffb\r\nsp\t0x7fffeff0\r\n"
+    },
+    {
+      "name": "functions-0",
+      "file": ".cache/stage4-run/functions-0.s",
+      "options": [
+        "a0",
+        "sp"
+      ],
+      "exitCode": 0,
+      "stdout": "1",
+      "stderr": "\nProgram terminated by calling exit\r\na0\t0x00000001\r\nsp\t0x7fffeff0\r\n"
+    },
+    {
+      "name": "functions-7",
+      "file": ".cache/stage4-run/functions-7.s",
+      "options": [
+        "a0",
+        "sp"
+      ],
+      "exitCode": 0,
+      "stdout": "15",
+      "stderr": "\nProgram terminated by calling exit\r\na0\t0x0000000f\r\nsp\t0x7fffeff0\r\n"
+    },
+    {
+      "name": "abi-5",
+      "file": "source/示例代码/04-rars-programs/abi-lab.s",
+      "options": [
+        "a0",
+        "t0",
+        "s0",
+        "s1",
+        "sp"
+      ],
+      "exitCode": 0,
+      "stdout": "101",
+      "stderr": "\nProgram terminated by calling exit\r\na0\t0x00000065\r\nt0\t0x0000005a\r\ns0\t0x0000007b\r\ns1\t0x7fffeff0\r\nsp\t0x7fffeff0\r\n"
+    },
+    {
+      "name": "abi--3",
+      "file": ".cache/stage4-run/abi--3.s",
+      "options": [
+        "a0",
+        "t0",
+        "s0",
+        "s1",
+        "sp"
+      ],
+      "exitCode": 0,
+      "stdout": "85",
+      "stderr": "\nProgram terminated by calling exit\r\na0\t0x00000055\r\nt0\t0x0000005a\r\ns0\t0x0000007b\r\ns1\t0x7fffeff0\r\nsp\t0x7fffeff0\r\n"
+    },
+    {
+      "name": "stats-main",
+      "file": "source/示例代码/04-rars-programs/stats.s",
+      "options": [
+        "s0",
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "exitCode": 0,
+      "stdout": "12\n7\n3\n",
+      "stderr": "\nProgram terminated by calling exit\r\ns0\t0x0000000c\r\ns1\t0x00000007\r\ns2\t0x00000003\r\ns3\t0x00000001\r\n"
+    },
+    {
+      "name": "stats-default",
+      "file": ".cache/stage4-run/stats-default.s",
+      "options": [
+        "a0",
+        "a1",
+        "a2",
+        "a3",
+        "s0",
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6",
+        "s7",
+        "s8",
+        "s9",
+        "s10",
+        "s11",
+        "sp"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "\nProgram terminated by calling exit\r\na0\t0x0000000c\r\na1\t0x00000007\r\na2\t0x00000003\r\na3\t0x00000001\r\ns0\t0x00000065\r\ns1\t0x00000066\r\ns2\t0x00000067\r\ns3\t0x00000068\r\ns4\t0x00000069\r\ns5\t0x0000006a\r\ns6\t0x0000006b\r\ns7\t0x0000006c\r\ns8\t0x0000006d\r\ns9\t0x0000006e\r\ns10\t0x0000006f\r\ns11\t0x7fffeff0\r\nsp\t0x7fffeff0\r\n"
+    },
+    {
+      "name": "stats-all-negative",
+      "file": ".cache/stage4-run/stats-all-negative.s",
+      "options": [
+        "a0",
+        "a1",
+        "a2",
+        "a3",
+        "s0",
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6",
+        "s7",
+        "s8",
+        "s9",
+        "s10",
+        "s11",
+        "sp"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "\nProgram terminated by calling exit\r\na0\t0xfffffff9\r\na1\t0xfffffffe\r\na2\t0x00000000\r\na3\t0x00000001\r\ns0\t0x00000065\r\ns1\t0x00000066\r\ns2\t0x00000067\r\ns3\t0x00000068\r\ns4\t0x00000069\r\ns5\t0x0000006a\r\ns6\t0x0000006b\r\ns7\t0x0000006c\r\ns8\t0x0000006d\r\ns9\t0x0000006e\r\ns10\t0x0000006f\r\ns11\t0x7fffeff0\r\nsp\t0x7fffeff0\r\n"
+    },
+    {
+      "name": "stats-single-zero",
+      "file": ".cache/stage4-run/stats-single-zero.s",
+      "options": [
+        "a0",
+        "a1",
+        "a2",
+        "a3",
+        "s0",
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6",
+        "s7",
+        "s8",
+        "s9",
+        "s10",
+        "s11",
+        "sp"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "\nProgram terminated by calling exit\r\na0\t0x00000000\r\na1\t0x00000000\r\na2\t0x00000000\r\na3\t0x00000001\r\ns0\t0x00000065\r\ns1\t0x00000066\r\ns2\t0x00000067\r\ns3\t0x00000068\r\ns4\t0x00000069\r\ns5\t0x0000006a\r\ns6\t0x0000006b\r\ns7\t0x0000006c\r\ns8\t0x0000006d\r\ns9\t0x0000006e\r\ns10\t0x0000006f\r\ns11\t0x7fffeff0\r\nsp\t0x7fffeff0\r\n"
+    },
+    {
+      "name": "stats-single-positive",
+      "file": ".cache/stage4-run/stats-single-positive.s",
+      "options": [
+        "a0",
+        "a1",
+        "a2",
+        "a3",
+        "s0",
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6",
+        "s7",
+        "s8",
+        "s9",
+        "s10",
+        "s11",
+        "sp"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "\nProgram terminated by calling exit\r\na0\t0x00000007\r\na1\t0x00000007\r\na2\t0x00000001\r\na3\t0x00000001\r\ns0\t0x00000065\r\ns1\t0x00000066\r\ns2\t0x00000067\r\ns3\t0x00000068\r\ns4\t0x00000069\r\ns5\t0x0000006a\r\ns6\t0x0000006b\r\ns7\t0x0000006c\r\ns8\t0x0000006d\r\ns9\t0x0000006e\r\ns10\t0x0000006f\r\ns11\t0x7fffeff0\r\nsp\t0x7fffeff0\r\n"
+    },
+    {
+      "name": "stats-interior-zero",
+      "file": ".cache/stage4-run/stats-interior-zero.s",
+      "options": [
+        "a0",
+        "a1",
+        "a2",
+        "a3",
+        "s0",
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6",
+        "s7",
+        "s8",
+        "s9",
+        "s10",
+        "s11",
+        "sp"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "\nProgram terminated by calling exit\r\na0\t0x00000007\r\na1\t0x00000004\r\na2\t0x00000002\r\na3\t0x00000001\r\ns0\t0x00000065\r\ns1\t0x00000066\r\ns2\t0x00000067\r\ns3\t0x00000068\r\ns4\t0x00000069\r\ns5\t0x0000006a\r\ns6\t0x0000006b\r\ns7\t0x0000006c\r\ns8\t0x0000006d\r\ns9\t0x0000006e\r\ns10\t0x0000006f\r\ns11\t0x7fffeff0\r\nsp\t0x7fffeff0\r\n"
+    },
+    {
+      "name": "stats-positive-wrap",
+      "file": ".cache/stage4-run/stats-positive-wrap.s",
+      "options": [
+        "a0",
+        "a1",
+        "a2",
+        "a3",
+        "s0",
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6",
+        "s7",
+        "s8",
+        "s9",
+        "s10",
+        "s11",
+        "sp"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "\nProgram terminated by calling exit\r\na0\t0x80000000\r\na1\t0x7fffffff\r\na2\t0x00000002\r\na3\t0x00000001\r\ns0\t0x00000065\r\ns1\t0x00000066\r\ns2\t0x00000067\r\ns3\t0x00000068\r\ns4\t0x00000069\r\ns5\t0x0000006a\r\ns6\t0x0000006b\r\ns7\t0x0000006c\r\ns8\t0x0000006d\r\ns9\t0x0000006e\r\ns10\t0x0000006f\r\ns11\t0x7fffeff0\r\nsp\t0x7fffeff0\r\n"
+    },
+    {
+      "name": "stats-negative-wrap",
+      "file": ".cache/stage4-run/stats-negative-wrap.s",
+      "options": [
+        "a0",
+        "a1",
+        "a2",
+        "a3",
+        "s0",
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6",
+        "s7",
+        "s8",
+        "s9",
+        "s10",
+        "s11",
+        "sp"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "\nProgram terminated by calling exit\r\na0\t0x7fffffff\r\na1\t0xffffffff\r\na2\t0x00000000\r\na3\t0x00000001\r\ns0\t0x00000065\r\ns1\t0x00000066\r\ns2\t0x00000067\r\ns3\t0x00000068\r\ns4\t0x00000069\r\ns5\t0x0000006a\r\ns6\t0x0000006b\r\ns7\t0x0000006c\r\ns8\t0x0000006d\r\ns9\t0x0000006e\r\ns10\t0x0000006f\r\ns11\t0x7fffeff0\r\nsp\t0x7fffeff0\r\n"
+    },
+    {
+      "name": "stats-empty",
+      "file": ".cache/stage4-run/stats-empty.s",
+      "options": [
+        "a0",
+        "a1",
+        "a2",
+        "a3",
+        "s0",
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6",
+        "s7",
+        "s8",
+        "s9",
+        "s10",
+        "s11",
+        "sp"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "\nProgram terminated by calling exit\r\na0\t0x00000000\r\na1\t0x00000000\r\na2\t0x00000000\r\na3\t0x00000000\r\ns0\t0x00000065\r\ns1\t0x00000066\r\ns2\t0x00000067\r\ns3\t0x00000068\r\ns4\t0x00000069\r\ns5\t0x0000006a\r\ns6\t0x0000006b\r\ns7\t0x0000006c\r\ns8\t0x0000006d\r\ns9\t0x0000006e\r\ns10\t0x0000006f\r\ns11\t0x7fffeff0\r\nsp\t0x7fffeff0\r\n"
+    },
+    {
+      "name": "stats-equal-max",
+      "file": ".cache/stage4-run/stats-equal-max.s",
+      "options": [
+        "a0",
+        "a1",
+        "a2",
+        "a3",
+        "s0",
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6",
+        "s7",
+        "s8",
+        "s9",
+        "s10",
+        "s11",
+        "sp"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "\nProgram terminated by calling exit\r\na0\t0x0000000c\r\na1\t0x00000004\r\na2\t0x00000003\r\na3\t0x00000001\r\ns0\t0x00000065\r\ns1\t0x00000066\r\ns2\t0x00000067\r\ns3\t0x00000068\r\ns4\t0x00000069\r\ns5\t0x0000006a\r\ns6\t0x0000006b\r\ns7\t0x0000006c\r\ns8\t0x0000006d\r\ns9\t0x0000006e\r\ns10\t0x0000006f\r\ns11\t0x7fffeff0\r\nsp\t0x7fffeff0\r\n"
+    },
+    {
+      "name": "stats-decreasing",
+      "file": ".cache/stage4-run/stats-decreasing.s",
+      "options": [
+        "a0",
+        "a1",
+        "a2",
+        "a3",
+        "s0",
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6",
+        "s7",
+        "s8",
+        "s9",
+        "s10",
+        "s11",
+        "sp"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "\nProgram terminated by calling exit\r\na0\t0x0000000e\r\na1\t0x00000009\r\na2\t0x00000003\r\na3\t0x00000001\r\ns0\t0x00000065\r\ns1\t0x00000066\r\ns2\t0x00000067\r\ns3\t0x00000068\r\ns4\t0x00000069\r\ns5\t0x0000006a\r\ns6\t0x0000006b\r\ns7\t0x0000006c\r\ns8\t0x0000006d\r\ns9\t0x0000006e\r\ns10\t0x0000006f\r\ns11\t0x7fffeff0\r\nsp\t0x7fffeff0\r\n"
+    },
+    {
+      "name": "stats-mixed",
+      "file": ".cache/stage4-run/stats-mixed.s",
+      "options": [
+        "a0",
+        "a1",
+        "a2",
+        "a3",
+        "s0",
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6",
+        "s7",
+        "s8",
+        "s9",
+        "s10",
+        "s11",
+        "sp"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "\nProgram terminated by calling exit\r\na0\t0x00000003\r\na1\t0x0000000d\r\na2\t0x00000003\r\na3\t0x00000001\r\ns0\t0x00000065\r\ns1\t0x00000066\r\ns2\t0x00000067\r\ns3\t0x00000068\r\ns4\t0x00000069\r\ns5\t0x0000006a\r\ns6\t0x0000006b\r\ns7\t0x0000006c\r\ns8\t0x0000006d\r\ns9\t0x0000006e\r\ns10\t0x0000006f\r\ns11\t0x7fffeff0\r\nsp\t0x7fffeff0\r\n"
+    },
+    {
+      "name": "stats-invalid-base-0",
+      "file": ".cache/stage4-run/stats-invalid-base-0.s",
+      "options": [
+        "a0",
+        "a1",
+        "a2",
+        "a3"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "\nProgram terminated by calling exit\r\na0\t0x00000000\r\na1\t0x00000000\r\na2\t0x00000000\r\na3\t0x00000000\r\n"
+    },
+    {
+      "name": "stats-invalid-base--1",
+      "file": ".cache/stage4-run/stats-invalid-base--1.s",
+      "options": [
+        "a0",
+        "a1",
+        "a2",
+        "a3"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "\nProgram terminated by calling exit\r\na0\t0x00000000\r\na1\t0x00000000\r\na2\t0x00000000\r\na3\t0x00000000\r\n"
+    },
+    {
+      "name": "fault-fallthrough",
+      "file": ".cache/stage4-run/fault-fallthrough.s",
+      "options": [],
+      "exitCode": 0,
+      "stdout": "0",
+      "stderr": "\nProgram terminated by calling exit\r\n"
+    },
+    {
+      "name": "fault-off-by-one",
+      "file": ".cache/stage4-run/fault-off-by-one.s",
+      "options": [],
+      "exitCode": 0,
+      "stdout": "10",
+      "stderr": "\nProgram terminated by calling exit\r\n"
+    },
+    {
+      "name": "fault-no-progress",
+      "file": ".cache/stage4-run/fault-no-progress.s",
+      "options": [],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "\nProgram terminated when maximum step limit 100 reached.\r\n"
+    },
+    {
+      "name": "fault-caller",
+      "file": ".cache/stage4-run/fault-caller.s",
+      "options": [],
+      "exitCode": 0,
+      "stdout": "-88",
+      "stderr": "\nProgram terminated by calling exit\r\n"
+    },
+    {
+      "name": "fault-callee",
+      "file": ".cache/stage4-run/fault-callee.s",
+      "options": [
+        "s0"
+      ],
+      "exitCode": 0,
+      "stdout": "101",
+      "stderr": "\nProgram terminated by calling exit\r\ns0\t0x00000005\r\n"
+    },
+    {
+      "name": "fault-ra",
+      "file": ".cache/stage4-run/fault-ra.s",
+      "options": [],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "\nProgram terminated when maximum step limit 100 reached.\r\n"
+    },
+    {
+      "name": "fault-max",
+      "file": ".cache/stage4-run/fault-max.s",
+      "options": [
+        "a1"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "\nProgram terminated by calling exit\r\na1\t0x00000000\r\n"
+    },
+    {
+      "name": "fault-positive",
+      "file": ".cache/stage4-run/fault-positive.s",
+      "options": [
+        "a2"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "\nProgram terminated by calling exit\r\na2\t0x00000001\r\n"
+    },
+    {
+      "name": "fault-pointer",
+      "file": ".cache/stage4-run/fault-pointer.s",
+      "options": [
+        "a0",
+        "a1",
+        "a2"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "\nProgram terminated by calling exit\r\na0\t0x0000000f\r\na1\t0x00000003\r\na2\t0x00000005\r\n"
+    },
+    {
+      "name": "functions-machine-table",
+      "file": "source/示例代码/04-rars-programs/functions.s",
+      "options": [
+        "a",
+        "dump",
+        ".text",
+        "SegmentWindow",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage4-run\\functions-text.txt"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+<view wx:if="{{feedback}}" class="feedback"><text class="heading">{{feedback.title}}</text><text class="body">{{feedback.message}}</text>
+<text class="code">核对代码：{{feedback.code}}</text><button wx:if="{{feedback.action}}" size="mini" bindtap="onAction">{{feedback.actionText}}</button></view>

@@ -1,0 +1,12 @@
+<view class="accessible-page theme-{{theme}}" style="font-size:{{fontPx}}px">
+<text class="demo-heading">可访问的本地学习清单</text><text class="demo-note">固定练习，不保存私人任务，不写云或缓存；离开后数据可能丢失。大字和深色仅作用于本页，不代表系统字号或全局深色适配。</text>
+<view class="toolbar"><button data-mode="normal" bindtap="onFont">普通字号18px</button><button data-mode="large" bindtap="onFont">大字24px</button><button data-mode="largest" bindtap="onFont">超大字32px</button></view>
+<text class="demo-note">当前字号档：{{fontMode}}。同时测试微信自身大字设置，避免重复放大。</text>
+<view class="toolbar"><button data-theme="light" bindtap="onTheme">本页浅色</button><button data-theme="dark" bindtap="onTheme">本页深色</button></view>
+<form bindsubmit="onSubmit"><text class="field-label">任务标题（必填）</text><text class="demo-note">去除两端空格后1—40个UTF-16代码单元。本例用length，与字形数量可能不同。</text>
+<input class="title-input" aria-label="任务标题，必填，最多40个UTF-16代码单元" value="{{title}}" maxlength="40" focus="{{titleFocus}}" bindblur="onBlur" bindinput="onTitle" confirm-type="done" bindconfirm="onSubmit" placeholder="例如：复习数组" adjust-position="{{true}}" />
+<text wx:if="{{error}}" class="field-error">标题错误：{{error}}</text><button class="primary" form-type="submit">添加本地演示任务</button></form>
+<text class="demo-result">{{result}}</text><text class="demo-summary">{{summary}}</text>
+<checkbox-group bindchange="onChecked"><label wx:for="{{items}}" wx:key="id" class="check-row"><checkbox value="{{item.id}}" checked="{{item.done}}" aria-label="{{item.title + '，' + (item.done ? '已完成' : '待完成')}}" /><view class="check-content"><text>{{item.title}}</text><text class="demo-note">{{item.done ? '已完成' : '待完成'}}</text></view></label></checkbox-group>
+<button bindtap="onReset">重置本地演示</button><text class="demo-note">错误与结果保留可见文字；没有承诺自动朗读。请用VoiceOver/TalkBack核对名称、状态、顺序和错误后焦点，不能仅凭aria属性认定可用。</text>
+</view>

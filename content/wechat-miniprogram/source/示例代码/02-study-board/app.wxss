@@ -1,0 +1,11 @@
+page {
+  background: #f4f7fb;
+  color: #1f2937;
+  font-family: sans-serif;
+  font-size: 28rpx;
+  line-height: 1.5;
+}
+view, text, input, button {
+  box-sizing: border-box;
+}
+button { font-size: 28rpx; }

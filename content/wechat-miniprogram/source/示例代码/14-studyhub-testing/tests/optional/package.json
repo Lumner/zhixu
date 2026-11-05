@@ -1,0 +1,13 @@
+{
+  "name": "studyhub-optional-component-rendering",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "test": "jest --config jest.config.cjs --runInBand"
+  },
+  "devDependencies": {
+    "jest": "29.7.0",
+    "jest-environment-jsdom": "29.7.0",
+    "miniprogram-simulate": "1.6.2"
+  }
+}

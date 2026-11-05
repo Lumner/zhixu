@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-04",
+  "courseId": "digital-logic",
+  "browser": "in-app browser, local HTTP",
+  "passed": true,
+  "checks": [
+    "32 chapters / 7 phases / 15 examples on course overview",
+    "chapter 07 opens with complete SystemVerilog code and highlighting",
+    "in-page table of contents navigates to code section",
+    "search 补码 finds digital-logic chapter 03 and opens it",
+    "download link returns HTTP 200; ZIP CRC passed"
+  ],
+  "screenshots": [
+    "reports/screenshots/digital-logic-course.jpg"
+  ],
+  "limits": [
+    "no new mobile viewport check",
+    "no FPGA synthesis, timing closure, or board validation"
+  ]
+}

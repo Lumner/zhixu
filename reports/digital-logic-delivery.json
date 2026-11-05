@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-04",
+  "courseId": "digital-logic",
+  "chapters": 32,
+  "phases": 7,
+  "examples": 15,
+  "sourceChecksPassed": true,
+  "simulationExamplesPassed": 15,
+  "injectedFaultsDetected": 3,
+  "siteChecks": {
+    "date": "2026-11-04",
+    "checks": 633,
+    "courses": 4,
+    "chapters": 136,
+    "documents": 304,
+    "localDocumentAndFileLinks": 478,
+    "diagrams": 23,
+    "browserQA": false
+  },
+  "buildSafety": {
+    "date": "2026-11-04",
+    "failedBuildPreservesOutput": true,
+    "lockReleased": true,
+    "stagingCleaned": true,
+    "fixtureRemoved": true
+  },
+  "archive": "content\\digital-logic\\downloads\\digital-logic-systemverilog.zip",
+  "archiveBytes": 112637,
+  "archiveSha256": "ad17dba4de35faa00df628736e9813cfdd6cabc1e5a2393ea977f48cb5497158"
+}

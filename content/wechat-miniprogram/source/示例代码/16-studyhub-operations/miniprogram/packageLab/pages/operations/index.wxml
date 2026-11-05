@@ -1,0 +1,13 @@
+<view class="operations-page">
+  <text class="title">日志与维护练习</text>
+  <text>构建阶段：{{stage}}；教学版本：{{version}}</text><text>{{targetText}}</text>
+  <text class="heading">真实调用的本地诊断</text>
+  <text>配置默认关闭，仅内存，不写缓存、不上传。启用状态：{{live.enabled}}；当前条目：{{live.events.length}}；挤出：{{live.dropped}}。</text>
+  <text class="heading">固定故障样本</text>
+  <text>RPC样本：{{sampleSummary.attempts}}；失败：{{sampleSummary.failures}}；超时：{{sampleSummary.timeouts}}；线索：{{sampleSummary.signal}}</text>
+  <text>{{sampleSummary.scope}}</text>
+  <button bindtap="onDrill">生成20条固定样本</button><button bindtap="onRefresh">刷新本地快照</button><button bindtap="onClear">清空本次内存样本</button>
+  <text>{{message}}</text>
+  <view wx:for="{{sample.events}}" wx:key="seq" class="row"><text>{{item.seq}} · {{item.event}} · {{item.action}}</text><text>{{item.code}} · {{item.elapsed}}</text></view>
+  <text>这里不执行真实回退、备份、清理或发送告警；按课程验收表在独立环境核对。</text>
+</view>

@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-05",
+  "edition": "detailed-rewrite-stage2",
+  "chapters": [
+    5,
+    6,
+    7,
+    8
+  ],
+  "passed": 26,
+  "scope": "Paper-example logic, state and numeric models only; no HDL or physical timing validation",
+  "scenarios": [
+    "basic gates all four input rows",
+    "enable expression and explicit wrong-parenthesis counterexample",
+    "majority truth table equals all full-adder carry rows",
+    "De Morgan identities all input rows",
+    "4-bit MUX all 512 input/select combinations",
+    "decoder all four high-active one-hot selections",
+    "full adder sum and carry all 8 rows",
+    "4-bit add and subtract all 512 pairs",
+    "5+3 ripple trace and 3-5 subtraction result",
+    "ALU all 1024 operation/input combinations",
+    "signed subtraction sign alone is not a comparison",
+    "synchronous reset and enable priority",
+    "simultaneous registers and two swaps use old state",
+    "enabled accumulation and fixed width",
+    "clock unit and critical path arithmetic",
+    "setup/hold window and early arrival example",
+    "4-bit unsigned multiplication all 256 input pairs",
+    "binary long division 7936 bounded input pairs",
+    "signed division with truncation toward zero",
+    "binary fraction and fixed-point arithmetic",
+    "binary32 independently known words and signs",
+    "binary32 special exponent cases and subnormals",
+    "rounding 0.1 and large integers",
+    "binary32 non-associative worked example",
+    "bit reinterpretation differs from value conversion",
+    "model rejects invalid bit width and division by zero inputs"
+  ]
+}

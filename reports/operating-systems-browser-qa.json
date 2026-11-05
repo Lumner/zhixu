@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-04",
+  "courseId": "operating-systems",
+  "mode": "local HTTP, in-app browser",
+  "passed": true,
+  "checks": [
+    "Course overview shows 36 chapters, 8 stages and 23 examples",
+    "Course overview displays all 8 stage links and exercise documents",
+    "C introduction stage opens chapter 03",
+    "Chapter 03 displays complete C code, compile instructions and rendered diagram",
+    "Desktop course overview screenshot visually inspected",
+    "Search for 条件变量 returns operating-systems chapter results",
+    "Clicking search result opens chapter 19 at selected section"
+  ],
+  "limits": ["No new mobile viewport test", "No file-mode browser test", "No full browser interaction regression"]
+}

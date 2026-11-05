@@ -1,0 +1,1 @@
+button { margin: 16rpx 0; } .preview { display: block; white-space: pre-wrap; overflow-wrap: anywhere; color: #475569; } progress { margin-top: 20rpx; }

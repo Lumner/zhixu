@@ -1,0 +1,2 @@
+.excerpt { display: block; margin-top: 16rpx; white-space: pre-wrap; word-break: break-all; }
+.tags { display: block; color: #16794b; font-size: 24rpx; margin-top: 12rpx; }

@@ -1,0 +1,21 @@
+<view class="page">
+  <text class="title">私人图片实验</text>
+  <text class="muted">缩略图压缩目标 320px，业务上限 64 KiB；原图不会自动备份。仅支持 PNG/JPEG。</text>
+  <view class="panel">
+    <input class="input" maxlength="40" value="{{caption}}" bindinput="onCaption" placeholder="图片标题" />
+    <button disabled="{{busy}}" bindtap="onChoose">选择并压缩一张图片</button>
+    <image wx:if="{{selectedPath}}" class="thumbnail" mode="aspectFit" src="{{selectedPath}}" />
+    <text wx:if="{{selectedPath}}">压缩后 {{selectedBytes}} 字节</text>
+    <button type="primary" disabled="{{busy || !selectedPath}}" loading="{{busy}}" bindtap="onUpload">保存私人缩略图</button>
+  <button bindtap="onPrivacy">查看数据与隐私说明</button></view>
+  <text class="error" wx:if="{{errorMessage}}">{{errorMessage}}</text>
+  <button disabled="{{busy}}" bindtap="refresh">刷新图片记录</button>
+  <view class="panel" wx:for="{{items}}" wx:key="id">
+    <text>{{item.caption}} · {{item.size}} 字节 · {{item.state}}</text>
+    <button wx:if="{{item.state === 'active'}}" data-id="{{item.id}}" disabled="{{busy}}" bindtap="onPreview">验证归属后预览</button>
+    <button wx:if="{{item.state !== 'deleted'}}" data-id="{{item.id}}" disabled="{{busy}}" bindtap="onRemove">{{item.state === 'deleting' ? '重试清理' : '删除'}}</button>
+  </view>
+  <button wx:if="{{hasMore}}" disabled="{{busy}}" bindtap="onMore">下一页</button>
+  <button bindtap="onPending">查看待处理上传</button>
+  <button bindtap="onClearPreview">清理本设备预览文件</button>
+</view>

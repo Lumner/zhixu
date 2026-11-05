@@ -1,0 +1,7 @@
+page { background:#ffffff; color:#1f2937; }
+.lab-page { box-sizing:border-box; width:100%; max-width:880px; margin:0 auto; padding:20px 16px 32px; padding-bottom:calc(32px + env(safe-area-inset-bottom)); font-size:18px; line-height:1.7; }
+.lab-title { display:block; font-size:24px; font-weight:700; margin:16px 0; }
+.lab-note { display:block; color:#475569; margin:12px 0; }
+.lab-report { display:block; white-space:pre-wrap; word-break:break-all; font-size:16px; }
+button { min-height:48px; height:auto; padding:12px; margin:12px 0; font-size:18px; line-height:1.5; white-space:normal; color:#1f2937; background:#f1f5f9; }
+.palette-row { padding:12px 0; border-bottom:1px solid #cbd5e1; }

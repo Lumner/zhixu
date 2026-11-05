@@ -1,0 +1,7 @@
+{
+  "appid": "touristappid",
+  "compileType": "miniprogram",
+  "projectname": "study-board-local",
+  "miniprogramRoot": "./",
+  "setting": { "es6": true }
+}

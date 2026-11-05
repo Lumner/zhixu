@@ -1,0 +1,5 @@
+.timer { padding: 24rpx; background: #edf7f1; border-radius: 16rpx; }
+.label { display: block; text-align: center; font-size: 64rpx; color: #16794b; }
+.hint { display: block; text-align: center; font-size: 24rpx; color: #64748b; }
+.buttons { display: flex; flex-wrap: wrap; margin-top: 20rpx; }
+button { margin: 0 12rpx 12rpx 0; font-size: 24rpx; }

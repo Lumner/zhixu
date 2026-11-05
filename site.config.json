@@ -1,0 +1,43 @@
+{
+  "name": "知序",
+  "englishName": "TUTORIAL LIBRARY",
+  "description": "把计算机知识，学成自己的能力。",
+  "updatedAt": "2026-11-04",
+  "categories": [
+    {
+      "id": "foundations",
+      "name": "编程与语言",
+      "description": "从语法、数据结构到编程思维",
+      "icon": "code",
+      "color": "blue"
+    },
+    {
+      "id": "frontend",
+      "name": "前端与客户端",
+      "description": "网页、界面与小程序开发",
+      "icon": "window",
+      "color": "green"
+    },
+    {
+      "id": "backend",
+      "name": "后端与数据",
+      "description": "服务、接口、数据库与数据建模",
+      "icon": "database",
+      "color": "amber"
+    },
+    {
+      "id": "systems",
+      "name": "计算机基础",
+      "description": "数字逻辑、计算机组成、操作系统与网络",
+      "icon": "layers",
+      "color": "violet"
+    },
+    {
+      "id": "engineering",
+      "name": "工程与工具",
+      "description": "测试、Git、部署与持续维护",
+      "icon": "tool",
+      "color": "rose"
+    }
+  ]
+}

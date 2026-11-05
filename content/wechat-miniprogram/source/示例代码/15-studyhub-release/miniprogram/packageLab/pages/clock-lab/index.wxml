@@ -1,0 +1,5 @@
+<view class="page">
+  <text class="title">本地五秒练习</text><text class="number">{{left}}</text><text>{{message}}</text>
+  <button bindtap="onStart">重新开始五秒练习</button>
+  <text class="muted">可切换到其他页面再返回，观察按结束时间重算。退出进程会丢失本例状态；这里不创建云端专注记录。</text>
+</view>

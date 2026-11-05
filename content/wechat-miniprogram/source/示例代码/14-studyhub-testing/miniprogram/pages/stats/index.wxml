@@ -1,0 +1,13 @@
+<view class="page">
+  <network-banner />
+  <feedback-panel feedback="{{feedback}}" bind:action="onFeedback" />
+  <text class="title">七天专注统计</text>
+  <text class="muted">默认包含统计时区的今天及前六天，也可选择一个历史截止日。</text>
+  <picker wx:if="{{today}}" mode="date" start="2000-01-01" end="{{today}}" value="{{endDate || today}}" bindchange="onDate"><view class="picker">选择截止日：{{endDate || '跟随今天'}}</view></picker>
+  <view class="actions"><button bindtap="onLatest">最近七天</button><button bindtap="refresh">重新核对</button></view>
+  <text wx:if="{{status === 'loading'}}">正在完整读取本窗口的可统计记录……</text>
+
+  <week-report wx:if="{{status === 'ready'}}" report="{{report}}" />
+  <button class="spaced" bindtap="onHistory">查看专注记录</button><button bindtap="onLab">本地统计与图表练习</button>
+  <text class="muted">超出教学版完整汇总上限时会明确报错；不会将未读完的结果显示为完整合计。</text>
+</view>

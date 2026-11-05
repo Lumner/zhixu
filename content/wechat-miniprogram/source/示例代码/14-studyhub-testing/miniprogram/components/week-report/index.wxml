@@ -1,0 +1,18 @@
+<view wx:if="{{ready}}">
+  <text class="range">{{dateFrom}} — {{dateTo}}</text>
+  <text class="policy">固定 UTC+08:00，整轮有效时长按结束日归属；实验和进行中不计入。</text>
+  <view class="cards">
+    <view class="card"><text class="value">{{presentation.totalMinutes}}</text><text>有效分钟</text><text class="small">精确合计 {{totals.totalSeconds}} 秒</text></view>
+    <view class="card"><text class="value">{{totals.completedSessions}}</text><text>计划完成轮次</text><text class="small">提前结束 {{totals.stoppedSessions}} 轮</text></view>
+    <view class="card"><text class="value">{{totals.activeDays}}</text><text>活跃天数 / 7</text><text class="small">至少 1 个有效整秒</text></view>
+    <view class="card"><text class="value">{{totals.longestActiveDays}}</text><text>窗口内最长连续活跃</text><text class="small">不是全历史连续天数</text></view>
+  </view>
+  <text class="policy">按七天日均 {{presentation.averageMinutes}} 分钟；终态轮次中的计划完成率 {{presentation.completedRate}}。</text>
+  <text class="chart-title">每日有效分钟</text><stats-chart days="{{days}}" />
+  <view class="table">
+    <view class="row heading"><text>日期</text><text>有效秒 / 分钟</text><text>完成 / 提前结束</text></view>
+    <view class="row" wx:for="{{presentation.rows}}" wx:key="date"><text>{{item.date}}</text><text>{{item.totalSeconds}} / {{item.minutes}}</text><text>{{item.completedSessions}} / {{item.stoppedSessions}}</text></view>
+  </view>
+  <text class="policy">核对时刻：{{presentation.asOfText}}（UTC+08:00）。生成期间有新记录时，请刷新核对。</text>
+</view>
+<text wx:else class="policy">统计数据尚未通过完整性校验。</text>

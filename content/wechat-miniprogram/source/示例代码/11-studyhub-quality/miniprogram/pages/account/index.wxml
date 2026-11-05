@@ -1,0 +1,24 @@
+<view class="page">
+  <view class="panel">
+    <button bindtap="onQuality">体验与故障实验（固定数据）</button><button bindtap="onDrafts">当前身份的任务草稿</button>
+    <button bindtap="onPlatform">文件、剪贴板、分享与订阅消息练习</button>
+    <button bindtap="onGallery">私人图片实验</button>
+    <button bindtap="onPending">待处理操作与冲突草稿</button>
+    <button bindtap="onMigrate">预览并导入旧本地任务</button>
+  </view>
+  <view class="panel">
+    <text class="title">可信身份与环境</text>
+    <text wx:if="{{status === 'loading'}}">正在验证……</text>
+    <block wx:elif="{{status === 'ready'}}">
+      <text class="muted">AppID：{{appId}}</text><text class="muted">用户核对标记：{{userTag}}</text>
+      <text class="muted">标记只是方便人工区分测试用户，不是登录凭证。</text>
+    </block>
+    <text wx:else class="error">{{errorMessage}}</text>
+    <button bindtap="refresh">重新验证身份</button>
+  </view>
+  <view class="panel">
+    <button loading="{{pingBusy}}" disabled="{{pingBusy}}" bindtap="onPing">调用 helloCloud</button>
+    <text class="muted spaced">{{pingMessage}}</text>
+    <text class="muted spaced">本例不获取头像、昵称或手机号。身份识别与个人资料授权是不同能力。</text>
+  </view>
+</view>

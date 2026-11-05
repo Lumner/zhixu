@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-03",
+  "sourceDigest": "791ef52f4736d7e7674dcd347bbca72b752aaa0bef2b9a97663d35ffc1108001",
+  "fixedMutants": 3,
+  "detected": 3,
+  "scenarios": [
+    {
+      "name": "数字版本误用字符串字典序",
+      "baselinePassed": true,
+      "assertionDetected": true,
+      "originalFileUnchanged": true
+    },
+    {
+      "name": "追加丢失ID去重",
+      "baselinePassed": true,
+      "assertionDetected": true,
+      "originalFileUnchanged": true
+    },
+    {
+      "name": "恢复时另换操作编号",
+      "baselinePassed": true,
+      "assertionDetected": true,
+      "originalFileUnchanged": true
+    }
+  ],
+  "mutationScoreForWholeProject": null,
+  "realCloud": false
+}

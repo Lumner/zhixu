@@ -1,0 +1,12 @@
+const test=require('node:test'),assert=require('node:assert/strict');
+const {component,page,copy}=require('./support/core.cjs');
+test('component: 查看按钮方法发出open和稳定ID',()=>{const {instance:c}=component('task-card');c.data.task={id:'a'};c.onOpen();assert.deepEqual(c.events,[{name:'open',detail:{id:'a'}}]);});
+test('component: 完成按钮方法发出toggle而不直接写云',()=>{const {instance:c}=component('task-card');c.data.task={id:'a'};c.onToggle();assert.deepEqual(c.events,[{name:'toggle',detail:{id:'a'}}]);});
+test('component: 禁用时两个方法均不发出事件',()=>{const {instance:c}=component('task-card');c.data.task={id:'a'};c.data.disabled=true;c.onOpen();c.onToggle();assert.equal(c.events.length,0);});
+test('component: 缺少任务时不会伪造ID事件',()=>{const {instance:c}=component('task-card');c.onOpen();c.onToggle();assert.equal(c.events.length,0);});
+test('component: 观察器显式调用只更新变化的meta',()=>{const {instance:c,definition:d}=component('task-card');d.observers.task.call(c,{meta:'展示元信息'});d.observers.task.call(c,{meta:'展示元信息'});assert.equal(c.data.meta,'展示元信息');assert.equal(c.patches.length,1);});
+test('component: feedback方法只转发允许的动作字段',()=>{const {instance:c}=component('feedback-panel');c.properties.feedback={action:'retryMore',secret:'not-an-event'};c.onAction();assert.deepEqual(c.events,[{name:'action',detail:{kind:'retryMore'}}]);});
+test('component: 两个实例的数据与事件记录互不污染',()=>{const a=component('task-card').instance,b=component('task-card').instance;a.data.task={id:'a'};a.onOpen();assert.equal(b.data.task,null);assert.equal(b.events.length,0);});
+test('page-method: 无效输入保留具体错误且未添加记录',()=>{const p=page('accessibility');p.onLoad();p.onShow();p.onSubmit();assert.equal(p.data.items.length,3);assert.ok(p.data.error.includes('标题'));assert.equal(p.data.titleFocus,true);p.onUnload();});
+test('page-method: checkbox按ID同步可复核文字汇总',()=>{const p=page('accessibility');p.onLoad();p.onShow();p.onChecked({detail:{value:['demo_1']}});assert.equal(p.data.summary,'共3项，已完成1项。');p.onUnload();});
+test('page-method: 隐藏后迟到焦点回调不更新界面',()=>{const p=page('accessibility'),callbacks=[];p.onLoad();p.onShow();p.setData=function(patch,callback){Object.assign(this.data,copy(patch));if(callback)callbacks.push(callback);};p.onSubmit();p.onHide();callbacks[0]();assert.equal(p.data.titleFocus,false);p.onUnload();});

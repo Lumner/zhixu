@@ -1,0 +1,25 @@
+Icarus Verilog version 11.0 (stable) ()
+PASS gates: 4 input combinations
+PASS bits: 256 values
+PASS mux: 512 combinations
+PASS decoder: 8 combinations
+PASS ALU: 1024 combinations, data and flags
+PASS parity: WIDTH 1 and 8, 256 inputs
+PASS register: reset, enable, hold, priority, between-edge pulse
+PASS tick: DIV 1 and 4, pause and reset, 40 cycles
+PASS PWM: duty 0 through 8, complete periods
+PASS memory: 16 addresses, synchronous read, read-first collision
+PASS FSM: hold, transitions, reset, exclusive outputs
+PASS FIFO: 111 cycles, empty/full rejection, simultaneous requests, wrap, reset
+PASS UART: 00 FF A5 frames, center samples, busy rejection, latched data, reset
+PASS button: glitch rejection, press, hold, release, second press
+PASS timer: 226 cycles, parameter 1/3, partial pause/resume, clear priority, wrap
+EXPECTED FAILURE: gate-and-to-or
+FATAL: C:\Users\17597\Desktop\tutorial\content\digital-logic\source\ʾ������\01-gates\tb.sv:8: gates i=1
+       Time: 2000 Scope: tb.$ivl_for_loop0
+EXPECTED FAILURE: timer-off-by-one
+FATAL: C:\Users\17597\Desktop\tutorial\content\digital-logic\source\ʾ������\15-timer\tb.sv:27: timer step=3 actual=0/0 expected=0/1 run=1/1
+       Time: 36000 Scope: tb.step
+EXPECTED FAILURE: timer-clear-loses-priority
+FATAL: C:\Users\17597\Desktop\tutorial\content\digital-logic\source\ʾ������\15-timer\tb.sv:27: timer step=213 actual=7/23 expected=0/0 run=0/0
+       Time: 2136000 Scope: tb.step

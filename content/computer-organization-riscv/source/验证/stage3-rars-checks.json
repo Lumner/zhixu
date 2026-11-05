@@ -1,0 +1,407 @@
+{
+  "date": "2026-11-05",
+  "edition": "detailed-rewrite-stage3",
+  "passed": 40,
+  "scope": "Official RARS v1.6 command-line assembly/execution, RV32, Default, little endian; GUI operations and Ripes not executed",
+  "javaVersion": "openjdk version \"17.0.21\" 2026-10-20\r\nOpenJDK Runtime Environment Temurin-17.0.21+9 (build 17.0.21+9)\r\nOpenJDK 64-Bit Server VM Temurin-17.0.21+9 (build 17.0.21+9, mixed mode, sharing)",
+  "rarsSha256": "780f730eb457b1ba609e968accc2c8b77d8f92c3d9dbf30cc7fdb3cfb14e8c24",
+  "independentPrograms": 7,
+  "sourceFiles": [
+    {
+      "name": "arithmetic.s",
+      "sha256": "b76f7d5489d3338ffb171f918236da9e75f7b07c5e52587369cba048419e52ad"
+    },
+    {
+      "name": "hello.s",
+      "sha256": "8b02f871db46b3ca2b10ca1bc9d880fd6a279d9dad87b1df9f40990054d99f43"
+    },
+    {
+      "name": "memory-update.s",
+      "sha256": "de4a9bacf50f341a37b41e2b9673ab039562ab2c1379f127b052398099f02d5b"
+    },
+    {
+      "name": "memory.s",
+      "sha256": "c6eddb74ca42898813308913d26f91a18428a98dda715ce2d077a553d4b511e8"
+    },
+    {
+      "name": "pseudo.s",
+      "sha256": "d45e0d9a60af8cff5d8b7cd017786886069fbb56e59e7c0f9b188c287f39ead5"
+    },
+    {
+      "name": "register-trace.s",
+      "sha256": "77446f5681ffa3e1a011076f2613406529b1cf462eb2c36cf0c93f4d2d784d44"
+    },
+    {
+      "name": "stage3-practice.s",
+      "sha256": "1a8bfde04475111e6850ecd89dadc8663dfa6c85285976548762c25424c6b9ce"
+    }
+  ],
+  "scenarios": [
+    "Java runtime is available",
+    "RARS v1.6 artifact fingerprint matches this verification batch",
+    "hello.s: actual console output 7 and register inputs",
+    "hello-negative-add",
+    "hello-negative-sub",
+    "hello-expression",
+    "register trace prefix 1 begins from reset state",
+    "register trace prefix 2 begins from reset state",
+    "register trace prefix 3 begins from reset state",
+    "register trace prefix 4 begins from reset state",
+    "register trace prefix 5 begins from reset state",
+    "register-trace: complete base-instruction program without pseudoinstructions",
+    "arithmetic: logical and arithmetic right shift",
+    "arithmetic: signed and unsigned comparisons",
+    "arithmetic: masks and left shift",
+    "arithmetic: both signed 12-bit immediate boundaries",
+    "arithmetic: li, mv and manually constructed large constant agree",
+    "arithmetic: signed overflow wraps and register shift masks to five bits",
+    "arithmetic variant: negative odd right shift is floor, not truncation",
+    "pseudo: actual final state",
+    "pseudo: eleven machine instructions at four-byte addresses",
+    "pseudo: independently specified machine words",
+    "pseudo: RARS v1.6 mv actually expands to add",
+    "memory: copied word and low byte",
+    "memory: same byte loaded signed and unsigned",
+    "memory update: load-add-store-reload and console",
+    "memory update: earlier register copy remains unchanged after sh",
+    "memory update: byte and halfword extension rules",
+    "memory update: four byte probes verify little-endian order",
+    "practice-original: inputs preserved and output reloaded",
+    "practice-negative: inputs preserved and output reloaded",
+    "practice-zero: inputs preserved and output reloaded",
+    "practice-wrap: inputs preserved and output reloaded",
+    "bad-addi-positive: official assembler rejects invalid input",
+    "bad-addi-negative: official assembler rejects invalid input",
+    "bad-shift: official assembler rejects invalid input",
+    "bad-register: official assembler rejects invalid input",
+    "np mode rejects pseudo hello source",
+    "misaligned lw to t1 still raises a runtime error",
+    "misaligned lw to zero still raises a runtime error"
+  ],
+  "runs": [
+    {
+      "name": "hello",
+      "file": "source/示例代码/03-rars-basics/hello.s",
+      "options": [
+        "t0",
+        "t1",
+        "a0"
+      ],
+      "exitCode": 0,
+      "stdout": "7",
+      "stderr": "\nProgram terminated by calling exit\r\nt0\t0x00000003\r\nt1\t0x00000004\r\na0\t0x00000007\r\n"
+    },
+    {
+      "name": "hello-negative-add",
+      "file": ".cache/stage3-run/hello-negative-add.s",
+      "options": [
+        "a0"
+      ],
+      "exitCode": 0,
+      "stdout": "5",
+      "stderr": "\nProgram terminated by calling exit\r\na0\t0x00000005\r\n"
+    },
+    {
+      "name": "hello-negative-sub",
+      "file": ".cache/stage3-run/hello-negative-sub.s",
+      "options": [
+        "a0"
+      ],
+      "exitCode": 0,
+      "stdout": "-9",
+      "stderr": "\nProgram terminated by calling exit\r\na0\t0xfffffff7\r\n"
+    },
+    {
+      "name": "hello-expression",
+      "file": ".cache/stage3-run/hello-expression.s",
+      "options": [
+        "a0"
+      ],
+      "exitCode": 0,
+      "stdout": "-2",
+      "stderr": "\nProgram terminated by calling exit\r\na0\t0xfffffffe\r\n"
+    },
+    {
+      "name": "register-prefix-1",
+      "file": "source/示例代码/03-rars-basics/register-trace.s",
+      "options": [
+        "1",
+        "t0",
+        "zero"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "\nProgram terminated when maximum step limit 1 reached.\r\nt0\t0x00000003\r\nzero\t0x00000000\r\n"
+    },
+    {
+      "name": "register-prefix-2",
+      "file": "source/示例代码/03-rars-basics/register-trace.s",
+      "options": [
+        "2",
+        "t0",
+        "t1",
+        "zero"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "\nProgram terminated when maximum step limit 2 reached.\r\nt0\t0x00000003\r\nt1\t0x00000004\r\nzero\t0x00000000\r\n"
+    },
+    {
+      "name": "register-prefix-3",
+      "file": "source/示例代码/03-rars-basics/register-trace.s",
+      "options": [
+        "3",
+        "t0",
+        "t1",
+        "zero"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "\nProgram terminated when maximum step limit 3 reached.\r\nt0\t0x00000007\r\nt1\t0x00000004\r\nzero\t0x00000000\r\n"
+    },
+    {
+      "name": "register-prefix-4",
+      "file": "source/示例代码/03-rars-basics/register-trace.s",
+      "options": [
+        "4",
+        "t0",
+        "t1",
+        "zero"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "\nProgram terminated when maximum step limit 4 reached.\r\nt0\t0x00000007\r\nt1\t0x00000004\r\nzero\t0x00000000\r\n"
+    },
+    {
+      "name": "register-prefix-5",
+      "file": "source/示例代码/03-rars-basics/register-trace.s",
+      "options": [
+        "5",
+        "t0",
+        "t1",
+        "a0",
+        "zero"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "\nProgram terminated when maximum step limit 5 reached.\r\nt0\t0x00000007\r\nt1\t0x00000004\r\na0\t0x0000000e\r\nzero\t0x00000000\r\n"
+    },
+    {
+      "name": "register-full-np",
+      "file": "source/示例代码/03-rars-basics/register-trace.s",
+      "options": [
+        "np",
+        "t0",
+        "t1",
+        "a0",
+        "zero"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "\nProgram terminated by calling exit\r\nt0\t0x00000007\r\nt1\t0x00000004\r\na0\t0x0000000e\r\nzero\t0x00000000\r\n"
+    },
+    {
+      "name": "arithmetic",
+      "file": "source/示例代码/03-rars-basics/arithmetic.s",
+      "options": [
+        "t0",
+        "t1",
+        "t2",
+        "s0",
+        "s1",
+        "t6",
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6",
+        "s3",
+        "s5",
+        "s6"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "\nProgram terminated by calling exit\r\nt0\t0xfffffff8\r\nt1\t0x7ffffffc\r\nt2\t0xfffffffc\r\ns0\t0x00000001\r\ns1\t0x00000000\r\nt6\t0x0000000d\r\na1\t0x000000b4\r\na2\t0xfffff800\r\na3\t0x000007ff\r\na4\t0x12345abc\r\na5\t0x12345abc\r\na6\t0x00000000\r\ns3\t0x12345abc\r\ns5\t0x80000000\r\ns6\t0x00000002\r\n"
+    },
+    {
+      "name": "arithmetic-minus7",
+      "file": ".cache/stage3-run/arithmetic-minus7.s",
+      "options": [
+        "t1",
+        "t2"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "\nProgram terminated by calling exit\r\nt1\t0x7ffffffc\r\nt2\t0xfffffffc\r\n"
+    },
+    {
+      "name": "pseudo",
+      "file": "source/示例代码/03-rars-basics/pseudo.s",
+      "options": [
+        "t0",
+        "t1",
+        "t2",
+        "t3",
+        "t4"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "\nProgram terminated by calling exit\r\nt0\t0x00000007\r\nt1\t0x00000800\r\nt2\t0x12345abc\r\nt3\t0x12345abc\r\nt4\t0x00000000\r\n"
+    },
+    {
+      "name": "pseudo-assemble-and-dump",
+      "file": "source/示例代码/03-rars-basics/pseudo.s",
+      "options": [
+        "a",
+        "dump",
+        ".text",
+        "SegmentWindow",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage3-run\\pseudo-text.txt"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "memory",
+      "file": "source/示例代码/03-rars-basics/memory.s",
+      "options": [
+        "t1",
+        "t3",
+        "t5",
+        "t6",
+        "0x10010000-0x10010004"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": "\nProgram terminated by calling exit\r\nt1\t0x12345678\r\nt3\t0x00000078\r\nt5\t0xfffffffe\r\nt6\t0x000000fe\r\nMem[0x10010000]\t0x12345678\t0x12345678\t\r\n"
+    },
+    {
+      "name": "memory-update",
+      "file": "source/示例代码/03-rars-basics/memory-update.s",
+      "options": [
+        "t0",
+        "t1",
+        "t2",
+        "t3",
+        "s0",
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "a0",
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "0x10010000-0x1001000c"
+      ],
+      "exitCode": 0,
+      "stdout": "5",
+      "stderr": "\nProgram terminated by calling exit\r\nt0\t0x10010000\r\nt1\t0x112233aa\r\nt2\t0xfffffffc\r\nt3\t0x00000005\r\ns0\t0xfffffffe\r\ns1\t0x000000fe\r\ns2\t0xfffffffe\r\ns3\t0x0000fffe\r\ns4\t0x1122bbcc\r\na0\t0x00000005\r\na1\t0x000000cc\r\na2\t0x000000bb\r\na3\t0x00000022\r\na4\t0x00000011\r\nMem[0x10010000]\t0x00000009\t0xfffffffc\t0x00000005\t0x1122bbcc\t\r\n"
+    },
+    {
+      "name": "practice-original",
+      "file": "source/示例代码/03-rars-basics/stage3-practice.s",
+      "options": [
+        "a0",
+        "0x10010000-0x1001000c"
+      ],
+      "exitCode": 0,
+      "stdout": "13",
+      "stderr": "\nProgram terminated by calling exit\r\na0\t0x0000000d\r\nMem[0x10010000]\t0x0000000c\t0xfffffffb\t0xfffffffa\t0x0000000d\t\r\n"
+    },
+    {
+      "name": "practice-negative",
+      "file": ".cache/stage3-run/practice-negative.s",
+      "options": [
+        "a0",
+        "0x10010000-0x1001000c"
+      ],
+      "exitCode": 0,
+      "stdout": "-13",
+      "stderr": "\nProgram terminated by calling exit\r\na0\t0xfffffff3\r\nMem[0x10010000]\t0xfffffff4\t0x00000005\t0x00000006\t0xfffffff3\t\r\n"
+    },
+    {
+      "name": "practice-zero",
+      "file": ".cache/stage3-run/practice-zero.s",
+      "options": [
+        "a0",
+        "0x10010000-0x1001000c"
+      ],
+      "exitCode": 0,
+      "stdout": "0",
+      "stderr": "\nProgram terminated by calling exit\r\na0\t0x00000000\r\nMem[0x10010000]\t0x00000000\t0x00000000\t0x00000000\t0x00000000\t\r\n"
+    },
+    {
+      "name": "practice-wrap",
+      "file": ".cache/stage3-run/practice-wrap.s",
+      "options": [
+        "a0",
+        "0x10010000-0x1001000c"
+      ],
+      "exitCode": 0,
+      "stdout": "-2147483648",
+      "stderr": "\nProgram terminated by calling exit\r\na0\t0x80000000\r\nMem[0x10010000]\t0x7fffffff\t0x00000001\t0x00000000\t0x80000000\t\r\n"
+    },
+    {
+      "name": "bad-addi-positive",
+      "file": ".cache/stage3-run/bad-addi-positive.s",
+      "options": [],
+      "exitCode": 2,
+      "stdout": "",
+      "stderr": "Error in C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage3-run\\bad-addi-positive.s line 4 column 16: \"2048\": Unsigned value is too large to fit into a sign-extended immediate\n\r\nProcessing terminated due to errors.\r\n"
+    },
+    {
+      "name": "bad-addi-negative",
+      "file": ".cache/stage3-run/bad-addi-negative.s",
+      "options": [],
+      "exitCode": 2,
+      "stdout": "",
+      "stderr": "Error in C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage3-run\\bad-addi-negative.s line 4 column 16: \"-2049\": operand is out of range\n\r\nProcessing terminated due to errors.\r\n"
+    },
+    {
+      "name": "bad-shift",
+      "file": ".cache/stage3-run/bad-shift.s",
+      "options": [],
+      "exitCode": 2,
+      "stdout": "",
+      "stderr": "Error in C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage3-run\\bad-shift.s line 4 column 16: \"32\": operand is out of range\n\r\nProcessing terminated due to errors.\r\n"
+    },
+    {
+      "name": "bad-register",
+      "file": ".cache/stage3-run/bad-register.s",
+      "options": [],
+      "exitCode": 2,
+      "stdout": "",
+      "stderr": "Error in C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage3-run\\bad-register.s line 4 column 5: \"t7\": operand is of incorrect type\n\r\nProcessing terminated due to errors.\r\n"
+    },
+    {
+      "name": "pseudo-disabled",
+      "file": "source/示例代码/03-rars-basics/hello.s",
+      "options": [
+        "np"
+      ],
+      "exitCode": 2,
+      "stdout": "",
+      "stderr": "Error in C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\source\\示例代码\\03-rars-basics\\hello.s line 5 column 5: Extended (pseudo) instruction or format not permitted.  See Settings.\nError in C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\source\\示例代码\\03-rars-basics\\hello.s line 6 column 5: Extended (pseudo) instruction or format not permitted.  See Settings.\nError in C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\source\\示例代码\\03-rars-basics\\hello.s line 8 column 5: Extended (pseudo) instruction or format not permitted.  See Settings.\nError in C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\source\\示例代码\\03-rars-basics\\hello.s line 10 column 5: Extended (pseudo) instruction or format not permitted.  See Settings.\n\r\nProcessing terminated due to errors.\r\n"
+    },
+    {
+      "name": "misaligned-t1",
+      "file": ".cache/stage3-run/misaligned-t1.s",
+      "options": [],
+      "exitCode": 3,
+      "stdout": "",
+      "stderr": "Error in C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage3-run\\misaligned-t1.s line 13: Runtime exception at 0x00400008: Load address not aligned to word boundary 0x10010001\n\r\nSimulation terminated due to errors.\r\n"
+    },
+    {
+      "name": "misaligned-zero",
+      "file": ".cache/stage3-run/misaligned-zero.s",
+      "options": [],
+      "exitCode": 3,
+      "stdout": "",
+      "stderr": "Error in C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage3-run\\misaligned-zero.s line 13: Runtime exception at 0x00400008: Load address not aligned to word boundary 0x10010001\n\r\nSimulation terminated due to errors.\r\n"
+    }
+  ]
+}

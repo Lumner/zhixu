@@ -1,0 +1,27 @@
+<view class="page">
+  <view class="panel"><text class="title">平台能力练习中心</text><text class="muted">按钮按需调用能力。API 存在不等于账号、权限、网络或真机环境满足要求。</text>
+    <view wx:for="{{capabilities}}" wx:key="name"><text>{{item.name}}：{{item.supported ? '接口存在' : '接口不存在'}}</text></view>
+  </view>
+  <view class="panel"><text class="section-title">一、报告文件</text><text class="muted">当前来源：{{sourceText}}；总秒数：{{report.totals.totalSeconds}}</text>
+    <button disabled="{{busy}}" bindtap="onDemo">使用固定练习</button><button disabled="{{busy}}" bindtap="onCloud">读取我的云报告</button>
+    <button disabled="{{busy}}" bindtap="onSave">生成本地 JSON 报告</button><text class="muted">当前文件：{{fileName || '未生成'}}</text>
+    <button disabled="{{busy}}" bindtap="onReadOwn">重新读取并校验</button><button disabled="{{busy}}" bindtap="onShareFile">主动选择聊天转发此文件</button>
+    <button disabled="{{busy}}" bindtap="onChoose">从聊天选择报告，仅核对合计</button><button disabled="{{busy}}" bindtap="onClearFile">清理当前报告槽</button>
+    <text class="muted">文件可以被修改，格式校验不能证明真实性；不导入云数据。固定槽会覆盖同类上一次文件。download 槽由下载实验覆盖管理。</text>
+  </view>
+  <view class="panel"><text class="section-title">二、剪贴板与小程序卡片</text>
+    <button disabled="{{busy}}" bindtap="onCopy">复制当前报告摘要</button><button disabled="{{busy}}" bindtap="onPaste">主动读取剪贴板预览</button>
+    <text class="preview" selectable="{{true}}">{{clipboardPreview}}</text><button open-type="share">转发公开固定练习卡片</button>
+    <text class="muted">卡片始终进入公开固定数据页，不把私人报告、身份或 fileID 塞入路径。</text>
+  </view>
+  <view class="panel"><text class="section-title">三、本地文件上传下载</text><text class="muted">先启动 server/file-lab.cjs 并配置地址。始终上传固定练习；匿名教学服务不接收私人报告。</text>
+    <button disabled="{{busy}}" bindtap="onUploadDemo">上传固定练习文件</button><button disabled="{{busy || !transferId}}" bindtap="onDownloadDemo">下载、校验并另存</button>
+    <progress percent="{{progress}}" show-info="{{true}}" /><button bindtap="onCancelTransfer">取消正在进行的传输</button>
+    <text class="muted">编号：{{transferId || '暂无'}}；切后台会请求中止传输，中止不撤销服务端已经完成的操作。</text>
+  </view>
+  <view class="panel"><text class="section-title">四、一次订阅练习回执</text><text class="muted">配置真实匹配模板后，点按钮申请本次回执，同意后请求立即发送。没有定时提醒；每用户每统计日最多一次发送尝试。</text>
+    <text class="muted">{{noticeText}}</text><button disabled="{{busy || !noticeReady}}" bindtap="onNotice">申请并发送一次练习回执</button>
+    <button disabled="{{busy}}" bindtap="refreshNotice">核对状态与配置</button>
+  </view>
+  <view class="panel"><text class="muted">{{message}}</text><text wx:if="{{busy}}">操作处理中……</text></view>
+</view>

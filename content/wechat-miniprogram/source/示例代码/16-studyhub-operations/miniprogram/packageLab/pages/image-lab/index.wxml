@@ -1,0 +1,6 @@
+<view class="page"><text class="title">显示尺寸与源像素</text><text class="muted">公开固定PNG：小图160×120，大图1280×960。展示框相同，源像素量相差64倍；RGBA8像素缓冲估算不等于应用总内存。</text>
+<view class="actions"><button data-mode="small" bindtap="onSize">小尺寸</button><button data-mode="large" bindtap="onSize">大尺寸</button></view>
+<view><text>下方图片启用原生lazy-load</text><switch checked="{{lazy}}" bindchange="onLazy" /></view><text class="muted">首张保持即时加载。图片使用固定宽高与aspectFit，mode不改变源文件字节或像素。</text>
+<text>当前：{{mode}}；load事件{{loaded}}次；error事件{{failed}}次</text><text class="muted">{{message}}</text>
+<view class="image-row" wx:for="{{rows}}" wx:key="id"><text>固定示例 {{item.index + 1}}</text>
+<image class="fixture" mode="aspectFit" lazy-load="{{item.index > 0 && lazy}}" src="{{item.src}}" data-id="{{item.id}}" data-revision="{{item.revision}}" bindload="onResult" binderror="onResult" /></view></view>

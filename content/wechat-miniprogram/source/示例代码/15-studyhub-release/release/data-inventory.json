@@ -1,0 +1,182 @@
+{
+  "kind": "code-data-inventory-draft",
+  "notFormalPrivacyPolicy": true,
+  "items": [
+    {
+      "id": "identity",
+      "name": "可信微信身份上下文与核对标记",
+      "fields": [
+        "服务端APPID/OPENID相关身份",
+        "环境标识"
+      ],
+      "sourceRefs": [
+        "cloudfunctions/studyhub/index.js",
+        "miniprogram/services/outbox.js"
+      ],
+      "purpose": "区分私人数据所有者",
+      "location": "云端和当前会话",
+      "trigger": "服务端上下文读取，不是头像昵称授权",
+      "recipientAndRegion": "待运营者明确",
+      "retention": "待运营者明确",
+      "rightsAndDeletion": "待运营者明确"
+    },
+    {
+      "id": "tasks-notes",
+      "name": "任务、笔记、链接与标签",
+      "fields": [
+        "任务字段",
+        "正文、链接、标签、附件ID"
+      ],
+      "sourceRefs": [
+        "cloudfunctions/studyhub/knowledge.js",
+        "miniprogram/services/task-session.js"
+      ],
+      "purpose": "主动保存与检索学习内容",
+      "location": "云数据库和编辑态",
+      "trigger": "用户编辑/保存；云读取可能在页面显示时发生",
+      "recipientAndRegion": "待运营者明确",
+      "retention": "待运营者明确",
+      "rightsAndDeletion": "待运营者明确"
+    },
+    {
+      "id": "focus-stats",
+      "name": "专注与统计",
+      "fields": [
+        "会话时间、状态、有效秒",
+        "日期与汇总"
+      ],
+      "sourceRefs": [
+        "miniprogram/services/focus-repository.js",
+        "miniprogram/shared/stats-core.js"
+      ],
+      "purpose": "专注恢复与统计",
+      "location": "云数据库与页面",
+      "trigger": "用户发起会话，按口径汇总",
+      "recipientAndRegion": "待运营者明确",
+      "retention": "待运营者明确",
+      "rightsAndDeletion": "待运营者明确"
+    },
+    {
+      "id": "draft-operations",
+      "name": "草稿、指令与回执",
+      "fields": [
+        "原编号、字段快照、版本、来源映射"
+      ],
+      "sourceRefs": [
+        "miniprogram/services/task-draft-core.js",
+        "miniprogram/services/outbox-core.js"
+      ],
+      "purpose": "恢复输入、避免重复写入",
+      "location": "本机缓存和云回执",
+      "trigger": "输入后保存，提交前封存；不是云备份",
+      "recipientAndRegion": "待运营者明确",
+      "retention": "待运营者明确",
+      "rightsAndDeletion": "待运营者明确"
+    },
+    {
+      "id": "media",
+      "name": "私人缩略图",
+      "fields": [
+        "用户选中图片和标题",
+        "资产引用"
+      ],
+      "sourceRefs": [
+        "miniprogram/services/images.js",
+        "cloudfunctions/studyhub/images.js"
+      ],
+      "purpose": "图片与笔记附件",
+      "location": "临时文件、云存储和数据库",
+      "trigger": "选择与上传是两个主动动作",
+      "recipientAndRegion": "待运营者明确",
+      "retention": "待运营者明确",
+      "rightsAndDeletion": "待运营者明确"
+    },
+    {
+      "id": "clipboard",
+      "name": "剪贴板读写",
+      "fields": [
+        "剪贴板文本或待复制输入"
+      ],
+      "sourceRefs": [
+        "miniprogram/services/platform-api.js",
+        "miniprogram/pages/task-compose/index.js"
+      ],
+      "purpose": "主动粘贴预览、复制或备份",
+      "location": "设备剪贴板和本页内存",
+      "trigger": "读取与写入各自主动触发",
+      "recipientAndRegion": "待运营者明确",
+      "retention": "待运营者明确",
+      "rightsAndDeletion": "待运营者明确"
+    },
+    {
+      "id": "files",
+      "name": "报告文件",
+      "fields": [
+        "七日汇总JSON",
+        "选中文件内容"
+      ],
+      "sourceRefs": [
+        "miniprogram/services/report-files.js",
+        "miniprogram/services/file-transfer.js"
+      ],
+      "purpose": "预览、导出、转发与固定文件实验",
+      "location": "本机目录、用户选择的收件端；HTTP只传固定教学内容",
+      "trigger": "点击后执行，副本不随源数据删除自动消失",
+      "recipientAndRegion": "待运营者明确",
+      "retention": "待运营者明确",
+      "rightsAndDeletion": "待运营者明确"
+    },
+    {
+      "id": "public-share",
+      "name": "固定公开卡片",
+      "fields": [
+        "固定教学标题与封面"
+      ],
+      "sourceRefs": [
+        "miniprogram/utils/public-share.js"
+      ],
+      "purpose": "公开教学入口分享",
+      "location": "平台分享链和接收者",
+      "trigger": "不含私人表单截图或OPENID查询参数",
+      "recipientAndRegion": "待运营者明确",
+      "retention": "待运营者明确",
+      "rightsAndDeletion": "待运营者明确"
+    },
+    {
+      "id": "notice",
+      "name": "订阅练习",
+      "fields": [
+        "模板、发送尝试回执",
+        "可信收件身份"
+      ],
+      "sourceRefs": [
+        "cloudfunctions/studyhubNotice/domain.js",
+        "miniprogram/services/notice-repository.js"
+      ],
+      "purpose": "用户申请后的练习回执",
+      "location": "微信消息服务和云回执集合",
+      "trigger": "默认未配置关闭，隐私同意不等于订阅",
+      "recipientAndRegion": "待运营者明确",
+      "retention": "待运营者明确",
+      "rightsAndDeletion": "待运营者明确"
+    },
+    {
+      "id": "diagnostics",
+      "name": "采样与日志",
+      "fields": [
+        "允许的公开性能数值",
+        "网络状态和云日志"
+      ],
+      "sourceRefs": [
+        "miniprogram/services/performance-entries.js",
+        "miniprogram/services/network-core.js"
+      ],
+      "purpose": "定位问题",
+      "location": "本机有界缓冲和运营者配置的云日志",
+      "trigger": "性能默认关闭；远端日志另行核对",
+      "recipientAndRegion": "待运营者明确",
+      "retention": "待运营者明确",
+      "rightsAndDeletion": "待运营者明确"
+    }
+  ]
+}

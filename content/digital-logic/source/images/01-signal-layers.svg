@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 350" role="img" aria-labelledby="t d">
+<title id="t">从物理电压到逻辑值再到信息含义</title><desc id="d">示例电压零点二伏按假设的阈值解释成逻辑零，再按门状态接口解释为门关。三个层次不应混为一谈。</desc>
+<rect width="1120" height="350" rx="16" fill="#f7faf8"/>
+<g font-family="Microsoft YaHei,Arial,sans-serif" fill="#203a31">
+<text x="35" y="48" font-size="26" font-weight="bold">同一条信息的三个层次</text>
+<g fill="#fff" stroke="#bdcec3" stroke-width="2"><rect x="30" y="82" width="310" height="185" rx="14"/><rect x="405" y="82" width="310" height="185" rx="14"/><rect x="780" y="82" width="310" height="185" rx="14"/></g>
+<g text-anchor="middle"><text x="185" y="123" font-size="22">物理层：测到电压</text><text x="185" y="189" font-size="44" font-weight="bold">0.2 V</text><text x="185" y="236" font-size="19">这是一个电气量</text>
+<text x="560" y="123" font-size="22">逻辑层：按阈值判断</text><text x="560" y="189" font-size="44" font-weight="bold">0</text><text x="560" y="236" font-size="19">属于本例有效低电平</text>
+<text x="935" y="123" font-size="22">含义层：按接口解释</text><text x="935" y="189" font-size="40" font-weight="bold">门关</text><text x="935" y="236" font-size="19">接口中 door_open = 0</text></g>
+<g fill="#3d7d5a"><path d="M350 165h34v-10l16 20-16 20v-10h-34z"/><path d="M725 165h34v-10l16 20-16 20v-10h-34z"/></g>
+<text x="35" y="311" font-size="20">电压阈值与逻辑含义要分别约定；这张图不是开发板电气规范。</text></g>
+</svg>

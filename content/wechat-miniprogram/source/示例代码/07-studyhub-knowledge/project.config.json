@@ -1,0 +1,5 @@
+{
+  "appid": "", "compileType": "miniprogram",
+  "projectname": "studyhub-knowledge", "miniprogramRoot": "miniprogram/",
+  "cloudfunctionRoot": "cloudfunctions/", "setting": { "es6": true, "urlCheck": true }
+}

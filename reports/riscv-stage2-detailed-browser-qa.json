@@ -1,0 +1,32 @@
+{
+  "date": "2026-11-05",
+  "course": "computer-organization-riscv",
+  "edition": "detailed-rewrite-stage2",
+  "preview": "http://127.0.0.1:4173",
+  "observations": {
+    "chapter06": "新正文、全加器真值表和4位5+3逐位演算已在网页中呈现；本页目录跳转到6.7。",
+    "chapter08": "22个分节标题已呈现；第二阶段练习入口跳转成功。",
+    "stage2Exercises": { "questions": 28, "answerSections": 28 },
+    "courseOverview": "详细版01—08章完成、09—32章待重写，第二阶段卡片和下载链接已呈现。",
+    "chapter05": "从课程概览进入第五章成功，保留为学习入口。"
+  },
+  "screenshot": "reports/riscv-stage2-detailed.jpg",
+  "archiveChecked": {
+    "chapter05": true,
+    "chapter08": true,
+    "stage2Exercises": true,
+    "stage2LabModel": true,
+    "stage2ModelValidationReport": true
+  },
+  "checks": {
+    "stage2ModelScenariosPassed": 26,
+    "siteChecksPassed": 651,
+    "sourceMarkdown": 58,
+    "internalSourceLinks": 195
+  },
+  "limits": [
+    "网页检查为桌面视口的选定章节、目录与练习入口，未逐屏复查所有正文。",
+    "未进行移动端专项检查。",
+    "逻辑与数值模型通过不代表运行过HDL仿真、实际器件时序、RARS、Ripes或FPGA。"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "note": "手动核对计划，非自动部署。statsBatch 同时按 owner、isDemo、state、endedAt 范围与 _id 游标查询。先保留已有 ownerAppId+ownerId+_id 索引，并在实际环境查看所需复合索引与查询代价；不能仅凭此文件认定命中最优索引。",
+  "collection": "studyhub_focus_sessions",
+  "candidateIndex": [
+    { "name": "ownerAppId", "order": "asc" }, { "name": "ownerId", "order": "asc" },
+    { "name": "isDemo", "order": "asc" }, { "name": "state", "order": "asc" },
+    { "name": "_id", "order": "asc" }, { "name": "endedAt", "order": "asc" }
+  ],
+  "mustVerify": ["当前传统文档环境是否要求其他字段顺序或组合索引", "多状态与范围过滤的执行计划", "真实批次延迟和函数运行/费用预算"],
+  "businessLimit": { "batchSize": 50, "probeLimit": 51, "maxSessions": 500 }
+}

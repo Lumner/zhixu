@@ -1,0 +1,6 @@
+<view wx:if="{{task}}" class="card {{task.done ? 'card--done' : ''}}">
+  <text class="title">{{task.title}}</text><text class="meta">{{meta}}</text><text class="status">{{task.done ? '已完成' : '待完成'}}</text>
+  <view class="card-actions"><button disabled="{{disabled}}" aria-label="{{'查看任务：' + task.title}}" bindtap="onOpen">查看任务</button>
+  <button disabled="{{disabled}}" aria-label="{{(task.done ? '恢复待办：' : '标记完成：') + task.title}}" bindtap="onToggle">{{task.done ? '恢复待办' : '标记完成'}}</button></view>
+  <view class="extra"><slot /></view>
+</view>

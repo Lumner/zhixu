@@ -1,0 +1,36 @@
+{
+  "date": "2026-11-04",
+  "edition": "detailed-rewrite-stage1",
+  "chapters": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "passed": 22,
+  "scope": "Author-side paper-example arithmetic and byte encoding QA; no RARS/Ripes execution",
+  "scenarios": [
+    "assignment reads old values and does not auto-recalculate",
+    "paper exercise A B S sequence",
+    "five-element cumulative states",
+    "binary examples checked by parsing and formatting",
+    "hexadecimal positional examples",
+    "binary addition and fixed-width truncation",
+    "unsigned pattern counts and maxima",
+    "all quoted bitwise and mask examples",
+    "8-bit shifts and discarded bits",
+    "storage and transmission unit arithmetic",
+    "two complement encodings cross-checked with Buffer",
+    "signed 8-bit boundaries enforced independently",
+    "signed mixed addition and subtraction examples",
+    "carry and signed overflow table independently classified",
+    "sign extension and zero extension differ",
+    "negative arithmetic shift differs from truncating division",
+    "little and big endian known words",
+    "read modify write changes memory only after store",
+    "UTF-8 and ASCII examples",
+    "array byte layout and address endpoints",
+    "single byte versus four-byte signed interpretation",
+    "one-byte mutation changes the second integer and sum"
+  ]
+}

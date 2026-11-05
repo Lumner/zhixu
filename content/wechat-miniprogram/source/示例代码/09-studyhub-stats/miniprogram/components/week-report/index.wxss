@@ -1,0 +1,11 @@
+.range { display: block; font-size: 30rpx; font-weight: 600; margin: 20rpx 0; }
+.policy { display: block; color: #64748b; font-size: 24rpx; line-height: 1.7; margin: 18rpx 0; }
+.cards { display: flex; flex-wrap: wrap; gap: 16rpx; }
+.card { flex: 1 1 40%; padding: 24rpx 16rpx; background: #f1f8f3; border-radius: 12rpx; display: flex; flex-direction: column; font-size: 24rpx; }
+.value { font-size: 44rpx; font-weight: 700; color: #16794b; }
+.small { font-size: 20rpx; color: #64748b; margin-top: 12rpx; }
+.chart-title { display: block; font-size: 30rpx; margin: 28rpx 0 12rpx; }
+.table { border: 1rpx solid #e2e8f0; }
+.row { display: flex; padding: 18rpx 8rpx; border-bottom: 1rpx solid #e2e8f0; font-size: 22rpx; }
+.row text { flex: 1; text-align: center; }
+.heading { background: #f8fafc; font-weight: 600; }

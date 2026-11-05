@@ -1,0 +1,11 @@
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict'),{spawnSync}=require('node:child_process');
+const ROOT=path.resolve(__dirname,'../示例代码/17-studyhub-tooling'),MAIN=path.resolve(__dirname,'../示例代码/16-studyhub-operations');
+const inherited=JSON.parse(fs.readFileSync(path.join(__dirname,'第十五阶段测试结果.json'),'utf8'));
+assert.equal(inherited.project,'16-studyhub-operations');assert.equal(inherited.totalPassed,600);
+assert.equal(require(path.join(MAIN,'tests/support/digest.cjs')).digest(),inherited.sourceDigest);
+const child=spawnSync(process.execPath,[path.join(ROOT,'tools/verify.cjs')],{cwd:ROOT,encoding:'utf8',timeout:120000,maxBuffer:8*1024*1024,windowsHide:true});
+assert.equal(child.error,undefined,child.error?.message);assert.equal(child.status,0,child.stdout+'\n'+child.stderr);
+const lab=JSON.parse(fs.readFileSync(path.join(ROOT,'reports/latest.json'),'utf8'));
+assert.equal(lab.passed,50);assert.equal(lab.sourceDigest,require(path.join(ROOT,'tools/digest.cjs')).digest());
+const result={date:'2026-11-03',project:'17-studyhub-tooling',mainProject:'16-studyhub-operations',passed:50,mainPreviouslyPassed:600,totalAcrossProjects:650,mainSourceDigest:inherited.sourceDigest,sourceDigest:lab.sourceDigest,compiler:lab.compiler,compilerExecuted:true,typeNegativeCasesRejected:4,loopbackHttp:true,realWechat:false,realWechatIdentity:false,persistentBackend:false,productionReady:false,weuiExecuted:false,taroExecuted:false,uniAppExecuted:false,scenarios:lab.scenarios};
+fs.writeFileSync(path.join(__dirname,'第十六阶段测试结果.json'),JSON.stringify(result,null,2)+'\n');console.log(child.stdout.trim());console.log(JSON.stringify({mainProjectScenarios:600,extensionScenarios:50,totalAcrossProjects:650,mainSourcesUnchanged:true,productionReady:false}));

@@ -1,0 +1,23 @@
+<view class="page">
+  <text class="title">{{editing ? '编辑云端任务' : '创建云端任务'}}</text>
+  <text wx:if="{{errorMessage}}" class="error">{{errorMessage}}</text>
+  <text wx:if="{{uncertain}}" class="error">结果未确认，先返回列表核对。本阶段尚未实现创建幂等，不自动重试保存。</text>
+  <text wx:if="{{loading}}">正在读取……</text>
+  <form wx:elif="{{!blocked && !saved}}" bindsubmit="onSubmit">
+    <view class="panel spaced">
+      <text class="section-title">标题</text>
+      <input class="input" name="title" value="{{title}}" maxlength="40" placeholder="学习目标" data-field="title" bindinput="onText" />
+      <text class="section-title">备注</text>
+      <textarea class="textarea" name="description" value="{{description}}" maxlength="1000" data-field="description" bindinput="onText" />
+      <picker range="{{categories}}" range-key="label" value="{{categoryIndex}}" bindchange="onCategory"><view class="picker">分类：{{categories[categoryIndex].label}}</view></picker>
+      <picker range="{{priorities}}" range-key="label" value="{{priorityIndex}}" bindchange="onPriority"><view class="picker">优先级：{{priorities[priorityIndex].label}}</view></picker>
+      <picker mode="date" value="{{dueDate}}" start="2000-01-01" end="2099-12-31" bindchange="onDate"><view class="picker">{{dueDate || '选择截止日期'}}</view></picker>
+      <button size="mini" bindtap="onClearDate">清除日期</button>
+      <view class="switch-row"><text>已经完成</text><switch name="done" checked="{{done}}" bindchange="onDone" /></view>
+    </view>
+    <button type="primary" form-type="submit" loading="{{saving}}" disabled="{{saving || uncertain}}">保存到云端</button>
+  </form>
+  <text wx:if="{{saved}}">已保存，可以返回核对。</text>
+  <button class="spaced" bindtap="onBack">返回</button>
+  <text class="muted spaced">草稿不自动保存；离开页面不会撤销已经发出的云端写入。</text>
+</view>

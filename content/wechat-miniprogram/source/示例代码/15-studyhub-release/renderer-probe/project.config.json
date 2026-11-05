@@ -1,0 +1,10 @@
+{
+  "appid": "",
+  "compileType": "miniprogram",
+  "projectname": "studyhub-skyline-probe",
+  "miniprogramRoot": "./",
+  "setting": {
+    "es6": true,
+    "urlCheck": true
+  }
+}

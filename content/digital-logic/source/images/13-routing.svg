@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="720" viewBox="0 0 840 720" role="img" aria-labelledby="title desc">
+  <title id="title">选择器、译码器与优先编码器的信息方向</title>
+  <desc id="desc">第一行四路数据经选择器输出编号二的数据。第二行编号二经译码器变成0100。第三行请求0101经最高编号优先编码输出有效与编号二。</desc>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#527b64"/></marker></defs>
+  <rect width="840" height="720" rx="18" fill="#f7faf7"/>
+  <g fill="#213b30" font-family="Microsoft YaHei, sans-serif">
+    <text x="28" y="43" font-size="27" font-weight="bold">先看输入输出分别表示什么</text>
+    <text x="28" y="77" font-size="21">同样是编号 2，数据、编号和选择线不是同一种表示。</text>
+    <g fill="#e5f0e7" stroke="#83a18b" stroke-width="2">
+      <rect x="303" y="115" width="190" height="151" rx="12"/>
+      <rect x="303" y="327" width="190" height="114" rx="12"/>
+      <rect x="303" y="505" width="190" height="122" rx="12"/>
+    </g>
+    <g font-size="22">
+      <text x="36" y="139">d0 = 0001</text><text x="36" y="173">d1 = 0010</text>
+      <text x="36" y="207">d2 = 0100</text><text x="36" y="241">d3 = 1000</text>
+      <text x="336" y="169" font-weight="bold">四选一 MUX</text>
+      <text x="336" y="205">选哪路数据</text><text x="337" y="243">sel = 10</text>
+      <text x="587" y="184">y = 0100</text><text x="587" y="218">来自 d2</text>
+      <text x="36" y="366">sel = 10</text><text x="36" y="409">en = 1</text>
+      <text x="341" y="373" font-weight="bold">二到四译码</text>
+      <text x="329" y="411">编号变选择线</text>
+      <text x="564" y="379">decoded = 0100</text><text x="564" y="413">只有第 2 位为 1</text>
+      <text x="36" y="562">req = 0101</text><text x="36" y="597">第 2、0 路请求</text>
+      <text x="325" y="551" font-weight="bold">最高编号优先</text>
+      <text x="340" y="591">优先编码器</text>
+      <text x="585" y="551">valid = 1</text><text x="585" y="590">index = 10</text>
+    </g>
+    <g stroke="#527b64" stroke-width="3" fill="none" marker-end="url(#arrow)">
+      <path d="M187 132 H301"/><path d="M187 166 H301"/><path d="M187 200 H301"/><path d="M187 234 H301"/>
+      <path d="M495 190 H568"/><path d="M177 360 H301"/><path d="M177 402 H301"/><path d="M495 383 H547"/>
+      <path d="M224 559 H301"/><path d="M495 550 H568"/><path d="M495 590 H568"/>
+    </g>
+    <text x="28" y="676" font-size="21">三项功能分别计算；本实验的 en 只控制译码输出。</text>
+  </g>
+</svg>

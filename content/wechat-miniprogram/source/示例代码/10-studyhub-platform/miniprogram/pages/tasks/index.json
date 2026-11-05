@@ -1,0 +1,3 @@
+{ "navigationBarTitleText": "学伴 · 云端任务", "usingComponents": {
+  "task-card": "/components/task-card/index", "empty-state": "/components/empty-state/index"
+} }

@@ -1,0 +1,10 @@
+{
+  "pages": ["pages/index/index"],
+  "window": {
+    "navigationBarTitleText": "学伴 · 本地任务板",
+    "navigationBarBackgroundColor": "#f4f7fb",
+    "navigationBarTextStyle": "black"
+  },
+  "renderer": "webview",
+  "sitemapLocation": "sitemap.json"
+}

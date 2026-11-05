@@ -1,0 +1,4 @@
+<view>
+  <canvas wx:if="{{!unavailable}}" type="2d" id="chart" class="chart" />
+  <text wx:else class="fallback">当前环境未能绘制图表，请查看下方完整数值表。</text>
+</view>

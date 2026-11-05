@@ -1,0 +1,27 @@
+<view class="page">
+  <text class="title">我的学习计划</text>
+  <text class="muted">全部 {{total}} · 已完成 {{completed}} · 待完成 {{remaining}}</text>
+  <button class="spaced" type="primary" disabled="{{status !== 'ready'}}" bindtap="onCreate">新建任务</button>
+  <view class="panel spaced">
+    <input class="input" value="{{keyword}}" maxlength="100" placeholder="搜索任务标题" bindinput="onKeywordInput" />
+    <picker range="{{categoryOptions}}" range-key="label" value="{{categoryIndex}}" bindchange="onCategory">
+      <view class="picker">分类：{{categoryOptions[categoryIndex].label}}</view>
+    </picker>
+    <view class="actions">
+      <button size="mini" type="{{filter === 'all' ? 'primary' : 'default'}}" data-filter="all" bindtap="onFilter">全部</button>
+      <button size="mini" type="{{filter === 'pending' ? 'primary' : 'default'}}" data-filter="pending" bindtap="onFilter">待完成</button>
+      <button size="mini" type="{{filter === 'done' ? 'primary' : 'default'}}" data-filter="done" bindtap="onFilter">已完成</button>
+    </view>
+  </view>
+  <empty-state wx:if="{{status === 'error'}}" title="读取失败" message="{{errorMessage}}">
+    <button slot="action" bindtap="refresh">重新读取</button>
+  </empty-state>
+  <empty-state wx:elif="{{status === 'loading'}}" title="正在准备" message="请稍候" />
+  <empty-state wx:elif="{{total === 0}}" title="还没有任务" message="从一个小目标开始">
+    <button slot="action" bindtap="onCreate">添加第一项</button>
+  </empty-state>
+  <empty-state wx:elif="{{visibleTasks.length === 0}}" title="没有匹配任务" message="试着调整关键词、分类或完成状态" />
+  <task-card wx:for="{{visibleTasks}}" wx:key="id" task="{{item}}" bind:open="onOpenTask" bind:toggle="onToggleTask">
+    <text class="muted">点击卡片查看详情</text>
+  </task-card>
+</view>

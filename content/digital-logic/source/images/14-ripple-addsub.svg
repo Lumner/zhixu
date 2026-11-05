@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="680" viewBox="0 0 900 680" role="img" aria-labelledby="title desc">
+  <title id="title">四位行波进位与加减法关系</title>
+  <desc id="desc">低位在左，高位在右，四个全加器由c0到c4相连，每级接收该位a和b并输出sum。减法先将四位b逐位取反，初始进位置一，得到a减b加十六的五位中间数。</desc>
+  <defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#527b64"/></marker></defs>
+  <rect width="900" height="680" rx="18" fill="#f7faf7"/>
+  <g font-family="Microsoft YaHei, sans-serif" fill="#213b30">
+    <text x="28" y="44" font-size="28" font-weight="bold">进位从低位传向高位</text>
+    <text x="28" y="82" font-size="21">图中低位在左；最终结果仍按 y[3]、y[2]、y[1]、y[0] 阅读。</text>
+    <g fill="#e5f0e7" stroke="#83a18b" stroke-width="2">
+      <rect x="110" y="200" width="130" height="120" rx="12"/>
+      <rect x="290" y="200" width="130" height="120" rx="12"/>
+      <rect x="470" y="200" width="130" height="120" rx="12"/>
+      <rect x="650" y="200" width="130" height="120" rx="12"/>
+    </g>
+    <g font-size="21" text-anchor="middle">
+      <text x="135" y="143">a[0]</text><text x="200" y="143">b[0]</text>
+      <text x="315" y="143">a[1]</text><text x="380" y="143">b[1]</text>
+      <text x="495" y="143">a[2]</text><text x="560" y="143">b[2]</text>
+      <text x="675" y="143">a[3]</text><text x="740" y="143">b[3]</text>
+      <text x="175" y="250">全加器</text><text x="175" y="285">第 0 位</text>
+      <text x="355" y="250">全加器</text><text x="355" y="285">第 1 位</text>
+      <text x="535" y="250">全加器</text><text x="535" y="285">第 2 位</text>
+      <text x="715" y="250">全加器</text><text x="715" y="285">第 3 位</text>
+      <text x="175" y="389">y[0]</text><text x="355" y="389">y[1]</text>
+      <text x="535" y="389">y[2]</text><text x="715" y="389">y[3]</text>
+      <text x="53" y="242">c0</text><text x="265" y="242">c1</text><text x="445" y="242">c2</text><text x="625" y="242">c3</text><text x="829" y="242">c4</text>
+    </g>
+    <g stroke="#527b64" stroke-width="3" fill="none" marker-end="url(#arrow)">
+      <path d="M135 155 V198"/><path d="M200 155 V198"/><path d="M315 155 V198"/><path d="M380 155 V198"/>
+      <path d="M495 155 V198"/><path d="M560 155 V198"/><path d="M675 155 V198"/><path d="M740 155 V198"/>
+      <path d="M28 265 H108"/><path d="M242 265 H288"/><path d="M422 265 H468"/><path d="M602 265 H648"/><path d="M782 265 H862"/>
+      <path d="M175 322 V359"/><path d="M355 322 V359"/><path d="M535 322 V359"/><path d="M715 322 V359"/>
+    </g>
+    <rect x="26" y="427" width="848" height="218" rx="12" fill="#eaf1eb"/>
+    <g font-size="22">
+      <text x="47" y="467" font-weight="bold">把同一类加法结构用于减法</text>
+      <text x="47" y="509">加法：B 保持原样，c0 = 0 → A + B</text>
+      <text x="47" y="551">减法：B 的四位分别取反，c0 = 1 → A + (~B) + 1</text>
+      <text x="47" y="593">3 − 5 的五位和为 01110：y = 1110，c4 = 0（有借位）。</text>
+      <text x="47" y="625" font-size="19">功能示意不代表真实门数或传播时间；本批未执行器件综合与时序分析。</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,17 @@
+{
+  "pages": ["pages/tasks/index", "pages/overview/index", "pages/detail/index", "pages/editor/index"],
+  "window": {
+    "navigationBarTitleText": "学伴 v0.2",
+    "navigationBarBackgroundColor": "#f4f7fb",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#64748b", "selectedColor": "#16794b", "backgroundColor": "#ffffff",
+    "list": [
+      { "pagePath": "pages/tasks/index", "text": "任务" },
+      { "pagePath": "pages/overview/index", "text": "概览" }
+    ]
+  },
+  "renderer": "webview",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,1 @@
+.feedback { margin: 20rpx 0; padding: 24rpx; background: #fff7ed; border: 1px solid #fed7aa; border-radius: 16rpx; } .heading,.body,.code { display:block; } .heading { font-weight:700; } .body { margin:12rpx 0; line-height:1.6; } .code { font-size:24rpx; color:#64748b; margin-bottom:16rpx; }

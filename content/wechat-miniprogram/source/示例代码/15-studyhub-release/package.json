@@ -1,0 +1,14 @@
+{
+  "name": "studyhub-release-course",
+  "version": "0.0.0",
+  "private": true,
+  "engines": {
+    "node": ">=24.15.0"
+  },
+  "scripts": {
+    "test": "node tests/run.cjs",
+    "test:coverage": "node tests/run.cjs --coverage",
+    "test:mutations": "node tests/mutations.cjs",
+    "release:audit": "node tools/release-audit.cjs"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "note": "传统文档数据库。手动建立以下集合并逐个禁止客户端直接读写；不是 CLI 自动部署配置。操作回执和迁移映射默认永久保留，不能直接加 TTL。",
+  "collections": ["studyhub_tasks", "studyhub_ops", "studyhub_migrations", "studyhub_assets", "studyhub_uploads", "studyhub_notes"],
+  "clientPermissions": { "read": false, "write": false },
+  "additionalIndexes": [
+    { "collection": "studyhub_assets", "fields": [["ownerAppId", "asc"], ["ownerId", "asc"], ["_id", "asc"]] },
+    { "collection": "studyhub_notes", "fields": [["ownerAppId", "asc"], ["ownerId", "asc"], ["_id", "asc"]] }
+  ]
+}

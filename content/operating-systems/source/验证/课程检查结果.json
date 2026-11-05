@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-05",
+  "passed": true,
+  "checks": 192,
+  "chapters": 36,
+  "detailedChapters": [
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07",
+    "08",
+    "09",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16"
+  ],
+  "examples": 23,
+  "embeddedSources": 24,
+  "localSourceLinks": 118,
+  "documents": 55
+}
