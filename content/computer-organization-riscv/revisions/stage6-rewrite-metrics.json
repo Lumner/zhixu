@@ -1,0 +1,38 @@
+[
+  {
+    "name": "21-性能指标与加速比.md",
+    "previousCharacters": 1340,
+    "detailedCharacters": 5985,
+    "sections": 17
+  },
+  {
+    "name": "22-五级流水线.md",
+    "previousCharacters": 1395,
+    "detailedCharacters": 6036,
+    "sections": 17
+  },
+  {
+    "name": "23-数据冒险转发与停顿.md",
+    "previousCharacters": 1433,
+    "detailedCharacters": 6918,
+    "sections": 18
+  },
+  {
+    "name": "24-控制冒险与分支预测.md",
+    "previousCharacters": 1373,
+    "detailedCharacters": 6148,
+    "sections": 17
+  },
+  {
+    "name": "第六阶段-学习记录与验收清单.md",
+    "previousCharacters": 0,
+    "detailedCharacters": 2805,
+    "sections": 8
+  },
+  {
+    "name": "第六阶段-练习与参考答案.md",
+    "previousCharacters": 660,
+    "detailedCharacters": 8756,
+    "sections": 6
+  }
+]

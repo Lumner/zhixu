@@ -1,0 +1,10 @@
+DSA-CATALOG-1
+1
+30
+C basics
+2
+45
+Pointers
+3
+20
+Arrays

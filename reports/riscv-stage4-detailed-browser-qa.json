@@ -1,0 +1,45 @@
+{
+  "date": "2026-11-05",
+  "course": "computer-organization-riscv",
+  "edition": "detailed-rewrite-stage4",
+  "observations": {
+    "chaptersOpened": [
+      "13",
+      "14",
+      "15",
+      "16"
+    ],
+    "chapter13": "详细版17个分节、分支与完整循环已呈现，源码链接存在。",
+    "chapter14": "详细版18个分节，数组与字符串边界内容已呈现。",
+    "chapter15": "详细版19个分节，调用与栈内容已呈现。",
+    "chapter16": "默认五项逐轮追踪表与文字说明呈现，目录16.8定位成功。",
+    "stage4Exercises": {
+      "questions": 36,
+      "answerSections": 36
+    },
+    "courseOverview": "累计01—16章详细版完成、17—32章待重写，第四阶段与70—100小时安排显示，卡片进入第13章成功。"
+  },
+  "screenshot": "reports/riscv-stage4-detailed.jpg",
+  "archive": {
+    "filesComparedToSource": 100,
+    "allMatched": true,
+    "authorRuntimeExcluded": true
+  },
+  "checks": {
+    "officialRarsScenariosPassed": 58,
+    "rarsInvocations": 57,
+    "independentStage4Programs": 9,
+    "faultsDetected": 9,
+    "inlineCompleteProgramsMatchSource": 5,
+    "inlineCompleteFunctionMatchesSource": true,
+    "siteChecksPassed": 673,
+    "sourceMarkdown": 62,
+    "sourceInternalLinks": 286,
+    "generatedCourseDocuments": 61
+  },
+  "limits": [
+    "网页检查为选定桌面正文、目录、入口与练习，未逐屏复查全部内容。",
+    "未进行移动端专项检查。",
+    "RARS实际验证为命令行，GUI、Ripes与真机未执行。"
+  ]
+}

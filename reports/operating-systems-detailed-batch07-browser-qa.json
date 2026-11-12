@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-10",
+  "course": "operating-systems",
+  "batch": "07",
+  "preview": "http://127.0.0.1:4174",
+  "passed": true,
+  "method": "in-app browser accessibility state plus read-only rendered DOM",
+  "recovery": "Initial tab creation timed out and reset the tool session; inventory showed no created tab, then a fresh tab in the same browser succeeded.",
+  "courseOverview": {"detailedRange":"01—29", "pendingRange":"30—36", "worksheetLinkObserved":true},
+  "pages": [
+    {"id":"25", "sections":20, "codeBlocks":8, "tables":2, "modeCreationProgram":true, "horizontalOverflow":false},
+    {"id":"26", "sections":20, "codeBlocks":8, "tables":1, "offsetProgram":true, "horizontalOverflow":false},
+    {"id":"27", "sections":20, "codeBlocks":6, "tables":0, "nulDirectoryTool":true, "horizontalOverflow":false},
+    {"id":"28", "sections":20, "codeBlocks":3, "tables":2, "syncStreamProgram":true, "horizontalOverflow":false},
+    {"id":"29", "sections":20, "codeBlocks":3, "tables":1, "ioReadyProgram":true, "horizontalOverflow":false},
+    {"id":"d-5cc378c8a87a", "sections":12, "codeBlocks":4, "tables":1, "saveProject":true, "horizontalOverflow":false}
+  ],
+  "limitations": ["No screenshot visual review: prior screenshot capability failure was not retried", "No mobile viewport or file:// mode verification in this batch", "Browser reading checks do not substitute for Linux permission, file or persistence-protocol tests"],
+  "cleanup": "Temporary verification tab closed; owned preview server stopped at final teardown."
+}

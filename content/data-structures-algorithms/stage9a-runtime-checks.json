@@ -1,0 +1,239 @@
+{
+  "date": "2026-11-12",
+  "passed": true,
+  "checks": 41,
+  "programGroups": 6,
+  "runtimeOnly": true,
+  "environment": {
+    "compiler": "gcc.exe (x86_64-posix-seh-rev0, Built by MinGW-W64 project) 8.1.0",
+    "flags": [
+      "-std=c17",
+      "-Wall",
+      "-Wextra",
+      "-Wpedantic",
+      "-Werror",
+      "-O0",
+      "-D__USE_MINGW_ANSI_STDIO=1"
+    ]
+  },
+  "metrics": {
+    "validImpossibleSudokuCases": 12,
+    "intervalCases": 111111,
+    "subsetCases": 103759,
+    "coinCases": 15616,
+    "packCases": 629145,
+    "sudokuRowCandidates": 331776,
+    "completeMiniSudokuSolutions": 288,
+    "sudokuClueMasks": 65536,
+    "dynamicAllocationsUsed": false,
+    "detectedSafeMutations": 6
+  },
+  "error": "",
+  "results": [
+    {
+      "name": "compiler starts",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "temporary cleanup confined",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: 49-interval/main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "documented output: 49-interval/main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: 49-change/main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "documented output: 49-change/main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: 50-subset/main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "documented output: 50-subset/main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: 50-sudoku/main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "documented output: 50-sudoku/main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: 51-dp/coin_main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "documented output: 51-dp/coin_main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: 51-dp/pack_main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "documented output: 51-dp/pack_main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: independent oracle: search",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "oracle exits: search",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "oracle summary: search",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: independent oracle: dp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "oracle exits: dp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "oracle summary: dp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: independent oracle: sudoku",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "oracle exits: sudoku",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "sudoku oracle summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mutation target: wrong interval criterion",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: safe mutant: wrong interval criterion",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "oracle detects: wrong interval criterion",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mutation target: subset prunes equality",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: safe mutant: subset prunes equality",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "oracle detects: subset prunes equality",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mutation target: subset forgets rollback",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: safe mutant: subset forgets rollback",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "oracle detects: subset forgets rollback",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mutation target: sudoku ignores box",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: safe mutant: sudoku ignores box",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "oracle detects: sudoku ignores box",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mutation target: coin adds wrong cost",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: safe mutant: coin adds wrong cost",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "oracle detects: coin adds wrong cost",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mutation target: rolling uses current row twice",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: safe mutant: rolling uses current row twice",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "oracle detects: rolling uses current row twice",
+      "passed": true,
+      "detail": ""
+    }
+  ]
+}

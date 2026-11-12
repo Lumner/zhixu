@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-12",
+  "passed": true,
+  "localOnly": true,
+  "status": "complete",
+  "detailedChapters": "01-36",
+  "newChapters": [
+    "34",
+    "35",
+    "36"
+  ],
+  "newTeachingPrograms": 2,
+  "helpVariant": 1,
+  "compiledTargets": 8,
+  "programChecks": 487,
+  "mainExamples": 23,
+  "fullRegressionChecks": 133,
+  "courseChecks": 269,
+  "siteChecks": 909,
+  "courseDocuments": 60,
+  "zipFiles": 116,
+  "zipSha256": "CA3EFA6E6223911472E43D5CDE08D632F745120275C0610F794A5D210A86B85A",
+  "zipEntryHashesMatch": true,
+  "websiteZipMatches": true,
+  "limits": [
+    "No strace execution: tool absent",
+    "No screenshot/mobile/file mode QA",
+    "No terminal job-control or xv6/kernel-build validation"
+  ]
+}

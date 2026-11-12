@@ -1,0 +1,632 @@
+{
+  "date": "2026-11-12",
+  "passed": true,
+  "checks": 119,
+  "programGroups": 1,
+  "runtimeOnly": true,
+  "environment": {
+    "compiler": "gcc.exe (x86_64-posix-seh-rev0, Built by MinGW-W64 project) 8.1.0",
+    "flags": [
+      "-std=c17",
+      "-Wall",
+      "-Wextra",
+      "-Wpedantic",
+      "-Werror",
+      "-O0",
+      "-D__USE_MINGW_ANSI_STDIO=1"
+    ]
+  },
+  "metrics": {
+    "dependencyGraphs": 512,
+    "readyCases": 200,
+    "routeGraphs": 64,
+    "routeQueries": 576,
+    "categoryCases": 701,
+    "load_failure_positions": 8,
+    "export_failure_positions": 1,
+    "view_failure_positions": 1,
+    "io_cases": 10,
+    "live": 0,
+    "streams": 0,
+    "cliCases": 82,
+    "detectedSafeMutations": 4
+  },
+  "error": "",
+  "results": [
+    {
+      "name": "compiler starts",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "temporary cleanup confined",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: planner CLI",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: check",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: stable view",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: ID zero",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: sparse ID",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: title matching",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: no matches",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: empty pattern",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: classification",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: topological ID mapping",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: ready initially",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: ready after root",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: ready after prerequisites",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: all finished",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: zero road and mapping",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: reverse road",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: self route",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: unreachable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: export",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: minutes/export",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: reload updated",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: empty check",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: empty list",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: empty categories",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: empty order",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: empty ready",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: empty export",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: CRLF",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: no final newline",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: UTF-8 labels",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: invalid arguments ['find', '2']",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: invalid arguments ['find', '-1']",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: invalid arguments ['find', '10000']",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: invalid arguments ['find', 'x']",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: invalid arguments ['minutes', '0']",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: invalid arguments ['ready', '9999']",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: invalid arguments ['ready', '0']",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: invalid arguments ['ready', '44']",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: invalid arguments ['route', '0']",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: invalid arguments ['title', 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa']",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: bad header",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: BOM",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: blank line",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: unknown tag",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: field count",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: phase order",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: NUL",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: bare CR",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: oversized line",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: category duplicate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: parent missing",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: class cycle",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: multiple roots",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: membership absent",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: membership duplicate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: unknown membership record",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: unknown class",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: study duplicate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: study missing record",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: missing dependency endpoint",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: dependency duplicate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: dependency cycle",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: dependency self",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: place duplicate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: negative road",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: road too large",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: reverse duplicate road",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: road missing endpoint",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: label too long",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: empty label",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: control label",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: numeric space",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: numeric overflow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: catalog header",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: duplicate catalog ID",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: title too long",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: negative minutes",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: truncated catalog",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: all capacity limits",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: ninth category",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: ninth study",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: ninth place",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CLI: thirty-third record",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: independent integration models",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "integration models",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "model summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "instrument: app.c 0",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "instrument: relations.c 1",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "instrument: query.c 2",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "instrument: io.c 3",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "instrument: view.c 4",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "instrument: catalog.c 5",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "instrument: catalog.c 6",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "instrument: open_map.c 7",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "instrument: matching.c 8",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "instrument: merge.c 9",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "instrument: sort_common.c 10",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "instrument: graph.c 11",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "instrument: topological.c 12",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "instrument: path.c 13",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "instrument: dijkstra.c 14",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "instrument: heap.c 15",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: controlled allocation and I/O failures",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "fault model",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "fault summary",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mutant target: failed load replaces old app",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: safe mutant: failed load replaces old app",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "oracle detects: failed load replaces old app",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mutant target: ready leaks positions",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: safe mutant: ready leaks positions",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "oracle detects: ready leaks positions",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mutant target: route leaks positions",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: safe mutant: route leaks positions",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "oracle detects: route leaks positions",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mutant target: ready ignores closure",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: safe mutant: ready ignores closure",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "oracle detects: ready ignores closure",
+      "passed": true,
+      "detail": ""
+    }
+  ]
+}

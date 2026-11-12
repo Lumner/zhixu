@@ -1,0 +1,220 @@
+{
+  "date": "2026-11-11",
+  "passed": true,
+  "checks": 37,
+  "programGroups": 7,
+  "runtimeOnly": true,
+  "environment": {
+    "compiler": "gcc.exe (x86_64-posix-seh-rev0, Built by MinGW-W64 project) 8.1.0",
+    "flags": [
+      "-std=c17",
+      "-Wall",
+      "-Wextra",
+      "-Wpedantic",
+      "-Werror",
+      "-O0",
+      "-D__USE_MINGW_ANSI_STDIO=1"
+    ]
+  },
+  "metrics": {
+    "treeShapes": 626,
+    "insertionPermutations": 5914,
+    "bstModelSteps": 10000,
+    "heapModelSteps": 20000,
+    "heapSortCases": 10141,
+    "controlledAllocationFailures": 70,
+    "finalTrackedAllocations": 0,
+    "huffmanFrequencySets": 364,
+    "huffmanBinaryMessages": 5461,
+    "huffmanBitStrings": 1023,
+    "detectedSafeMutations": 4
+  },
+  "error": "",
+  "results": [
+    {
+      "name": "compiler starts",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "temporary cleanup confined",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: 37-binary-tree/main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "documented output: 37-binary-tree/main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: 38-traversal/main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "documented output: 38-traversal/main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: 39-bst/main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "documented output: 39-bst/main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: 40-avl/main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "documented output: 40-avl/main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: 41-heap/main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "documented output: 41-heap/main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: 42-huffman/main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "documented output: 42-huffman/main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: heapsort demo",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "documented heapsort count and stability",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile allocation hook: tree",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile allocation hook: bst",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile allocation hook: avl",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: tree and priority models",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "shapes, permutations, histories and failures",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: Huffman subset and parsing oracles",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "optimality, binary messages and bit parsing",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mutation target: successor incorrectly takes maximum",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile wrong owner module: bst",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: safe mutant: successor incorrectly takes maximum",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "oracle detects: successor incorrectly takes maximum",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mutation target: rotation caches wrong lower height",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile wrong owner module: avl",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: safe mutant: rotation caches wrong lower height",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "oracle detects: rotation caches wrong lower height",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mutation target: heap equal priority reverses ID",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: safe mutant: heap equal priority reverses ID",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "oracle detects: heap equal priority reverses ID",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mutation target: decoder accepts incomplete prefix",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: safe mutant: decoder accepts incomplete prefix",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "oracle detects: decoder accepts incomplete prefix",
+      "passed": true,
+      "detail": ""
+    }
+  ]
+}

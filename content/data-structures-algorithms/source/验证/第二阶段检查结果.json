@@ -1,0 +1,1975 @@
+{
+  "date": "2026-11-11",
+  "passed": true,
+  "checks": 391,
+  "programGroups": 8,
+  "environment": {
+    "compiler": "gcc (x86_64-posix-seh-rev0, Built by MinGW-W64 project) 8.1.0",
+    "compatibilityFlags": [
+      "-D__USE_MINGW_ANSI_STDIO=1"
+    ],
+    "gdb": {
+      "attempted": true,
+      "passed": true,
+      "exitCode": 0
+    }
+  },
+  "error": "",
+  "results": [
+    {
+      "name": "compiler starts",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "no unresolved include: 00-整体规划与学习路线.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 00-整体规划与学习路线.md -> 最终综合实践-学习资料检索与路线规划器.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 00-整体规划与学习路线.md -> 第一阶段-练习.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 00-整体规划与学习路线.md -> 第一阶段-参考答案.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 00-整体规划与学习路线.md -> 99-官方资料与核验说明.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 00-整体规划与学习路线.md -> 验证/课程验证记录.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 00-整体规划与学习路线.md -> 09-字符串与整行输入.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 00-整体规划与学习路线.md -> 16-综合实践资料目录v0.2.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 00-整体规划与学习路线.md -> 第二阶段-练习.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 00-整体规划与学习路线.md -> 验证/第二阶段验证记录.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "no unresolved include: 01-从生活问题到算法.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 01-从生活问题到算法.md -> 02-环境与第一个C程序.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "no unresolved include: 02-环境与第一个C程序.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 02-环境与第一个C程序.md -> 示例代码/02-hello/hello.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 02-环境与第一个C程序.md -> 03-变量类型与运算.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "no unresolved include: 03-变量类型与运算.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 03-变量类型与运算.md -> 示例代码/03-values/values.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 03-变量类型与运算.md -> 04-输入输出与合法数据.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "no unresolved include: 04-输入输出与合法数据.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 04-输入输出与合法数据.md -> 示例代码/04-input/input.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 04-输入输出与合法数据.md -> 05-条件判断与边界.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "no unresolved include: 05-条件判断与边界.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 05-条件判断与边界.md -> 示例代码/05-branches/branches.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 05-条件判断与边界.md -> 06-循环累加与执行跟踪.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "no unresolved include: 06-循环累加与执行跟踪.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 06-循环累加与执行跟踪.md -> 示例代码/06-loops/sum.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 06-循环累加与执行跟踪.md -> 07-函数参数与作用域.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "no unresolved include: 07-函数参数与作用域.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 07-函数参数与作用域.md -> 示例代码/07-functions/functions.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 07-函数参数与作用域.md -> 08-数组统计与顺序查找.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "no unresolved include: 08-数组统计与顺序查找.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 08-数组统计与顺序查找.md -> 示例代码/08-arrays/arrays.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 08-数组统计与顺序查找.md -> 第一阶段-练习.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 08-数组统计与顺序查找.md -> 第一阶段-参考答案.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 08-数组统计与顺序查找.md -> 09-字符串与整行输入.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "no unresolved include: 09-字符串与整行输入.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "09-字符串与整行输入.md: 目标与先修",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "09-字符串与整行输入.md: 常见错误",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "09-字符串与整行输入.md: 练习与参考答案",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "09-字符串与整行输入.md: 完成条件",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 09-字符串与整行输入.md -> 示例代码/09-strings/strings.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 09-字符串与整行输入.md -> 10-地址指针与生命周期.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "no unresolved include: 10-地址指针与生命周期.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "10-地址指针与生命周期.md: 目标与先修",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "10-地址指针与生命周期.md: 常见错误",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "10-地址指针与生命周期.md: 练习与参考答案",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "10-地址指针与生命周期.md: 完成条件",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 10-地址指针与生命周期.md -> 示例代码/10-pointers/pointers.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 10-地址指针与生命周期.md -> 11-数组参数长度与const.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "no unresolved include: 11-数组参数长度与const.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "11-数组参数长度与const.md: 目标与先修",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "11-数组参数长度与const.md: 常见错误",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "11-数组参数长度与const.md: 练习与参考答案",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "11-数组参数长度与const.md: 完成条件",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 11-数组参数长度与const.md -> 示例代码/11-array-api/array_api.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 11-数组参数长度与const.md -> 12-结构体枚举与记录.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "no unresolved include: 12-结构体枚举与记录.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "12-结构体枚举与记录.md: 目标与先修",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "12-结构体枚举与记录.md: 常见错误",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "12-结构体枚举与记录.md: 练习与参考答案",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "12-结构体枚举与记录.md: 完成条件",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 12-结构体枚举与记录.md -> 示例代码/12-records/records.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 12-结构体枚举与记录.md -> 13-动态内存与所有权.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "no unresolved include: 13-动态内存与所有权.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "13-动态内存与所有权.md: 目标与先修",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "13-动态内存与所有权.md: 常见错误",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "13-动态内存与所有权.md: 练习与参考答案",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "13-动态内存与所有权.md: 完成条件",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 13-动态内存与所有权.md -> 示例代码/13-memory/memory.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 13-动态内存与所有权.md -> 14-多文件调试与测试.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "no unresolved include: 14-多文件调试与测试.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "14-多文件调试与测试.md: 目标与先修",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "14-多文件调试与测试.md: 常见错误",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "14-多文件调试与测试.md: 练习与参考答案",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "14-多文件调试与测试.md: 完成条件",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 14-多文件调试与测试.md -> 示例代码/14-modules/totals.h",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 14-多文件调试与测试.md -> 示例代码/14-modules/totals.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 14-多文件调试与测试.md -> 示例代码/14-modules/main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 14-多文件调试与测试.md -> 15-文件命令行与错误处理.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "no unresolved include: 15-文件命令行与错误处理.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "15-文件命令行与错误处理.md: 目标与先修",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "15-文件命令行与错误处理.md: 常见错误",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "15-文件命令行与错误处理.md: 练习与参考答案",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "15-文件命令行与错误处理.md: 完成条件",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 15-文件命令行与错误处理.md -> 示例代码/15-files/file_count.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 15-文件命令行与错误处理.md -> 16-综合实践资料目录v0.2.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "no unresolved include: 16-综合实践资料目录v0.2.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "16-综合实践资料目录v0.2.md: 目标与先修",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "16-综合实践资料目录v0.2.md: 常见错误",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "16-综合实践资料目录v0.2.md: 练习与参考答案",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "16-综合实践资料目录v0.2.md: 完成条件",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 16-综合实践资料目录v0.2.md -> 示例代码/stage2-catalog/catalog.h",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 16-综合实践资料目录v0.2.md -> 示例代码/stage2-catalog/catalog.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 16-综合实践资料目录v0.2.md -> 示例代码/stage2-catalog/main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 16-综合实践资料目录v0.2.md -> 示例代码/stage2-catalog/sample.txt",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 16-综合实践资料目录v0.2.md -> 示例代码/stage2-catalog/完整源码.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 16-综合实践资料目录v0.2.md -> 第二阶段-练习.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 16-综合实践资料目录v0.2.md -> 第二阶段-参考答案.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "no unresolved include: 99-官方资料与核验说明.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 99-官方资料与核验说明.md -> 验证/课程验证记录.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "no unresolved include: README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 00-整体规划与学习路线.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 01-从生活问题到算法.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 第一阶段-练习.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 第一阶段-参考答案.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 第二阶段-练习.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 第二阶段-参考答案.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 示例代码/README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 示例代码/stage2-catalog/README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 99-官方资料与核验说明.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 验证/第二阶段验证记录.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 最终综合实践-学习资料检索与路线规划器.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "no unresolved include: 最终综合实践-学习资料检索与路线规划器.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "no unresolved include: 第一阶段-参考答案.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 第一阶段-参考答案.md -> 第一阶段-练习.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 第一阶段-参考答案.md -> 示例代码/stage1-stats/stats.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 第一阶段-参考答案.md -> 验证/课程验证记录.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "no unresolved include: 第一阶段-练习.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 第一阶段-练习.md -> 第一阶段-参考答案.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "no unresolved include: 第二阶段-参考答案.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 第二阶段-参考答案.md -> 第二阶段-练习.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 第二阶段-参考答案.md -> 示例代码/stage2-catalog/README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 第二阶段-参考答案.md -> 示例代码/stage2-catalog/完整源码.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 第二阶段-参考答案.md -> 验证/第二阶段验证记录.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "no unresolved include: 第二阶段-练习.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 第二阶段-练习.md -> 第二阶段-参考答案.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "no unresolved include: README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> ../验证/课程验证记录.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 02-hello/hello.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> ../02-环境与第一个C程序.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 03-values/values.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> ../03-变量类型与运算.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 04-input/input.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> ../04-输入输出与合法数据.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 05-branches/branches.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> ../05-条件判断与边界.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 06-loops/sum.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> ../06-循环累加与执行跟踪.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 07-functions/functions.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> ../07-函数参数与作用域.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 08-arrays/arrays.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> ../08-数组统计与顺序查找.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> stage1-stats/stats.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> ../第一阶段-练习.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> ../第一阶段-参考答案.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 09-strings/strings.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> ../09-字符串与整行输入.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 10-pointers/pointers.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> ../10-地址指针与生命周期.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 11-array-api/array_api.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> ../11-数组参数长度与const.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 12-records/records.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> ../12-结构体枚举与记录.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 13-memory/memory.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> ../13-动态内存与所有权.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 14-modules/main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 14-modules/totals.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 14-modules/totals.h",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> ../14-多文件调试与测试.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 15-files/file_count.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> ../15-文件命令行与错误处理.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> stage2-catalog/README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> ../16-综合实践资料目录v0.2.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> ../验证/第二阶段验证记录.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "no unresolved include: 第二阶段验证记录.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "no unresolved include: 课程验证记录.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 课程验证记录.md -> verify-stage1.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 课程验证记录.md -> 第一阶段检查结果.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "no unresolved include: README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> ../../验证/第二阶段验证记录.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 完整源码.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "no unresolved include: 完整源码.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 完整源码.md -> README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 完整源码.md -> catalog.h",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 完整源码.md -> catalog.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 完整源码.md -> main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 完整源码.md -> sample.txt",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "prose/source match: 09-strings/strings.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "prose/source match: 10-pointers/pointers.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "prose/source match: 11-array-api/array_api.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "prose/source match: 12-records/records.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "prose/source match: 13-memory/memory.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "prose/source match: 15-files/file_count.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "prose/source match: stage2-catalog/main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "module source match: totals.h",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "module source match: totals.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "module source match: main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "appendix source match: catalog.h",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "appendix source match: catalog.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "appendix source match: main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "appendix source match: sample.txt",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "temp cleanup confined",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: 09",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: 10",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: 11",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: 12",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: 13",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: 15",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: modules",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: catalog project",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: missing implementation rejected",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "separate compile: main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "separate compile: totals.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: separate linking",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "separate objects output",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "title empty",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "title EOF",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "title boundary 1/'\\n'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "title boundary 1/''",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "title boundary 2/'\\n'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "title boundary 2/''",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "title boundary 3/'\\n'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "title boundary 3/''",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "title boundary 4/'\\n'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "title boundary 4/''",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "title boundary 5/'\\n'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "title boundary 5/''",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "title boundary 6/'\\n'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "title boundary 6/''",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "title boundary 7/'\\n'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "title boundary 7/''",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "title boundary 8/'\\n'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "title boundary 8/''",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "title boundary 9/'\\n'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "title boundary 9/''",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "title boundary 10/'\\n'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "title boundary 10/''",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "title boundary 11/'\\n'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "title boundary 11/''",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "title boundary 12/'\\n'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "title boundary 12/''",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "title boundary 13/'\\n'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "title boundary 13/''",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "title boundary 14/'\\n'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "title boundary 14/''",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "title boundary 15/'\\n'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "title boundary 15/''",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "title too long 16/'\\n'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "title too long 16/''",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "title too long 17/'\\n'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "title too long 17/''",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "matching title",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "UTF8 byte length",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "pointer state transitions",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "array API normal and empty",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "record copies independent",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "memory growth and calloc",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "module output",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: array failure harness",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "array API failures",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: const input write rejected",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "binary file length 0",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "binary file length 1",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "binary file length 2",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "binary file length 3",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "binary file length 4",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "file usage",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "file missing",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 0",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 0",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 0",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 1",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 1",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 1",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 2",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 2",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 2",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 3",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 3",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 3",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 4",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 4",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 4",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 5",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 5",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 5",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 6",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 6",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 6",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 7",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 7",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 7",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 8",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 8",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 8",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 9",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 9",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 9",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 10",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 10",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 10",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 11",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 11",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 11",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 12",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 12",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 12",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 13",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 13",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 13",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 14",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 14",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 14",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 15",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 15",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 15",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 16",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 16",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 16",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 17",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 17",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 17",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 18",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 18",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 18",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 19",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 19",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 19",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 20",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 20",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 20",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 21",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 21",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 21",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 22",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 22",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 22",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 23",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 23",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 23",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 24",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 24",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 24",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 25",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 25",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 25",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 26",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 26",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 26",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 27",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 27",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 27",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 28",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 28",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 28",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 29",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 29",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 29",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 30",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 30",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog roundtrip 30",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog update",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog reload edited output",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog missing ID",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "invalid command minutes -1",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "invalid command minutes 1.5",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "invalid command minutes 2x",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "invalid command minutes 1441",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "invalid command minutes 999999999999",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog bad file 0",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog bad file 1",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog bad file 2",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog bad file 3",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog bad file 4",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog bad file 5",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog bad file 6",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog bad file 7",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog bad file 8",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog bad file 9",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog bad file 10",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog bad file 11",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog bad file 12",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog bad file 13",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog bad file 14",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog bad file 15",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog bad file 16",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog bad file 17",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog bad file 18",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog bad file 19",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog bad file 20",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog bad file 21",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog bad file 22",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog bad file 23",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "duplicate IDs numeric equivalence",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "record 33 rejected",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog missing input file",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "catalog usage",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile controlled allocation and IO substitutes",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: API rollback and resource audit",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "API failure paths and resource balance",
+      "passed": true,
+      "detail": ""
+    }
+  ]
+}

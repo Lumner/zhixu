@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-05",
+  "course": "operating-systems",
+  "detailedChapters": "01—20",
+  "nextBatch": "21—24",
+  "teachingPrograms": 14,
+  "teachingChecks": 719,
+  "mainExamplesReused": 3,
+  "courseChecks": 208,
+  "siteChecks": 681,
+  "zipFilesVerified": 100,
+  "sourceAndDistDownloadMatch": true,
+  "downloadSHA256": "0663B29A5D6016D02438D07153416CF5B43EB818E8671B694400E1A801F1F1DE",
+  "browserReport": "operating-systems-detailed-batch05-browser-qa.json",
+  "threadSanitizer": "compiled but runtime failed: unexpected memory mapping; not a passing diagnostic run",
+  "localOnly": true
+}

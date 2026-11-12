@@ -1,0 +1,19 @@
+{
+  "date":"2026-11-12",
+  "passed":true,
+  "origin":"http://127.0.0.1:4173",
+  "method":"IAB accessibility and read-only DOM inspection",
+  "chapters":[
+    {"id":"34","sections":20,"measureSelfPresent":true,"horizontalOverflow":false},
+    {"id":"35","sections":20,"runOnePresent":true,"detailedNotice":true,"horizontalOverflow":false},
+    {"id":"36","sections":20,"reviewPresent":true,"detailedNotice":true,"horizontalOverflow":false}
+  ],
+  "exercise":{"id":"d-392a099d9c7c","sections":12,"helpFragmentsPresent":true,"validationLinkPresent":true,"horizontalOverflow":false},
+  "graduation":{"id":"d-558f9b035248","sections":7,"checklistPresent":true,"recordTemplatePresent":true,"horizontalOverflow":false},
+  "courseSummaryComplete":true,
+  "exerciseLinkPresent":true,
+  "overallGuideCompleteNotice":true,
+  "overallGuideStaleDraftNotice":false,
+  "ownedTabsClosed":true,
+  "limits":["No screenshot visual QA","No mobile viewport or file mode QA","DOM inspection does not assess learning comprehension"]
+}

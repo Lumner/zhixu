@@ -3,6 +3,7 @@ Linux only. Every subprocess owns a fresh process group; timeouts clean that gro
 Fault wrappers affect only the newly compiled tutorial executables, not system tools.
 """
 from pathlib import Path
+import fcntl
 import json
 import os
 import platform
@@ -27,6 +28,13 @@ def check(name, condition):
 
 if platform.system() != "Linux":
     raise SystemExit("Run this script inside Linux/WSL Ubuntu.")
+capacity_read, capacity_write = os.pipe()
+try:
+    pipe_capacity = fcntl.fcntl(capacity_read, fcntl.F_GETPIPE_SZ)
+finally:
+    os.close(capacity_read)
+    os.close(capacity_write)
+check("large payload exceeds measured default pipe capacity", 1048699 > pipe_capacity)
 for doc in [next(SOURCE.glob(f"{n:02d}-*.md")) for n in range(11, 17)] + [SOURCE / "详写第四批-练习与参考答案.md"]:
     text = doc.read_text(encoding="utf-8").replace("\r\n", "\n")
     for filename, code in re.findall(r"\*\*完整程序：([^*]+)\*\*\s*```c\n(.*?)\n```", text, re.S):
@@ -244,6 +252,7 @@ report = {"date":"2026-11-05", "passed":True, "checks":len(checks), "teachingPro
           "mainExamples":6, "fixtures":3, "faultWrappedPrograms":11,
           "platform":platform.platform(), "compiler":subprocess.check_output(["gcc","--version"],text=True).splitlines()[0],
           "signalHandshakeRuns":21, "signalDemoRuns":3, "largePayloadBytes":1048699,
+          "pipeCapacityBytes":pipe_capacity,
           "straceAvailable":shutil.which("strace") is not None,
           "limitations":["strace optional steps were not run because strace is absent", "no kernel scheduler modification or timing benchmark", "fault auditing covers parent-owned children and tracked descriptors at normal exit, not every possible process failure", "not a full shell or job control implementation"],
           "details":checks}

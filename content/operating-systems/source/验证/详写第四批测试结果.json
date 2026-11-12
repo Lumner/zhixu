@@ -1,7 +1,7 @@
 {
   "date": "2026-11-05",
   "passed": true,
-  "checks": 430,
+  "checks": 431,
   "teachingPrograms": 16,
   "mainExamples": 6,
   "fixtures": 3,
@@ -11,6 +11,7 @@
   "signalHandshakeRuns": 21,
   "signalDemoRuns": 3,
   "largePayloadBytes": 1048699,
+  "pipeCapacityBytes": 65536,
   "straceAvailable": false,
   "limitations": [
     "strace optional steps were not run because strace is absent",
@@ -19,6 +20,7 @@
     "not a full shell or job control implementation"
   ],
   "details": [
+    "large payload exceeds measured default pipe capacity",
     "unique teaching program fd-write.c",
     "unique teaching program fd-error.c",
     "unique teaching program stdio-three.c",

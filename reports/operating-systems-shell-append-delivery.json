@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-12",
+  "passed": true,
+  "localOnly": true,
+  "mainChapters": 36,
+  "mainExamples": 23,
+  "newExtension": "shell-append",
+  "extensionPrograms": 2,
+  "lessonSections": 20,
+  "programChecks": 285,
+  "sourceOnlyChecks": 263,
+  "courseSiteChecks": 289,
+  "siteChecks": 925,
+  "courseDocuments": 61,
+  "embeddedSources": 26,
+  "zipFiles": 123,
+  "zipSha256": "18092A320788CB4613DDC4E9AFEA307F36D133DA3213E967FA5A0AD3347D7E5A",
+  "zipEntryHashesMatch": true,
+  "websiteZipMatches": true,
+  "mainSiteGuideNavigationVerified": true,
+  "initialBuildBlockedByOtherCourse": true,
+  "finalMainBuildSucceeded": true,
+  "limits": [
+    "Sequential local filesystem tests; no multiwriter record or power-loss guarantee",
+    "No screenshot/mobile/file mode QA",
+    "Baseline 23 programs unchanged; full regression retained from batch09"
+  ]
+}

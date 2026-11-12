@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-05",
+  "course": "operating-systems",
+  "batch": "04",
+  "preview": "http://127.0.0.1:4174",
+  "passed": true,
+  "method": "in-app browser accessibility state plus read-only rendered DOM",
+  "courseOverview": {"detailedRange": "01—16", "pendingRange": "17—36", "worksheetLinkObserved": true},
+  "pages": [
+    {"id": "11", "sections": 18, "codeBlocks": 9, "shortWriteExplanation": true, "horizontalOverflow": false},
+    {"id": "14", "sections": 19, "codeBlocks": 8, "eofProbe": true, "newFileRedirect": true, "horizontalOverflow": false},
+    {"id": "15", "sections": 19, "codeBlocks": 4, "signalHandshake": true, "atomicWait": true, "horizontalOverflow": false},
+    {"id": "16", "sections": 20, "codeBlocks": 8, "tables": 6, "roundRobin": true, "srtf": true, "horizontalOverflow": false},
+    {"id": "d-ab6c45aaa04b", "sections": 12, "codeBlocks": 7, "pipelineProject": true, "failureCleanup": true, "returnConvention": true, "horizontalOverflow": false}
+  ],
+  "limitations": ["No screenshot visual review: earlier screenshot capability failure was not retried", "No mobile viewport or file:// mode verification in this batch", "Browser reading checks do not substitute for Linux process tests"],
+  "cleanup": "Temporary verification tab closed; owned preview server stopped at final teardown."
+}

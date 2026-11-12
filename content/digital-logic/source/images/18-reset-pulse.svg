@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="530" viewBox="0 0 900 530" role="img" aria-labelledby="title desc">
+<title id="title">17到19纳秒短复位的同步与异步效果</title>
+<desc id="desc">时钟上升沿在15和25纳秒，17到19纳秒的复位脉冲没有覆盖上升沿。同步输出保持A，异步输出在17纳秒清零。使能在16纳秒关闭，所以25纳秒后两者仍保持不同历史。</desc>
+<rect width="900" height="530" rx="16" fill="#f7faf7"/>
+<g font-family="Microsoft YaHei, sans-serif" fill="#213b30">
+<text x="28" y="43" font-size="27" font-weight="bold">短复位没有覆盖采样沿</text>
+<text x="28" y="80" font-size="21">15 ns 加载 A，16 ns 关闭 en；复位脉冲在 17–19 ns。</text>
+<g font-size="20" text-anchor="middle"><text x="215" y="119">15 ns</text><text x="305" y="119">17</text><text x="395" y="119">19</text><text x="665" y="119">25 ns</text></g>
+<g stroke="#b7c9bc" stroke-width="1.5" stroke-dasharray="5 5"><path d="M215 128 V413"/><path d="M665 128 V413"/></g>
+<g font-size="22"><text x="32" y="172">clk</text><text x="32" y="258">rst</text><text x="32" y="337">sync_q</text><text x="32" y="405">async_q</text></g>
+<g fill="none" stroke="#527b64" stroke-width="3"><path d="M170 180 H215 V145 H440 V180 H665 V145 H800"/><path d="M170 265 H305 V230 H395 V265 H800"/></g>
+<g fill="#e5f0e7" stroke="#83a18b" stroke-width="2">
+<rect x="170" y="309" width="45" height="43"/><rect x="215" y="309" width="585" height="43"/>
+<rect x="170" y="377" width="45" height="43"/><rect x="215" y="377" width="90" height="43"/><rect x="305" y="377" width="495" height="43"/>
+</g>
+<g font-size="22" text-anchor="middle"><text x="192" y="339">0</text><text x="506" y="339">A：同步块没遇到高 rst 的采样沿</text><text x="192" y="407">0</text><text x="260" y="407">A</text><text x="551" y="407">0：异步块响应 rst 上升</text></g>
+<text x="28" y="468" font-size="21">25 ns 时 rst=0、en=0，各自保持；释放复位不会自动加载。</text>
+<text x="28" y="503" font-size="19">理想 RTL 行为示意，不代表真实复位传播或恢复/移除时间测量。</text>
+</g></svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="500" viewBox="0 0 840 500" role="img" aria-labelledby="title desc">
+<title id="title">八个相位格中的PWM占空比</title>
+<desc id="desc">相位零到七。duty零八格全低，duty三前零一二格高，duty八全部高。绿色格标记一，浅色格标记零。</desc>
+<rect width="840" height="500" rx="16" fill="#f7faf7"/>
+<g font-family="Microsoft YaHei, sans-serif" fill="#213b30">
+<text x="28" y="44" font-size="27" font-weight="bold">固定 8 格，改变高电平占比</text>
+<text x="28" y="84" font-size="21">pwm = (phase &lt; duty)，每格持续一个时钟间隔。</text>
+<g font-size="22"><text x="35" y="140">phase</text><text x="35" y="211">duty=0</text><text x="35" y="307">duty=3</text><text x="35" y="403">duty=8</text></g>
+<g font-size="22" text-anchor="middle"><text x="194" y="140">0</text><text x="261" y="140">1</text><text x="328" y="140">2</text><text x="395" y="140">3</text><text x="462" y="140">4</text><text x="529" y="140">5</text><text x="596" y="140">6</text><text x="663" y="140">7</text></g>
+<g stroke="#83a18b" stroke-width="1.5">
+<path d="M160 173 H697 V227 H160 Z M160 269 H697 V323 H160 Z M160 365 H697 V419 H160 Z" fill="#edf2ee"/>
+<path d="M160 269 H361 V323 H160 Z M160 365 H697 V419 H160 Z" fill="#a8c9b1"/>
+<path d="M227 173 V227 M294 173 V227 M361 173 V227 M428 173 V227 M495 173 V227 M562 173 V227 M629 173 V227 M227 269 V323 M294 269 V323 M361 269 V323 M428 269 V323 M495 269 V323 M562 269 V323 M629 269 V323 M227 365 V419 M294 365 V419 M361 365 V419 M428 365 V419 M495 365 V419 M562 365 V419 M629 365 V419" fill="none"/>
+</g>
+<g font-size="23" text-anchor="middle"><text x="194" y="209">0</text><text x="261" y="209">0</text><text x="328" y="209">0</text><text x="395" y="209">0</text><text x="462" y="209">0</text><text x="529" y="209">0</text><text x="596" y="209">0</text><text x="663" y="209">0</text>
+<text x="194" y="305">1</text><text x="261" y="305">1</text><text x="328" y="305">1</text><text x="395" y="305">0</text><text x="462" y="305">0</text><text x="529" y="305">0</text><text x="596" y="305">0</text><text x="663" y="305">0</text>
+<text x="194" y="401">1</text><text x="261" y="401">1</text><text x="328" y="401">1</text><text x="395" y="401">1</text><text x="462" y="401">1</text><text x="529" y="401">1</text><text x="596" y="401">1</text><text x="663" y="401">1</text></g>
+<g font-size="21"><text x="724" y="210">0/8</text><text x="724" y="306">3/8</text><text x="724" y="402">8/8</text><text x="28" y="468">此图要求 duty 在整个周期保持；本实验另检查两次实时改值。</text></g>
+</g></svg>

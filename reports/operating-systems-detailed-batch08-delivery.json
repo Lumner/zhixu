@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-12",
+  "passed": true,
+  "localOnly": true,
+  "detailedChapters": "01-33",
+  "newChapters": [
+    "30",
+    "31",
+    "32",
+    "33"
+  ],
+  "pendingChapters": [
+    "34",
+    "35",
+    "36"
+  ],
+  "newTeachingPrograms": 6,
+  "reusedMainExample": "socket-demo.c",
+  "compiledTargets": 13,
+  "programChecks": 711,
+  "courseChecks": 248,
+  "siteChecks": 907,
+  "courseDocuments": 59,
+  "embeddedSources": 24,
+  "zipFiles": 112,
+  "zipSourceFileHashesMatch": true,
+  "websiteZipMatches": true,
+  "zipSha256": "DB6B267DE2ED59C51C1F87F608BED8E0FC9B8F4F7BB550DC79E7BF8D9B4FEA65",
+  "browserReport": "reports/operating-systems-detailed-batch08-browser-qa.json",
+  "limits": [
+    "No Internet/TLS/DNS or VM/container setup tests",
+    "No screenshot/mobile/file mode QA",
+    "Controlled directory and bounded worker assumptions; not general sandbox"
+  ]
+}

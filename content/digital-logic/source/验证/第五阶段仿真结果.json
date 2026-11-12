@@ -1,0 +1,292 @@
+{
+  "date": "2026-11-05",
+  "tool": "Icarus Verilog version 11.0 (stable) ()",
+  "languageMode": "-g2012",
+  "passedControlExperiments": 4,
+  "detectedInjectedFaults": 9,
+  "coverage": {
+    "fsmEdges": 10,
+    "fsmTransitionRows": 6,
+    "streamCycles": 13,
+    "streamAccepted": 5,
+    "streamDelivered": 4,
+    "streamResetDiscarded": 1,
+    "fifoCycles": 220,
+    "uartClksPerBit": [
+      1,
+      4
+    ],
+    "uartCompletedFrames": 512,
+    "uartCenterSamples": 5120,
+    "uartAbortedFrames": 2
+  },
+  "results": [
+    {
+      "name": "22-fsm",
+      "expectedFailure": false,
+      "compileExitCode": 0,
+      "compileMessages": "",
+      "exitCode": 0,
+      "output": "TRACE FSM state=0 lamps=100\r\nTRACE FSM state=0 lamps=100\r\nTRACE FSM state=1 lamps=010\r\nTRACE FSM state=1 lamps=010\r\nTRACE FSM state=2 lamps=001\r\nTRACE FSM state=2 lamps=001\r\nTRACE FSM state=0 lamps=100\r\nTRACE FSM state=1 lamps=010\r\nTRACE FSM state=0 lamps=100\r\nTRACE FSM state=1 lamps=010\r\nPASS FSM: 10 edge cases, 6 transition-table rows, Moore hold and reset priority\r\n"
+    },
+    {
+      "name": "23-ready-valid",
+      "expectedFailure": false,
+      "compileExitCode": 0,
+      "compileMessages": "",
+      "exitCode": 0,
+      "output": "TRACE stream cycle=1 input-fire=0 output-fire=0 queued=0\r\nTRACE stream cycle=2 input-fire=1 output-fire=0 queued=1\r\nTRACE stream cycle=3 input-fire=0 output-fire=0 queued=1\r\nTRACE stream cycle=4 input-fire=0 output-fire=0 queued=1\r\nTRACE stream cycle=5 input-fire=1 output-fire=1 queued=1\r\nTRACE stream cycle=6 input-fire=1 output-fire=1 queued=1\r\nTRACE stream cycle=7 input-fire=0 output-fire=1 queued=0\r\nTRACE stream cycle=8 input-fire=0 output-fire=0 queued=0\r\nTRACE stream cycle=9 input-fire=1 output-fire=0 queued=1\r\nTRACE stream cycle=10 input-fire=0 output-fire=0 queued=1\r\nTRACE stream cycle=11 input-fire=0 output-fire=0 queued=0\r\nTRACE stream cycle=12 input-fire=1 output-fire=0 queued=1\r\nTRACE stream cycle=13 input-fire=0 output-fire=1 queued=0\r\nPASS ready/valid: 13 cycles accepted=5 delivered=4 reset-discarded=1\r\n"
+    },
+    {
+      "name": "24-fifo",
+      "expectedFailure": false,
+      "compileExitCode": 0,
+      "compileMessages": "",
+      "exitCode": 0,
+      "output": "TRACE FIFO cycle=1 before=0 push=0 pop=0 after=0 dout=00\r\nTRACE FIFO cycle=2 before=0 push=0 pop=0 after=0 dout=00\r\nTRACE FIFO cycle=3 before=0 push=1 pop=0 after=1 dout=00\r\nTRACE FIFO cycle=4 before=1 push=1 pop=0 after=2 dout=00\r\nTRACE FIFO cycle=5 before=2 push=1 pop=0 after=3 dout=00\r\nTRACE FIFO cycle=6 before=3 push=1 pop=0 after=4 dout=00\r\nTRACE FIFO cycle=7 before=4 push=0 pop=0 after=4 dout=00\r\nTRACE FIFO cycle=8 before=4 push=0 pop=1 after=3 dout=a1\r\nTRACE FIFO cycle=9 before=3 push=1 pop=1 after=3 dout=b2\r\nTRACE FIFO cycle=10 before=3 push=0 pop=1 after=2 dout=c3\r\nTRACE FIFO cycle=11 before=2 push=1 pop=0 after=3 dout=c3\r\nTRACE FIFO cycle=12 before=3 push=0 pop=1 after=2 dout=d4\r\nTRACE FIFO cycle=13 before=2 push=0 pop=1 after=1 dout=e5\r\nTRACE FIFO cycle=14 before=1 push=0 pop=1 after=0 dout=f6\r\nTRACE FIFO cycle=15 before=0 push=0 pop=0 after=0 dout=f6\r\nTRACE FIFO cycle=16 before=0 push=1 pop=0 after=1 dout=f6\r\nTRACE FIFO cycle=17 before=1 push=0 pop=0 after=0 dout=00\r\nTRACE FIFO cycle=18 before=0 push=1 pop=0 after=1 dout=00\r\nTRACE FIFO cycle=19 before=1 push=0 pop=1 after=0 dout=88\r\nTRACE FIFO cycle=20 before=0 push=0 pop=0 after=0 dout=88\r\nPASS FIFO: 220 cycles writes=111 reads=107 rejected-write=32 rejected-read=4 reset-discarded=1 remaining=3\r\n"
+    },
+    {
+      "name": "25-uart",
+      "expectedFailure": false,
+      "compileExitCode": 0,
+      "compileMessages": "",
+      "exitCode": 0,
+      "output": "VCD info: dumpfile uart.vcd opened for output.\r\nTRACE UART CPB=1 value=00 received=00\r\nTRACE UART CPB=4 value=00 received=00\r\nTRACE UART CPB=1 value=53 received=53\r\nTRACE UART CPB=1 value=a5 received=a5\r\nTRACE UART CPB=1 value=ff received=ff\r\nPASS UART CPB=1: frames=256 centers=2560 busy rejection, latched data, reset\r\nTRACE UART CPB=4 value=53 received=53\r\nTRACE UART CPB=4 value=a5 received=a5\r\nTRACE UART CPB=4 value=ff received=ff\r\nPASS UART CPB=4: frames=256 centers=2560 busy rejection, latched data, reset\r\nPASS UART all: 512 frames and 5120 symbol centers at CPB=1/4\r\n"
+    },
+    {
+      "name": "mutant-skip-yellow",
+      "expectedFailure": true,
+      "compileExitCode": 0,
+      "compileMessages": "",
+      "exitCode": 1,
+      "output": "TRACE FSM state=0 lamps=100\r\nTRACE FSM state=0 lamps=100\r\nTRACE FSM state=1 lamps=010\r\nTRACE FSM state=1 lamps=010\r\nFATAL: C:\\Users\\17597\\Desktop\\tutorial\\content\\digital-logic\\source\\控制通信实验\\22-fsm\\tb.sv:14: FSM rst=0 advance=1 state=0 lamps=100 expected=2/001\r\n       Time: 56000 Scope: tb.step\r\n"
+    },
+    {
+      "name": "mutant-ready-loses-replacement",
+      "expectedFailure": true,
+      "compileExitCode": 0,
+      "compileMessages": "",
+      "exitCode": 1,
+      "output": "TRACE stream cycle=1 input-fire=0 output-fire=0 queued=0\r\nTRACE stream cycle=2 input-fire=1 output-fire=0 queued=1\r\nTRACE stream cycle=3 input-fire=0 output-fire=0 queued=1\r\nTRACE stream cycle=4 input-fire=0 output-fire=0 queued=1\r\nFATAL: C:\\Users\\17597\\Desktop\\tutorial\\content\\digital-logic\\source\\控制通信实验\\23-ready-valid\\tb.sv:26: stream cycle=4 ready/valid=0/1 expected=1/1\r\n       Time: 51000 Scope: tb.step\r\n"
+    },
+    {
+      "name": "mutant-overwrite-while-stalled",
+      "expectedFailure": true,
+      "compileExitCode": 0,
+      "compileMessages": "",
+      "exitCode": 1,
+      "output": "TRACE stream cycle=1 input-fire=0 output-fire=0 queued=0\r\nTRACE stream cycle=2 input-fire=1 output-fire=0 queued=1\r\nFATAL: C:\\Users\\17597\\Desktop\\tutorial\\content\\digital-logic\\source\\控制通信实验\\23-ready-valid\\tb.sv:39: stream post-edge data\r\n       Time: 36000 Scope: tb.step\r\n"
+    },
+    {
+      "name": "mutant-fifo-full-replacement",
+      "expectedFailure": true,
+      "compileExitCode": 0,
+      "compileMessages": "",
+      "exitCode": 1,
+      "output": "TRACE FIFO cycle=1 before=0 push=0 pop=0 after=0 dout=00\r\nTRACE FIFO cycle=2 before=0 push=0 pop=0 after=0 dout=00\r\nTRACE FIFO cycle=3 before=0 push=1 pop=0 after=1 dout=00\r\nTRACE FIFO cycle=4 before=1 push=1 pop=0 after=2 dout=00\r\nTRACE FIFO cycle=5 before=2 push=1 pop=0 after=3 dout=00\r\nTRACE FIFO cycle=6 before=3 push=1 pop=0 after=4 dout=00\r\nTRACE FIFO cycle=7 before=4 push=0 pop=0 after=4 dout=00\r\nFATAL: C:\\Users\\17597\\Desktop\\tutorial\\content\\digital-logic\\source\\控制通信实验\\24-fifo\\tb.sv:22: FIFO acceptance cycle=7 level=4 request=11 actual=11 expected=01\r\n       Time: 81000 Scope: tb.step\r\n"
+    },
+    {
+      "name": "mutant-fifo-empty-bypass",
+      "expectedFailure": true,
+      "compileExitCode": 0,
+      "compileMessages": "",
+      "exitCode": 1,
+      "output": "TRACE FIFO cycle=1 before=0 push=0 pop=0 after=0 dout=00\r\nTRACE FIFO cycle=2 before=0 push=0 pop=0 after=0 dout=00\r\nFATAL: C:\\Users\\17597\\Desktop\\tutorial\\content\\digital-logic\\source\\控制通信实验\\24-fifo\\tb.sv:22: FIFO acceptance cycle=2 level=0 request=11 actual=11 expected=10\r\n       Time: 31000 Scope: tb.step\r\n"
+    },
+    {
+      "name": "mutant-fifo-double-count-write",
+      "expectedFailure": true,
+      "compileExitCode": 0,
+      "compileMessages": "",
+      "exitCode": 1,
+      "output": "TRACE FIFO cycle=1 before=0 push=0 pop=0 after=0 dout=00\r\nTRACE FIFO cycle=2 before=0 push=0 pop=0 after=0 dout=00\r\nTRACE FIFO cycle=3 before=0 push=1 pop=0 after=1 dout=00\r\nTRACE FIFO cycle=4 before=1 push=1 pop=0 after=2 dout=00\r\nTRACE FIFO cycle=5 before=2 push=1 pop=0 after=3 dout=00\r\nTRACE FIFO cycle=6 before=3 push=1 pop=0 after=4 dout=00\r\nTRACE FIFO cycle=7 before=4 push=0 pop=0 after=4 dout=00\r\nTRACE FIFO cycle=8 before=4 push=0 pop=1 after=3 dout=a1\r\nFATAL: C:\\Users\\17597\\Desktop\\tutorial\\content\\digital-logic\\source\\控制通信实验\\24-fifo\\tb.sv:34: FIFO post-edge cycle=8 data=b2 expected=b2 level=2 expected-level=3\r\n       Time: 96000 Scope: tb.step\r\n"
+    },
+    {
+      "name": "mutant-uart-msb-first",
+      "expectedFailure": true,
+      "compileExitCode": 0,
+      "compileMessages": "",
+      "exitCode": 1,
+      "output": "VCD info: dumpfile uart.vcd opened for output.\r\nTRACE UART CPB=1 value=00 received=00\r\nFATAL: C:\\Users\\17597\\Desktop\\tutorial\\content\\digital-logic\\source\\控制通信实验\\25-uart\\tb.sv:20: UART CPB=1 value=01 symbol=1 actual=0 busy=1 expected=1\r\n       Time: 170000 Scope: tb.c1.send_check\r\n"
+    },
+    {
+      "name": "mutant-uart-external-data",
+      "expectedFailure": true,
+      "compileExitCode": 0,
+      "compileMessages": "",
+      "exitCode": 1,
+      "output": "VCD info: dumpfile uart.vcd opened for output.\r\nFATAL: C:\\Users\\17597\\Desktop\\tutorial\\content\\digital-logic\\source\\控制通信实验\\25-uart\\tb.sv:20: UART CPB=1 value=00 symbol=1 actual=1 busy=1 expected=0\r\n       Time: 40000 Scope: tb.c1.send_check\r\n"
+    },
+    {
+      "name": "mutant-uart-short-stop-busy",
+      "expectedFailure": true,
+      "compileExitCode": 0,
+      "compileMessages": "",
+      "exitCode": 1,
+      "output": "VCD info: dumpfile uart.vcd opened for output.\r\nFATAL: C:\\Users\\17597\\Desktop\\tutorial\\content\\digital-logic\\source\\控制通信实验\\25-uart\\tb.sv:20: UART CPB=1 value=00 symbol=9 actual=1 busy=0 expected=1\r\n       Time: 120000 Scope: tb.c1.send_check\r\n"
+    }
+  ],
+  "uartVcdFrames": [
+    {
+      "clksPerBit": 1,
+      "byte": 0,
+      "acceptedNs": 25.0,
+      "symbols": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "decodedByte": 0
+    },
+    {
+      "clksPerBit": 1,
+      "byte": 83,
+      "acceptedNs": 10815.0,
+      "symbols": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "decodedByte": 83
+    },
+    {
+      "clksPerBit": 1,
+      "byte": 165,
+      "acceptedNs": 21475.0,
+      "symbols": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "decodedByte": 165
+    },
+    {
+      "clksPerBit": 1,
+      "byte": 255,
+      "acceptedNs": 33175.0,
+      "symbols": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "decodedByte": 255
+    },
+    {
+      "clksPerBit": 4,
+      "byte": 0,
+      "acceptedNs": 25.0,
+      "symbols": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "decodedByte": 0
+    },
+    {
+      "clksPerBit": 4,
+      "byte": 83,
+      "acceptedNs": 35715.0,
+      "symbols": [
+        0,
+        1,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "decodedByte": 83
+    },
+    {
+      "clksPerBit": 4,
+      "byte": 165,
+      "acceptedNs": 70975.0,
+      "symbols": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        1
+      ],
+      "decodedByte": 165
+    },
+    {
+      "clksPerBit": 4,
+      "byte": 255,
+      "acceptedNs": 109675.0,
+      "symbols": [
+        0,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "decodedByte": 255
+    }
+  ],
+  "uartAcceptedFramesIncludingAbort": {
+    "1": 257,
+    "4": 257
+  },
+  "gtkWaveGuiExecuted": false,
+  "fpgaSynthesisVerified": false,
+  "physicalUartVerified": false,
+  "sourceHashes": {
+    "控制通信实验\\22-fsm\\design.sv": "2006e9678e162d9a007fe0b4a7f876f76713895f2e3476f1c185f03d556ab13c",
+    "控制通信实验\\22-fsm\\tb.sv": "f3922a6a5397372bf175aca857695d102fd96445e103b80ec00fd2011f0cbc62",
+    "控制通信实验\\23-ready-valid\\design.sv": "243d5fa63b41a2ca7458378ced25ca2f5be693915b0d53fddfd9b03da24d631a",
+    "控制通信实验\\23-ready-valid\\tb.sv": "dfdcbbb267cb11ed007b515836e56fa304f236d9d0fb22a76e3b09af634cab1c",
+    "控制通信实验\\24-fifo\\design.sv": "4b71f797df70d0f69d0ec0858dd7cb596b8280ccaff220ef4aaf3d5a09bd4578",
+    "控制通信实验\\24-fifo\\tb.sv": "68a9fadca1232ed95d91f5bd6d6a530b0055792aa87e0330f4c802c3f1df6ddd",
+    "控制通信实验\\25-uart\\design.sv": "996adb9fe5bb0b17227bae68079d9770d82a57a23d559d0b27ee3550954c2b06",
+    "控制通信实验\\25-uart\\tb.sv": "3175f380c641792c301436d9824a9c5a1ec7182ff2d61cbf218f316daff668ac"
+  }
+}

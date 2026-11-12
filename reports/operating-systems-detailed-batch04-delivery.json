@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-05",
+  "course": "operating-systems",
+  "detailedChapters": "01—16",
+  "nextBatch": "17—20",
+  "teachingChecks": 431,
+  "mainRegressionChecks": 133,
+  "courseChecks": 192,
+  "siteChecks": 673,
+  "zipFilesVerified": 96,
+  "sourceAndDistDownloadMatch": true,
+  "downloadSHA256": "428E544E513C067AFC72491E9C92CFC386CF5518EC12C0547F1A9986E239626C",
+  "browserReport": "operating-systems-detailed-batch04-browser-qa.json",
+  "localOnly": true
+}

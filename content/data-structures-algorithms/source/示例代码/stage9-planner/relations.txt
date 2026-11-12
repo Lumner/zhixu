@@ -1,0 +1,23 @@
+DSA-RELATIONS-1
+C|7|0|Algorithms
+C|0|-1|Basics
+C|42|0|Empty category
+M|0|0
+M|17|7
+M|9|7
+M|9999|7
+S|9999
+S|9
+S|0
+S|17
+D|0|17
+D|0|9
+D|17|9999
+D|9|9999
+P|202|Library
+P|0|Desk
+P|9999|Isolated
+P|101|Gate
+R|0|101|0
+R|101|202|5
+R|0|202|9

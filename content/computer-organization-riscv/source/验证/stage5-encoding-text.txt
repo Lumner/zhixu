@@ -1,0 +1,15 @@
+Address     Code        Basic                        Line Source
+
+0x00400000  0x00700293  addi x5,x0,7                 6        addi x5, x0, 7
+0x00400004  0x006283b3  add x7,x5,x6                 7        add x7, x5, x6
+0x00400008  0x406283b3  sub x7,x5,x6                 8        sub x7, x5, x6
+0x0040000c  0xfff28293  addi x5,x5,0xffffffff        9        addi x5, x5, -1
+0x00400010  0x0042a383  lw x7,4(x5)                  10       lw x7, 4(x5)
+0x00400014  0xfe62ae23  sw x6,0xfffffffc(x5)         11       sw x6, -4(x5)
+0x00400018  0x00000463  beq x0,x0,0x00000008         13       beq x0, x0, forward
+0x0040001c  0x00000013  addi x0,x0,0                 14       addi x0, x0, 0
+0x00400020  0xfe000ce3  beq x0,x0,0xfffffff8         16       beq x0, x0, backward
+0x00400024  0x123452b7  lui x5,0x00012345            17       lui x5, 0x12345
+0x00400028  0x008000ef  jal x1,0x00000008            18       jal x1, jump_target
+0x0040002c  0x00000013  addi x0,x0,0                 19       addi x0, x0, 0
+0x00400030  0x00000013  addi x0,x0,0                 21       addi x0, x0, 0

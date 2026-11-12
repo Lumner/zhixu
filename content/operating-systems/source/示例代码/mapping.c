@@ -5,6 +5,8 @@ int main(void) {
     FILE *file = tmpfile();
     if (file == NULL) { die("tmpfile"); }
     int fd = fileno(file);
+    if (fd < 0) { die("fileno"); }
+    if (fflush(file) != 0) { die("fflush"); }
     write_all(fd, "abc", 3);
     char *memory = mmap(NULL, 3, PROT_READ | PROT_WRITE, MAP_PRIVATE, fd, 0);
     if (memory == MAP_FAILED) { die("mmap"); }

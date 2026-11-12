@@ -1,0 +1,219 @@
+{
+  "date": "2026-11-05",
+  "edition": "detailed-rewrite-stage5",
+  "passed": 24,
+  "scope": "Node functional models and explicit numeric examples only. This report does not run RARS, C compiler, HDL, Ripes or real timing.",
+  "officialRarsChecked": false,
+  "cCompilerChecked": false,
+  "scenarios": [
+    "addi known independent encoding",
+    "add and sub known encodings",
+    "negative I and split S encoding",
+    "load encoding",
+    "positive and negative branch encoding",
+    "field extraction",
+    "little endian byte layout",
+    "U and J meanings",
+    "seven-step final result",
+    "load separates address and value",
+    "store separates offset and write data",
+    "branch taken and not taken",
+    "control rows",
+    "differential state input 0",
+    "differential state input 5",
+    "differential state input 9",
+    "differential state input 2147483647",
+    "differential state input 4294967294",
+    "unsupported encodings have no commit",
+    "misaligned access has no partial write",
+    "x0 and read-before-write",
+    "single-cycle path arithmetic and units",
+    "multicycle schedule and weighted time",
+    "saved instruction PC avoids branch plus-four error"
+  ],
+  "datapathTrace": [
+    {
+      "pc": 0,
+      "word": 268436115,
+      "op": "addi",
+      "rs1Value": 0,
+      "rs2Value": 0,
+      "imm": 256,
+      "controls": {
+        "RegWrite": true,
+        "ALUSrc": "imm",
+        "MemRead": false,
+        "MemWrite": false,
+        "ResultSrc": "alu",
+        "Branch": false
+      },
+      "aluB": 256,
+      "aluResult": 256,
+      "memReadValue": null,
+      "equal": true,
+      "target": 256,
+      "nextPC": 4,
+      "registerWrite": {
+        "register": 5,
+        "value": 256
+      },
+      "memoryWrite": null
+    },
+    {
+      "pc": 4,
+      "word": 172803,
+      "op": "lw",
+      "rs1Value": 256,
+      "rs2Value": 0,
+      "imm": 0,
+      "controls": {
+        "RegWrite": true,
+        "ALUSrc": "imm",
+        "MemRead": true,
+        "MemWrite": false,
+        "ResultSrc": "memory",
+        "Branch": false
+      },
+      "aluB": 0,
+      "aluResult": 256,
+      "memReadValue": 5,
+      "equal": false,
+      "target": 4,
+      "nextPC": 8,
+      "registerWrite": {
+        "register": 6,
+        "value": 5
+      },
+      "memoryWrite": null
+    },
+    {
+      "pc": 8,
+      "word": 2294675,
+      "op": "addi",
+      "rs1Value": 5,
+      "rs2Value": 0,
+      "imm": 2,
+      "controls": {
+        "RegWrite": true,
+        "ALUSrc": "imm",
+        "MemRead": false,
+        "MemWrite": false,
+        "ResultSrc": "alu",
+        "Branch": false
+      },
+      "aluB": 2,
+      "aluResult": 7,
+      "memReadValue": null,
+      "equal": false,
+      "target": 10,
+      "nextPC": 12,
+      "registerWrite": {
+        "register": 7,
+        "value": 7
+      },
+      "memoryWrite": null
+    },
+    {
+      "pc": 12,
+      "word": 7512611,
+      "op": "sw",
+      "rs1Value": 256,
+      "rs2Value": 7,
+      "imm": 4,
+      "controls": {
+        "RegWrite": false,
+        "ALUSrc": "imm",
+        "MemRead": false,
+        "MemWrite": true,
+        "ResultSrc": null,
+        "Branch": false
+      },
+      "aluB": 4,
+      "aluResult": 260,
+      "memReadValue": null,
+      "equal": false,
+      "target": 16,
+      "nextPC": 16,
+      "registerWrite": null,
+      "memoryWrite": {
+        "address": 260,
+        "value": 7
+      }
+    },
+    {
+      "pc": 16,
+      "word": 7537763,
+      "op": "beq",
+      "rs1Value": 5,
+      "rs2Value": 7,
+      "imm": 8,
+      "controls": {
+        "RegWrite": false,
+        "ALUSrc": "reg",
+        "MemRead": false,
+        "MemWrite": false,
+        "ResultSrc": null,
+        "Branch": true
+      },
+      "aluB": 7,
+      "aluResult": 4294967294,
+      "memReadValue": null,
+      "equal": false,
+      "target": 24,
+      "nextPC": 20,
+      "registerWrite": null,
+      "memoryWrite": null
+    },
+    {
+      "pc": 20,
+      "word": 7537971,
+      "op": "add",
+      "rs1Value": 5,
+      "rs2Value": 7,
+      "imm": 0,
+      "controls": {
+        "RegWrite": true,
+        "ALUSrc": "reg",
+        "MemRead": false,
+        "MemWrite": false,
+        "ResultSrc": "alu",
+        "Branch": false
+      },
+      "aluB": 7,
+      "aluResult": 12,
+      "memReadValue": null,
+      "equal": false,
+      "target": 20,
+      "nextPC": 24,
+      "registerWrite": {
+        "register": 10,
+        "value": 12
+      },
+      "memoryWrite": null
+    },
+    {
+      "pc": 24,
+      "word": 7570531,
+      "op": "beq",
+      "rs1Value": 7,
+      "rs2Value": 7,
+      "imm": 8,
+      "controls": {
+        "RegWrite": false,
+        "ALUSrc": "reg",
+        "MemRead": false,
+        "MemWrite": false,
+        "ResultSrc": null,
+        "Branch": true
+      },
+      "aluB": 7,
+      "aluResult": 0,
+      "memReadValue": null,
+      "equal": true,
+      "target": 32,
+      "nextPC": 32,
+      "registerWrite": null,
+      "memoryWrite": null
+    }
+  ]
+}

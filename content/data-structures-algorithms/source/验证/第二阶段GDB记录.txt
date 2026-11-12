@@ -1,0 +1,18 @@
+Breakpoint 1 at 0x401628: file C:\Users\17597\Desktop\tutorial\content\data-structures-algorithms\source\ʾ������\14-modules\totals.c, line 7.
+[New Thread 11744.0xa854]
+[New Thread 11744.0x5014]
+[New Thread 11744.0xc2e0]
+[New Thread 11744.0x1010]
+
+Thread 1 hit Breakpoint 1, add_minutes (a=30, b=15) at C:\Users\17597\Desktop\tutorial\content\data-structures-algorithms\source\ʾ������\14-modules\totals.c:7
+7	    int result = a + b;
+$1 = 30
+$2 = 15
+8	    return result;
+$3 = 45
+total=45
+[Thread 11744.0xc2e0 exited with code 0]
+[Thread 11744.0x1010 exited with code 0]
+[Thread 11744.0x5014 exited with code 0]
+[Inferior 1 (process 11744) exited normally]
+

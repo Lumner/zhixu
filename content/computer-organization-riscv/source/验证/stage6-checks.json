@@ -1,0 +1,2091 @@
+{
+  "date": "2026-11-10",
+  "edition": "detailed-stage6",
+  "passed": 69,
+  "officialRarsChecked": true,
+  "rarsInvocations": 20,
+  "randomArchitectureRuns": 400,
+  "scope": "Discrete-cycle teaching model, scalar differential checks, arithmetic and predictor; optional official RARS encoding/architecture, never real hardware timing or Ripes GUI.",
+  "sourceFiles": [
+    {
+      "name": "alu-chain.s",
+      "sha256": "73e15c3b8fd9a3c2fe4f12716356e1492491767a5fdff2677ac9837e80f814c4"
+    },
+    {
+      "name": "branch-squash.s",
+      "sha256": "3f41c98c45b75cbebf23310791540da24c106bcb6668259a6d6b597d9aadc27c"
+    },
+    {
+      "name": "count-loop.s",
+      "sha256": "818591db00d4135a839daa623f3c1085358ab6b6e27a370af2dae8b05fd76a52"
+    },
+    {
+      "name": "hazards.s",
+      "sha256": "3f09b18751734724785594ce2a40686e5b43a2c49df46aa552674f69379112e2"
+    },
+    {
+      "name": "load-use.s",
+      "sha256": "37bc64d512810f8cc3f4045adca769f12b1e8397f3d88038261c038075c09de4"
+    },
+    {
+      "name": "pipeline-lab.cjs",
+      "sha256": "63134f614ebb9f68d8778a535784479faf518e4ddd00832128a8934b8cee7d24"
+    },
+    {
+      "name": "predictor-lab.cjs",
+      "sha256": "359e88284f4c28fbcfd22ff3267c6e18fc5f897b10f1f91527cb539fae299d43"
+    },
+    {
+      "name": "scheduled.s",
+      "sha256": "1b63f58c67c4816c28c1abea5ea5463907a0fe337677c29d741b7681825fcc0f"
+    }
+  ],
+  "scenarios": [
+    "independent matches scalar architecture, forwarding=true",
+    "independent matches scalar architecture, forwarding=false",
+    "alu matches scalar architecture, forwarding=true",
+    "alu matches scalar architecture, forwarding=false",
+    "priority matches scalar architecture, forwarding=true",
+    "priority matches scalar architecture, forwarding=false",
+    "load matches scalar architecture, forwarding=true",
+    "load matches scalar architecture, forwarding=false",
+    "unscheduled matches scalar architecture, forwarding=true",
+    "unscheduled matches scalar architecture, forwarding=false",
+    "scheduled matches scalar architecture, forwarding=true",
+    "scheduled matches scalar architecture, forwarding=false",
+    "store matches scalar architecture, forwarding=true",
+    "store matches scalar architecture, forwarding=false",
+    "taken matches scalar architecture, forwarding=true",
+    "taken matches scalar architecture, forwarding=false",
+    "untaken matches scalar architecture, forwarding=true",
+    "untaken matches scalar architecture, forwarding=false",
+    "loadBranch matches scalar architecture, forwarding=true",
+    "loadBranch matches scalar architecture, forwarding=false",
+    "loop matches scalar architecture, forwarding=true",
+    "loop matches scalar architecture, forwarding=false",
+    "zero matches scalar architecture, forwarding=true",
+    "zero matches scalar architecture, forwarding=false",
+    "falseSource matches scalar architecture, forwarding=true",
+    "falseSource matches scalar architecture, forwarding=false",
+    "All thirteen documented cycle/stall/redirect/retirement tuples",
+    "ALU chain without forwarding waits four cycles and keeps result",
+    "Load-use freezes ID while load advances and EX receives a bubble",
+    "Nearest matching writer wins over an older matching writer",
+    "A newer load masks an older same-register ALU value until ready",
+    "Same-cycle WB then ID read needs no stall without forwarding",
+    "Store data is captured in EX and immediate load-store needs one stall",
+    "Taken branch removes both younger instructions and all their effects",
+    "Untaken path executes its store; final load is not the transient 99",
+    "Load-branch stall followed by flush preserves data and target result",
+    "Reordered independent work preserves registers and data memory",
+    "x0 and I-immediate bit positions do not create false dependencies",
+    "A flushed unsupported word is never decoded or executed",
+    "Executed unsupported code and misaligned data fail explicitly",
+    "Finite empty/single programs and infinite loop bounds",
+    "Two hundred generated dependent arithmetic programs, both forwarding modes",
+    "Two-bit predictor follows all state transitions and saturation",
+    "Predict before update: T,T,N,T has two errors from weak not-taken",
+    "Two repeated T,T,T,N loops differ for one and two bits",
+    "Alternating history and empty input do not promise universal gains",
+    "Time units, weighted CPI and whole-work speedup examples",
+    "Dynamic loop count includes final branch but excludes output region",
+    "Amdahl time fractions and finite pipeline overhead",
+    "Official RARS encoding of independent",
+    "Official RARS encoding of alu",
+    "Official RARS encoding of priority",
+    "Official RARS encoding of load",
+    "Official RARS encoding of unscheduled",
+    "Official RARS encoding of scheduled",
+    "Official RARS encoding of store",
+    "Official RARS encoding of taken",
+    "Official RARS encoding of untaken",
+    "Official RARS encoding of loadBranch",
+    "Official RARS encoding of loop",
+    "Official RARS encoding of zero",
+    "Official RARS encoding of falseSource",
+    "Official RARS execution alu-chain.s",
+    "Official RARS execution load-use.s",
+    "Official RARS execution scheduled.s",
+    "Official RARS execution branch-squash.s",
+    "Official RARS counted loop N=0",
+    "Official RARS counted loop N=1",
+    "Official RARS counted loop N=5"
+  ],
+  "expected": {
+    "independent": [
+      7,
+      0,
+      0,
+      3
+    ],
+    "alu": [
+      7,
+      0,
+      0,
+      3
+    ],
+    "priority": [
+      7,
+      0,
+      0,
+      3
+    ],
+    "load": [
+      8,
+      1,
+      0,
+      3
+    ],
+    "unscheduled": [
+      10,
+      1,
+      0,
+      5
+    ],
+    "scheduled": [
+      9,
+      0,
+      0,
+      5
+    ],
+    "store": [
+      9,
+      1,
+      0,
+      4
+    ],
+    "taken": [
+      10,
+      0,
+      1,
+      4
+    ],
+    "untaken": [
+      10,
+      0,
+      0,
+      6
+    ],
+    "loadBranch": [
+      11,
+      1,
+      1,
+      4
+    ],
+    "loop": [
+      19,
+      0,
+      2,
+      11
+    ],
+    "zero": [
+      6,
+      0,
+      0,
+      2
+    ],
+    "falseSource": [
+      7,
+      0,
+      0,
+      3
+    ]
+  },
+  "traces": {
+    "independent": {
+      "cycles": 7,
+      "retired": 3,
+      "stalls": 0,
+      "redirects": 0,
+      "trace": [
+        {
+          "cycle": 1,
+          "IF": 0,
+          "ID": null,
+          "EX": null,
+          "MEM": null,
+          "WB": null,
+          "stall": false,
+          "flush": [],
+          "operands": null,
+          "store": null
+        },
+        {
+          "cycle": 2,
+          "IF": 4,
+          "ID": 0,
+          "EX": null,
+          "MEM": null,
+          "WB": null,
+          "stall": false,
+          "flush": [],
+          "operands": null,
+          "store": null
+        },
+        {
+          "cycle": 3,
+          "IF": 8,
+          "ID": 4,
+          "EX": 0,
+          "MEM": null,
+          "WB": null,
+          "stall": false,
+          "flush": [],
+          "operands": {
+            "a": {
+              "value": 0,
+              "from": "x0"
+            },
+            "b": {
+              "value": 0,
+              "from": "unused"
+            }
+          },
+          "store": null
+        },
+        {
+          "cycle": 4,
+          "IF": null,
+          "ID": 8,
+          "EX": 4,
+          "MEM": 0,
+          "WB": null,
+          "stall": false,
+          "flush": [],
+          "operands": {
+            "a": {
+              "value": 0,
+              "from": "x0"
+            },
+            "b": {
+              "value": 0,
+              "from": "unused"
+            }
+          },
+          "store": null
+        },
+        {
+          "cycle": 5,
+          "IF": null,
+          "ID": null,
+          "EX": 8,
+          "MEM": 4,
+          "WB": 0,
+          "stall": false,
+          "flush": [],
+          "operands": {
+            "a": {
+              "value": 0,
+              "from": "x0"
+            },
+            "b": {
+              "value": 0,
+              "from": "unused"
+            }
+          },
+          "store": null
+        },
+        {
+          "cycle": 6,
+          "IF": null,
+          "ID": null,
+          "EX": null,
+          "MEM": 8,
+          "WB": 4,
+          "stall": false,
+          "flush": [],
+          "operands": null,
+          "store": null
+        },
+        {
+          "cycle": 7,
+          "IF": null,
+          "ID": null,
+          "EX": null,
+          "MEM": null,
+          "WB": 8,
+          "stall": false,
+          "flush": [],
+          "operands": null,
+          "store": null
+        }
+      ]
+    },
+    "alu": {
+      "cycles": 7,
+      "retired": 3,
+      "stalls": 0,
+      "redirects": 0,
+      "trace": [
+        {
+          "cycle": 1,
+          "IF": 0,
+          "ID": null,
+          "EX": null,
+          "MEM": null,
+          "WB": null,
+          "stall": false,
+          "flush": [],
+          "operands": null,
+          "store": null
+        },
+        {
+          "cycle": 2,
+          "IF": 4,
+          "ID": 0,
+          "EX": null,
+          "MEM": null,
+          "WB": null,
+          "stall": false,
+          "flush": [],
+          "operands": null,
+          "store": null
+        },
+        {
+          "cycle": 3,
+          "IF": 8,
+          "ID": 4,
+          "EX": 0,
+          "MEM": null,
+          "WB": null,
+          "stall": false,
+          "flush": [],
+          "operands": {
+            "a": {
+              "value": 0,
+              "from": "x0"
+            },
+            "b": {
+              "value": 0,
+              "from": "unused"
+            }
+          },
+          "store": null
+        },
+        {
+          "cycle": 4,
+          "IF": null,
+          "ID": 8,
+          "EX": 4,
+          "MEM": 0,
+          "WB": null,
+          "stall": false,
+          "flush": [],
+          "operands": {
+            "a": {
+              "value": 3,
+              "from": "EX/MEM"
+            },
+            "b": {
+              "value": 3,
+              "from": "EX/MEM"
+            }
+          },
+          "store": null
+        },
+        {
+          "cycle": 5,
+          "IF": null,
+          "ID": null,
+          "EX": 8,
+          "MEM": 4,
+          "WB": 0,
+          "stall": false,
+          "flush": [],
+          "operands": {
+            "a": {
+              "value": 6,
+              "from": "EX/MEM"
+            },
+            "b": {
+              "value": 3,
+              "from": "MEM/WB"
+            }
+          },
+          "store": null
+        },
+        {
+          "cycle": 6,
+          "IF": null,
+          "ID": null,
+          "EX": null,
+          "MEM": 8,
+          "WB": 4,
+          "stall": false,
+          "flush": [],
+          "operands": null,
+          "store": null
+        },
+        {
+          "cycle": 7,
+          "IF": null,
+          "ID": null,
+          "EX": null,
+          "MEM": null,
+          "WB": 8,
+          "stall": false,
+          "flush": [],
+          "operands": null,
+          "store": null
+        }
+      ]
+    },
+    "load": {
+      "cycles": 8,
+      "retired": 3,
+      "stalls": 1,
+      "redirects": 0,
+      "trace": [
+        {
+          "cycle": 1,
+          "IF": 0,
+          "ID": null,
+          "EX": null,
+          "MEM": null,
+          "WB": null,
+          "stall": false,
+          "flush": [],
+          "operands": null,
+          "store": null
+        },
+        {
+          "cycle": 2,
+          "IF": 4,
+          "ID": 0,
+          "EX": null,
+          "MEM": null,
+          "WB": null,
+          "stall": false,
+          "flush": [],
+          "operands": null,
+          "store": null
+        },
+        {
+          "cycle": 3,
+          "IF": 8,
+          "ID": 4,
+          "EX": 0,
+          "MEM": null,
+          "WB": null,
+          "stall": false,
+          "flush": [],
+          "operands": {
+            "a": {
+              "value": 0,
+              "from": "x0"
+            },
+            "b": {
+              "value": 0,
+              "from": "unused"
+            }
+          },
+          "store": null
+        },
+        {
+          "cycle": 4,
+          "IF": null,
+          "ID": 8,
+          "EX": 4,
+          "MEM": 0,
+          "WB": null,
+          "stall": true,
+          "flush": [],
+          "operands": {
+            "a": {
+              "value": 256,
+              "from": "EX/MEM"
+            },
+            "b": {
+              "value": 0,
+              "from": "unused"
+            }
+          },
+          "store": null
+        },
+        {
+          "cycle": 5,
+          "IF": null,
+          "ID": 8,
+          "EX": null,
+          "MEM": 4,
+          "WB": 0,
+          "stall": false,
+          "flush": [],
+          "operands": null,
+          "store": null
+        },
+        {
+          "cycle": 6,
+          "IF": null,
+          "ID": null,
+          "EX": 8,
+          "MEM": null,
+          "WB": 4,
+          "stall": false,
+          "flush": [],
+          "operands": {
+            "a": {
+              "value": 7,
+              "from": "MEM/WB"
+            },
+            "b": {
+              "value": 7,
+              "from": "MEM/WB"
+            }
+          },
+          "store": null
+        },
+        {
+          "cycle": 7,
+          "IF": null,
+          "ID": null,
+          "EX": null,
+          "MEM": 8,
+          "WB": null,
+          "stall": false,
+          "flush": [],
+          "operands": null,
+          "store": null
+        },
+        {
+          "cycle": 8,
+          "IF": null,
+          "ID": null,
+          "EX": null,
+          "MEM": null,
+          "WB": 8,
+          "stall": false,
+          "flush": [],
+          "operands": null,
+          "store": null
+        }
+      ]
+    },
+    "unscheduled": {
+      "cycles": 10,
+      "retired": 5,
+      "stalls": 1,
+      "redirects": 0,
+      "trace": [
+        {
+          "cycle": 1,
+          "IF": 0,
+          "ID": null,
+          "EX": null,
+          "MEM": null,
+          "WB": null,
+          "stall": false,
+          "flush": [],
+          "operands": null,
+          "store": null
+        },
+        {
+          "cycle": 2,
+          "IF": 4,
+          "ID": 0,
+          "EX": null,
+          "MEM": null,
+          "WB": null,
+          "stall": false,
+          "flush": [],
+          "operands": null,
+          "store": null
+        },
+        {
+          "cycle": 3,
+          "IF": 8,
+          "ID": 4,
+          "EX": 0,
+          "MEM": null,
+          "WB": null,
+          "stall": false,
+          "flush": [],
+          "operands": {
+            "a": {
+              "value": 0,
+              "from": "x0"
+            },
+            "b": {
+              "value": 0,
+              "from": "unused"
+            }
+          },
+          "store": null
+        },
+        {
+          "cycle": 4,
+          "IF": 12,
+          "ID": 8,
+          "EX": 4,
+          "MEM": 0,
+          "WB": null,
+          "stall": true,
+          "flush": [],
+          "operands": {
+            "a": {
+              "value": 256,
+              "from": "EX/MEM"
+            },
+            "b": {
+              "value": 0,
+              "from": "unused"
+            }
+          },
+          "store": null
+        },
+        {
+          "cycle": 5,
+          "IF": 12,
+          "ID": 8,
+          "EX": null,
+          "MEM": 4,
+          "WB": 0,
+          "stall": false,
+          "flush": [],
+          "operands": null,
+          "store": null
+        },
+        {
+          "cycle": 6,
+          "IF": 16,
+          "ID": 12,
+          "EX": 8,
+          "MEM": null,
+          "WB": 4,
+          "stall": false,
+          "flush": [],
+          "operands": {
+            "a": {
+              "value": 7,
+              "from": "MEM/WB"
+            },
+            "b": {
+              "value": 7,
+              "from": "MEM/WB"
+            }
+          },
+          "store": null
+        },
+        {
+          "cycle": 7,
+          "IF": null,
+          "ID": 16,
+          "EX": 12,
+          "MEM": 8,
+          "WB": null,
+          "stall": false,
+          "flush": [],
+          "operands": {
+            "a": {
+              "value": 0,
+              "from": "ID register value"
+            },
+            "b": {
+              "value": 0,
+              "from": "unused"
+            }
+          },
+          "store": null
+        },
+        {
+          "cycle": 8,
+          "IF": null,
+          "ID": null,
+          "EX": 16,
+          "MEM": 12,
+          "WB": 8,
+          "stall": false,
+          "flush": [],
+          "operands": {
+            "a": {
+              "value": 14,
+              "from": "MEM/WB"
+            },
+            "b": {
+              "value": 7,
+              "from": "ID register value"
+            }
+          },
+          "store": null
+        },
+        {
+          "cycle": 9,
+          "IF": null,
+          "ID": null,
+          "EX": null,
+          "MEM": 16,
+          "WB": 12,
+          "stall": false,
+          "flush": [],
+          "operands": null,
+          "store": null
+        },
+        {
+          "cycle": 10,
+          "IF": null,
+          "ID": null,
+          "EX": null,
+          "MEM": null,
+          "WB": 16,
+          "stall": false,
+          "flush": [],
+          "operands": null,
+          "store": null
+        }
+      ]
+    },
+    "scheduled": {
+      "cycles": 9,
+      "retired": 5,
+      "stalls": 0,
+      "redirects": 0,
+      "trace": [
+        {
+          "cycle": 1,
+          "IF": 0,
+          "ID": null,
+          "EX": null,
+          "MEM": null,
+          "WB": null,
+          "stall": false,
+          "flush": [],
+          "operands": null,
+          "store": null
+        },
+        {
+          "cycle": 2,
+          "IF": 4,
+          "ID": 0,
+          "EX": null,
+          "MEM": null,
+          "WB": null,
+          "stall": false,
+          "flush": [],
+          "operands": null,
+          "store": null
+        },
+        {
+          "cycle": 3,
+          "IF": 8,
+          "ID": 4,
+          "EX": 0,
+          "MEM": null,
+          "WB": null,
+          "stall": false,
+          "flush": [],
+          "operands": {
+            "a": {
+              "value": 0,
+              "from": "x0"
+            },
+            "b": {
+              "value": 0,
+              "from": "unused"
+            }
+          },
+          "store": null
+        },
+        {
+          "cycle": 4,
+          "IF": 12,
+          "ID": 8,
+          "EX": 4,
+          "MEM": 0,
+          "WB": null,
+          "stall": false,
+          "flush": [],
+          "operands": {
+            "a": {
+              "value": 256,
+              "from": "EX/MEM"
+            },
+            "b": {
+              "value": 0,
+              "from": "unused"
+            }
+          },
+          "store": null
+        },
+        {
+          "cycle": 5,
+          "IF": 16,
+          "ID": 12,
+          "EX": 8,
+          "MEM": 4,
+          "WB": 0,
+          "stall": false,
+          "flush": [],
+          "operands": {
+            "a": {
+              "value": 0,
+              "from": "ID register value"
+            },
+            "b": {
+              "value": 0,
+              "from": "unused"
+            }
+          },
+          "store": null
+        },
+        {
+          "cycle": 6,
+          "IF": null,
+          "ID": 16,
+          "EX": 12,
+          "MEM": 8,
+          "WB": 4,
+          "stall": false,
+          "flush": [],
+          "operands": {
+            "a": {
+              "value": 7,
+              "from": "MEM/WB"
+            },
+            "b": {
+              "value": 7,
+              "from": "MEM/WB"
+            }
+          },
+          "store": null
+        },
+        {
+          "cycle": 7,
+          "IF": null,
+          "ID": null,
+          "EX": 16,
+          "MEM": 12,
+          "WB": 8,
+          "stall": false,
+          "flush": [],
+          "operands": {
+            "a": {
+              "value": 14,
+              "from": "EX/MEM"
+            },
+            "b": {
+              "value": 7,
+              "from": "ID register value"
+            }
+          },
+          "store": null
+        },
+        {
+          "cycle": 8,
+          "IF": null,
+          "ID": null,
+          "EX": null,
+          "MEM": 16,
+          "WB": 12,
+          "stall": false,
+          "flush": [],
+          "operands": null,
+          "store": null
+        },
+        {
+          "cycle": 9,
+          "IF": null,
+          "ID": null,
+          "EX": null,
+          "MEM": null,
+          "WB": 16,
+          "stall": false,
+          "flush": [],
+          "operands": null,
+          "store": null
+        }
+      ]
+    },
+    "taken": {
+      "cycles": 10,
+      "retired": 4,
+      "stalls": 0,
+      "redirects": 1,
+      "trace": [
+        {
+          "cycle": 1,
+          "IF": 0,
+          "ID": null,
+          "EX": null,
+          "MEM": null,
+          "WB": null,
+          "stall": false,
+          "flush": [],
+          "operands": null,
+          "store": null
+        },
+        {
+          "cycle": 2,
+          "IF": 4,
+          "ID": 0,
+          "EX": null,
+          "MEM": null,
+          "WB": null,
+          "stall": false,
+          "flush": [],
+          "operands": null,
+          "store": null
+        },
+        {
+          "cycle": 3,
+          "IF": 8,
+          "ID": 4,
+          "EX": 0,
+          "MEM": null,
+          "WB": null,
+          "stall": false,
+          "flush": [],
+          "operands": {
+            "a": {
+              "value": 0,
+              "from": "x0"
+            },
+            "b": {
+              "value": 0,
+              "from": "unused"
+            }
+          },
+          "store": null
+        },
+        {
+          "cycle": 4,
+          "IF": 12,
+          "ID": 8,
+          "EX": 4,
+          "MEM": 0,
+          "WB": null,
+          "stall": false,
+          "flush": [],
+          "operands": {
+            "a": {
+              "value": 0,
+              "from": "x0"
+            },
+            "b": {
+              "value": 0,
+              "from": "unused"
+            }
+          },
+          "store": null
+        },
+        {
+          "cycle": 5,
+          "IF": 16,
+          "ID": 12,
+          "EX": 8,
+          "MEM": 4,
+          "WB": 0,
+          "stall": false,
+          "flush": [
+            12,
+            16
+          ],
+          "operands": {
+            "a": {
+              "value": 1,
+              "from": "EX/MEM"
+            },
+            "b": {
+              "value": 1,
+              "from": "EX/MEM"
+            }
+          },
+          "store": null,
+          "branch": {
+            "taken": true,
+            "predictedNext": 12,
+            "actualNext": 20
+          },
+          "redirect": 20
+        },
+        {
+          "cycle": 6,
+          "IF": 20,
+          "ID": null,
+          "EX": null,
+          "MEM": 8,
+          "WB": 4,
+          "stall": false,
+          "flush": [],
+          "operands": null,
+          "store": null
+        },
+        {
+          "cycle": 7,
+          "IF": null,
+          "ID": 20,
+          "EX": null,
+          "MEM": null,
+          "WB": 8,
+          "stall": false,
+          "flush": [],
+          "operands": null,
+          "store": null
+        },
+        {
+          "cycle": 8,
+          "IF": null,
+          "ID": null,
+          "EX": 20,
+          "MEM": null,
+          "WB": null,
+          "stall": false,
+          "flush": [],
+          "operands": {
+            "a": {
+              "value": 256,
+              "from": "ID register value"
+            },
+            "b": {
+              "value": 0,
+              "from": "unused"
+            }
+          },
+          "store": null
+        },
+        {
+          "cycle": 9,
+          "IF": null,
+          "ID": null,
+          "EX": null,
+          "MEM": 20,
+          "WB": null,
+          "stall": false,
+          "flush": [],
+          "operands": null,
+          "store": null
+        },
+        {
+          "cycle": 10,
+          "IF": null,
+          "ID": null,
+          "EX": null,
+          "MEM": null,
+          "WB": 20,
+          "stall": false,
+          "flush": [],
+          "operands": null,
+          "store": null
+        }
+      ]
+    },
+    "loadBranch": {
+      "cycles": 11,
+      "retired": 4,
+      "stalls": 1,
+      "redirects": 1,
+      "trace": [
+        {
+          "cycle": 1,
+          "IF": 0,
+          "ID": null,
+          "EX": null,
+          "MEM": null,
+          "WB": null,
+          "stall": false,
+          "flush": [],
+          "operands": null,
+          "store": null
+        },
+        {
+          "cycle": 2,
+          "IF": 4,
+          "ID": 0,
+          "EX": null,
+          "MEM": null,
+          "WB": null,
+          "stall": false,
+          "flush": [],
+          "operands": null,
+          "store": null
+        },
+        {
+          "cycle": 3,
+          "IF": 8,
+          "ID": 4,
+          "EX": 0,
+          "MEM": null,
+          "WB": null,
+          "stall": false,
+          "flush": [],
+          "operands": {
+            "a": {
+              "value": 0,
+              "from": "x0"
+            },
+            "b": {
+              "value": 0,
+              "from": "unused"
+            }
+          },
+          "store": null
+        },
+        {
+          "cycle": 4,
+          "IF": 12,
+          "ID": 8,
+          "EX": 4,
+          "MEM": 0,
+          "WB": null,
+          "stall": true,
+          "flush": [],
+          "operands": {
+            "a": {
+              "value": 256,
+              "from": "EX/MEM"
+            },
+            "b": {
+              "value": 0,
+              "from": "unused"
+            }
+          },
+          "store": null
+        },
+        {
+          "cycle": 5,
+          "IF": 12,
+          "ID": 8,
+          "EX": null,
+          "MEM": 4,
+          "WB": 0,
+          "stall": false,
+          "flush": [],
+          "operands": null,
+          "store": null
+        },
+        {
+          "cycle": 6,
+          "IF": 16,
+          "ID": 12,
+          "EX": 8,
+          "MEM": null,
+          "WB": 4,
+          "stall": false,
+          "flush": [
+            12,
+            16
+          ],
+          "operands": {
+            "a": {
+              "value": 0,
+              "from": "MEM/WB"
+            },
+            "b": {
+              "value": 0,
+              "from": "x0"
+            }
+          },
+          "store": null,
+          "branch": {
+            "taken": true,
+            "predictedNext": 12,
+            "actualNext": 20
+          },
+          "redirect": 20
+        },
+        {
+          "cycle": 7,
+          "IF": 20,
+          "ID": null,
+          "EX": null,
+          "MEM": 8,
+          "WB": null,
+          "stall": false,
+          "flush": [],
+          "operands": null,
+          "store": null
+        },
+        {
+          "cycle": 8,
+          "IF": null,
+          "ID": 20,
+          "EX": null,
+          "MEM": null,
+          "WB": 8,
+          "stall": false,
+          "flush": [],
+          "operands": null,
+          "store": null
+        },
+        {
+          "cycle": 9,
+          "IF": null,
+          "ID": null,
+          "EX": 20,
+          "MEM": null,
+          "WB": null,
+          "stall": false,
+          "flush": [],
+          "operands": {
+            "a": {
+              "value": 0,
+              "from": "x0"
+            },
+            "b": {
+              "value": 0,
+              "from": "unused"
+            }
+          },
+          "store": null
+        },
+        {
+          "cycle": 10,
+          "IF": null,
+          "ID": null,
+          "EX": null,
+          "MEM": 20,
+          "WB": null,
+          "stall": false,
+          "flush": [],
+          "operands": null,
+          "store": null
+        },
+        {
+          "cycle": 11,
+          "IF": null,
+          "ID": null,
+          "EX": null,
+          "MEM": null,
+          "WB": 20,
+          "stall": false,
+          "flush": [],
+          "operands": null,
+          "store": null
+        }
+      ]
+    },
+    "loop": {
+      "cycles": 19,
+      "retired": 11,
+      "stalls": 0,
+      "redirects": 2,
+      "trace": [
+        {
+          "cycle": 1,
+          "IF": 0,
+          "ID": null,
+          "EX": null,
+          "MEM": null,
+          "WB": null,
+          "stall": false,
+          "flush": [],
+          "operands": null,
+          "store": null
+        },
+        {
+          "cycle": 2,
+          "IF": 4,
+          "ID": 0,
+          "EX": null,
+          "MEM": null,
+          "WB": null,
+          "stall": false,
+          "flush": [],
+          "operands": null,
+          "store": null
+        },
+        {
+          "cycle": 3,
+          "IF": 8,
+          "ID": 4,
+          "EX": 0,
+          "MEM": null,
+          "WB": null,
+          "stall": false,
+          "flush": [],
+          "operands": {
+            "a": {
+              "value": 0,
+              "from": "x0"
+            },
+            "b": {
+              "value": 0,
+              "from": "unused"
+            }
+          },
+          "store": null
+        },
+        {
+          "cycle": 4,
+          "IF": 12,
+          "ID": 8,
+          "EX": 4,
+          "MEM": 0,
+          "WB": null,
+          "stall": false,
+          "flush": [],
+          "operands": {
+            "a": {
+              "value": 0,
+              "from": "x0"
+            },
+            "b": {
+              "value": 0,
+              "from": "unused"
+            }
+          },
+          "store": null
+        },
+        {
+          "cycle": 5,
+          "IF": 16,
+          "ID": 12,
+          "EX": 8,
+          "MEM": 4,
+          "WB": 0,
+          "stall": false,
+          "flush": [],
+          "operands": {
+            "a": {
+              "value": 0,
+              "from": "EX/MEM"
+            },
+            "b": {
+              "value": 0,
+              "from": "unused"
+            }
+          },
+          "store": null
+        },
+        {
+          "cycle": 6,
+          "IF": null,
+          "ID": 16,
+          "EX": 12,
+          "MEM": 8,
+          "WB": 4,
+          "stall": false,
+          "flush": [],
+          "operands": {
+            "a": {
+              "value": 3,
+              "from": "ID register value"
+            },
+            "b": {
+              "value": 0,
+              "from": "unused"
+            }
+          },
+          "store": null
+        },
+        {
+          "cycle": 7,
+          "IF": null,
+          "ID": null,
+          "EX": 16,
+          "MEM": 12,
+          "WB": 8,
+          "stall": false,
+          "flush": [],
+          "operands": {
+            "a": {
+              "value": 2,
+              "from": "EX/MEM"
+            },
+            "b": {
+              "value": 0,
+              "from": "x0"
+            }
+          },
+          "store": null,
+          "branch": {
+            "taken": true,
+            "predictedNext": 20,
+            "actualNext": 8
+          },
+          "redirect": 8
+        },
+        {
+          "cycle": 8,
+          "IF": 8,
+          "ID": null,
+          "EX": null,
+          "MEM": 16,
+          "WB": 12,
+          "stall": false,
+          "flush": [],
+          "operands": null,
+          "store": null
+        },
+        {
+          "cycle": 9,
+          "IF": 12,
+          "ID": 8,
+          "EX": null,
+          "MEM": null,
+          "WB": 16,
+          "stall": false,
+          "flush": [],
+          "operands": null,
+          "store": null
+        },
+        {
+          "cycle": 10,
+          "IF": 16,
+          "ID": 12,
+          "EX": 8,
+          "MEM": null,
+          "WB": null,
+          "stall": false,
+          "flush": [],
+          "operands": {
+            "a": {
+              "value": 1,
+              "from": "ID register value"
+            },
+            "b": {
+              "value": 0,
+              "from": "unused"
+            }
+          },
+          "store": null
+        },
+        {
+          "cycle": 11,
+          "IF": null,
+          "ID": 16,
+          "EX": 12,
+          "MEM": 8,
+          "WB": null,
+          "stall": false,
+          "flush": [],
+          "operands": {
+            "a": {
+              "value": 2,
+              "from": "ID register value"
+            },
+            "b": {
+              "value": 0,
+              "from": "unused"
+            }
+          },
+          "store": null
+        },
+        {
+          "cycle": 12,
+          "IF": null,
+          "ID": null,
+          "EX": 16,
+          "MEM": 12,
+          "WB": 8,
+          "stall": false,
+          "flush": [],
+          "operands": {
+            "a": {
+              "value": 1,
+              "from": "EX/MEM"
+            },
+            "b": {
+              "value": 0,
+              "from": "x0"
+            }
+          },
+          "store": null,
+          "branch": {
+            "taken": true,
+            "predictedNext": 20,
+            "actualNext": 8
+          },
+          "redirect": 8
+        },
+        {
+          "cycle": 13,
+          "IF": 8,
+          "ID": null,
+          "EX": null,
+          "MEM": 16,
+          "WB": 12,
+          "stall": false,
+          "flush": [],
+          "operands": null,
+          "store": null
+        },
+        {
+          "cycle": 14,
+          "IF": 12,
+          "ID": 8,
+          "EX": null,
+          "MEM": null,
+          "WB": 16,
+          "stall": false,
+          "flush": [],
+          "operands": null,
+          "store": null
+        },
+        {
+          "cycle": 15,
+          "IF": 16,
+          "ID": 12,
+          "EX": 8,
+          "MEM": null,
+          "WB": null,
+          "stall": false,
+          "flush": [],
+          "operands": {
+            "a": {
+              "value": 2,
+              "from": "ID register value"
+            },
+            "b": {
+              "value": 0,
+              "from": "unused"
+            }
+          },
+          "store": null
+        },
+        {
+          "cycle": 16,
+          "IF": null,
+          "ID": 16,
+          "EX": 12,
+          "MEM": 8,
+          "WB": null,
+          "stall": false,
+          "flush": [],
+          "operands": {
+            "a": {
+              "value": 1,
+              "from": "ID register value"
+            },
+            "b": {
+              "value": 0,
+              "from": "unused"
+            }
+          },
+          "store": null
+        },
+        {
+          "cycle": 17,
+          "IF": null,
+          "ID": null,
+          "EX": 16,
+          "MEM": 12,
+          "WB": 8,
+          "stall": false,
+          "flush": [],
+          "operands": {
+            "a": {
+              "value": 0,
+              "from": "EX/MEM"
+            },
+            "b": {
+              "value": 0,
+              "from": "x0"
+            }
+          },
+          "store": null,
+          "branch": {
+            "taken": false,
+            "predictedNext": 20,
+            "actualNext": 20
+          }
+        },
+        {
+          "cycle": 18,
+          "IF": null,
+          "ID": null,
+          "EX": null,
+          "MEM": 16,
+          "WB": 12,
+          "stall": false,
+          "flush": [],
+          "operands": null,
+          "store": null
+        },
+        {
+          "cycle": 19,
+          "IF": null,
+          "ID": null,
+          "EX": null,
+          "MEM": null,
+          "WB": 16,
+          "stall": false,
+          "flush": [],
+          "operands": null,
+          "store": null
+        }
+      ]
+    }
+  },
+  "runs": [
+    {
+      "name": "assemble-independent",
+      "args": [
+        "-Dfile.encoding=UTF-8",
+        "-Duser.language=en",
+        "-Duser.country=US",
+        "-jar",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage3-tools\\rars1_6.jar",
+        "nc",
+        "me",
+        "sm",
+        "ae2",
+        "se3",
+        "1000",
+        "a",
+        "dump",
+        ".text",
+        "SegmentWindow",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage6-run\\independent.txt",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage6-run\\independent.s"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "assemble-alu",
+      "args": [
+        "-Dfile.encoding=UTF-8",
+        "-Duser.language=en",
+        "-Duser.country=US",
+        "-jar",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage3-tools\\rars1_6.jar",
+        "nc",
+        "me",
+        "sm",
+        "ae2",
+        "se3",
+        "1000",
+        "a",
+        "dump",
+        ".text",
+        "SegmentWindow",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage6-run\\alu.txt",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage6-run\\alu.s"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "assemble-priority",
+      "args": [
+        "-Dfile.encoding=UTF-8",
+        "-Duser.language=en",
+        "-Duser.country=US",
+        "-jar",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage3-tools\\rars1_6.jar",
+        "nc",
+        "me",
+        "sm",
+        "ae2",
+        "se3",
+        "1000",
+        "a",
+        "dump",
+        ".text",
+        "SegmentWindow",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage6-run\\priority.txt",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage6-run\\priority.s"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "assemble-load",
+      "args": [
+        "-Dfile.encoding=UTF-8",
+        "-Duser.language=en",
+        "-Duser.country=US",
+        "-jar",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage3-tools\\rars1_6.jar",
+        "nc",
+        "me",
+        "sm",
+        "ae2",
+        "se3",
+        "1000",
+        "a",
+        "dump",
+        ".text",
+        "SegmentWindow",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage6-run\\load.txt",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage6-run\\load.s"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "assemble-unscheduled",
+      "args": [
+        "-Dfile.encoding=UTF-8",
+        "-Duser.language=en",
+        "-Duser.country=US",
+        "-jar",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage3-tools\\rars1_6.jar",
+        "nc",
+        "me",
+        "sm",
+        "ae2",
+        "se3",
+        "1000",
+        "a",
+        "dump",
+        ".text",
+        "SegmentWindow",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage6-run\\unscheduled.txt",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage6-run\\unscheduled.s"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "assemble-scheduled",
+      "args": [
+        "-Dfile.encoding=UTF-8",
+        "-Duser.language=en",
+        "-Duser.country=US",
+        "-jar",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage3-tools\\rars1_6.jar",
+        "nc",
+        "me",
+        "sm",
+        "ae2",
+        "se3",
+        "1000",
+        "a",
+        "dump",
+        ".text",
+        "SegmentWindow",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage6-run\\scheduled.txt",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage6-run\\scheduled.s"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "assemble-store",
+      "args": [
+        "-Dfile.encoding=UTF-8",
+        "-Duser.language=en",
+        "-Duser.country=US",
+        "-jar",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage3-tools\\rars1_6.jar",
+        "nc",
+        "me",
+        "sm",
+        "ae2",
+        "se3",
+        "1000",
+        "a",
+        "dump",
+        ".text",
+        "SegmentWindow",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage6-run\\store.txt",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage6-run\\store.s"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "assemble-taken",
+      "args": [
+        "-Dfile.encoding=UTF-8",
+        "-Duser.language=en",
+        "-Duser.country=US",
+        "-jar",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage3-tools\\rars1_6.jar",
+        "nc",
+        "me",
+        "sm",
+        "ae2",
+        "se3",
+        "1000",
+        "a",
+        "dump",
+        ".text",
+        "SegmentWindow",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage6-run\\taken.txt",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage6-run\\taken.s"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "assemble-untaken",
+      "args": [
+        "-Dfile.encoding=UTF-8",
+        "-Duser.language=en",
+        "-Duser.country=US",
+        "-jar",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage3-tools\\rars1_6.jar",
+        "nc",
+        "me",
+        "sm",
+        "ae2",
+        "se3",
+        "1000",
+        "a",
+        "dump",
+        ".text",
+        "SegmentWindow",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage6-run\\untaken.txt",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage6-run\\untaken.s"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "assemble-loadBranch",
+      "args": [
+        "-Dfile.encoding=UTF-8",
+        "-Duser.language=en",
+        "-Duser.country=US",
+        "-jar",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage3-tools\\rars1_6.jar",
+        "nc",
+        "me",
+        "sm",
+        "ae2",
+        "se3",
+        "1000",
+        "a",
+        "dump",
+        ".text",
+        "SegmentWindow",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage6-run\\loadBranch.txt",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage6-run\\loadBranch.s"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "assemble-loop",
+      "args": [
+        "-Dfile.encoding=UTF-8",
+        "-Duser.language=en",
+        "-Duser.country=US",
+        "-jar",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage3-tools\\rars1_6.jar",
+        "nc",
+        "me",
+        "sm",
+        "ae2",
+        "se3",
+        "1000",
+        "a",
+        "dump",
+        ".text",
+        "SegmentWindow",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage6-run\\loop.txt",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage6-run\\loop.s"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "assemble-zero",
+      "args": [
+        "-Dfile.encoding=UTF-8",
+        "-Duser.language=en",
+        "-Duser.country=US",
+        "-jar",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage3-tools\\rars1_6.jar",
+        "nc",
+        "me",
+        "sm",
+        "ae2",
+        "se3",
+        "1000",
+        "a",
+        "dump",
+        ".text",
+        "SegmentWindow",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage6-run\\zero.txt",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage6-run\\zero.s"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "assemble-falseSource",
+      "args": [
+        "-Dfile.encoding=UTF-8",
+        "-Duser.language=en",
+        "-Duser.country=US",
+        "-jar",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage3-tools\\rars1_6.jar",
+        "nc",
+        "me",
+        "sm",
+        "ae2",
+        "se3",
+        "1000",
+        "a",
+        "dump",
+        ".text",
+        "SegmentWindow",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage6-run\\falseSource.txt",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage6-run\\falseSource.s"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "run-alu-chain.s",
+      "args": [
+        "-Dfile.encoding=UTF-8",
+        "-Duser.language=en",
+        "-Duser.country=US",
+        "-jar",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage3-tools\\rars1_6.jar",
+        "nc",
+        "me",
+        "sm",
+        "ae2",
+        "se3",
+        "1000",
+        "a0",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\source\\示例代码\\06-pipeline\\alu-chain.s"
+      ],
+      "exitCode": 0,
+      "stdout": "3",
+      "stderr": "\nProgram terminated by calling exit\r\na0\t0x00000003\r\n"
+    },
+    {
+      "name": "run-load-use.s",
+      "args": [
+        "-Dfile.encoding=UTF-8",
+        "-Duser.language=en",
+        "-Duser.country=US",
+        "-jar",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage3-tools\\rars1_6.jar",
+        "nc",
+        "me",
+        "sm",
+        "ae2",
+        "se3",
+        "1000",
+        "a0",
+        "t2",
+        "t5",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\source\\示例代码\\06-pipeline\\load-use.s"
+      ],
+      "exitCode": 0,
+      "stdout": "7",
+      "stderr": "\nProgram terminated by calling exit\r\na0\t0x00000007\r\nt2\t0x0000000e\r\nt5\t0x00000001\r\n"
+    },
+    {
+      "name": "run-scheduled.s",
+      "args": [
+        "-Dfile.encoding=UTF-8",
+        "-Duser.language=en",
+        "-Duser.country=US",
+        "-jar",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage3-tools\\rars1_6.jar",
+        "nc",
+        "me",
+        "sm",
+        "ae2",
+        "se3",
+        "1000",
+        "a0",
+        "t2",
+        "t5",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\source\\示例代码\\06-pipeline\\scheduled.s"
+      ],
+      "exitCode": 0,
+      "stdout": "7",
+      "stderr": "\nProgram terminated by calling exit\r\na0\t0x00000007\r\nt2\t0x0000000e\r\nt5\t0x00000001\r\n"
+    },
+    {
+      "name": "run-branch-squash.s",
+      "args": [
+        "-Dfile.encoding=UTF-8",
+        "-Duser.language=en",
+        "-Duser.country=US",
+        "-jar",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage3-tools\\rars1_6.jar",
+        "nc",
+        "me",
+        "sm",
+        "ae2",
+        "se3",
+        "1000",
+        "a0",
+        "0x10010000-0x10010000",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\source\\示例代码\\06-pipeline\\branch-squash.s"
+      ],
+      "exitCode": 0,
+      "stdout": "123",
+      "stderr": "\nProgram terminated by calling exit\r\na0\t0x0000007b\r\nMem[0x10010000]\t0x0000007b\t\r\n"
+    },
+    {
+      "name": "run-count-0",
+      "args": [
+        "-Dfile.encoding=UTF-8",
+        "-Duser.language=en",
+        "-Duser.country=US",
+        "-jar",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage3-tools\\rars1_6.jar",
+        "nc",
+        "me",
+        "sm",
+        "ae2",
+        "se3",
+        "1000",
+        "a0",
+        "ic",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage6-run\\count-0.s"
+      ],
+      "exitCode": 0,
+      "stdout": "0",
+      "stderr": "\nProgram terminated by calling exit\r\n\n7\r\na0\t0x00000000\r\n"
+    },
+    {
+      "name": "run-count-1",
+      "args": [
+        "-Dfile.encoding=UTF-8",
+        "-Duser.language=en",
+        "-Duser.country=US",
+        "-jar",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage3-tools\\rars1_6.jar",
+        "nc",
+        "me",
+        "sm",
+        "ae2",
+        "se3",
+        "1000",
+        "a0",
+        "ic",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage6-run\\count-1.s"
+      ],
+      "exitCode": 0,
+      "stdout": "0",
+      "stderr": "\nProgram terminated by calling exit\r\n\n11\r\na0\t0x00000000\r\n"
+    },
+    {
+      "name": "run-count-5",
+      "args": [
+        "-Dfile.encoding=UTF-8",
+        "-Duser.language=en",
+        "-Duser.country=US",
+        "-jar",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage3-tools\\rars1_6.jar",
+        "nc",
+        "me",
+        "sm",
+        "ae2",
+        "se3",
+        "1000",
+        "a0",
+        "ic",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage6-run\\count-5.s"
+      ],
+      "exitCode": 0,
+      "stdout": "10",
+      "stderr": "\nProgram terminated by calling exit\r\n\n27\r\na0\t0x0000000a\r\n"
+    }
+  ]
+}

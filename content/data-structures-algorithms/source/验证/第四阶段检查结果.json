@@ -1,0 +1,2203 @@
+{
+  "date": "2026-11-11",
+  "passed": true,
+  "checks": 436,
+  "programGroups": 8,
+  "environment": {
+    "compiler": "gcc (x86_64-posix-seh-rev0, Built by MinGW-W64 project) 8.1.0",
+    "compatibilityFlags": [
+      "-D__USE_MINGW_ANSI_STDIO=1"
+    ]
+  },
+  "metrics": {
+    "listModelSteps": 20000,
+    "stackQueueModelSteps": 57000,
+    "controlledAllocationFailures": 47,
+    "bracketWords": 97656,
+    "expressionTrees": 81920,
+    "finalTrackedAllocations": 0
+  },
+  "error": "",
+  "results": [
+    {
+      "name": "compiler starts",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "resolved sources: 00-整体规划与学习路线.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 00-整体规划与学习路线.md -> 最终综合实践-学习资料检索与路线规划器.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 00-整体规划与学习路线.md -> 第一阶段-练习.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 00-整体规划与学习路线.md -> 第一阶段-参考答案.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 00-整体规划与学习路线.md -> 99-官方资料与核验说明.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 00-整体规划与学习路线.md -> 验证/课程验证记录.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 00-整体规划与学习路线.md -> 09-字符串与整行输入.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 00-整体规划与学习路线.md -> 16-综合实践资料目录v0.2.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 00-整体规划与学习路线.md -> 第二阶段-练习.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 00-整体规划与学习路线.md -> 验证/第二阶段验证记录.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 00-整体规划与学习路线.md -> 17-问题规格与循环不变量.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 00-整体规划与学习路线.md -> 17-问题规格与循环不变量.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 00-整体规划与学习路线.md -> 第三阶段-练习.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 00-整体规划与学习路线.md -> 第三阶段-参考答案.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 00-整体规划与学习路线.md -> 示例代码/stage3-search-lab/README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 00-整体规划与学习路线.md -> 验证/第三阶段验证记录.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "resolved sources: 01-从生活问题到算法.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 01-从生活问题到算法.md -> 02-环境与第一个C程序.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "resolved sources: 02-环境与第一个C程序.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 02-环境与第一个C程序.md -> 示例代码/02-hello/hello.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 02-环境与第一个C程序.md -> 03-变量类型与运算.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "resolved sources: 03-变量类型与运算.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 03-变量类型与运算.md -> 示例代码/03-values/values.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 03-变量类型与运算.md -> 04-输入输出与合法数据.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "resolved sources: 04-输入输出与合法数据.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 04-输入输出与合法数据.md -> 示例代码/04-input/input.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 04-输入输出与合法数据.md -> 05-条件判断与边界.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "resolved sources: 05-条件判断与边界.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 05-条件判断与边界.md -> 示例代码/05-branches/branches.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 05-条件判断与边界.md -> 06-循环累加与执行跟踪.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "resolved sources: 06-循环累加与执行跟踪.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 06-循环累加与执行跟踪.md -> 示例代码/06-loops/sum.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 06-循环累加与执行跟踪.md -> 07-函数参数与作用域.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "resolved sources: 07-函数参数与作用域.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 07-函数参数与作用域.md -> 示例代码/07-functions/functions.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 07-函数参数与作用域.md -> 08-数组统计与顺序查找.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "resolved sources: 08-数组统计与顺序查找.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 08-数组统计与顺序查找.md -> 示例代码/08-arrays/arrays.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 08-数组统计与顺序查找.md -> 第一阶段-练习.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 08-数组统计与顺序查找.md -> 第一阶段-参考答案.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 08-数组统计与顺序查找.md -> 09-字符串与整行输入.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "resolved sources: 09-字符串与整行输入.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 09-字符串与整行输入.md -> 示例代码/09-strings/strings.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 09-字符串与整行输入.md -> 10-地址指针与生命周期.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "resolved sources: 10-地址指针与生命周期.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 10-地址指针与生命周期.md -> 示例代码/10-pointers/pointers.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 10-地址指针与生命周期.md -> 11-数组参数长度与const.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "resolved sources: 11-数组参数长度与const.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 11-数组参数长度与const.md -> 示例代码/11-array-api/array_api.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 11-数组参数长度与const.md -> 12-结构体枚举与记录.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "resolved sources: 12-结构体枚举与记录.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 12-结构体枚举与记录.md -> 示例代码/12-records/records.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 12-结构体枚举与记录.md -> 13-动态内存与所有权.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "resolved sources: 13-动态内存与所有权.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 13-动态内存与所有权.md -> 示例代码/13-memory/memory.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 13-动态内存与所有权.md -> 14-多文件调试与测试.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "resolved sources: 14-多文件调试与测试.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 14-多文件调试与测试.md -> 示例代码/14-modules/totals.h",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 14-多文件调试与测试.md -> 示例代码/14-modules/totals.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 14-多文件调试与测试.md -> 示例代码/14-modules/main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 14-多文件调试与测试.md -> 15-文件命令行与错误处理.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "resolved sources: 15-文件命令行与错误处理.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 15-文件命令行与错误处理.md -> 示例代码/15-files/file_count.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 15-文件命令行与错误处理.md -> 16-综合实践资料目录v0.2.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "resolved sources: 16-综合实践资料目录v0.2.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 16-综合实践资料目录v0.2.md -> 示例代码/stage2-catalog/catalog.h",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 16-综合实践资料目录v0.2.md -> 示例代码/stage2-catalog/catalog.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 16-综合实践资料目录v0.2.md -> 示例代码/stage2-catalog/main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 16-综合实践资料目录v0.2.md -> 示例代码/stage2-catalog/sample.txt",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 16-综合实践资料目录v0.2.md -> 示例代码/stage2-catalog/完整源码.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 16-综合实践资料目录v0.2.md -> 第二阶段-练习.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 16-综合实践资料目录v0.2.md -> 第二阶段-参考答案.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 16-综合实践资料目录v0.2.md -> 17-问题规格与循环不变量.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "resolved sources: 17-问题规格与循环不变量.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 17-问题规格与循环不变量.md -> 示例代码/17-specifications/prefix_stats.h",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 17-问题规格与循环不变量.md -> 示例代码/17-specifications/prefix_stats.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 17-问题规格与循环不变量.md -> 示例代码/17-specifications/main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 17-问题规格与循环不变量.md -> 18-操作计数与复杂度.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "resolved sources: 18-操作计数与复杂度.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 18-操作计数与复杂度.md -> 示例代码/18-growth/growth.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 18-操作计数与复杂度.md -> 19-递归调用栈与汉诺塔.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "resolved sources: 19-递归调用栈与汉诺塔.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 19-递归调用栈与汉诺塔.md -> 示例代码/19-recursion/recursion.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 19-递归调用栈与汉诺塔.md -> 示例代码/19-recursion/hanoi.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 19-递归调用栈与汉诺塔.md -> 20-顺序查找与二分边界.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "resolved sources: 20-顺序查找与二分边界.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 20-顺序查找与二分边界.md -> 示例代码/20-search/search.h",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 20-顺序查找与二分边界.md -> 示例代码/20-search/search.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 20-顺序查找与二分边界.md -> 示例代码/20-search/search_demo.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 20-顺序查找与二分边界.md -> 第三阶段-练习.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 20-顺序查找与二分边界.md -> 第三阶段-参考答案.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "resolved sources: 99-官方资料与核验说明.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 99-官方资料与核验说明.md -> 验证/第三阶段验证记录.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 99-官方资料与核验说明.md -> 验证/课程验证记录.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "resolved sources: README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 00-整体规划与学习路线.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 01-从生活问题到算法.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 第一阶段-练习.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 第一阶段-参考答案.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 第二阶段-练习.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 第二阶段-参考答案.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 第三阶段-练习.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 第三阶段-参考答案.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 示例代码/README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 示例代码/stage2-catalog/README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 示例代码/stage3-search-lab/README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 99-官方资料与核验说明.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 验证/第三阶段验证记录.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 最终综合实践-学习资料检索与路线规划器.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "resolved sources: 最终综合实践-学习资料检索与路线规划器.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "resolved sources: 第一阶段-参考答案.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 第一阶段-参考答案.md -> 第一阶段-练习.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 第一阶段-参考答案.md -> 示例代码/stage1-stats/stats.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 第一阶段-参考答案.md -> 验证/课程验证记录.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "resolved sources: 第一阶段-练习.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 第一阶段-练习.md -> 第一阶段-参考答案.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "resolved sources: 第三阶段-参考答案.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 第三阶段-参考答案.md -> 第三阶段-练习.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 第三阶段-参考答案.md -> 示例代码/stage3-search-lab/README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 第三阶段-参考答案.md -> 示例代码/stage3-search-lab/main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 第三阶段-参考答案.md -> 示例代码/20-search/search.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 第三阶段-参考答案.md -> 验证/第三阶段验证记录.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "resolved sources: 第三阶段-练习.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 第三阶段-练习.md -> 第三阶段-参考答案.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "resolved sources: 第二阶段-参考答案.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 第二阶段-参考答案.md -> 第二阶段-练习.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 第二阶段-参考答案.md -> 示例代码/stage2-catalog/README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 第二阶段-参考答案.md -> 示例代码/stage2-catalog/完整源码.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 第二阶段-参考答案.md -> 验证/第二阶段验证记录.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "resolved sources: 第二阶段-练习.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 第二阶段-练习.md -> 第二阶段-参考答案.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "resolved sources: README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> ../验证/课程验证记录.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 02-hello/hello.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> ../02-环境与第一个C程序.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 03-values/values.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> ../03-变量类型与运算.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 04-input/input.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> ../04-输入输出与合法数据.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 05-branches/branches.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> ../05-条件判断与边界.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 06-loops/sum.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> ../06-循环累加与执行跟踪.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 07-functions/functions.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> ../07-函数参数与作用域.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 08-arrays/arrays.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> ../08-数组统计与顺序查找.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> stage1-stats/stats.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> ../第一阶段-练习.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> ../第一阶段-参考答案.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 09-strings/strings.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> ../09-字符串与整行输入.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 10-pointers/pointers.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> ../10-地址指针与生命周期.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 11-array-api/array_api.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> ../11-数组参数长度与const.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 12-records/records.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> ../12-结构体枚举与记录.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 13-memory/memory.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> ../13-动态内存与所有权.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 14-modules/main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 14-modules/totals.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 14-modules/totals.h",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> ../14-多文件调试与测试.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 15-files/file_count.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> ../15-文件命令行与错误处理.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> stage2-catalog/README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> ../16-综合实践资料目录v0.2.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> ../验证/第二阶段验证记录.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 17-specifications/main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 17-specifications/prefix_stats.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 17-specifications/prefix_stats.h",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 18-growth/growth.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 19-recursion/recursion.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 19-recursion/hanoi.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 20-search/search_demo.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 20-search/search.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 20-search/search.h",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> stage3-search-lab/README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> ../验证/第三阶段验证记录.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "resolved sources: 第三阶段验证记录.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 第三阶段验证记录.md -> 第三阶段检查结果.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 第三阶段验证记录.md -> stage3-search-tests.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 第三阶段验证记录.md -> stage3-stats-tests.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "resolved sources: 第二阶段验证记录.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 第二阶段验证记录.md -> 第二阶段检查结果.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 第二阶段验证记录.md -> stage2-faults.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 第二阶段验证记录.md -> stage2-api-tests.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 第二阶段验证记录.md -> 第二阶段GDB记录.txt",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "resolved sources: 第四阶段验证记录.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "resolved sources: 课程验证记录.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 课程验证记录.md -> 第二阶段验证记录.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 课程验证记录.md -> verify-stage1.py",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 课程验证记录.md -> 第一阶段检查结果.json",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 课程验证记录.md -> 第三阶段验证记录.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "resolved sources: README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> ../../验证/第二阶段验证记录.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 完整源码.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "resolved sources: 完整源码.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 完整源码.md -> README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 完整源码.md -> catalog.h",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 完整源码.md -> catalog.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 完整源码.md -> main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 完整源码.md -> sample.txt",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "resolved sources: README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> ../20-search/search.h",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> ../20-search/search.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> ../../验证/第三阶段验证记录.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> ../../第三阶段-参考答案.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> ../../20-顺序查找与二分边界.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "resolved sources: README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> ../../验证/第四阶段验证记录.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> 完整源码.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "resolved sources: 完整源码.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 完整源码.md -> README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 完整源码.md -> ../stage4-common/ds_status.h",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 完整源码.md -> ../21-sequence/main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 完整源码.md -> ../21-sequence/sequence.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 完整源码.md -> ../21-sequence/sequence.h",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 完整源码.md -> ../22-vector/main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 完整源码.md -> ../22-vector/vector.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 完整源码.md -> ../22-vector/vector.h",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 完整源码.md -> ../23-singly/main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 完整源码.md -> ../23-singly/singly.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 完整源码.md -> ../23-singly/singly.h",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 完整源码.md -> ../24-doubly/doubly.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 完整源码.md -> ../24-doubly/doubly.h",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 完整源码.md -> ../24-doubly/main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 完整源码.md -> ../25-stack/brackets.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 完整源码.md -> ../25-stack/brackets.h",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 完整源码.md -> ../25-stack/brackets_main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 完整源码.md -> ../25-stack/main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 完整源码.md -> ../25-stack/stack.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 完整源码.md -> ../25-stack/stack.h",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 完整源码.md -> ../26-queue/main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 完整源码.md -> ../26-queue/queue.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 完整源码.md -> ../26-queue/queue.h",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 完整源码.md -> ../stage4-expression/expression.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 完整源码.md -> ../stage4-expression/expression.h",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 完整源码.md -> ../stage4-expression/main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "resolved sources: README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> ../../第四阶段-参考答案.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: README.md -> ../stage4-common/完整源码.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "resolved sources: 21-抽象数据类型与顺序表.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "21-抽象数据类型与顺序表.md: 目标与先修",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "21-抽象数据类型与顺序表.md: 常见错误",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "21-抽象数据类型与顺序表.md: 练习与参考答案",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "21-抽象数据类型与顺序表.md: 完成条件",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 21-抽象数据类型与顺序表.md -> 示例代码/stage4-common/ds_status.h",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 21-抽象数据类型与顺序表.md -> 示例代码/21-sequence/sequence.h",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 21-抽象数据类型与顺序表.md -> 示例代码/21-sequence/sequence.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 21-抽象数据类型与顺序表.md -> 示例代码/21-sequence/main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 21-抽象数据类型与顺序表.md -> 示例代码/stage4-common/完整源码.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 21-抽象数据类型与顺序表.md -> 22-动态数组扩容与摊还.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "resolved sources: 22-动态数组扩容与摊还.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "22-动态数组扩容与摊还.md: 目标与先修",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "22-动态数组扩容与摊还.md: 常见错误",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "22-动态数组扩容与摊还.md: 练习与参考答案",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "22-动态数组扩容与摊还.md: 完成条件",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 22-动态数组扩容与摊还.md -> 示例代码/22-vector/vector.h",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 22-动态数组扩容与摊还.md -> 示例代码/22-vector/vector.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 22-动态数组扩容与摊还.md -> 示例代码/22-vector/main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 22-动态数组扩容与摊还.md -> 示例代码/stage4-common/ds_status.h",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 22-动态数组扩容与摊还.md -> 示例代码/stage4-common/完整源码.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 22-动态数组扩容与摊还.md -> 23-单链表前驱与释放.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "resolved sources: 23-单链表前驱与释放.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "23-单链表前驱与释放.md: 目标与先修",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "23-单链表前驱与释放.md: 常见错误",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "23-单链表前驱与释放.md: 练习与参考答案",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "23-单链表前驱与释放.md: 完成条件",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 23-单链表前驱与释放.md -> 示例代码/23-singly/singly.h",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 23-单链表前驱与释放.md -> 示例代码/23-singly/singly.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 23-单链表前驱与释放.md -> 示例代码/23-singly/main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 23-单链表前驱与释放.md -> 示例代码/stage4-common/ds_status.h",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 23-单链表前驱与释放.md -> 示例代码/stage4-common/完整源码.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 23-单链表前驱与释放.md -> 24-双向与循环链表.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "resolved sources: 24-双向与循环链表.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "24-双向与循环链表.md: 目标与先修",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "24-双向与循环链表.md: 常见错误",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "24-双向与循环链表.md: 练习与参考答案",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "24-双向与循环链表.md: 完成条件",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 24-双向与循环链表.md -> 示例代码/24-doubly/doubly.h",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 24-双向与循环链表.md -> 示例代码/24-doubly/doubly.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 24-双向与循环链表.md -> 示例代码/24-doubly/main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 24-双向与循环链表.md -> 示例代码/stage4-common/ds_status.h",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 24-双向与循环链表.md -> 示例代码/stage4-common/完整源码.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 24-双向与循环链表.md -> 25-栈与括号匹配.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "resolved sources: 25-栈与括号匹配.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "25-栈与括号匹配.md: 目标与先修",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "25-栈与括号匹配.md: 常见错误",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "25-栈与括号匹配.md: 练习与参考答案",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "25-栈与括号匹配.md: 完成条件",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 25-栈与括号匹配.md -> 示例代码/25-stack/stack.h",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 25-栈与括号匹配.md -> 示例代码/25-stack/stack.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 25-栈与括号匹配.md -> 示例代码/25-stack/main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 25-栈与括号匹配.md -> 示例代码/stage4-common/ds_status.h",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 25-栈与括号匹配.md -> 示例代码/25-stack/brackets.h",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 25-栈与括号匹配.md -> 示例代码/25-stack/brackets.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 25-栈与括号匹配.md -> 示例代码/25-stack/brackets_main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 25-栈与括号匹配.md -> 26-队列绕回与排队.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "resolved sources: 26-队列绕回与排队.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "26-队列绕回与排队.md: 目标与先修",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "26-队列绕回与排队.md: 常见错误",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "26-队列绕回与排队.md: 练习与参考答案",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "26-队列绕回与排队.md: 完成条件",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 26-队列绕回与排队.md -> 示例代码/26-queue/queue.h",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 26-队列绕回与排队.md -> 示例代码/26-queue/queue.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 26-队列绕回与排队.md -> 示例代码/26-queue/main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 26-队列绕回与排队.md -> 示例代码/stage4-common/ds_status.h",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 26-队列绕回与排队.md -> 示例代码/stage4-common/完整源码.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 26-队列绕回与排队.md -> 示例代码/stage4-expression/README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 26-队列绕回与排队.md -> 第四阶段-参考答案.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 26-队列绕回与排队.md -> 第四阶段-练习.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 26-队列绕回与排队.md -> 第四阶段-参考答案.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "resolved sources: 第四阶段-参考答案.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 第四阶段-参考答案.md -> 第四阶段-练习.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 第四阶段-参考答案.md -> 示例代码/stage4-common/完整源码.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 第四阶段-参考答案.md -> 示例代码/stage4-common/README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 第四阶段-参考答案.md -> 示例代码/stage4-expression/README.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 第四阶段-参考答案.md -> 示例代码/stage4-common/完整源码.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 第四阶段-参考答案.md -> 验证/第四阶段验证记录.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "resolved sources: 第四阶段-练习.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "link: 第四阶段-练习.md -> 第四阶段-参考答案.md",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "appendix source match: stage4-common/ds_status.h",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "appendix source match: 21-sequence/main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "appendix source match: 21-sequence/sequence.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "appendix source match: 21-sequence/sequence.h",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "appendix source match: 22-vector/main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "appendix source match: 22-vector/vector.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "appendix source match: 22-vector/vector.h",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "appendix source match: 23-singly/main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "appendix source match: 23-singly/singly.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "appendix source match: 23-singly/singly.h",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "appendix source match: 24-doubly/doubly.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "appendix source match: 24-doubly/doubly.h",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "appendix source match: 24-doubly/main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "appendix source match: 25-stack/brackets.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "appendix source match: 25-stack/brackets.h",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "appendix source match: 25-stack/brackets_main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "appendix source match: 25-stack/main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "appendix source match: 25-stack/stack.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "appendix source match: 25-stack/stack.h",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "appendix source match: 26-queue/main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "appendix source match: 26-queue/queue.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "appendix source match: 26-queue/queue.h",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "appendix source match: stage4-expression/expression.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "appendix source match: stage4-expression/expression.h",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "appendix source match: stage4-expression/main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "chapter complete source: stage4-common/ds_status.h",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "chapter complete source: 21-sequence/sequence.h",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "chapter complete source: 21-sequence/sequence.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "chapter complete source: 22-vector/vector.h",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "chapter complete source: 22-vector/vector.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "chapter complete source: 23-singly/singly.h",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "chapter complete source: 23-singly/singly.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "chapter complete source: 24-doubly/doubly.h",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "chapter complete source: 24-doubly/doubly.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "chapter complete source: 25-stack/stack.h",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "chapter complete source: 25-stack/stack.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "chapter complete source: 25-stack/brackets.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "chapter complete source: 26-queue/queue.h",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "chapter complete source: 26-queue/queue.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "chapter complete source: stage4-expression/expression.h",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "chapter complete source: stage4-expression/expression.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "temporary cleanup confined",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: sequence",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "normal demo: sequence",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: vector",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "normal demo: vector",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: singly",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "normal demo: singly",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: doubly",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "normal demo: doubly",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: stack",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "normal demo: stack",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: queue",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "normal demo: queue",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: brackets",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: expression",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "brackets valid ",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "brackets valid abc",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "brackets valid ()",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "brackets valid ([])",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "brackets valid ({[]})",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "brackets valid (((((((((((((((())))",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "brackets valid xxxxxxxxxxxxxxxxxxxx",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "brackets diagnostic )",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "brackets diagnostic ([)]",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "brackets diagnostic [(",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "brackets diagnostic abc(",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "brackets diagnostic [(]",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "brackets diagnostic a[b(c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "brackets diagnostic \"(\"",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "brackets diagnostic ((((((((((((((((()))",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "brackets diagnostic xxxxxxxxxxxxxxxxxxxx",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "brackets diagnostic )xxxxxxxxxxxxxxxxxxx",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "brackets usage",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "expression valid 2 3 + 4 *",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "expression valid 8 3 - 2 *",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "expression valid 2 8 -",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "expression valid 7 2 /",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "expression valid 0 7 - 2 /",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "expression valid    7  ",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "expression valid 0",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "expression valid 9 9 * 9 * 9 *",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "expression diagnostic 2 +",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "expression diagnostic 2 3",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "expression diagnostic 8 0 /",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "expression diagnostic 12 3 +",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "expression diagnostic -3 2 +",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "expression diagnostic 1\t2",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "expression diagnostic 9 9 * 9 * 9 * 9 *",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "expression diagnostic 0 9 - 9 * 9 * 9 * 9 *",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "expression diagnostic 1 1 1 1 1 1 1 1 1 1 1 1 ",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "expression diagnostic ",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "expression diagnostic    ",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "expression diagnostic                         ",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "expression diagnostic 1 (",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "expression usage",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile controlled allocator: sequence",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile controlled allocator: vector",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile controlled allocator: singly",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile controlled allocator: doubly",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile controlled allocator: stack",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile controlled allocator: queue",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: model histories and failure audit",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "model traces, invariants and allocation failure",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: application finite comparisons",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "bracket reduction and expression tree oracles",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile safe value-corruption variant",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: detect sequence corruption",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "model oracle detects value corruption",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: detect operand-order corruption",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "operand oracle detects left-right confusion",
+      "passed": true,
+      "detail": ""
+    }
+  ]
+}

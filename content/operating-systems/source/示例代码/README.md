@@ -50,6 +50,8 @@ make all
 
 详细版第二批已把functions.c调整为仅使用整数参数的add_minutes，输出仍为sum=90。数组参数的sum_values移到第07章正文教学例子，避免第06章依赖尚未解释的数组。正文中的其他完整变体和综合练习通过教材提取脚本验证，未全部计入这里的23个主线文件。
 
+第六批为mapping.c补上fileno返回检查和fflush交接，原正常输出保持不变；全部23个主线已再次回归。更多翻译、置换、映射变体与模拟器见 [第六批练习](../详写第六批-练习与参考答案.md)，它们不重复计为本目录新增主线文件。
+
 ```bash
 gcc -std=c17 -D_POSIX_C_SOURCE=200809L -Wall -Wextra -Wpedantic -g process.c -o process
 gcc -std=c17 -D_POSIX_C_SOURCE=200809L -Wall -Wextra -Wpedantic -g -pthread mutex.c -o mutex
@@ -115,3 +117,7 @@ static inline int wait_child(pid_t pid) {
 signal-demo 运行后按 Ctrl+C 结束；mini-shell 输入 exit 结束，支持范围见第 35 章。只在自己的实验目录使用 `>`，它会覆盖指定文件。
 
 有 Python3 时，从本目录运行 `python3 ../验证/verify.py`，检查脚本在临时目录编译，测试正常/失败输入、重复并发、信号与 Shell。结果写到课程自己的验证目录。Python 只是附带验收工具，不是本课程另一个语言先修。
+
+第九批修正mini-shell的整行字节边界、NUL拒绝、输入无缓冲交接、执行失败126/127区分、输出刷新和第二次fork失败时终止回收直接child。输入限1023非换行字节，每侧最多63个token。全部23例程已于2026-11-12重新回归133项；教学变体与help改造见 [第九批练习](../详写第九批-练习与参考答案.md)。
+
+可选 [Shell追加输出实践](../进阶实践01-Shell追加输出从零实现.md)的append-fds.c与mini-shell-append.c位于相邻的进阶代码目录，不计作本目录第24、25个主线例程。学习时把所需C文件与本目录lab.h复制到自己的新练习目录，再按实践页编译。

@@ -1,0 +1,115 @@
+{
+  "id": "data-structures-algorithms",
+  "title": "数据结构与算法：从零学习C语言",
+  "shortTitle": "数据结构与算法",
+  "category": "systems",
+  "summary": "52章完整零基础教程：从C语言、内存与复杂度，到线性结构、匹配散列、排序、树与图、贪心回溯和动态规划；最终完成资料检索、分类、先修顺序、就绪推荐与地点路线工具。含完整C例程、阶段练习答案和真实验证。",
+  "level": "零基础",
+  "duration": "全课339–482小时",
+  "status": "complete",
+  "updatedAt": "2026-11-12",
+  "tags": [
+    "C17",
+    "零基础编程",
+    "数据结构",
+    "算法",
+    "分阶段实践"
+  ],
+  "source": "source",
+  "download": "downloads/data-structures-algorithms-complete.zip",
+  "stats": {
+    "chapters": 52,
+    "examples": 63
+  },
+  "cover": {
+    "eyebrow": "DATA STRUCTURES / ALGORITHMS / C",
+    "lines": [
+      "数据结构与算法",
+      "从零学习C语言"
+    ],
+    "icon": "code"
+  },
+  "groups": [
+    {
+      "id": "c-foundations",
+      "name": "第一阶段：C语言起步",
+      "range": [
+        1,
+        8
+      ],
+      "summary": "从生活步骤、终端与第一行C代码，到变量、输入、判断、循环、函数、数组和分钟统计器。"
+    },
+    {
+      "id": "c-memory",
+      "name": "第二阶段：地址与程序组织",
+      "range": [
+        9,
+        16
+      ],
+      "summary": "从字符串、指针与资源所有权，到多文件、调试、文件和可重载的资料目录。"
+    },
+    {
+      "id": "algorithm-foundations",
+      "name": "第三阶段：算法分析与递归",
+      "range": [
+        17,
+        20
+      ],
+      "summary": "从问题规格、不变量与工作量推导，到递归、汉诺塔、半开区间二分与查找对照实验。"
+    },
+    {
+      "id": "linear-structures",
+      "name": "第四阶段：线性结构",
+      "range": [
+        21,
+        26
+      ],
+      "summary": "用统一序列行为对照顺序存储与链式存储，掌握栈、队列、边界、释放与应用。"
+    },
+    {
+      "id": "lookup-and-hashing",
+      "name": "第五阶段：查找与散列",
+      "range": [
+        27,
+        30
+      ],
+      "summary": "从字节子串与KMP，到冲突、墓碑和重散列，再维护主记录与ID索引的一致性。"
+    },
+    {
+      "id": "sorting",
+      "name": "第六阶段：排序与目录整合",
+      "range": [
+        31,
+        36
+      ],
+      "summary": "从记录、稳定性和统一计数，到九种排序、对照实验与文件/索引/稳定视图目录v0.3。"
+    },
+    {
+      "id": "trees-and-heaps",
+      "name": "第七阶段：树与堆",
+      "range": [
+        37,
+        42
+      ],
+      "summary": "从树的所有权与遍历，到BST删除、AVL旋转、堆优先队列/堆排序与哈夫曼前缀编解码。"
+    },
+    {
+      "id": "graph-algorithms",
+      "name": "第八阶段：图、依赖与路线",
+      "range": [
+        43,
+        48
+      ],
+      "summary": "从图存储、DFS/BFS与拓扑，到Dijkstra、负环影响、Floyd全点对、并查集与最小生成森林，附固定关系网络实验台。"
+    },
+    {
+      "id": "algorithm-design",
+      "name": "第九阶段：算法设计与综合实践",
+      "range": [
+        49,
+        52
+      ],
+      "summary": "交换论证与贪心反例、回溯撤销/剪枝/数独、零钱与背包动态规划；整合资料分类/检索、先修/就绪、路线、导出重载和故障验证。"
+    }
+  ]
+}

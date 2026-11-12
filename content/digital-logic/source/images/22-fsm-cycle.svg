@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="650" viewBox="0 0 840 650" role="img" aria-labelledby="title desc">
+<title id="title">红绿黄三状态的前进与保持</title><desc id="desc">复位进入RED。advance为一时在上升沿按RED、GREEN、YELLOW、RED前进；为零保持。三个正常状态的red green yellow输出分别100、010、001。</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#527b64"/></marker></defs>
+<rect width="840" height="650" rx="16" fill="#f7faf7"/>
+<g font-family="Microsoft YaHei, sans-serif" fill="#213b30">
+<text x="28" y="43" font-size="27" font-weight="bold">先画转换，再给状态编码</text><text x="28" y="82" font-size="21">状态在 clk 上升沿更新；图中箭头条件均为 advance=1。</text>
+<g stroke="#83a18b" stroke-width="2"><rect x="280" y="120" width="310" height="90" rx="14" fill="#f3e1dd"/><rect x="280" y="280" width="310" height="90" rx="14" fill="#dceedd"/><rect x="280" y="440" width="310" height="90" rx="14" fill="#f3edce"/></g>
+<g font-size="25" text-anchor="middle"><text x="435" y="156" font-weight="bold">RED / 00</text><text x="435" y="191">灯向量 100</text><text x="435" y="316" font-weight="bold">GREEN / 01</text><text x="435" y="351">灯向量 010</text><text x="435" y="476" font-weight="bold">YELLOW / 10</text><text x="435" y="511">灯向量 001</text></g>
+<g fill="none" stroke="#527b64" stroke-width="3" marker-end="url(#arrow)"><path d="M435 212 V275"/><path d="M435 372 V435"/><path d="M278 485 H165 V165 H275"/></g>
+<g font-size="21"><text x="462" y="253">advance=1</text><text x="462" y="413">advance=1</text><text x="27" y="343">回到红</text><text x="615" y="163">rst 采样后</text><text x="615" y="198">进入 RED</text></g>
+<text x="28" y="584" font-size="22">advance=0：三种状态都保持，各自灯输出不因输入直接切换。</text><text x="28" y="621" font-size="20">灯向量顺序为 red / green / yellow；本图只描述正常状态。</text>
+</g></svg>

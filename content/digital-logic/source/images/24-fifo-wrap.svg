@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="650" viewBox="0 0 900 650" role="img" aria-labelledby="title desc">
+<title id="title">FIFO回绕后物理位置与队列顺序不同</title><desc id="desc">周期九后位置零是E5，一是旧B2，二是C3，三是D4。读指针为二，写指针为一，数量三；逻辑队列顺序C3 D4 E5。旧B2不属于有效队列。</desc>
+<rect width="900" height="650" rx="16" fill="#f7faf7"/>
+<g font-family="Microsoft YaHei, sans-serif" fill="#213b30">
+<text x="28" y="43" font-size="27" font-weight="bold">数组不搬家，指针决定先后</text><text x="28" y="82" font-size="21">下图为测试周期 9 沿后：rp=2，wp=1，level=3。</text>
+<g font-size="22" text-anchor="middle"><text x="177" y="132">位置 0</text><text x="357" y="132">位置 1</text><text x="537" y="132">位置 2</text><text x="717" y="132">位置 3</text></g>
+<g stroke="#83a18b" stroke-width="2"><rect x="100" y="151" width="155" height="93" rx="10" fill="#dceedd"/><rect x="280" y="151" width="155" height="93" rx="10" fill="#edf0ed"/><rect x="460" y="151" width="155" height="93" rx="10" fill="#dceedd"/><rect x="640" y="151" width="155" height="93" rx="10" fill="#dceedd"/></g>
+<g font-size="27" text-anchor="middle"><text x="177" y="207">E5</text><text x="357" y="195">旧 B2</text><text x="357" y="224" font-size="19">已读，无效</text><text x="537" y="207">C3</text><text x="717" y="207">D4</text></g>
+<g font-size="21"><text x="290" y="282">wp：下一写位置</text><text x="470" y="282">rp：下一读位置</text><text x="28" y="338" font-weight="bold">逻辑队列：C3 → D4 → E5</text><text x="28" y="377">读取按位置 2 → 3 → 0 回绕，不会再读已移除的 B2。</text></g>
+<rect x="28" y="407" width="844" height="183" rx="12" fill="#eaf1eb"/>
+<g font-size="22"><text x="48" y="447">周期 6：写满 A1 / B2 / C3 / D4，level=4。</text><text x="48" y="488">周期 8：满时同请求，只读 A1，E5 本沿被拒绝。</text><text x="48" y="529">周期 9：读 B2，同时成功写 E5，level 仍为 3。</text><text x="48" y="570">物理旧字节存在，不代表它仍是有效队列项。</text></g>
+<text x="28" y="625" font-size="20">本例按沿前空满拒绝请求，不采用满替换或空旁路。</text>
+</g></svg>

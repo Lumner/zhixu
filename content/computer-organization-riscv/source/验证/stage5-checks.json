@@ -1,0 +1,705 @@
+{
+  "date": "2026-11-05",
+  "edition": "detailed-rewrite-stage5",
+  "passed": 36,
+  "gccVersion": "gcc.exe (x86_64-posix-seh-rev0, Built by MinGW-W64 project) 8.1.0\r\nCopyright (C) 2018 Free Software Foundation, Inc.\r\nThis is free software; see the source for copying conditions.  There is NO\r\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.",
+  "gccTarget": "x86_64-w64-mingw32",
+  "rarsInvocations": 3,
+  "scope": "RARS encoding/one complete program; host C17; bounded functional models and arithmetic. No RV32 C cross compilation, HDL, Ripes or real timing validation.",
+  "sourceFiles": [
+    {
+      "name": "datapath-lab.cjs",
+      "sha256": "bbba9fb6603bfee524717f34e4e9818a61a900acbfe6a56345beae437366820f"
+    },
+    {
+      "name": "datapath-rars.s",
+      "sha256": "f7bbac0c54fec266c4d696b6ed17746e392a9f0dddffd24088b548ed629a2742"
+    },
+    {
+      "name": "datapath.s",
+      "sha256": "c3fcf0500728ae2a3c2bdbdb14fda153585eec7761adbe49d924115dcec68e47"
+    },
+    {
+      "name": "encoding.s",
+      "sha256": "1414900245afb80a81525ea859c7f22ca4fddfdad80d6856a2a58eeaa61d5c5a"
+    },
+    {
+      "name": "pointer-demo.c",
+      "sha256": "df4fd0006f349ca0e75378d6504486c8aabaa996b73f7c98298a5bb5ad5da799"
+    },
+    {
+      "name": "sum-main.c",
+      "sha256": "1fe6304120d23701e4f2e50f72b1a822a5889808389bdda82acee516e3e14232"
+    },
+    {
+      "name": "sum.c",
+      "sha256": "56a6537ec0c0f66506e4e934481554cf4aafec0b1905e1be3b6a95cb6f978d13"
+    },
+    {
+      "name": "sum.h",
+      "sha256": "bb0c5d64ba988e47938e286aa221190c14aca55bdd7c6546a88e6068844caf15"
+    },
+    {
+      "name": "trace.cjs",
+      "sha256": "1e9d726cf84df77e92c172a86f258c86d876fdd0f873d4725ec644cb0d1b2cbe"
+    }
+  ],
+  "scenarios": [
+    "All thirteen fixture words agree with official RARS assembler",
+    "I field extraction and signed immediate",
+    "R add/sub differ only in their specified funct7 bit",
+    "S split immediate reassembles to minus four",
+    "B positive and negative offsets use current PC",
+    "U value and J link/target have different meanings",
+    "Machine word produces little-endian bytes, not bit reversal",
+    "Teaching demo words independently assembled by RARS",
+    "Official RARS program prints twelve and writes data seven",
+    "Seven-step functional demo final architecture",
+    "lw address, memory value and writeback are distinct",
+    "sw ALU immediate and memory write source are distinct",
+    "Both beq paths select correct next PC without state writes",
+    "Five-op control rows match independently specified expectations",
+    "Differential architecture versus existing model input 0",
+    "Differential architecture versus existing model input 5",
+    "Differential architecture versus existing model input 9",
+    "Differential architecture versus existing model input 2147483647",
+    "Differential architecture versus existing model input 4294967294",
+    "Unsupported sub and reserved load reject before changing architecture",
+    "Misaligned load rejects without a partial register write",
+    "x0 writes are discarded and old operands are used",
+    "Single-cycle path and unit calculations",
+    "Multicycle schedule time, CPI and branch base arithmetic",
+    "Host target explicitly differs from RISC-V",
+    "C17 two-file sum compile and execute O0",
+    "C17 pointer value/store distinction O0",
+    "C17 two-file sum compile and execute O2",
+    "C17 pointer value/store distinction O2",
+    "C defined-input sum negative",
+    "C defined-input sum prefix",
+    "C defined-input sum zero",
+    "C defined-input sum empty",
+    "C compile stages and separate link produce the same result",
+    "Missing definition is a real link failure",
+    "Observed host type sizes are recorded, not assumed RV32"
+  ],
+  "datapathTrace": [
+    {
+      "pc": 0,
+      "word": 268436115,
+      "op": "addi",
+      "rs1Value": 0,
+      "rs2Value": 0,
+      "imm": 256,
+      "controls": {
+        "RegWrite": true,
+        "ALUSrc": "imm",
+        "MemRead": false,
+        "MemWrite": false,
+        "ResultSrc": "alu",
+        "Branch": false
+      },
+      "aluB": 256,
+      "aluResult": 256,
+      "memReadValue": null,
+      "equal": true,
+      "target": 256,
+      "nextPC": 4,
+      "registerWrite": {
+        "register": 5,
+        "value": 256
+      },
+      "memoryWrite": null
+    },
+    {
+      "pc": 4,
+      "word": 172803,
+      "op": "lw",
+      "rs1Value": 256,
+      "rs2Value": 0,
+      "imm": 0,
+      "controls": {
+        "RegWrite": true,
+        "ALUSrc": "imm",
+        "MemRead": true,
+        "MemWrite": false,
+        "ResultSrc": "memory",
+        "Branch": false
+      },
+      "aluB": 0,
+      "aluResult": 256,
+      "memReadValue": 5,
+      "equal": false,
+      "target": 4,
+      "nextPC": 8,
+      "registerWrite": {
+        "register": 6,
+        "value": 5
+      },
+      "memoryWrite": null
+    },
+    {
+      "pc": 8,
+      "word": 2294675,
+      "op": "addi",
+      "rs1Value": 5,
+      "rs2Value": 0,
+      "imm": 2,
+      "controls": {
+        "RegWrite": true,
+        "ALUSrc": "imm",
+        "MemRead": false,
+        "MemWrite": false,
+        "ResultSrc": "alu",
+        "Branch": false
+      },
+      "aluB": 2,
+      "aluResult": 7,
+      "memReadValue": null,
+      "equal": false,
+      "target": 10,
+      "nextPC": 12,
+      "registerWrite": {
+        "register": 7,
+        "value": 7
+      },
+      "memoryWrite": null
+    },
+    {
+      "pc": 12,
+      "word": 7512611,
+      "op": "sw",
+      "rs1Value": 256,
+      "rs2Value": 7,
+      "imm": 4,
+      "controls": {
+        "RegWrite": false,
+        "ALUSrc": "imm",
+        "MemRead": false,
+        "MemWrite": true,
+        "ResultSrc": null,
+        "Branch": false
+      },
+      "aluB": 4,
+      "aluResult": 260,
+      "memReadValue": null,
+      "equal": false,
+      "target": 16,
+      "nextPC": 16,
+      "registerWrite": null,
+      "memoryWrite": {
+        "address": 260,
+        "value": 7
+      }
+    },
+    {
+      "pc": 16,
+      "word": 7537763,
+      "op": "beq",
+      "rs1Value": 5,
+      "rs2Value": 7,
+      "imm": 8,
+      "controls": {
+        "RegWrite": false,
+        "ALUSrc": "reg",
+        "MemRead": false,
+        "MemWrite": false,
+        "ResultSrc": null,
+        "Branch": true
+      },
+      "aluB": 7,
+      "aluResult": 4294967294,
+      "memReadValue": null,
+      "equal": false,
+      "target": 24,
+      "nextPC": 20,
+      "registerWrite": null,
+      "memoryWrite": null
+    },
+    {
+      "pc": 20,
+      "word": 7537971,
+      "op": "add",
+      "rs1Value": 5,
+      "rs2Value": 7,
+      "imm": 0,
+      "controls": {
+        "RegWrite": true,
+        "ALUSrc": "reg",
+        "MemRead": false,
+        "MemWrite": false,
+        "ResultSrc": "alu",
+        "Branch": false
+      },
+      "aluB": 7,
+      "aluResult": 12,
+      "memReadValue": null,
+      "equal": false,
+      "target": 20,
+      "nextPC": 24,
+      "registerWrite": {
+        "register": 10,
+        "value": 12
+      },
+      "memoryWrite": null
+    },
+    {
+      "pc": 24,
+      "word": 7570531,
+      "op": "beq",
+      "rs1Value": 7,
+      "rs2Value": 7,
+      "imm": 8,
+      "controls": {
+        "RegWrite": false,
+        "ALUSrc": "reg",
+        "MemRead": false,
+        "MemWrite": false,
+        "ResultSrc": null,
+        "Branch": true
+      },
+      "aluB": 7,
+      "aluResult": 0,
+      "memReadValue": null,
+      "equal": true,
+      "target": 32,
+      "nextPC": 32,
+      "registerWrite": null,
+      "memoryWrite": null
+    }
+  ],
+  "runs": [
+    {
+      "name": "encoding-assemble-only",
+      "tool": "java.exe",
+      "args": [
+        "-Dfile.encoding=UTF-8",
+        "-Duser.language=en",
+        "-Duser.country=US",
+        "-jar",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage3-tools\\rars1_6.jar",
+        "nc",
+        "me",
+        "sm",
+        "ae2",
+        "se3",
+        "1000",
+        "a",
+        "dump",
+        ".text",
+        "SegmentWindow",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage5-run\\encoding-text.txt",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\source\\示例代码\\05-datapath\\encoding.s"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "model-words-assemble-only",
+      "tool": "java.exe",
+      "args": [
+        "-Dfile.encoding=UTF-8",
+        "-Duser.language=en",
+        "-Duser.country=US",
+        "-jar",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage3-tools\\rars1_6.jar",
+        "nc",
+        "me",
+        "sm",
+        "ae2",
+        "se3",
+        "1000",
+        "a",
+        "dump",
+        ".text",
+        "SegmentWindow",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage5-run\\model-words.txt",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage5-run\\model-encoding.s"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "datapath-rars-execute",
+      "tool": "java.exe",
+      "args": [
+        "-Dfile.encoding=UTF-8",
+        "-Duser.language=en",
+        "-Duser.country=US",
+        "-jar",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage3-tools\\rars1_6.jar",
+        "nc",
+        "me",
+        "sm",
+        "ae2",
+        "se3",
+        "1000",
+        "a0",
+        "t1",
+        "t2",
+        "0x10010000-0x10010004",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\source\\示例代码\\05-datapath\\datapath-rars.s"
+      ],
+      "exitCode": 0,
+      "stdout": "12",
+      "stderr": "\nProgram terminated by calling exit\r\na0\t0x0000000c\r\nt1\t0x00000005\r\nt2\t0x00000007\r\nMem[0x10010000]\t0x00000005\t0x00000007\t\r\n"
+    },
+    {
+      "name": "gcc-version",
+      "tool": "gcc.exe",
+      "args": [
+        "--version"
+      ],
+      "exitCode": 0,
+      "stdout": "gcc.exe (x86_64-posix-seh-rev0, Built by MinGW-W64 project) 8.1.0\r\nCopyright (C) 2018 Free Software Foundation, Inc.\r\nThis is free software; see the source for copying conditions.  There is NO\r\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\r\n\r\n",
+      "stderr": ""
+    },
+    {
+      "name": "gcc-target",
+      "tool": "gcc.exe",
+      "args": [
+        "-dumpmachine"
+      ],
+      "exitCode": 0,
+      "stdout": "x86_64-w64-mingw32\r\n",
+      "stderr": ""
+    },
+    {
+      "name": "build-sum-O0",
+      "tool": "gcc.exe",
+      "args": [
+        "-std=c17",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-O0",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\source\\示例代码\\05-datapath\\sum.c",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\source\\示例代码\\05-datapath\\sum-main.c",
+        "-o",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage5-run\\sum-O0.exe"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "run-sum-O0",
+      "tool": "sum-O0.exe",
+      "args": [],
+      "exitCode": 0,
+      "stdout": "sum = 12\r\n",
+      "stderr": ""
+    },
+    {
+      "name": "build-pointer-O0",
+      "tool": "gcc.exe",
+      "args": [
+        "-std=c17",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-O0",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\source\\示例代码\\05-datapath\\pointer-demo.c",
+        "-o",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage5-run\\pointer-O0.exe"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "run-pointer-O0",
+      "tool": "pointer-O0.exe",
+      "args": [],
+      "exitCode": 0,
+      "stdout": "inside = 4\r\nafter local = 3\r\nafter store = 9\r\n",
+      "stderr": ""
+    },
+    {
+      "name": "build-sum-O2",
+      "tool": "gcc.exe",
+      "args": [
+        "-std=c17",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-O2",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\source\\示例代码\\05-datapath\\sum.c",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\source\\示例代码\\05-datapath\\sum-main.c",
+        "-o",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage5-run\\sum-O2.exe"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "run-sum-O2",
+      "tool": "sum-O2.exe",
+      "args": [],
+      "exitCode": 0,
+      "stdout": "sum = 12\r\n",
+      "stderr": ""
+    },
+    {
+      "name": "build-pointer-O2",
+      "tool": "gcc.exe",
+      "args": [
+        "-std=c17",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-O2",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\source\\示例代码\\05-datapath\\pointer-demo.c",
+        "-o",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage5-run\\pointer-O2.exe"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "run-pointer-O2",
+      "tool": "pointer-O2.exe",
+      "args": [],
+      "exitCode": 0,
+      "stdout": "inside = 4\r\nafter local = 3\r\nafter store = 9\r\n",
+      "stderr": ""
+    },
+    {
+      "name": "compile-c-negative",
+      "tool": "gcc.exe",
+      "args": [
+        "-std=c17",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\source\\示例代码\\05-datapath",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\source\\示例代码\\05-datapath\\sum.c",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage5-run\\c-negative.c",
+        "-o",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage5-run\\c-negative.exe"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "run-c-negative",
+      "tool": "c-negative.exe",
+      "args": [],
+      "exitCode": 0,
+      "stdout": "-7\r\n",
+      "stderr": ""
+    },
+    {
+      "name": "compile-c-prefix",
+      "tool": "gcc.exe",
+      "args": [
+        "-std=c17",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\source\\示例代码\\05-datapath",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\source\\示例代码\\05-datapath\\sum.c",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage5-run\\c-prefix.c",
+        "-o",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage5-run\\c-prefix.exe"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "run-c-prefix",
+      "tool": "c-prefix.exe",
+      "args": [],
+      "exitCode": 0,
+      "stdout": "8\r\n",
+      "stderr": ""
+    },
+    {
+      "name": "compile-c-zero",
+      "tool": "gcc.exe",
+      "args": [
+        "-std=c17",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\source\\示例代码\\05-datapath",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\source\\示例代码\\05-datapath\\sum.c",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage5-run\\c-zero.c",
+        "-o",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage5-run\\c-zero.exe"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "run-c-zero",
+      "tool": "c-zero.exe",
+      "args": [],
+      "exitCode": 0,
+      "stdout": "0\r\n",
+      "stderr": ""
+    },
+    {
+      "name": "compile-c-empty",
+      "tool": "gcc.exe",
+      "args": [
+        "-std=c17",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\source\\示例代码\\05-datapath",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\source\\示例代码\\05-datapath\\sum.c",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage5-run\\c-empty.c",
+        "-o",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage5-run\\c-empty.exe"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "run-c-empty",
+      "tool": "c-empty.exe",
+      "args": [],
+      "exitCode": 0,
+      "stdout": "0\r\n",
+      "stderr": ""
+    },
+    {
+      "name": "preprocess",
+      "tool": "gcc.exe",
+      "args": [
+        "-std=c17",
+        "-E",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\source\\示例代码\\05-datapath\\sum.c",
+        "-o",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage5-run\\sum.i"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "host-assembly-O0",
+      "tool": "gcc.exe",
+      "args": [
+        "-std=c17",
+        "-O0",
+        "-S",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\source\\示例代码\\05-datapath\\sum.c",
+        "-o",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage5-run\\sum-host-O0.s"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "host-assembly-O2",
+      "tool": "gcc.exe",
+      "args": [
+        "-std=c17",
+        "-O2",
+        "-S",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\source\\示例代码\\05-datapath\\sum.c",
+        "-o",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage5-run\\sum-host-O2.s"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "compile-sum-object",
+      "tool": "gcc.exe",
+      "args": [
+        "-std=c17",
+        "-c",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\source\\示例代码\\05-datapath\\sum.c",
+        "-o",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage5-run\\sum.o"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "compile-main-object",
+      "tool": "gcc.exe",
+      "args": [
+        "-std=c17",
+        "-c",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\source\\示例代码\\05-datapath\\sum-main.c",
+        "-o",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage5-run\\sum-main.o"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "separate-link",
+      "tool": "gcc.exe",
+      "args": [
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage5-run\\sum.o",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage5-run\\sum-main.o",
+        "-o",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage5-run\\sum-linked.exe"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "run-linked",
+      "tool": "sum-linked.exe",
+      "args": [],
+      "exitCode": 0,
+      "stdout": "sum = 12\r\n",
+      "stderr": ""
+    },
+    {
+      "name": "missing-sum-definition",
+      "tool": "gcc.exe",
+      "args": [
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage5-run\\sum-main.o",
+        "-o",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage5-run\\missing.exe"
+      ],
+      "exitCode": 1,
+      "stdout": "",
+      "stderr": "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage5-run\\sum-main.o:sum-main.c:(.text+0x3d): undefined reference to `sum'\r\ncollect2.exe: error: ld returned 1 exit status\n"
+    },
+    {
+      "name": "build-sizes",
+      "tool": "gcc.exe",
+      "args": [
+        "-std=c17",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage5-run\\sizes.c",
+        "-o",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\computer-organization-riscv\\.cache\\stage5-run\\sizes.exe"
+      ],
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "run-sizes",
+      "tool": "sizes.exe",
+      "args": [],
+      "exitCode": 0,
+      "stdout": "4 8\r\n",
+      "stderr": ""
+    }
+  ]
+}

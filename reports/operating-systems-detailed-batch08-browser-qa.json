@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-12",
+  "passed": true,
+  "origin": "http://127.0.0.1:4173",
+  "method": "HTTP IAB accessibility and read-only DOM checks",
+  "chapters": [
+    {"id":"30","sections":20,"codeBlocks":4,"program":"boot-probe.c","present":true,"horizontalOverflow":false},
+    {"id":"31","sections":20,"codeBlocks":5,"program":"bounded-open.c","present":true,"horizontalOverflow":false},
+    {"id":"32","sections":20,"codeBlocks":8,"program":"tcp-loop.c","present":true,"horizontalOverflow":false},
+    {"id":"33","sections":20,"codeBlocks":4,"program":"view-probe.c","present":true,"horizontalOverflow":false}
+  ],
+  "exercise": {"id":"d-bcfb1bbbd936","sections":12,"codeBlocks":4,"program":"local-request.c","present":true,"horizontalOverflow":false},
+  "courseSummaryDetailed33":true,
+  "courseSummaryDraft34to36":true,
+  "exerciseLinkPresent":true,
+  "asyncReadRecovery":"Immediate post-click read was previous chapter; direct navigation to observed exercise route verified loaded content.",
+  "limits":["No screenshot visual QA","No mobile viewport or file mode QA","DOM count does not prove teaching comprehension"],
+  "ownedTabsClosed":true
+}

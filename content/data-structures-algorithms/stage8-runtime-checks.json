@@ -1,0 +1,289 @@
+{
+  "date": "2026-11-11",
+  "passed": true,
+  "checks": 51,
+  "programGroups": 8,
+  "runtimeOnly": true,
+  "environment": {
+    "compiler": "gcc.exe (x86_64-posix-seh-rev0, Built by MinGW-W64 project) 8.1.0",
+    "flags": [
+      "-std=c17",
+      "-Wall",
+      "-Wextra",
+      "-Wpedantic",
+      "-Werror",
+      "-O0",
+      "-D__USE_MINGW_ANSI_STDIO=1"
+    ]
+  },
+  "metrics": {
+    "storageModelSteps": 5000,
+    "walkGraphs": 512,
+    "componentGraphs": 64,
+    "topologyGraphs": 65536,
+    "dsuModelSteps": 10000,
+    "weightedDirectedGraphs": 262144,
+    "weightedUndirectedGraphs": 4096,
+    "checkedArithmeticBoundaries": true,
+    "dynamicAllocationsUsed": false,
+    "detectedSafeMutations": 5
+  },
+  "error": "",
+  "results": [
+    {
+      "name": "compiler starts",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "temporary cleanup confined",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: 43-graph/main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "documented output: 43-graph/main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: 44-traversal/main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "documented output: 44-traversal/main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: 45-topological/main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "documented output: 45-topological/main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: 46-shortest/main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "documented output: 46-shortest/main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: 47-negative-paths/bellman_main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "documented output: 47-negative-paths/bellman_main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: 47-negative-paths/floyd_main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "documented output: 47-negative-paths/floyd_main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: 48-spanning/main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "documented output: 48-spanning/main.c",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: network laboratory",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "study order",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "dependency cycle",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "route finite",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "route unreachable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "route self",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "reverse route",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "invalid vertex '6'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "invalid vertex '8'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "invalid vertex '-1'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "invalid vertex ''",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "invalid vertex '00'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "invalid vertex 'a'",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "usage",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: finite oracle: structural",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "independent checks: structural",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: finite oracle: paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "independent checks: paths",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: finite oracle: forests",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "independent checks: forests",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mutation target: topology accepts partial result",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: safe mutant: topology accepts partial result",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "oracle detects: topology accepts partial result",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mutation target: Dijkstra ignores zero edge",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: safe mutant: Dijkstra ignores zero edge",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "oracle detects: Dijkstra ignores zero edge",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mutation target: negative effect propagation too short",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: safe mutant: negative effect propagation too short",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "oracle detects: negative effect propagation too short",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mutation target: Floyd misses upstream affected pair",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: safe mutant: Floyd misses upstream affected pair",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "oracle detects: Floyd misses upstream affected pair",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mutation target: Prim ignores disconnected roots",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: safe mutant: Prim ignores disconnected roots",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "oracle detects: Prim ignores disconnected roots",
+      "passed": true,
+      "detail": ""
+    }
+  ]
+}

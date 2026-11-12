@@ -1,43 +1,261 @@
 # 23 valid/ready 握手与流水
 
-> **详细版重写提示：本章目前仍为原简版，尚未完成详细重写。** 已完成的详细版为第01–16章。后续将补充逐步讲解、完整操作、代码逐行解释与过程答案；进度见[课程导览](00-课程框架与学习方法.md)。
+> 零基础详细版。先修：第17章采样沿、第18章使能、第21章已知数据与有效性。建议6–8小时，先标出每个真正传输的沿，再推导一项缓冲的控制。
 
-本章目标：定义数据何时被接收，理解背压、吞吐量和延迟。预计 3 小时。
+**本章目标：** 区分提供数据与接受数据；理解背压和保持；推导允许同沿替换的一项缓冲；分清延迟与吞吐量；用参考队列核对顺序、数量和复位丢弃。
 
-## 23.1 传输发生在共同采样沿
+## 23.1 发出请求不等于对方已经收到
 
-valid 表示发送方提供有效数据，ready 表示接收方本拍能接收。只有在上升沿前两者都为 1，才发生一次传输，常记为 `fire=valid&&ready`。两者分属不同方向，不是谁先变高就算传输。
+假设发送方有一项数据A1，接收方正忙。若发送方只把A1放一拍便换B2，接收方可能根本没看到A1。我们需要两条相反方向的控制线：valid说明“我正在提供一项有效数据”，ready说明“我在本次采样沿能接收”。
 
-发送方不能等 ready 才愿意置 valid，否则与某些接收方组合会互相等待。若 valid=1 而 ready=0，发送方必须保持 valid 和 data，直到传输完成。这是背压下不丢数据的关键。
+两者在同一上升沿前都为1，才完成一次传输，常记为**fire**。fire是这两个条件的与，不要求额外新增一根物理端口。valid先高还是ready先高，不改变共同采样规则。
 
-## 23.2 一项缓冲结构
+| 沿前valid | 沿前ready | 该沿是否传输 | 数据怎样处理 |
+| --- | --- | --- | --- |
+| 0 | 0 | 否 | 没有有效项 |
+| 0 | 1 | 否 | 接收方有空，但没人交 |
+| 1 | 0 | 否 | 发送方继续保留该项 |
+| 1 | 1 | 是，一项 | 该沿后才可换下一项 |
 
-一个占用位 full 和一个数据寄存器即可保存一项。输出 `out_valid=full`，输入可接收条件 `in_ready=!full || out_ready`。同沿输出被接收时允许新输入替换，避免空泡。
+不是valid从0变1才算一次，也不是看到valid连续高就只能算一次。若valid与ready连续三次采样沿都为1，就传了三项，发送方可以在每次成功沿之后更新到下一项。
 
-状态更新核心片段（模块需要声明端口与寄存器）：
+## 23.2 背压时要保留什么
+
+接收方暂时将ready置0，阻止新传输，叫**背压**。如果valid已经为1，发送方必须保持valid与对应data，直到被接受，或进入双方约定的复位/取消过程。
+
+例：沿1、2、3前valid都为1，ready依次0、0、1，data一直A1。前两个沿不传，第三沿只传一项A1。若第二沿把data改B2，接收方无法知道未被接受的A1去了哪里。
+
+发送方也不应等ready先高才愿意提出valid，否则遇到“看见valid才决定ready”的接收方，可能互相等待。ready允许先高；valid一旦提出，应按稳定性规则保留。
+
+这些握手原则也见于[Arm AMBA握手说明，A3.2.1](https://developer.arm.com/-/media/Arm%20Developer%20Community/PDF/IHI0022H_amba_axi_protocol_spec.pdf)，核验日期2026-11-05。**本章是一个简化单时钟数据通道，不是完整AXI实现或一致性认证**；例如本例保留组合ready传播，不能据此忽略具体总线的结构约束。
+
+## 23.3 中间放一个只容纳一项的缓冲
+
+我们写stream1：左侧接发送者，右侧接接收者。内部用full记住是否占用，用stored保存一字节。输入端一次握手是“上游交给缓冲”，输出端一次握手是“缓冲交给下游”，是两次不同事件。
+
+| 信号 | 相对stream1方向 | 谁负责 |
+| --- | --- | --- |
+| in_valid、in_data | 输入 | 上游提供 |
+| in_ready | 输出 | 缓冲告诉上游能否接收 |
+| out_valid、out_data | 输出 | 缓冲提供给下游 |
+| out_ready | 输入 | 下游决定能否接收 |
+
+in_data与out_data不必在同一周期相同。例如缓冲里存A1，外面等待B2，此时输出还是A1。数据从输入接收后进入寄存器，没有空缓冲的组合直通。
+
+## 23.4 输入什么时候可以接收
+
+第一种情况，full=0，缓冲空，可以接收，不管下游ready是多少。第二种，full=1但out_ready=1，旧项将在这个沿离开，因此也能在同一沿装入新项，不浪费一个空周期。
+
+所以非复位时`in_ready = !full || out_ready`。若full=1且out_ready=0，内部没有空位，也没有旧项离开，必须拒绝输入。
+
+| 沿前full | out_ready | in_ready | 原因 |
+| --- | --- | --- | --- |
+| 0 | 0 | 1 | 空位可以先存一项 |
+| 0 | 1 | 1 | 空位可以接收 |
+| 1 | 0 | 0 | 旧项堵住，不能覆盖 |
+| 1 | 1 | 1 | 本沿旧项离开，可新项替换 |
+
+把条件简化成!full仍可做一个更保守的缓冲，但满时即使下游正取走，也拒绝新项，会形成空泡。它不是本实验的吞吐量合同。
+
+## 23.5 同沿替换时，输出的是旧项
+
+假设沿前full=1，stored=A1，上游提供B2，双方ready都允许。该沿输出握手交付A1，同时输入握手接受B2；沿后stored变B2，full仍1。
+
+这与第17章旧值/新值一致：消费者在沿上读取旧out_data，寄存器沿后装新数据。不应把沿后看到的B2倒推为“这个沿刚才交付的是B2”。
+
+![背压、保持与同沿替换](images/23-handshake.svg)
+
+## 23.6 占用位怎样更新
+
+若in_ready为0，必是旧项被堵住，full与stored都保持。若in_ready为1：in_valid=1就存入新项，full置1；in_valid=0就让full置0，表示沿后没有新项待交。
+
+这里`full<=in_valid`并非不管条件地复制valid，而是在“本沿有空位或旧项被取走”的前提下更新。外层else if(in_ready)不能随手删掉，否则上游未被接受的数据也可能覆盖旧项。
+
+stored只有新输入被接受时才更新；full=0时out_data可能保留上次字节，但out_valid=0，所以接收端不能把它当成一次有效传输。无效数据不一定自动清零。
+
+## 23.7 复位如何终止未完成的数据
+
+本例rst高有效同步地清full与stored。同时组合地令in_ready、out_valid在rst=1时为0，禁止把复位期间算作传输。寄存状态的清零仍发生在采样沿，组合屏蔽不等于将所有状态改成异步复位。
+
+合同允许复位丢弃内部尚未交付的项。测试会记录这项discarded，而不是要求复位后凭空重发。若系统要求复位仍保证数据不丢，需要更高层重试或恢复协议，本例没有提供。
+
+## 23.8 第一份完整文件：design.sv
+
+在`logic-lab/23-ready-valid/`保存两文件，或复制下载包`source/控制通信实验/23-ready-valid/`。下面是[design.sv](控制通信实验/23-ready-valid/design.sv)完整内容。
 
 ```systemverilog
-always_ff @(posedge clk) begin
-  if (rst) full <= 1'b0;
-  else if (in_ready) begin
-    full <= in_valid;
-    if (in_valid) data_reg <= in_data;
+module stream1(
+  input logic clk,rst,
+  input logic in_valid,
+  input logic [7:0] in_data,
+  output logic in_ready,
+  output logic out_valid,
+  output logic [7:0] out_data,
+  input logic out_ready
+);
+  logic full;
+  logic [7:0] stored;
+  assign in_ready=!rst && (!full || out_ready);
+  assign out_valid=!rst && full;
+  assign out_data=stored;
+  always_ff @(posedge clk) begin
+    if (rst) begin full<=1'b0;stored<=8'h00;end
+    else if (in_ready) begin
+      full<=in_valid;
+      if (in_valid) stored<=in_data;
+    end
   end
-end
+endmodule
 ```
 
-这要求输入输出都遵守同一时钟的握手合同。组合 ready 链过长会影响时序，跨时钟不能直接套用这一结构。
+full只有时序块驱动，out_valid从full译码；stored只有时序块写，out_data连续连接。in_ready有从out_ready回传的组合关系，串接很多此类模块会形成较长ready路径，需要后续时序分析。
 
-## 23.3 延迟与吞吐量
+本例输入输出使用同一clk；不能直接把另一时钟域的valid/ready/data接来，期待握手本身解决跨时钟问题。不同域需要明确的跨域结构，后面另讲。
 
-延迟是一项数据从输入接收到输出可接收经过多少拍。吞吐量是单位时间能处理多少项。三级流水可能延迟三拍，但填满后每拍产出一项。不要把“每项经过三拍”理解成“三拍才接收一项”。
+## 23.9 延迟与吞吐量不是同一个量
 
-## 23.4 测试背压
+当缓冲空，上升沿接受A1后，沿后out_valid变1；下游最早在下一上升沿接受A1，输入接受到输出接受相隔一周期。这是本例的最小传输延迟。
 
-让接收方 ready 连续为 0，多观察几拍：valid 与 data 应保持；恢复 ready 后，只计一次传输，再检查下一项。参考队列只在输入 fire 时入队、输出 fire 时出队，不能每看到 valid=1 就重复记录。
+缓冲填满后，只要上下游持续配合，可以每拍取旧、装新，达到每周期一项的稳态吞吐量。第一项等了一拍，并不意味着以后也必须每隔一拍空着才能接收。
 
-## 23.5 练习与答案
+背压会延长某一项的等待时间。如果下游永远不ready，任何有限缓冲都不能保证数据在有限时间送达；“没有覆盖未接受数据”与“保证一定很快交付”是不同性质。
 
-周期 1、2、3 上升沿前 valid 都为 1，ready 依次为 0、0、1，发送数据是否允许在前两拍切换？传输了几项？
+## 23.10 第二份完整文件：tb.sv
 
-答案：不允许，必须保持同一项；第 3 拍传输一项。验收：画一张含连续背压与恢复的时序表，标出每个 fire。
+下面是[tb.sv](控制通信实验/23-ready-valid/tb.sv)完整内容。它使用一份只存在于测试中的参考队列，记录真正接受但尚未交付的字节。
+
+```systemverilog
+`timescale 1ns/1ps
+module tb;
+  logic clk=0,rst,in_valid,in_ready,out_valid,out_ready;
+  logic [7:0] in_data,out_data,held_source,held_output;
+  bit source_stalled=0,output_stalled=0;
+  integer model[$];
+  integer cycles=0,accepted=0,delivered=0,discarded=0;
+  stream1 dut(.clk(clk),.rst(rst),.in_valid(in_valid),.in_data(in_data),
+    .in_ready(in_ready),.out_valid(out_valid),.out_data(out_data),.out_ready(out_ready));
+  always #5 clk=~clk;
+  task automatic step(input logic r,v,input logic [7:0] value,input logic ready_value);
+    bit want_ready,want_valid,take_in,take_out;
+    integer oldest;
+    logic [7:0] expected_front;
+    @(negedge clk);rst=r;in_valid=v;in_data=value;out_ready=ready_value;
+    want_valid=!r && (model.size()!=0);
+    want_ready=!r && (model.size()==0 || ready_value);
+    expected_front=0;
+    if (model.size()!=0) expected_front=model[0];
+    #1;
+    if (source_stalled && !r && (!v || in_data !== held_source))
+      $fatal(1,"test source broke its hold contract");
+    if (output_stalled && !r && (!out_valid || out_data !== held_output))
+      $fatal(1,"output changed while stalled");
+    if (in_ready !== want_ready || out_valid !== want_valid)
+      $fatal(1,"stream cycle=%0d ready/valid=%b/%b expected=%b/%b",cycles,in_ready,out_valid,want_ready,want_valid);
+    if (want_valid && out_data !== expected_front) $fatal(1,"stream oldest data mismatch");
+    take_in=v && want_ready;take_out=want_valid && ready_value;
+    source_stalled=!r && v && !want_ready;held_source=value;
+    output_stalled=want_valid && !ready_value;held_output=out_data;
+    @(posedge clk);#1;
+    if (r) begin discarded=discarded+model.size();model.delete();end
+    else begin
+      if (take_out) begin oldest=model.pop_front();delivered++;end
+      if (take_in) begin model.push_back(value);accepted++;end
+    end
+    if (out_valid !== (!r && model.size()!=0)) $fatal(1,"stream post-edge occupancy");
+    if (model.size()!=0) expected_front=model[0];
+    if (!r && model.size()!=0 && out_data !== expected_front) $fatal(1,"stream post-edge data");
+    cycles++;
+    $display("TRACE stream cycle=%0d input-fire=%b output-fire=%b queued=%0d",cycles,take_in,take_out,model.size());
+  endtask
+  initial begin
+    rst=1;in_valid=0;in_data=0;out_ready=0;
+    step(1,0,8'h00,0);
+    step(0,1,8'ha1,0);
+    step(0,1,8'hb2,0);
+    step(0,1,8'hb2,0);
+    step(0,1,8'hb2,1);
+    step(0,1,8'hc3,1);
+    step(0,0,8'h00,1);
+    step(0,0,8'h00,1);
+    step(0,1,8'hd4,0);
+    step(0,0,8'h00,0);
+    step(1,0,8'h00,1);
+    step(0,1,8'he5,1);
+    step(0,0,8'h00,1);
+    if (accepted!=5 || delivered!=4 || discarded!=1 || model.size()!=0) $fatal(1,"stream accounting");
+    $display("PASS ready/valid: %0d cycles accepted=%0d delivered=%0d reset-discarded=%0d",cycles,accepted,delivered,discarded);
+    $finish;
+  end
+  initial begin #300;$fatal(1,"stream timeout");end
+endmodule
+```
+
+## 23.11 测试中的动态队列怎样读
+
+`integer model[$];`是一份SystemVerilog动态队列，$表示长度可变；这里每项使用整数保存0…255的字节值。它是**测试平台的数据结构，不要求综合为硬件**。
+
+| 写法 | 本测试含义 |
+| --- | --- |
+| model.size() | 当前待交付的项数 |
+| model[0] | 最早的一项 |
+| model.push_back(value) | 在末尾追加新接受的项 |
+| oldest=model.pop_front() | 移除并返回最早一项 |
+| model.delete() | 清空参考队列，模拟复位丢弃 |
+
+expected_front先把整数队首转存成八位，再与out_data比较，位宽清楚，也避开本批Icarus对队列元素连续切片的支持限制。只有队列非空时读取队首，不能在空队列上pop。
+
+## 23.12 参考模型先判断沿前，再更新沿后
+
+step在下降沿驱动rst、valid、data、下游ready；根据参考队列是否为空建立want_valid/want_ready，不借用DUT的full。等待组合稳定后，先检查实际ready/valid和旧队首数据。
+
+随后记录take_in与take_out，它们基于沿前条件。等上升沿后，再按“先移除旧队首，再追加新输入”更新参考队列，检查沿后占用与数据。这样同沿替换时不会错误地将新项当成旧项交付。
+
+source_stalled检查测试发送方自己是否遵守保持；output_stalled检查DUT在背压下是否保持。这区分了“测试在乱改数据”和“设计覆盖了未交付数据”，定位更清楚。
+
+## 23.13 逐沿看A1、B2、C3
+
+| 测试周期 | 沿前缓冲 | 上游valid/data | 下游ready | 输入/输出fire | 沿后缓冲 |
+| --- | --- | --- | --- | --- | --- |
+| 2 | 空 | 1/A1 | 0 | 1/0 | A1 |
+| 3 | A1 | 1/B2 | 0 | 0/0 | A1 |
+| 4 | A1 | 1/B2 | 0 | 0/0 | A1 |
+| 5 | A1 | 1/B2 | 1 | 1/1 | B2 |
+| 6 | B2 | 1/C3 | 1 | 1/1 | C3 |
+| 7 | C3 | 0/无效 | 1 | 0/1 | 空 |
+
+上游B2在周期3、4被拒绝，必须继续提供同一个B2；缓冲输出A1也保持。周期5才交A1并接B2，周期6交B2并接C3。注意两端的保持对象不同。
+
+后面又接受D4，在尚未交付时复位丢弃；复位后接受并交付E5。总共接受A1/B2/C3/D4/E5五项，交付A1/B2/C3/E5四项，明确丢弃D4一项，最终空。5=4+1+0，数量能对上。
+
+## 23.14 运行与两种错误
+
+在**23-ready-valid目录的PowerShell**执行，编译成功再运行：
+
+```powershell
+iverilog -g2012 -s tb -o sim.vvp design.sv tb.sv
+vvp sim.vvp
+```
+
+最后应有：
+
+```text
+PASS ready/valid: 13 cycles accepted=5 delivered=4 reset-discarded=1
+```
+
+故障一：in_ready去掉out_ready带来的同沿替换条件，周期5实际ready=0，而合同要求1。故障二：删掉更新块的in_ready门槛，周期3未接受B2也覆盖旧A1，数据检查失败。两种副本均编译后实际检出。
+
+## 23.15 常见错误与练习
+
+| 错误 | 为什么错 | 检查方法 |
+| --- | --- | --- |
+| 看到valid就累计接收 | 没看共同采样沿的ready | 只在fire计数 |
+| 背压时换data | 未接受项丢失 | 连续两拍stall |
+| 满时永不允许替换 | 违背本例每拍流动合同 | 周期5同进同出 |
+| 比较无效out_data | 无效内容本来不保证有意义 | 先看out_valid |
+| 复位丢弃仍算成功交付 | 混淆清状态与消费数据 | 记录discarded |
+
+练习1：valid连续高三沿、ready也连续高，传几项？三项，前一沿接受后可更新下一项。练习2：空缓冲、下游ready=0，可否接受一项？可以，先保存，随后对上游施加背压。练习3：full=1、out_ready=1、in_valid=0，沿后怎样？旧项被取走，没有替代项，full=0。
+
+## 23.16 完成条件
+
+自己标出13周期中的两个fire；解释为何B2不能提前覆盖A1；区分延迟与稳态吞吐量；运行并检出两项错误，说明五项数据各自去向。继续[第24章](24-同步FIFO与边界行为.md)，将一项缓冲扩成有明确边界的多项队列。

@@ -12,6 +12,27 @@ struct Command {
     int has_pipe;
 };
 
+/* Consume one whole text record; reject embedded NUL and oversized records. */
+static int read_line(char *line, size_t capacity) {
+    size_t used = 0;
+    int invalid = 0;
+    for (;;) {
+        int ch = getchar();
+        if (ch == EOF && ferror(stdin)) {
+            if (errno == EINTR) { clearerr(stdin); continue; }
+            perror("input"); return -1;
+        }
+        if (ch == EOF && used == 0 && !invalid) { return 0; }
+        if (ch == '\n' || ch == EOF) {
+            line[used] = '\0';
+            return invalid ? -2 : 1;
+        }
+        if (ch == '\0') { invalid = 1; }
+        if (used < capacity - 1) { line[used++] = (char)ch; }
+        else { invalid = 1; }
+    }
+}
+
 static int parse(char *line, struct Command *command) {
     memset(command, 0, sizeof *command);
     int left_count = 0, right_count = 0;
@@ -69,14 +90,19 @@ static void run_child(char *const args[], int input, int output,
     }
     redirect_output(filename);
     execvp(args[0], args);
+    int code = errno == ENOENT ? 127 : 126;
     perror(args[0]);
-    _exit(127);
+    _exit(code);
 }
 
 static int launch(struct Command *command) {
     int fd[2] = {-1, -1};
     if (command->has_pipe && pipe(fd) < 0) { perror("pipe"); return 1; }
-    fflush(NULL);
+    if (fflush(NULL) == EOF) {
+        perror("flush");
+        if (command->has_pipe) { close(fd[0]); close(fd[1]); }
+        return 1;
+    }
     pid_t first = fork();
     if (first < 0) {
         perror("fork");
@@ -93,6 +119,8 @@ static int launch(struct Command *command) {
     if (second < 0) {
         perror("fork second");
         close(fd[0]); close(fd[1]);
+        /* Only the child created by this launch is targeted. */
+        if (kill(first, SIGKILL) < 0 && errno != ESRCH) { perror("kill child"); }
         (void)wait_child(first);
         return 1;
     }
@@ -105,6 +133,8 @@ static int launch(struct Command *command) {
 int main(void) {
     /* Require normal standard descriptors; pipe descriptors are then >= 3. */
     for (int fd = 0; fd <= 2; fd++) { if (fcntl(fd, F_GETFD) < 0) { return 1; } }
+    /* Do not prefetch bytes that an external command may read from stdin. */
+    if (setvbuf(stdin, NULL, _IONBF, 0) != 0) { return 1; }
     struct sigaction action = {0};
     action.sa_handler = SIG_IGN;
     sigemptyset(&action.sa_mask);
@@ -112,15 +142,13 @@ int main(void) {
     int status = 0;
     char line[MAX_LINE];
     for (;;) {
-        if (isatty(STDIN_FILENO)) { fputs("os-lab> ", stdout); fflush(stdout); }
-        if (fgets(line, sizeof line, stdin) == NULL) {
-            if (ferror(stdin)) { perror("input"); return 1; }
-            return status;
-        }
-        if (strchr(line, '\n') == NULL && !feof(stdin)) {
-            int ch;
-            while ((ch = getchar()) != '\n' && ch != EOF) { }
-            fputs("line too long\n", stderr);
+        if (isatty(STDIN_FILENO) &&
+            (fputs("os-lab> ", stdout) == EOF || fflush(stdout) == EOF)) { return 1; }
+        int input = read_line(line, sizeof line);
+        if (input == 0) { return status; }
+        if (input == -1) { return 1; }
+        if (input == -2) {
+            fputs("line too long or contains NUL\n", stderr);
             status = 2;
             continue;
         }
@@ -147,7 +175,7 @@ int main(void) {
             if (count != 1) { fputs("usage: pwd\n", stderr); status = 2; continue; }
             char cwd[4096];
             if (getcwd(cwd, sizeof cwd) == NULL) { perror("pwd"); status = 1; }
-            else { puts(cwd); status = 0; }
+            else { status = (puts(cwd) == EOF || fflush(stdout) == EOF) ? 1 : 0; }
             continue;
         }
         status = launch(&command);

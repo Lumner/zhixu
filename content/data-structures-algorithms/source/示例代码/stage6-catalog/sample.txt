@@ -1,0 +1,13 @@
+DSA-CATALOG-1
+17
+30
+C basics
+1
+45
+Pointers in C
+9
+30
+Queues
+3
+20
+Arrays

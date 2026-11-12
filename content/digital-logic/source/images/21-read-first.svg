@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="600" viewBox="0 0 840 600" role="img" aria-labelledby="title desc">
+<title id="title">RAM同址写入后存储与输出的两个版本</title>
+<desc id="desc">105纳秒上升沿前地址二内容为22，写入C3。该沿后存储变C3，输出为旧22。115纳秒上升沿只读同址后输出才变C3。</desc>
+<rect width="840" height="600" rx="16" fill="#f7faf7"/>
+<g font-family="Microsoft YaHei, sans-serif" fill="#213b30">
+<text x="28" y="43" font-size="27" font-weight="bold">写新内容，同时输出旧内容</text>
+<text x="28" y="80" font-size="21">本模型为 read-first；地址始终是 2，数据为十六进制。</text>
+<g fill="#e5f0e7" stroke="#83a18b" stroke-width="2"><rect x="28" y="110" width="784" height="112" rx="12"/><rect x="28" y="257" width="784" height="112" rx="12"/><rect x="28" y="404" width="784" height="112" rx="12"/></g>
+<g font-size="23"><text x="50" y="151" font-weight="bold">105 ns 上升沿前</text><text x="50" y="192">mem[2] = 22</text><text x="397" y="192">we=1，din=C3</text>
+<text x="50" y="298" font-weight="bold">105 ns 上升沿后</text><text x="50" y="339">mem[2] = C3（新）</text><text x="397" y="339">dout = 22（旧）</text>
+<text x="50" y="445" font-weight="bold">115 ns 下一上升沿后，只读同址</text><text x="50" y="486">mem[2] = C3</text><text x="397" y="486">dout = C3</text></g>
+<path d="M420 225 V249 M408 239 L420 251 L432 239 M420 372 V396 M408 386 L420 398 L432 386" stroke="#527b64" stroke-width="3" fill="none"/>
+<text x="28" y="562" font-size="21">读取旧值不等于拒绝写入；新值已在 105 ns 的沿写进数组。</text>
+</g></svg>

@@ -1,0 +1,126 @@
+{
+  "date": "2026-11-05",
+  "courseId": "digital-logic",
+  "revision": "detailed-rewrite-stage-04",
+  "newDetailedChapters": [
+    17,
+    18,
+    19,
+    20,
+    21
+  ],
+  "completedDetailedChapters": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21
+  ],
+  "pendingDetailedChapters": [
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32
+  ],
+  "newSequentialLabs": 5,
+  "totalIndependentLabs": 30,
+  "matchingMainCompleteCodeBlocks": 10,
+  "matchingRomFile": true,
+  "sourceLinksChecked": 294,
+  "newPracticeQuestionsWithWorkedSolutions": 30,
+  "newSvgDiagrams": 4,
+  "simulation": {
+    "tool": "Icarus Verilog 11.0",
+    "passedLabs": 5,
+    "rejectedFaultCopies": 9,
+    "pipelineVcdSamples": 7,
+    "coverage": {
+      "pipelineScriptedEdges": 7,
+      "resetScriptedEdges": 17,
+      "resetPulseChecks": 3,
+      "counterCyclesPerConfiguration": 25,
+      "counterDivisors": [
+        1,
+        4,
+        5
+      ],
+      "shiftChecks": 5,
+      "pwmFrames": 16,
+      "pwmPhaseSamples": 128,
+      "pwmLiveChanges": 2,
+      "memoryAccesses": 14
+    },
+    "gtkWaveGuiExecuted": false,
+    "fpgaSynthesisVerified": false
+  },
+  "siteChecks": {
+    "date": "2026-11-05",
+    "checks": 685,
+    "courses": 4,
+    "chapters": 136,
+    "documents": 330,
+    "localDocumentAndFileLinks": 913,
+    "diagrams": 26,
+    "browserQA": false
+  },
+  "browserQa": {
+    "passed": true,
+    "checks": [
+      "Overview states 01-21 detailed, 22-32 pending, 30 lab groups",
+      "Chapter 17 complete programs and syntax highlighting render",
+      "All four new SVG diagrams are loaded and visually legible",
+      "Chapter 19 tables explain terminal/mid-count pause and DIV=1",
+      "Chapter 21 contains matching ROM file and two complete SV programs",
+      "Exercise page contains question 30 and worked answers",
+      "Stage practice page contains acceptance table and required ROM attachment",
+      "Chapter 22 retains explicit pending detailed notice",
+      "Search opens chapter 21 section 21.3",
+      "Two punctuation-heavy headings replaced with Chinese labels and verified after reload"
+    ]
+  },
+  "screenshots": [
+    "reports/screenshots/digital-logic-detailed-stage4-pipeline.jpg",
+    "reports/screenshots/digital-logic-detailed-stage4-reset.jpg",
+    "reports/screenshots/digital-logic-detailed-stage4-pwm.jpg",
+    "reports/screenshots/digital-logic-detailed-stage4-memory.jpg"
+  ],
+  "archive": {
+    "crcPassed": true,
+    "matchesCurrentSource": 153,
+    "matchesBuiltDownload": true,
+    "files": 156,
+    "svFiles": 60,
+    "svgFiles": 11,
+    "bytes": 309553,
+    "sha256": "96a604066f3a2397a939f645f67b35aeec7baf366d480c68adb9ae0b5dbd1007"
+  },
+  "nextDetailedBatch": [
+    22,
+    23,
+    24,
+    25
+  ]
+}

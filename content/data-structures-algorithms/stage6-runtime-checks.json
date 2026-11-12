@@ -1,0 +1,309 @@
+{
+  "date": "2026-11-11",
+  "passed": true,
+  "checks": 56,
+  "programGroups": 7,
+  "runtimeOnly": true,
+  "environment": {
+    "compiler": "gcc.exe (x86_64-posix-seh-rev0, Built by MinGW-W64 project) 8.1.0",
+    "flags": [
+      "-std=c17",
+      "-Wall",
+      "-Wextra",
+      "-Wpedantic",
+      "-Werror",
+      "-O0",
+      "-D__USE_MINGW_ANSI_STDIO=1"
+    ]
+  },
+  "metrics": {
+    "sortRuns": 93123,
+    "catalogRoundtrips": 33,
+    "controlledAllocationFailures": 17,
+    "finalTrackedAllocations": 0,
+    "detectedSafeMutations": 3
+  },
+  "error": "",
+  "results": [
+    {
+      "name": "compiler starts",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "temporary cleanup confined",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: 31-basic-sort",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "documented output: 31-basic-sort",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: 32-insertion-shell",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "documented output: 32-insertion-shell",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: 33-merge",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "documented output: 33-merge",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: 34-quick",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "documented output: 34-quick",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: 35-distribution",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "documented output: 35-distribution",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: sort laboratory",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "lab all: sorted",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "lab all: reverse",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "lab all: equal",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "lab all: nearly",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "lab all: mixed",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "lab insertion sorted counts",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "lab bad algorithm",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "lab bad dataset",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "lab usage",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: catalog v0.3",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "stable catalog view",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "query ID",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "query title",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "save original order",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "update before save",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "reload updated query",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "reload stable three ties",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "delete canonical output",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "reload after delete index",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "missing query",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "invalid minutes",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "invalid key",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "over title budget",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "missing input",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "truncated data",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile allocation hook: merge",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile allocation hook: distribution",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile allocation hook: open",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile allocation hook: legacy",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: model, reference sort and failure audit",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "record oracles and allocation failures",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "expected finite coverage",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mutation target: merge equal keys choose right",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile wrong allocation module: merge",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: safe mutant: merge equal keys choose right",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "oracle detects: merge equal keys choose right",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mutation target: bubble descending",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: safe mutant: bubble descending",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "oracle detects: bubble descending",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mutation target: counting loses payload identities",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile wrong allocation module: distribution",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "compile: safe mutant: counting loses payload identities",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "oracle detects: counting loses payload identities",
+      "passed": true,
+      "detail": ""
+    }
+  ]
+}

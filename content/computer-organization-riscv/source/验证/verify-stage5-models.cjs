@@ -1,0 +1,33 @@
+'use strict';
+// No Java, compiler, UI or network. Functional models and explicit paper calculations only.
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
+const {decode,Datapath,demo,WORDS}=require('../示例代码/05-datapath/datapath-lab.cjs');
+const {CPU}=require('../示例代码/08-mini-rv32/cpu.cjs');
+const names=[];function check(name,fn){fn();names.push(name);}
+const I=(imm,rs1,f3,rd,opcode=0x13)=>(((imm&4095)<<20)|(rs1<<15)|(f3<<12)|(rd<<7)|opcode)>>>0;
+const R=(f7,rs2,rs1,f3,rd)=>((f7<<25)|(rs2<<20)|(rs1<<15)|(f3<<12)|(rd<<7)|0x33)>>>0;
+const S=(imm,rs2,rs1)=>(((imm&0xfe0)<<20)|(rs2<<20)|(rs1<<15)|(2<<12)|((imm&31)<<7)|0x23)>>>0;
+const B=imm=>(((imm&0x1000)<<19)|((imm&0x800)>>>4)|((imm&0x7e0)<<20)|((imm&30)<<7)|0x63)>>>0;
+check('addi known independent encoding',()=>assert.equal(I(7,0,0,5),0x00700293));
+check('add and sub known encodings',()=>{assert.equal(R(0,6,5,0,7),0x006283b3);assert.equal(R(0x20,6,5,0,7),0x406283b3);});
+check('negative I and split S encoding',()=>{assert.equal(I(-1,5,0,5),0xfff28293);assert.equal(S(-4,6,5),0xfe62ae23);assert.equal(decode(0xfe62ae23).imm,-4);});
+check('load encoding',()=>assert.equal(I(4,5,2,7,3),0x0042a383));
+check('positive and negative branch encoding',()=>{assert.equal(B(8),0x00000463);assert.equal(B(-8),0xfe000ce3);assert.equal(decode(B(-8)).imm,-8);});
+check('field extraction',()=>{const w=0x00700293;assert.equal(w&127,0x13);assert.equal((w>>>7)&31,5);assert.equal((w>>>15)&31,0);assert.equal(w>>20,7);});
+check('little endian byte layout',()=>{const b=Buffer.alloc(4);b.writeUInt32LE(0x00700293);assert.deepEqual([...b],[0x93,2,0x70,0]);});
+check('U and J meanings',()=>{assert.equal((0x123452b7&0xfffff000)>>>0,0x12345000);const c=new CPU();c.loadWords([0x008000ef,0x13,0x13]);c.step();assert.equal(c.pc,8);assert.equal(c.r[1],4);});
+const result=demo();
+check('seven-step final result',()=>{assert.equal(result.trace.length,7);assert.equal(result.cpu.r[10],12);assert.equal(result.cpu.memory.getUint32(260,true),7);assert.equal(result.cpu.pc,32);});
+check('load separates address and value',()=>{const r=result.trace[1];assert.equal(r.aluResult,256);assert.equal(r.memReadValue,5);assert.deepEqual(r.registerWrite,{register:6,value:5});});
+check('store separates offset and write data',()=>{const r=result.trace[3];assert.equal(r.aluB,4);assert.deepEqual(r.memoryWrite,{address:260,value:7});assert.equal(r.registerWrite,null);});
+check('branch taken and not taken',()=>{assert.equal(result.trace[4].nextPC,20);assert.equal(result.trace[4].equal,false);assert.equal(result.trace[6].nextPC,32);assert.equal(result.trace[6].equal,true);});
+check('control rows',()=>{const rows={add:[true,'reg',false,false,'alu',false],addi:[true,'imm',false,false,'alu',false],lw:[true,'imm',true,false,'memory',false],sw:[false,'imm',false,true,null,false],beq:[false,'reg',false,false,null,true]};for(const r of result.trace){const c=r.controls;assert.deepEqual([c.RegWrite,c.ALUSrc,c.MemRead,c.MemWrite,c.ResultSrc,c.Branch],rows[r.op]);}});
+for(const value of [0,5,9,0x7fffffff,0xfffffffe])check('differential state input '+value,()=>{const a=new Datapath(),b=new CPU(512);a.load(WORDS);b.loadWords(WORDS);a.memory.setUint32(256,value,true);b.memory.setUint32(256,value,true);for(let i=0;i<7;i++){a.step();b.step();assert.equal(a.pc,b.pc);assert.deepEqual([...a.r],[...b.r]);assert.deepEqual([...new Uint8Array(a.memory.buffer)],[...new Uint8Array(b.memory.buffer)]);}});
+check('unsupported encodings have no commit',()=>{for(const w of [0x406283b3,0x0002b303,0xffffffff]){const c=new Datapath();c.load([w]);assert.throws(()=>c.step(),/Unsupported/);assert.equal(c.pc,0);assert.ok([...c.r].every(x=>x===0));}});
+check('misaligned access has no partial write',()=>{const c=new Datapath();c.load([0x0012a303]);c.r[5]=256;assert.throws(()=>c.step(),/Invalid aligned/);assert.equal(c.pc,0);assert.equal(c.r[6],0);});
+check('x0 and read-before-write',()=>{const c=new Datapath();c.load([0x00700013,0x00128293]);c.r[5]=6;c.step();assert.equal(c.r[0],0);c.step();assert.equal(c.r[5],7);});
+check('single-cycle path arithmetic and units',()=>{assert.equal(200+100+150+200+50,700);assert.equal(200+100+150+50,500);assert.ok(Math.abs(1/(700e-12)/1e9-1.4285714285714286)<1e-12);});
+check('multicycle schedule and weighted time',()=>{assert.equal(60*4+20*5+10*4+10*3,410);assert.equal(410*250,102500);assert.equal(100*700,70000);});
+check('saved instruction PC avoids branch plus-four error',()=>{assert.equal(0x100-8,0xf8);assert.equal(0x104-8,0xfc);});
+const report={date:'2026-11-05',edition:'detailed-rewrite-stage5',passed:names.length,scope:'Node functional models and explicit numeric examples only. This report does not run RARS, C compiler, HDL, Ripes or real timing.',officialRarsChecked:false,cCompilerChecked:false,scenarios:names,datapathTrace:result.trace};
+fs.writeFileSync(path.join(__dirname,'stage5-model-checks.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify({date:report.date,passed:names.length,scope:report.scope},null,2));

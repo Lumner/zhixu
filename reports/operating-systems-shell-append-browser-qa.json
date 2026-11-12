@@ -1,0 +1,10 @@
+{
+ "date":"2026-11-12",
+ "passed":true,
+ "method":"IAB read-only DOM plus native AX navigation",
+ "isolatedContent":{"sections":20,"codeBlocks":12,"tables":3,"bothProgramsPresent":true,"horizontalOverflow":false},
+ "mainSite":{"origin":"http://127.0.0.1:4173","guideEntryAXClickVerified":true,"route":"#/learn/operating-systems/d-005e6a215a81","title":"进阶实践01：从零为Shell加入追加输出","sections":20,"bothProgramsPresent":true,"horizontalOverflow":false},
+ "recovery":"Isolated Playwright click left guide unchanged; direct route worked; later main-site native AX click verified the actual guide entry.",
+ "tabCleanup":"Isolated tab explicitly closed; unmarked main-site tab closes at turn end.",
+ "limits":["No screenshot visual QA","No mobile viewport or file mode QA","DOM checks do not assess learner comprehension"]
+}

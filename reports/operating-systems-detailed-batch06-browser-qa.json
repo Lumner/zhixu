@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-05",
+  "course": "operating-systems",
+  "batch": "06",
+  "preview": "http://127.0.0.1:4174",
+  "passed": true,
+  "method": "in-app browser accessibility state plus read-only rendered DOM",
+  "courseOverview": {"detailedRange":"01—24", "pendingRange":"25—36", "worksheetLinkObserved":true},
+  "pages": [
+    {"id":"21", "sections":20, "codeBlocks":8, "tables":1, "ownMappingProgram":true, "horizontalOverflow":false},
+    {"id":"22", "sections":20, "codeBlocks":6, "tables":2, "tlbModel":true, "horizontalOverflow":false},
+    {"id":"23", "sections":20, "codeBlocks":4, "tables":2, "clockModel":true, "horizontalOverflow":false},
+    {"id":"24", "sections":20, "codeBlocks":5, "tables":1, "mappingLifetime":true, "horizontalOverflow":false},
+    {"id":"d-15d411461aa2", "sections":12, "codeBlocks":5, "tables":1, "vmLabProject":true, "horizontalOverflow":false}
+  ],
+  "limitations": ["No screenshot visual review: previous screenshot capability failure was not retried", "No mobile viewport or file:// mode verification in this batch", "Browser reading checks do not substitute for Linux memory experiments"],
+  "cleanup": "Temporary verification tab closed; owned preview server stopped at final teardown."
+}

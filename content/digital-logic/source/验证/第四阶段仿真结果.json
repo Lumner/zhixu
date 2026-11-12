@@ -1,0 +1,203 @@
+{
+  "date": "2026-11-05",
+  "tool": "Icarus Verilog version 11.0 (stable) ()",
+  "languageMode": "-g2012",
+  "passedSequentialExperiments": 5,
+  "detectedInjectedFaults": 9,
+  "results": [
+    {
+      "name": "17-pipeline",
+      "expectedFailure": false,
+      "compileExitCode": 0,
+      "compileMessages": "",
+      "exitCode": 0,
+      "output": "VCD info: dumpfile pipeline.vcd opened for output.\r\nTRACE pipeline t=16 ns d=0 rst=1 q1=0 q2=0\r\nTRACE pipeline t=26 ns d=a rst=0 q1=a q2=0\r\nTRACE pipeline t=36 ns d=b rst=0 q1=b q2=a\r\nTRACE pipeline t=46 ns d=c rst=0 q1=c q2=b\r\nTRACE pipeline t=56 ns d=f rst=1 q1=0 q2=0\r\nTRACE pipeline t=66 ns d=f rst=0 q1=f q2=0\r\nTRACE pipeline t=76 ns d=2 rst=0 q1=2 q2=f\r\nPASS pipeline: 7 edge cases and 1 between-edge hold\r\n"
+    },
+    {
+      "name": "18-reset",
+      "expectedFailure": false,
+      "compileExitCode": 0,
+      "compileMessages": "",
+      "exitCode": 0,
+      "output": "PASS reset: 17 scripted edge checks and 3 pulse/release/hold checks\r\n"
+    },
+    {
+      "name": "19-tick",
+      "expectedFailure": false,
+      "compileExitCode": 0,
+      "compileMessages": "",
+      "exitCode": 0,
+      "output": "TRACE tick i=0 rst=1 en=1 pre4=0 use4=0 post4=0 events4=0\r\nTRACE tick i=1 rst=0 en=1 pre4=0 use4=0 post4=1 events4=0\r\nTRACE tick i=2 rst=0 en=1 pre4=1 use4=0 post4=2 events4=0\r\nTRACE tick i=3 rst=0 en=0 pre4=2 use4=0 post4=2 events4=0\r\nTRACE tick i=4 rst=0 en=0 pre4=2 use4=0 post4=2 events4=0\r\nTRACE tick i=5 rst=0 en=1 pre4=2 use4=0 post4=3 events4=0\r\nTRACE tick i=6 rst=0 en=0 pre4=3 use4=0 post4=3 events4=0\r\nTRACE tick i=7 rst=0 en=0 pre4=3 use4=0 post4=3 events4=0\r\nTRACE tick i=8 rst=0 en=1 pre4=3 use4=1 post4=0 events4=1\r\nTRACE tick i=9 rst=0 en=1 pre4=0 use4=0 post4=1 events4=1\r\nTRACE tick i=10 rst=0 en=1 pre4=1 use4=0 post4=2 events4=1\r\nTRACE tick i=11 rst=0 en=1 pre4=2 use4=0 post4=3 events4=1\r\nTRACE tick i=12 rst=0 en=1 pre4=3 use4=1 post4=0 events4=2\r\nTRACE tick i=13 rst=0 en=1 pre4=0 use4=0 post4=1 events4=2\r\nTRACE tick i=14 rst=1 en=1 pre4=1 use4=0 post4=0 events4=0\r\nTRACE tick i=15 rst=0 en=1 pre4=0 use4=0 post4=1 events4=0\r\nTRACE tick i=16 rst=0 en=1 pre4=1 use4=0 post4=2 events4=0\r\nTRACE tick i=17 rst=0 en=1 pre4=2 use4=0 post4=3 events4=0\r\nTRACE tick i=18 rst=0 en=1 pre4=3 use4=1 post4=0 events4=1\r\nTRACE tick i=19 rst=0 en=1 pre4=0 use4=0 post4=1 events4=1\r\nTRACE tick i=20 rst=0 en=1 pre4=1 use4=0 post4=2 events4=1\r\nTRACE tick i=21 rst=0 en=1 pre4=2 use4=0 post4=3 events4=1\r\nTRACE tick i=22 rst=0 en=1 pre4=3 use4=1 post4=0 events4=2\r\nTRACE tick i=23 rst=0 en=1 pre4=0 use4=0 post4=1 events4=2\r\nTRACE tick i=24 rst=0 en=1 pre4=1 use4=0 post4=2 events4=2\r\nPASS tick: 25 cycles, DIV=1/4/5, pause at middle/terminal and reset\r\n"
+    },
+    {
+      "name": "20-shift-pwm",
+      "expectedFailure": false,
+      "compileExitCode": 0,
+      "compileMessages": "",
+      "exitCode": 0,
+      "output": "TRACE pwm duty=0 high=0/8\r\nTRACE pwm duty=1 high=1/8\r\nTRACE pwm duty=2 high=2/8\r\nTRACE pwm duty=3 high=3/8\r\nTRACE pwm duty=4 high=4/8\r\nTRACE pwm duty=5 high=5/8\r\nTRACE pwm duty=6 high=6/8\r\nTRACE pwm duty=7 high=7/8\r\nTRACE pwm duty=8 high=8/8\r\nTRACE pwm duty=9 high=8/8\r\nTRACE pwm duty=10 high=8/8\r\nTRACE pwm duty=11 high=8/8\r\nTRACE pwm duty=12 high=8/8\r\nTRACE pwm duty=13 high=8/8\r\nTRACE pwm duty=14 high=8/8\r\nTRACE pwm duty=15 high=8/8\r\nPASS shift/PWM: 5 shift checks, 16 full frames, 128 phase samples, 2 live changes\r\n"
+    },
+    {
+      "name": "21-memory",
+      "expectedFailure": false,
+      "compileExitCode": 0,
+      "compileMessages": "",
+      "exitCode": 0,
+      "output": "TRACE memory we=0 addr=0 din=00 dout=xx\r\nTRACE memory we=1 addr=0 din=20 dout=xx\r\nTRACE memory we=1 addr=1 din=21 dout=xx\r\nTRACE memory we=1 addr=2 din=22 dout=xx\r\nTRACE memory we=1 addr=3 din=23 dout=xx\r\nTRACE memory we=0 addr=0 din=00 dout=20\r\nTRACE memory we=0 addr=1 din=00 dout=21\r\nTRACE memory we=0 addr=2 din=00 dout=22\r\nTRACE memory we=0 addr=3 din=00 dout=23\r\nTRACE memory we=1 addr=2 din=c3 dout=22\r\nTRACE memory we=0 addr=2 din=00 dout=c3\r\nTRACE memory we=0 addr=1 din=ff dout=21\r\nTRACE memory we=0 addr=1 din=00 dout=21\r\nTRACE memory we=0 addr=3 din=00 dout=23\r\nPASS memory: 14 synchronous accesses, ROM file, unknown data, read-first and hold\r\n"
+    },
+    {
+      "name": "mutant-pipeline-blocking-collapse",
+      "expectedFailure": true,
+      "compileExitCode": 0,
+      "compileMessages": "",
+      "exitCode": 1,
+      "output": "VCD info: dumpfile pipeline.vcd opened for output.\r\nTRACE pipeline t=16 ns d=0 rst=1 q1=0 q2=0\r\nFATAL: C:\\Users\\17597\\Desktop\\tutorial\\content\\digital-logic\\source\\时序实验\\17-pipeline\\tb.sv:16: pipeline d=a rst=0 actual=a/a expected=a/0\r\n       Time: 26000 Scope: tb.step\r\n"
+    },
+    {
+      "name": "mutant-sync-reset-made-async",
+      "expectedFailure": true,
+      "compileExitCode": 0,
+      "compileMessages": "",
+      "exitCode": 1,
+      "output": "FATAL: C:\\Users\\17597\\Desktop\\tutorial\\content\\digital-logic\\source\\时序实验\\18-reset\\tb.sv:25: short reset must leave sync=A and clear async=0\r\n       Time: 18000 Scope: tb\r\n"
+    },
+    {
+      "name": "mutant-enable-before-reset-clear",
+      "expectedFailure": true,
+      "compileExitCode": 0,
+      "compileMessages": "",
+      "exitCode": 1,
+      "output": "FATAL: C:\\Users\\17597\\Desktop\\tutorial\\content\\digital-logic\\source\\时序实验\\18-reset\\tb.sv:14: priority rst/clear/en=011 actual=5/0 expected=0\r\n       Time: 106000 Scope: tb.step\r\n"
+    },
+    {
+      "name": "mutant-tick-one-cycle-late",
+      "expectedFailure": true,
+      "compileExitCode": 0,
+      "compileMessages": "",
+      "exitCode": 1,
+      "output": "TRACE tick i=0 rst=1 en=1 pre4=0 use4=0 post4=0 events4=0\r\nFATAL: C:\\Users\\17597\\Desktop\\tutorial\\content\\digital-logic\\source\\时序实验\\19-tick\\tb.sv:25: pre-edge tick i=1 actual=000 expected=100\r\n       Time: 21000 Scope: tb.$ivl_for_loop0\r\n"
+    },
+    {
+      "name": "mutant-pause-clears-position",
+      "expectedFailure": true,
+      "compileExitCode": 0,
+      "compileMessages": "",
+      "exitCode": 1,
+      "output": "TRACE tick i=0 rst=1 en=1 pre4=0 use4=0 post4=0 events4=0\r\nTRACE tick i=1 rst=0 en=1 pre4=0 use4=0 post4=1 events4=0\r\nTRACE tick i=2 rst=0 en=1 pre4=1 use4=0 post4=2 events4=0\r\nFATAL: C:\\Users\\17597\\Desktop\\tutorial\\content\\digital-logic\\source\\时序实验\\19-tick\\tb.sv:37: post-edge counter i=3 actual=0/0/0 events=2/0/0\r\n       Time: 46000 Scope: tb.$ivl_for_loop0\r\n"
+    },
+    {
+      "name": "mutant-shift-direction-reversed",
+      "expectedFailure": true,
+      "compileExitCode": 0,
+      "compileMessages": "",
+      "exitCode": 1,
+      "output": "FATAL: C:\\Users\\17597\\Desktop\\tutorial\\content\\digital-logic\\source\\时序实验\\20-shift-pwm\\tb.sv:14: shift en=1 bit=1 actual=1000 expected=0001\r\n       Time: 16000 Scope: tb.shift_step\r\n"
+    },
+    {
+      "name": "mutant-pwm-inclusive-comparison",
+      "expectedFailure": true,
+      "compileExitCode": 0,
+      "compileMessages": "",
+      "exitCode": 1,
+      "output": "FATAL: C:\\Users\\17597\\Desktop\\tutorial\\content\\digital-logic\\source\\时序实验\\20-shift-pwm\\tb.sv:32: PWM duty=0 slot=0 phase=0 pwm=1\r\n       Time: 71000 Scope: tb.$ivl_for_loop0.$ivl_for_loop1\r\n"
+    },
+    {
+      "name": "mutant-ram-write-first",
+      "expectedFailure": true,
+      "compileExitCode": 0,
+      "compileMessages": "",
+      "exitCode": 1,
+      "output": "TRACE memory we=0 addr=0 din=00 dout=xx\r\nFATAL: C:\\Users\\17597\\Desktop\\tutorial\\content\\digital-logic\\source\\时序实验\\21-memory\\tb.sv:21: RAM we=1 addr=0 actual=20 expected-old=xx\r\n       Time: 26000 Scope: tb.access\r\n"
+    },
+    {
+      "name": "mutant-ram-forced-zero-initial",
+      "expectedFailure": true,
+      "compileExitCode": 0,
+      "compileMessages": "",
+      "exitCode": 1,
+      "output": "FATAL: C:\\Users\\17597\\Desktop\\tutorial\\content\\digital-logic\\source\\时序实验\\21-memory\\tb.sv:21: RAM we=0 addr=0 actual=00 expected-old=xx\r\n       Time: 16000 Scope: tb.access\r\n"
+    }
+  ],
+  "pipelineVcdSamples": [
+    {
+      "sampleNs": 16,
+      "d": 0,
+      "rst": 1,
+      "q1": 0,
+      "q2": 0
+    },
+    {
+      "sampleNs": 26,
+      "d": 10,
+      "rst": 0,
+      "q1": 10,
+      "q2": 0
+    },
+    {
+      "sampleNs": 36,
+      "d": 11,
+      "rst": 0,
+      "q1": 11,
+      "q2": 10
+    },
+    {
+      "sampleNs": 46,
+      "d": 12,
+      "rst": 0,
+      "q1": 12,
+      "q2": 11
+    },
+    {
+      "sampleNs": 56,
+      "d": 15,
+      "rst": 1,
+      "q1": 0,
+      "q2": 0
+    },
+    {
+      "sampleNs": 66,
+      "d": 15,
+      "rst": 0,
+      "q1": 15,
+      "q2": 0
+    },
+    {
+      "sampleNs": 76,
+      "d": 2,
+      "rst": 0,
+      "q1": 2,
+      "q2": 15
+    }
+  ],
+  "coverage": {
+    "pipelineScriptedEdges": 7,
+    "resetScriptedEdges": 17,
+    "resetPulseChecks": 3,
+    "counterCyclesPerConfiguration": 25,
+    "counterDivisors": [
+      1,
+      4,
+      5
+    ],
+    "shiftChecks": 5,
+    "pwmFrames": 16,
+    "pwmPhaseSamples": 128,
+    "pwmLiveChanges": 2,
+    "memoryAccesses": 14
+  },
+  "gtkWaveGuiExecuted": false,
+  "fpgaSynthesisVerified": false,
+  "sourceHashes": {
+    "时序实验\\17-pipeline\\design.sv": "6e69ce3a3a0d350a5b7784e29e1cb2708c0ab5f4ea6bcbf71c27cef002983d55",
+    "时序实验\\17-pipeline\\tb.sv": "8406583c00d16bb276b5b240de5d17aa58c70fac95c13d2c4bb9ebae998e2aed",
+    "时序实验\\18-reset\\design.sv": "9dc5eaa8101df76e98bcd67b98a6f6c90d7cf8f2580c1ac3d66c2aefdfa9c0e6",
+    "时序实验\\18-reset\\tb.sv": "7aaf417ada3f371b5239502a8d68c79586710e2cdb4180e1fe3d6a3dd6e49993",
+    "时序实验\\19-tick\\design.sv": "f61df93cab56b949143a78a1789f2ba424bf9fdb98407c426ba6db87bef4cc23",
+    "时序实验\\19-tick\\tb.sv": "80b9e545b66198ee39809840309e6f3996fa91d937e61931c0163a863bf563b3",
+    "时序实验\\20-shift-pwm\\design.sv": "a036dd3191ec476975b61fc82c47d93604c5936cbd21cb53f952005a2460cf8f",
+    "时序实验\\20-shift-pwm\\tb.sv": "fbee9910f7bc822b89583028796471fc03faf7bab5b5bdba97e80176935371e1",
+    "时序实验\\21-memory\\design.sv": "fe4983a1d80b80dbe529212fd2642129d673644ec64af94bc14a9b46edfefec7",
+    "时序实验\\21-memory\\rom.hex": "61c1653fe7727359b98602915d74a0f19a81fb9daced09a058889ea9b6af3d8c",
+    "时序实验\\21-memory\\tb.sv": "7afb7620ad8cb7c50f28a152307cab7cb7e0b962e0bf802a790855e9550b10f9"
+  }
+}

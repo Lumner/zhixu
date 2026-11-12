@@ -3,11 +3,11 @@
   "title": "数字逻辑：从零到 SystemVerilog 实践",
   "shortTitle": "数字逻辑与 SystemVerilog",
   "category": "systems",
-  "summary": "零基础详细版已重写01–16章：从数字基础、SystemVerilog到组合电路，逐步推导选路、算术标志、参数与独立验证；17–32章待继续重写。",
+  "summary": "零基础详细版已重写01–25章：从数字基础、SystemVerilog到状态机、握手、FIFO与UART，逐步推导并配完整实测例程和过程答案；26–32章待继续重写。",
   "level": "零基础",
-  "duration": "前三阶段约52–79小时（含练习）",
+  "duration": "前五阶段约113–166小时（含练习）",
   "status": "ongoing",
-  "updatedAt": "2026-11-05",
+  "updatedAt": "2026-11-10",
   "tags": [
     "数字电路",
     "SystemVerilog",
@@ -18,7 +18,7 @@
   "download": "downloads/digital-logic-systemverilog.zip",
   "stats": {
     "chapters": 32,
-    "examples": 25
+    "examples": 34
   },
   "groups": [
     {
@@ -55,7 +55,7 @@
         17,
         21
       ],
-      "summary": "待详细重写：触发器、复位、使能、计数、PWM、移位与存储器。"
+      "summary": "详细版已更新：逐沿解释流水、复位、计数与节拍、移位/PWM和同步RAM，配五组实测例程与30题过程答案。"
     },
     {
       "id": "control",
@@ -64,7 +64,7 @@
         22,
         25
       ],
-      "summary": "待详细重写：FSM、握手、同步 FIFO 与 UART 发送器。"
+      "summary": "详细版已更新：从状态表推导控制，逐沿讲握手、FIFO边界与UART十格帧，配四组实测实验和32题过程答案。"
     },
     {
       "id": "hardware",
@@ -111,15 +111,22 @@
       13,
       14,
       15,
-      16
-    ],
-    "nextChapters": [
+      16,
       17,
       18,
       19,
       20,
-      21
+      21,
+      22,
+      23,
+      24,
+      25
     ],
-    "note": "第17–32章为原简版，待按零基础详细标准重写。"
+    "nextChapters": [
+      26,
+      27,
+      28
+    ],
+    "note": "第26–32章为原简版，待按零基础详细标准重写。"
   }
 }

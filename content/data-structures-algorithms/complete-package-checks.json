@@ -1,0 +1,12 @@
+{
+  "date": "2026-11-12",
+  "passed": true,
+  "file": "data-structures-algorithms-complete.zip",
+  "entries": 328,
+  "bytes": 705756,
+  "sha256": "BA519CF53F5715D9CE1636C9BB0DD918416323B1F27125836F0CFE742125DBBB",
+  "chapterCount": 52,
+  "previousCHFilesUnchanged": 178,
+  "previousStage9aSha256": "6CB2ABF85CC838EB9471D7D2ED5CE98CB10937C179A3C4A004F051C80131DD4B",
+  "crcAndByteComparison": true
+}

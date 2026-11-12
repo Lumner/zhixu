@@ -1,0 +1,13 @@
+DSA-CATALOG-1
+0
+30
+C basics
+17
+30
+Arrays
+9
+20
+Pointers
+9999
+15
+Graphs
