@@ -1,0 +1,18 @@
+{
+  "kind": "official_publication_excerpt",
+  "publisher": "国家统计局",
+  "title": "国家统计局关于2024年国内生产总值最终核实的公告",
+  "url": "https://www.stats.gov.cn/sj/zxfbhjd/202512/t20251226_1962144.html",
+  "publishedDate": "2025-12-26",
+  "accessedDate": "2026-11-13",
+  "referencePeriod": "2024 full calendar year",
+  "frequency": "annual",
+  "nominalUnit": "亿元",
+  "nominalGdpAsPublished": 1348066,
+  "nominalRevisionVersusPreliminary": -1018,
+  "realGrowthRateAsPublished": 0.05,
+  "realGrowthRevisionPercentagePoints": 0,
+  "status": "final verification in this historical publication",
+  "scopeNote": "A small manually recorded reading excerpt, not the full official dataset or a claim about the latest available GDP.",
+  "usedAsSyntheticModelInput": false
+}

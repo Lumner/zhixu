@@ -1,0 +1,38 @@
+{
+  "version": "1.0",
+  "origin": "synthetic_teaching_data",
+  "versions": {
+    "python": "3.13.9",
+    "numpy": "2.3.5",
+    "pandas": "2.3.3",
+    "matplotlib": "3.10.6"
+  },
+  "parameters": {
+    "seed": 20261113,
+    "replications": 2000,
+    "income_change": 10.0
+  },
+  "inputs": {
+    "data/config.json": "c2ac409dfc2ea61fe2a2baa83fd6f083c750c6f889ee409464433d12889abac1",
+    "data/households_raw.csv": "ae0ee4dd1eccc86362dc22cba15c276910246462964462fe3d7f2f4ec9b3f518",
+    "data/metadata.json": "ec652c76a723019947565f8462f4fd0366837af9b651712e4009b99c0980e598",
+    "arrays_tables.py": "a894509bcccef600a7d7b12c3141798936dcce52b55ca9adbc39c23a2ea6dd1c",
+    "lab.py": "b80fb6bd7f2a6349c3df0ece6ce629715b1ad6a94e27df6cb44cd4629e580a9d",
+    "report_project.py": "972fc7db76253f92dac478f4ff0205b73006c75ebe121b8dd9573db33ded758a",
+    "reproduce.py": "cb4b1e7ddab6ee219e4334d2f233aa6ada357435110fd5766490b0cf0c9a5161",
+    "statistics_demo.py": "b009819b3c3959f9b98aa634a78782f0b510b667278b65650d3241dc6f98b79c",
+    "requirements.txt": "7967b75cf18000eee06df9cc2464badf703001c3522f7a3df4df157a80a19618"
+  },
+  "outputs": {
+    "clean.csv": "a55386dcda4751e3841848ada9c24e77425185d48233337569d30b438ac3996d",
+    "coefficients.csv": "d4e569dc8bd34b8e364b9d9a7bc201f4c01ff0031215f15dd3aaf3b08e061bf1",
+    "regression.png": "320efedba3075d28fd56ab570d78db08b588df8ca9ec5976faf3f4881090c734",
+    "regression.svg": "e8f8effe01d9cd2f9e02bf95eb8588f18faca9af884218c1f8f16e5fba413b94",
+    "report.md": "1a0ea7e504e163dda464d5a3da4f023c2a04adc2f7229d20d9f41bf8071c4fe0",
+    "sampling.png": "b9df28ee5ea2168ee118e6cbbbfafd7e7ca576128724e418eb9f0f2667fe199d",
+    "sampling.svg": "f15202587c7551ad7b67216a0c3763b4f69be60013775f26740b865fa6184484",
+    "sensitivity.png": "d3fdacab469f33af887554a1fc83e785bd154ee85b293ff31ad4b219dada1a90",
+    "sensitivity.svg": "0d53d92a90851be57df3f93361c4ea7a9d2fb99e4cd18c56b4583a8e0bc8783b",
+    "summary.json": "950eaef64c488a166ff98a2cbff204df40660e1bcfa5308ff31b359e860c19f3"
+  }
+}

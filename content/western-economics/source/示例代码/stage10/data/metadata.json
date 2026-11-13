@@ -1,0 +1,13 @@
+{
+  "dataset": "synthetic_households_v1",
+  "origin": "synthetic_teaching_data",
+  "created": "2026-11-13",
+  "scope": "Fictional cross-section, one common teaching period; no country, no real people, no probability survey",
+  "units": {"id": "fictional household ID", "income": "teaching currency per period", "consumption": "teaching currency per period", "background": "binary teaching background 0 or 1; not randomized treatment"},
+  "construction": "consumption=10+0.2*income+6*background+noise; eight noise values [1,-1,-1,1,1,-1,-1,1]",
+  "raw_issues": "10 rows include one exact H03 duplicate and H09 missing income (NA)",
+  "missing_tokens": ["", "NA"],
+  "frequency": "cross-section, not a time series",
+  "revision": "frozen teaching v1, not official statistics",
+  "limitations": "No causal identification, no macro MPC, no policy forecast"
+}

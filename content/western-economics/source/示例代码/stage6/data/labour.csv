@@ -1,0 +1,4 @@
+scenario,population,employed,unemployed,outside
+base,1000,600,60,340
+discouraged,1000,600,40,360
+job_growth,1000,620,40,340

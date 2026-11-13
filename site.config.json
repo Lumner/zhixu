@@ -1,8 +1,8 @@
 {
   "name": "知序",
   "englishName": "TUTORIAL LIBRARY",
-  "description": "把计算机知识，学成自己的能力。",
-  "updatedAt": "2026-11-04",
+  "description": "把知识，学成自己的能力。",
+  "updatedAt": "2026-11-13",
   "categories": [
     {
       "id": "foundations",
@@ -31,6 +31,13 @@
       "description": "数字逻辑、计算机组成、操作系统与网络",
       "icon": "layers",
       "color": "violet"
+    },
+    {
+      "id": "social-sciences",
+      "name": "经济与社会科学",
+      "description": "从经济学原理到数据分析与社会科学方法",
+      "icon": "book",
+      "color": "amber"
     },
     {
       "id": "engineering",

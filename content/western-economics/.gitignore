@@ -1,0 +1,6 @@
+maintenance/.cache/
+.venv-economics/
+my-results/
+__pycache__/
+research/
+maintenance/stage10-reproduction/

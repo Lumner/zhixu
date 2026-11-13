@@ -1,0 +1,193 @@
+{
+  "verifiedDate": "2026-11-13",
+  "timezone": "Asia/Shanghai",
+  "stage": 5,
+  "chapters": [
+    27,
+    32
+  ],
+  "python": "3.13.13 (tags/v3.13.13:01104ce, Apr  7 2026, 19:25:48) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "testsRun": 40,
+  "failures": 0,
+  "errors": 0,
+  "successful": true,
+  "subprocessRuns": 17,
+  "preservedPriorFiles": 48,
+  "testLog": "test_cli_bad_inputs_and_help (__main__.DeliveryChecks.test_cli_bad_inputs_and_help) ... ok\ntest_independently_calculated_stage_exercise_answers (__main__.DeliveryChecks.test_independently_calculated_stage_exercise_answers) ... ok\ntest_integrated_default (__main__.DeliveryChecks.test_integrated_default) ... ok\ntest_integrated_parameter_ownership (__main__.DeliveryChecks.test_integrated_parameter_ownership) ... ok\ntest_previous_chapters_examples_and_data_unchanged (__main__.DeliveryChecks.test_previous_chapters_examples_and_data_unchanged) ... ok\ntest_six_complete_entrypoints (__main__.DeliveryChecks.test_six_complete_entrypoints) ... ok\ntest_efficiency_does_not_imply_equal_distribution (__main__.ExchangeChecks.test_efficiency_does_not_imply_equal_distribution) ... ok\ntest_exchange_known_allocation (__main__.ExchangeChecks.test_exchange_known_allocation) ... ok\ntest_feasibility_budget_and_mrs (__main__.ExchangeChecks.test_feasibility_budget_and_mrs) ... ok\ntest_grid_efficiency_differs_from_continuous_efficiency (__main__.ExchangeChecks.test_grid_efficiency_differs_from_continuous_efficiency) ... ok\ntest_integer_frontier (__main__.ExchangeChecks.test_integer_frontier) ... ok\ntest_invalid_exchange_and_pareto_comparisons (__main__.ExchangeChecks.test_invalid_exchange_and_pareto_comparisons) ... ok\ntest_hidden_action_known_choices (__main__.InformationChecks.test_hidden_action_known_choices) ... ok\ntest_hidden_action_threshold_and_bad_inputs (__main__.InformationChecks.test_hidden_action_threshold_and_bad_inputs) ... ok\ntest_invalid_lemons_domains (__main__.InformationChecks.test_invalid_lemons_domains) ... ok\ntest_lemons_known_selection (__main__.InformationChecks.test_lemons_known_selection) ... ok\ntest_pooling_and_no_trade (__main__.InformationChecks.test_pooling_and_no_trade) ... ok\ntest_signaling_is_only_an_incentive_check (__main__.InformationChecks.test_signaling_is_only_an_incentive_check) ... ok\ntest_cournot_known_answers (__main__.MarketPowerChecks.test_cournot_known_answers) ... ok\ntest_cournot_more_firms_and_invalid_counts (__main__.MarketPowerChecks.test_cournot_more_firms_and_invalid_counts) ... ok\ntest_cournot_unilateral_deviations (__main__.MarketPowerChecks.test_cournot_unilateral_deviations) ... ok\ntest_fixed_cost_and_first_degree (__main__.MarketPowerChecks.test_fixed_cost_and_first_degree) ... ok\ntest_invalid_market_parameters (__main__.MarketPowerChecks.test_invalid_market_parameters) ... ok\ntest_monopoly_first_order_and_neighbor_profits (__main__.MarketPowerChecks.test_monopoly_first_order_and_neighbor_profits) ... ok\ntest_monopoly_known_answers (__main__.MarketPowerChecks.test_monopoly_known_answers) ... ok\ntest_multiple_and_tied_equilibria (__main__.MarketPowerChecks.test_multiple_and_tied_equilibria) ... ok\ntest_no_pure_equilibrium_and_bad_matrix (__main__.MarketPowerChecks.test_no_pure_equilibrium_and_bad_matrix) ... ok\ntest_no_trade_monopoly (__main__.MarketPowerChecks.test_no_trade_monopoly) ... ok\ntest_prisoners_dilemma (__main__.MarketPowerChecks.test_prisoners_dilemma) ... ok\ntest_segmented_known_example (__main__.MarketPowerChecks.test_segmented_known_example) ... ok\ntest_abatement_capacity_boundary (__main__.PolicyChecks.test_abatement_capacity_boundary) ... ok\ntest_abatement_feasible_grid_cost_check (__main__.PolicyChecks.test_abatement_feasible_grid_cost_check) ... ok\ntest_abatement_interior_and_equal_split_cost (__main__.PolicyChecks.test_abatement_interior_and_equal_split_cost) ... ok\ntest_commons_overuse_and_single_user (__main__.PolicyChecks.test_commons_overuse_and_single_user) ... ok\ntest_externality_known_answers (__main__.PolicyChecks.test_externality_known_answers) ... ok\ntest_externality_tax_wedge_and_marginal_conditions (__main__.PolicyChecks.test_externality_tax_wedge_and_marginal_conditions) ... ok\ntest_public_good_invalid_inputs (__main__.PolicyChecks.test_public_good_invalid_inputs) ... ok\ntest_public_good_kink_and_zero_boundaries (__main__.PolicyChecks.test_public_good_kink_and_zero_boundaries) ... ok\ntest_public_good_known_answers (__main__.PolicyChecks.test_public_good_known_answers) ... ok\ntest_zero_damage_and_no_trade (__main__.PolicyChecks.test_zero_damage_and_no_trade) ... ok\n\n----------------------------------------------------------------------\nRan 40 tests in 1.847s\n\nOK\n",
+  "runs": [
+    {
+      "program": "policy_lab.py",
+      "args": [
+        "--firms",
+        "0"
+      ],
+      "exitCode": 2,
+      "stdout": "",
+      "stderr": "usage: policy_lab.py [-h] [--firms FIRMS] [--damage-slope DAMAGE_SLOPE]\n                     [--coverage COVERAGE]\npolicy_lab.py: error: firms must be a positive integer\n"
+    },
+    {
+      "program": "policy_lab.py",
+      "args": [
+        "--firms",
+        "-1"
+      ],
+      "exitCode": 2,
+      "stdout": "",
+      "stderr": "usage: policy_lab.py [-h] [--firms FIRMS] [--damage-slope DAMAGE_SLOPE]\n                     [--coverage COVERAGE]\npolicy_lab.py: error: firms must be a positive integer\n"
+    },
+    {
+      "program": "policy_lab.py",
+      "args": [
+        "--firms",
+        "1.5"
+      ],
+      "exitCode": 2,
+      "stdout": "",
+      "stderr": "usage: policy_lab.py [-h] [--firms FIRMS] [--damage-slope DAMAGE_SLOPE]\n                     [--coverage COVERAGE]\npolicy_lab.py: error: argument --firms: invalid int value: '1.5'\n"
+    },
+    {
+      "program": "policy_lab.py",
+      "args": [
+        "--damage-slope",
+        "-1"
+      ],
+      "exitCode": 2,
+      "stdout": "",
+      "stderr": "usage: policy_lab.py [-h] [--firms FIRMS] [--damage-slope DAMAGE_SLOPE]\n                     [--coverage COVERAGE]\npolicy_lab.py: error: damage_slope outside model domain\n"
+    },
+    {
+      "program": "policy_lab.py",
+      "args": [
+        "--damage-slope",
+        "nan"
+      ],
+      "exitCode": 2,
+      "stdout": "",
+      "stderr": "usage: policy_lab.py [-h] [--firms FIRMS] [--damage-slope DAMAGE_SLOPE]\n                     [--coverage COVERAGE]\npolicy_lab.py: error: damage_slope must be a finite number\n"
+    },
+    {
+      "program": "policy_lab.py",
+      "args": [
+        "--coverage",
+        "1.1"
+      ],
+      "exitCode": 2,
+      "stdout": "",
+      "stderr": "usage: policy_lab.py [-h] [--firms FIRMS] [--damage-slope DAMAGE_SLOPE]\n                     [--coverage COVERAGE]\npolicy_lab.py: error: Coverage/probability outside model domain\n"
+    },
+    {
+      "program": "policy_lab.py",
+      "args": [
+        "--coverage",
+        "inf"
+      ],
+      "exitCode": 2,
+      "stdout": "",
+      "stderr": "usage: policy_lab.py [-h] [--firms FIRMS] [--damage-slope DAMAGE_SLOPE]\n                     [--coverage COVERAGE]\npolicy_lab.py: error: coverage must be a finite number\n"
+    },
+    {
+      "program": "policy_lab.py",
+      "args": [
+        "--coverage",
+        "oops"
+      ],
+      "exitCode": 2,
+      "stdout": "",
+      "stderr": "usage: policy_lab.py [-h] [--firms FIRMS] [--damage-slope DAMAGE_SLOPE]\n                     [--coverage COVERAGE]\npolicy_lab.py: error: argument --coverage: invalid float value: 'oops'\n"
+    },
+    {
+      "program": "policy_lab.py",
+      "args": [
+        "--help"
+      ],
+      "exitCode": 0,
+      "stdout": "usage: policy_lab.py [-h] [--firms FIRMS] [--damage-slope DAMAGE_SLOPE]\n                     [--coverage COVERAGE]\n\nMicroeconomics teaching experiments v0.2\n\noptions:\n  -h, --help            show this help message and exit\n  --firms FIRMS\n  --damage-slope DAMAGE_SLOPE\n  --coverage COVERAGE\n",
+      "stderr": ""
+    },
+    {
+      "program": "policy_lab.py",
+      "args": [],
+      "exitCode": 0,
+      "stdout": "{\n  \"version\": \"0.2\",\n  \"scope\": \"Independent synthetic micro models; no macro or real-policy causal evaluation\",\n  \"monopoly\": {\n    \"quantity\": 48.0,\n    \"price\": 36.0,\n    \"consumer_surplus\": 576.0,\n    \"producer_surplus\": 1152.0,\n    \"profit\": 1152.0,\n    \"total_surplus_gross\": 1728.0,\n    \"total_surplus_net_fixed\": 1728.0,\n    \"competitive_quantity\": 96.0,\n    \"competitive_price\": 12,\n    \"competitive_total_surplus_gross\": 2304.0,\n    \"deadweight_loss\": 576.0,\n    \"first_degree_quantity\": 96.0,\n    \"first_degree_producer_surplus\": 2304.0\n  },\n  \"cournot\": {\n    \"firms\": 2,\n    \"quantity_each\": 32.0,\n    \"quantity\": 64.0,\n    \"price\": 28.0,\n    \"profit_each\": 512.0,\n    \"consumer_surplus\": 1024.0\n  },\n  \"pure_nash\": [\n    {\n      \"a\": \"low\",\n      \"b\": \"low\",\n      \"payoffs\": [\n        4,\n        4\n      ]\n    }\n  ],\n  \"exchange\": {\n    \"px\": 1.0,\n    \"py\": 1,\n    \"total_x\": 10,\n    \"total_y\": 10,\n    \"a\": {\n      \"wealth\": 10.0,\n      \"x\": 5.0,\n      \"y\": 5.0,\n      \"utility\": 5.0,\n      \"initial_utility\": 4.0\n    },\n    \"b\": {\n      \"wealth\": 10.0,\n      \"x\": 5.0,\n      \"y\": 5.0,\n      \"utility\": 5.0,\n      \"initial_utility\": 4.0\n    }\n  },\n  \"externality\": {\n    \"private_quantity\": 64.0,\n    \"efficient_quantity\": 48.0,\n    \"optimal_unit_tax\": 12.0,\n    \"consumer_price_at_optimum\": 36.0,\n    \"producer_price_at_optimum\": 24.0,\n    \"welfare_private\": 1024.0,\n    \"welfare_efficient\": 1152.0,\n    \"deadweight_loss\": 128.0,\n    \"damage_private\": 512.0,\n    \"damage_efficient\": 288.0,\n    \"tax_revenue\": 576.0\n  },\n  \"abatement\": {\n    \"a\": 9.0,\n    \"b\": 3.0,\n    \"marginal_cost_a\": 18.0,\n    \"marginal_cost_b\": 18.0,\n    \"cost\": 108.0,\n    \"interior\": true\n  },\n  \"public_good\": {\n    \"efficient_quantity\": 7.999999999999998,\n    \"voluntary_quantity\": 4.0,\n    \"marginal_benefits_at_optimum\": [\n      12.000000000000002,\n      4.000000000000002\n    ],\n    \"welfare_efficient\": 64.0,\n    \"welfare_voluntary\": 48.0,\n    \"private_desired_totals\": [\n      4.0,\n      0\n    ]\n  },\n  \"commons\": {\n    \"effort_each\": 2.6666666666666665,\n    \"noncooperative_total_effort\": 5.333333333333333,\n    \"efficient_total_effort\": 4.0,\n    \"welfare_noncooperative\": 14.222222222222221,\n    \"welfare_efficient\": 16.0\n  },\n  \"lemons\": {\n    \"trace\": [\n      {\n        \"active\": [\n          \"high\",\n          \"low\"\n        ],\n        \"offered_price\": 150.0\n      },\n      {\n        \"active\": [\n          \"low\"\n        ],\n        \"offered_price\": 100.0\n      }\n    ],\n    \"active_types\": [\n      \"low\"\n    ],\n    \"price\": 100.0,\n    \"trade_share\": 0.5,\n    \"full_information_gains\": 30.0,\n    \"selection_gains\": 10.0\n  },\n  \"hidden_action\": {\n    \"coverage\": 0.5,\n    \"no_effort_private_cost\": 15.0,\n    \"effort_private_cost\": 9.0,\n    \"choose_effort\": true,\n    \"loss_probability\": 0.1,\n    \"expected_claim\": 5.0,\n    \"social_cost\": 14.0\n  },\n  \"signaling\": {\n    \"high_type_net_gain\": 4,\n    \"low_type_net_gain\": -2,\n    \"incentive_conditions_met\": true\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "program": "policy_lab.py",
+      "args": [
+        "--firms",
+        "3",
+        "--damage-slope",
+        "0",
+        "--coverage",
+        "1"
+      ],
+      "exitCode": 0,
+      "stdout": "{\n  \"version\": \"0.2\",\n  \"scope\": \"Independent synthetic micro models; no macro or real-policy causal evaluation\",\n  \"monopoly\": {\n    \"quantity\": 48.0,\n    \"price\": 36.0,\n    \"consumer_surplus\": 576.0,\n    \"producer_surplus\": 1152.0,\n    \"profit\": 1152.0,\n    \"total_surplus_gross\": 1728.0,\n    \"total_surplus_net_fixed\": 1728.0,\n    \"competitive_quantity\": 96.0,\n    \"competitive_price\": 12,\n    \"competitive_total_surplus_gross\": 2304.0,\n    \"deadweight_loss\": 576.0,\n    \"first_degree_quantity\": 96.0,\n    \"first_degree_producer_surplus\": 2304.0\n  },\n  \"cournot\": {\n    \"firms\": 3,\n    \"quantity_each\": 24.0,\n    \"quantity\": 72.0,\n    \"price\": 24.0,\n    \"profit_each\": 288.0,\n    \"consumer_surplus\": 1296.0\n  },\n  \"pure_nash\": [\n    {\n      \"a\": \"low\",\n      \"b\": \"low\",\n      \"payoffs\": [\n        4,\n        4\n      ]\n    }\n  ],\n  \"exchange\": {\n    \"px\": 1.0,\n    \"py\": 1,\n    \"total_x\": 10,\n    \"total_y\": 10,\n    \"a\": {\n      \"wealth\": 10.0,\n      \"x\": 5.0,\n      \"y\": 5.0,\n      \"utility\": 5.0,\n      \"initial_utility\": 4.0\n    },\n    \"b\": {\n      \"wealth\": 10.0,\n      \"x\": 5.0,\n      \"y\": 5.0,\n      \"utility\": 5.0,\n      \"initial_utility\": 4.0\n    }\n  },\n  \"externality\": {\n    \"private_quantity\": 64.0,\n    \"efficient_quantity\": 64.0,\n    \"optimal_unit_tax\": 0.0,\n    \"consumer_price_at_optimum\": 28.0,\n    \"producer_price_at_optimum\": 28.0,\n    \"welfare_private\": 1536.0,\n    \"welfare_efficient\": 1536.0,\n    \"deadweight_loss\": 0.0,\n    \"damage_private\": 0.0,\n    \"damage_efficient\": 0.0,\n    \"tax_revenue\": 0.0\n  },\n  \"abatement\": {\n    \"a\": 9.0,\n    \"b\": 3.0,\n    \"marginal_cost_a\": 18.0,\n    \"marginal_cost_b\": 18.0,\n    \"cost\": 108.0,\n    \"interior\": true\n  },\n  \"public_good\": {\n    \"efficient_quantity\": 7.999999999999998,\n    \"voluntary_quantity\": 4.0,\n    \"marginal_benefits_at_optimum\": [\n      12.000000000000002,\n      4.000000000000002\n    ],\n    \"welfare_efficient\": 64.0,\n    \"welfare_voluntary\": 48.0,\n    \"private_desired_totals\": [\n      4.0,\n      0\n    ]\n  },\n  \"commons\": {\n    \"effort_each\": 2.6666666666666665,\n    \"noncooperative_total_effort\": 5.333333333333333,\n    \"efficient_total_effort\": 4.0,\n    \"welfare_noncooperative\": 14.222222222222221,\n    \"welfare_efficient\": 16.0\n  },\n  \"lemons\": {\n    \"trace\": [\n      {\n        \"active\": [\n          \"high\",\n          \"low\"\n        ],\n        \"offered_price\": 150.0\n      },\n      {\n        \"active\": [\n          \"low\"\n        ],\n        \"offered_price\": 100.0\n      }\n    ],\n    \"active_types\": [\n      \"low\"\n    ],\n    \"price\": 100.0,\n    \"trade_share\": 0.5,\n    \"full_information_gains\": 30.0,\n    \"selection_gains\": 10.0\n  },\n  \"hidden_action\": {\n    \"coverage\": 1.0,\n    \"no_effort_private_cost\": 0.0,\n    \"effort_private_cost\": 4.0,\n    \"choose_effort\": false,\n    \"loss_probability\": 0.3,\n    \"expected_claim\": 30.0,\n    \"social_cost\": 30.0\n  },\n  \"signaling\": {\n    \"high_type_net_gain\": 4,\n    \"low_type_net_gain\": -2,\n    \"incentive_conditions_met\": true\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "program": "monopoly.py",
+      "args": [],
+      "exitCode": 0,
+      "stdout": "Monopoly: Q=48.00, P=36.00, profit=1152.00\nCS=576.00, gross TS=1728.00, DWL=576.00\nCompetitive Q=96.00; first-degree gross seller surplus=2304.00\nSeparate two-group discrimination: Q=30.00, profit=500.00, CS=250.00\n",
+      "stderr": ""
+    },
+    {
+      "program": "games.py",
+      "args": [],
+      "exitCode": 0,
+      "stdout": "Pure Nash: [{'a': 'low', 'b': 'low', 'payoffs': [4, 4]}]\nCournot n=1: each=48.00, total=48.00, price=36.00\nCournot n=2: each=32.00, total=64.00, price=28.00\nCournot n=5: each=16.00, total=80.00, price=20.00\n",
+      "stderr": ""
+    },
+    {
+      "program": "exchange.py",
+      "args": [],
+      "exitCode": 0,
+      "stdout": "Prices: px=1.00, py=1.00\na: x=5.00, y=5.00, U=5.00, initial U=4.00\nb: x=5.00, y=5.00, U=5.00, initial U=4.00\nGrid points: 121\nGrid-efficient A bundles: [(0, 0), (1, 1), (1, 2), (2, 1), (2, 2), (2, 3), (3, 2), (3, 3), (3, 4), (4, 3), (4, 4), (4, 5), (5, 4), (5, 5), (5, 6), (6, 5), (6, 6), (6, 7), (7, 6), (7, 7), (7, 8), (8, 7), (8, 8), (8, 9), (9, 8), (9, 9), (10, 10)]\n",
+      "stderr": ""
+    },
+    {
+      "program": "externalities.py",
+      "args": [],
+      "exitCode": 0,
+      "stdout": "Private Q=64.00, efficient Q=48.00, tax=12.00\nSocial welfare: 1024.00 -> 1152.00; DWL=128.00\nSeparate abatement: A=9.00, B=3.00, cost=108.00\n",
+      "stderr": ""
+    },
+    {
+      "program": "public_goods.py",
+      "args": [],
+      "exitCode": 0,
+      "stdout": "Public good: efficient g=8.00, voluntary g=4.00\nNet welfare: 64.00 vs 48.00\nSeparate commons: Nash effort=5.333333, efficient effort=4.000000\n",
+      "stderr": ""
+    },
+    {
+      "program": "information.py",
+      "args": [],
+      "exitCode": 0,
+      "stdout": "Lemons trace: [{'active': ['high', 'low'], 'offered_price': 150.0}, {'active': ['low'], 'offered_price': 100.0}]\nRemaining=['low'], price=100.00, trade share=0.50\nCoverage=0.0, effort=True, social cost=14.00\nCoverage=0.5, effort=True, social cost=14.00\nCoverage=1.0, effort=False, social cost=30.00\nSignaling incentive conditions: {'high_type_net_gain': 4, 'low_type_net_gain': -2, 'incentive_conditions_met': True}\n",
+      "stderr": ""
+    }
+  ],
+  "sourceHashes": {
+    "示例代码/stage5/exchange.py": "7bfdaaf36304123463d8c0679a5bea79fea826733aeff135e2d8ae1bfa35ab13",
+    "示例代码/stage5/externalities.py": "12bc1705980936c5bcba4d3a655b480b5fb0593c17d310f8a6b866871d0faec6",
+    "示例代码/stage5/games.py": "b6a75d6fcf9e325579b1dfd8ceb3a8d5a610d9eada9d0761e5e10b1c95f845d8",
+    "示例代码/stage5/information.py": "37fdb0e1c642e8aeae6e023d270d9691f1fe6caa8854526455cf8a0870e0c309",
+    "示例代码/stage5/models.py": "c095ded0c4452ca4346901d591393fe38a9a9141647f23639a8afcaaab4d3dec",
+    "示例代码/stage5/monopoly.py": "d1c6f4f95b84c3e55038d9f42c247bc6ad2e769f9cf5a738e52a2bbf726780be",
+    "示例代码/stage5/policy_lab.py": "97372d3d37343cb22c2eccad4d60593890438b1c9a3d0f5eac7fca8cc787b0f9",
+    "示例代码/stage5/public_goods.py": "b88dbdad1c778061d12a264fe383d7a5d0ec051d40e3eccc21a111842ca8b0b4"
+  },
+  "notValidated": [
+    "fresh installation",
+    "all operating systems/Python versions",
+    "mixed-strategy solver",
+    "general price discrimination",
+    "real policy causality",
+    "full information-contract equilibrium",
+    "macro chapters 33-60",
+    "full-site build",
+    "browser UI"
+  ]
+}

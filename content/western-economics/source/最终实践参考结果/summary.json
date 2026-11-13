@@ -1,0 +1,184 @@
+{
+  "version": "1.0",
+  "origin": "synthetic_teaching_data",
+  "audit": {
+    "raw_rows": 10,
+    "exact_duplicates_removed": 1,
+    "missing_rows_removed": 1,
+    "missing_ids": [
+      "H09"
+    ],
+    "clean_rows": 8
+  },
+  "parameters": {
+    "seed": 20261113,
+    "replications": 2000,
+    "income_change": 10.0
+  },
+  "income": {
+    "n": 8,
+    "mean": 45.0,
+    "median": 45.0,
+    "sample_variance": 257.14285714285717,
+    "sample_std": 16.035674514745462,
+    "min": 20.0,
+    "max": 70.0,
+    "mean_se_iid": 5.669467095138407
+  },
+  "consumption": {
+    "n": 8,
+    "mean": 22.0,
+    "median": 23.0,
+    "sample_variance": 35.42857142857143,
+    "sample_std": 5.9521904731427595,
+    "min": 15.0,
+    "max": 31.0,
+    "mean_se_iid": 2.1044171232366047
+  },
+  "simple": {
+    "predictors": [
+      "income"
+    ],
+    "coefficients": {
+      "intercept": 6.9999999999999885,
+      "income": 0.3333333333333333
+    },
+    "n": 8,
+    "parameters": 2,
+    "degrees_of_freedom": 6,
+    "sse": 48.00000000000001,
+    "r_squared": 0.8064516129032258,
+    "correlation": 0.8980265101338745,
+    "rmse": 2.4494897427831783,
+    "residual_std": 2.8284271247461903,
+    "fitted": [
+      13.666666666666654,
+      16.99999999999999,
+      20.33333333333332,
+      23.666666666666654,
+      20.33333333333332,
+      23.666666666666654,
+      26.99999999999999,
+      30.33333333333332
+    ],
+    "residuals": [
+      1.3333333333333464,
+      -1.9999999999999893,
+      -3.3333333333333215,
+      -2.6666666666666536,
+      4.6666666666666785,
+      1.3333333333333464,
+      1.0658141036401503e-14,
+      0.6666666666666785
+    ],
+    "residual_sum": 9.592326932761353e-14,
+    "normal_equation_max_abs": 4.298783551348606e-12
+  },
+  "controlled": {
+    "predictors": [
+      "income",
+      "background"
+    ],
+    "coefficients": {
+      "intercept": 9.999999999999998,
+      "income": 0.20000000000000026,
+      "background": 6.000000000000005
+    },
+    "n": 8,
+    "parameters": 3,
+    "degrees_of_freedom": 5,
+    "sse": 8.0,
+    "r_squared": 0.967741935483871,
+    "correlation": null,
+    "rmse": 1.0,
+    "residual_std": 1.2649110640673518,
+    "fitted": [
+      14.000000000000004,
+      16.000000000000007,
+      18.000000000000007,
+      20.00000000000001,
+      24.000000000000014,
+      26.000000000000014,
+      28.00000000000002,
+      30.00000000000002
+    ],
+    "residuals": [
+      0.9999999999999964,
+      -1.000000000000007,
+      -1.000000000000007,
+      0.9999999999999893,
+      0.9999999999999858,
+      -1.0000000000000142,
+      -1.0000000000000213,
+      0.9999999999999787
+    ],
+    "residual_sum": -9.947598300641403e-14,
+    "normal_equation_max_abs": 5.144329406903125e-12
+  },
+  "without_H08": {
+    "predictors": [
+      "income"
+    ],
+    "coefficients": {
+      "intercept": 7.631578947368422,
+      "income": 0.3157894736842106
+    },
+    "n": 7,
+    "parameters": 2,
+    "degrees_of_freedom": 5,
+    "sse": 47.15789473684211,
+    "r_squared": 0.6965944272445821,
+    "correlation": 0.834622326111986,
+    "rmse": 2.5955427380922007,
+    "residual_std": 3.0710875837996583,
+    "fitted": [
+      13.947368421052634,
+      17.10526315789474,
+      20.263157894736846,
+      23.421052631578952,
+      20.263157894736846,
+      23.421052631578952,
+      26.57894736842106
+    ],
+    "residuals": [
+      1.0526315789473664,
+      -2.10526315789474,
+      -3.263157894736846,
+      -2.4210526315789522,
+      4.736842105263154,
+      1.5789473684210478,
+      0.42105263157894157
+    ],
+    "residual_sum": -2.842170943040401e-14,
+    "normal_equation_max_abs": 1.3073986337985843e-12
+  },
+  "conditional_fitted_change": {
+    "income_change": 10.0,
+    "simple": 3.333333333333333,
+    "controlled": 2.0000000000000027,
+    "outside_income_support": 1,
+    "causal": false
+  },
+  "sampling": {
+    "4": {
+      "mean_of_means": 4.9635,
+      "variance_of_means": 2.7262808904452225,
+      "theoretical_mean": 5.0,
+      "theoretical_variance": 2.9166666666666665
+    },
+    "64": {
+      "mean_of_means": 4.99228125,
+      "variance_of_means": 0.17311682305996745,
+      "theoretical_mean": 5.0,
+      "theoretical_variance": 0.18229166666666666
+    }
+  },
+  "bootstrap": {
+    "method": "iid empirical-distribution bootstrap demonstration; not a real survey CI",
+    "mean": 22.0,
+    "percentile_025": 18.24375,
+    "percentile_975": 25.756249999999966,
+    "seed": 20261114,
+    "replications": 2000
+  }
+}

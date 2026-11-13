@@ -1,0 +1,258 @@
+{
+  "verifiedDate": "2026-11-12",
+  "timezone": "Asia/Shanghai",
+  "python": "3.13.13 (tags/v3.13.13:01104ce, Apr  7 2026, 19:25:48) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "testsRun": 29,
+  "failures": 0,
+  "errors": 0,
+  "successful": true,
+  "subprocessRuns": 25,
+  "testLog": "test_bad_csv_cases (__main__.FileAndProgramChecks.test_bad_csv_cases) ... ok\ntest_complete_in_chapter_exercises (__main__.FileAndProgramChecks.test_complete_in_chapter_exercises) ... ok\ntest_csv_run_from_different_working_directory (__main__.FileAndProgramChecks.test_csv_run_from_different_working_directory) ... ok\ntest_fixed_entrypoints (__main__.FileAndProgramChecks.test_fixed_entrypoints) ... ok\ntest_interactive_decision_cases (__main__.FileAndProgramChecks.test_interactive_decision_cases) ... ok\ntest_market_cli_bad_inputs (__main__.FileAndProgramChecks.test_market_cli_bad_inputs) ... ok\ntest_market_cli_default (__main__.FileAndProgramChecks.test_market_cli_default) ... ok\ntest_market_cli_nonbinding (__main__.FileAndProgramChecks.test_market_cli_nonbinding) ... ok\ntest_utf8_bom_csv (__main__.FileAndProgramChecks.test_utf8_bom_csv) ... ok\ntest_alternative_stage_exercise (__main__.ModelChecks.test_alternative_stage_exercise) ... ok\ntest_arc_elasticity (__main__.ModelChecks.test_arc_elasticity) ... ok\ntest_baseline (__main__.ModelChecks.test_baseline) ... ok\ntest_baseline_welfare (__main__.ModelChecks.test_baseline_welfare) ... ok\ntest_ceiling_binding (__main__.ModelChecks.test_ceiling_binding) ... ok\ntest_control_rejects_invalid_values (__main__.ModelChecks.test_control_rejects_invalid_values) ... ok\ntest_cost_shift (__main__.ModelChecks.test_cost_shift) ... ok\ntest_demand_shift (__main__.ModelChecks.test_demand_shift) ... ok\ntest_elasticity_invalid_inputs (__main__.ModelChecks.test_elasticity_invalid_inputs) ... ok\ntest_floor_binding (__main__.ModelChecks.test_floor_binding) ... ok\ntest_intro_demand_boundaries (__main__.ModelChecks.test_intro_demand_boundaries) ... ok\ntest_invalid_parameters_and_no_interior (__main__.ModelChecks.test_invalid_parameters_and_no_interior) ... ok\ntest_negative_supply_intercept (__main__.ModelChecks.test_negative_supply_intercept) ... ok\ntest_no_trade_control (__main__.ModelChecks.test_no_trade_control) ... ok\ntest_nonbinding_controls_and_exact_boundary (__main__.ModelChecks.test_nonbinding_controls_and_exact_boundary) ... ok\ntest_tax_accounting_and_market_residuals (__main__.ModelChecks.test_tax_accounting_and_market_residuals) ... ok\ntest_tax_five_known_answer (__main__.ModelChecks.test_tax_five_known_answer) ... ok\ntest_tax_rejects_unsupported_regimes (__main__.ModelChecks.test_tax_rejects_unsupported_regimes) ... ok\ntest_tax_ten_known_answer (__main__.ModelChecks.test_tax_ten_known_answer) ... ok\ntest_zero_tax (__main__.ModelChecks.test_zero_tax) ... ok\n\n----------------------------------------------------------------------\nRan 29 tests in 2.069s\n\nOK\n",
+  "runs": [
+    {
+      "program": "embedded-0.py",
+      "args": [],
+      "input": "1000\n",
+      "exitCode": 0,
+      "stdout": "Income in yuan: Income: 1000.00 yuan\n",
+      "stderr": ""
+    },
+    {
+      "program": "embedded-1.py",
+      "args": [],
+      "input": null,
+      "exitCode": 0,
+      "stdout": "20 80 110 30\n24 72 102 30\n30 60 90 30\n",
+      "stderr": ""
+    },
+    {
+      "program": "embedded-2.py",
+      "args": [],
+      "input": "1200\n900\n",
+      "exitCode": 0,
+      "stdout": "Income: Expense: Balance: 300.00\n",
+      "stderr": ""
+    },
+    {
+      "program": "csv_io.py",
+      "args": [],
+      "input": null,
+      "exitCode": 0,
+      "stdout": "Wrote output/demand-results.csv\n",
+      "stderr": ""
+    },
+    {
+      "program": "hello.py",
+      "args": [],
+      "input": null,
+      "exitCode": 0,
+      "stdout": "Hello, economics!\n2 + 3 = 5\n",
+      "stderr": ""
+    },
+    {
+      "program": "budget.py",
+      "args": [],
+      "input": null,
+      "exitCode": 0,
+      "stdout": "Balance: 480.00 yuan\nFood share: 40.0%\n",
+      "stderr": ""
+    },
+    {
+      "program": "demand_table.py",
+      "args": [],
+      "input": null,
+      "exitCode": 0,
+      "stdout": "P= 0, Qd=120\nP=10, Qd=100\nP=20, Qd= 80\nP=30, Qd= 60\nP=40, Qd= 40\nP=50, Qd= 20\nP=60, Qd=  0\nP=70, Qd=  0\nSum across hypothetical scenarios: 420\n",
+      "stderr": ""
+    },
+    {
+      "program": "functions.py",
+      "args": [],
+      "input": null,
+      "exitCode": 0,
+      "stdout": "Quantity: 72\nRevenue: 1728\n",
+      "stderr": ""
+    },
+    {
+      "program": "basket.py",
+      "args": [],
+      "input": null,
+      "exitCode": 0,
+      "stdout": "Base basket: 50.00 yuan\nCurrent basket: 61.00 yuan\nBasket index: 122.00 (base=100)\n",
+      "stderr": ""
+    },
+    {
+      "program": "debug_demo.py",
+      "args": [],
+      "input": null,
+      "exitCode": 0,
+      "stdout": "Four demand checks passed.\n",
+      "stderr": ""
+    },
+    {
+      "program": "elasticity.py",
+      "args": [],
+      "input": null,
+      "exitCode": 0,
+      "stdout": "Signed midpoint elasticity: -0.714286\nAbsolute elasticity: 0.714286\nRevenue: 1600 -> 1800\n",
+      "stderr": ""
+    },
+    {
+      "program": "decision.py",
+      "args": [],
+      "input": "1000\n800\n",
+      "exitCode": 0,
+      "stdout": "Monthly income (yuan): Monthly expense (yuan): Balance: 200.00 yuan\n",
+      "stderr": ""
+    },
+    {
+      "program": "decision.py",
+      "args": [],
+      "input": "800\n1000\n",
+      "exitCode": 0,
+      "stdout": "Monthly income (yuan): Monthly expense (yuan): Shortfall: 200.00 yuan\n",
+      "stderr": ""
+    },
+    {
+      "program": "decision.py",
+      "args": [],
+      "input": "1000\n1000\n",
+      "exitCode": 0,
+      "stdout": "Monthly income (yuan): Monthly expense (yuan): Balance: 0.00 yuan\n",
+      "stderr": ""
+    },
+    {
+      "program": "decision.py",
+      "args": [],
+      "input": "-1\n100\n",
+      "exitCode": 0,
+      "stdout": "Monthly income (yuan): Monthly expense (yuan): Income and expense must be non-negative.\n",
+      "stderr": ""
+    },
+    {
+      "program": "decision.py",
+      "args": [],
+      "input": "abc\n",
+      "exitCode": 0,
+      "stdout": "Monthly income (yuan): Please enter a number, for example 1000.\n",
+      "stderr": ""
+    },
+    {
+      "program": "decision.py",
+      "args": [],
+      "input": "nan\n100\n",
+      "exitCode": 0,
+      "stdout": "Monthly income (yuan): Monthly expense (yuan): Please enter finite numbers.\n",
+      "stderr": ""
+    },
+    {
+      "program": "decision.py",
+      "args": [],
+      "input": "inf\n100\n",
+      "exitCode": 0,
+      "stdout": "Monthly income (yuan): Monthly expense (yuan): Please enter finite numbers.\n",
+      "stderr": ""
+    },
+    {
+      "program": "market_lab.py",
+      "args": [
+        "--tax",
+        "-1"
+      ],
+      "input": null,
+      "exitCode": 2,
+      "stdout": "",
+      "stderr": "usage: market_lab.py [-h] [--tax TAX] [--ceiling CEILING] [--floor FLOOR]\nmarket_lab.py: error: This experiment accepts non-negative taxes only\n"
+    },
+    {
+      "program": "market_lab.py",
+      "args": [
+        "--tax",
+        "60"
+      ],
+      "input": null,
+      "exitCode": 2,
+      "stdout": "",
+      "stderr": "usage: market_lab.py [-h] [--tax TAX] [--ceiling CEILING] [--floor FLOOR]\nmarket_lab.py: error: Tax outside the positive-trade interior model\n"
+    },
+    {
+      "program": "market_lab.py",
+      "args": [
+        "--tax",
+        "nan"
+      ],
+      "input": null,
+      "exitCode": 2,
+      "stdout": "",
+      "stderr": "usage: market_lab.py [-h] [--tax TAX] [--ceiling CEILING] [--floor FLOOR]\nmarket_lab.py: error: tax must be a finite number\n"
+    },
+    {
+      "program": "market_lab.py",
+      "args": [
+        "--ceiling",
+        "-1"
+      ],
+      "input": null,
+      "exitCode": 2,
+      "stdout": "",
+      "stderr": "usage: market_lab.py [-h] [--tax TAX] [--ceiling CEILING] [--floor FLOOR]\nmarket_lab.py: error: Require a non-negative price and ceiling or floor\n"
+    },
+    {
+      "program": "market_lab.py",
+      "args": [
+        "--floor",
+        "inf"
+      ],
+      "input": null,
+      "exitCode": 2,
+      "stdout": "",
+      "stderr": "usage: market_lab.py [-h] [--tax TAX] [--ceiling CEILING] [--floor FLOOR]\nmarket_lab.py: error: control price must be a finite number\n"
+    },
+    {
+      "program": "market_lab.py",
+      "args": [],
+      "input": null,
+      "exitCode": 0,
+      "stdout": "{\n  \"assumptions\": \"Qd=120-2Pc, Qs=3Ps; interior, competition, no externalities\",\n  \"baseline\": {\n    \"price\": 24.0,\n    \"quantity\": 72.0\n  },\n  \"tax_scenario\": {\n    \"consumer_price\": 30.0,\n    \"seller_price\": 20.0,\n    \"quantity\": 60.0,\n    \"consumer_surplus\": 900.0,\n    \"producer_surplus\": 600.0,\n    \"tax_revenue\": 600.0,\n    \"deadweight_loss\": 60.0,\n    \"baseline_total_surplus\": 2160.0,\n    \"after_total_including_tax\": 2100.0\n  },\n  \"ceiling_scenario\": {\n    \"binding\": true,\n    \"price\": 20,\n    \"demand\": 80,\n    \"supply\": 60,\n    \"transaction_upper_bound\": 60,\n    \"shortage\": 20,\n    \"surplus\": 0\n  },\n  \"floor_scenario\": {\n    \"binding\": true,\n    \"price\": 30,\n    \"demand\": 60,\n    \"supply\": 90,\n    \"transaction_upper_bound\": 60,\n    \"shortage\": 0,\n    \"surplus\": 30\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "program": "market_lab.py",
+      "args": [
+        "--tax",
+        "5",
+        "--ceiling",
+        "30",
+        "--floor",
+        "20"
+      ],
+      "input": null,
+      "exitCode": 0,
+      "stdout": "{\n  \"assumptions\": \"Qd=120-2Pc, Qs=3Ps; interior, competition, no externalities\",\n  \"baseline\": {\n    \"price\": 24.0,\n    \"quantity\": 72.0\n  },\n  \"tax_scenario\": {\n    \"consumer_price\": 27.0,\n    \"seller_price\": 22.0,\n    \"quantity\": 66.0,\n    \"consumer_surplus\": 1089.0,\n    \"producer_surplus\": 726.0,\n    \"tax_revenue\": 330.0,\n    \"deadweight_loss\": 15.0,\n    \"baseline_total_surplus\": 2160.0,\n    \"after_total_including_tax\": 2145.0\n  },\n  \"ceiling_scenario\": {\n    \"binding\": false,\n    \"price\": 24.0,\n    \"demand\": 72.0,\n    \"supply\": 72.0,\n    \"transaction_upper_bound\": 72.0,\n    \"shortage\": 0,\n    \"surplus\": 0\n  },\n  \"floor_scenario\": {\n    \"binding\": false,\n    \"price\": 24.0,\n    \"demand\": 72.0,\n    \"supply\": 72.0,\n    \"transaction_upper_bound\": 72.0,\n    \"shortage\": 0,\n    \"surplus\": 0\n  }\n}\n",
+      "stderr": ""
+    }
+  ],
+  "sourceHashes": {
+    "示例代码/basket.py": "0dd22a1c6098e10ce209abb9d67d6abd4b0591f1fca11db346f40285ea274b2f",
+    "示例代码/budget.py": "63d48058ca6774ce18da638912140968ddb2514ac806397cdf2d0ac0dec0c6ed",
+    "示例代码/csv_io.py": "fd424932d7d722b37a9babb8a55f537b26d683bc0908ed2c5d9b8828e861e6c7",
+    "示例代码/debug_demo.py": "de87fc63fe14101f2dc3baa98607dc41746cabd67ac67f543397946895a32cd8",
+    "示例代码/decision.py": "412835d369380ee62a809b0156b15b61bdf35d872162801b0b8479adba39a4ed",
+    "示例代码/demand_table.py": "7a8acb5b3d0998f18ab02fef817ba06e44bdb14699df2ea5f9214287de09db6d",
+    "示例代码/econ.py": "71b8bc6c4e35ddc9b70fc6de9ddc490849d0b0134c16050fc4db57c49f858196",
+    "示例代码/elasticity.py": "9d3b96b96c62725cb8511c16cc2cabb2922e00c68b6e291747d74f50c497f4d3",
+    "示例代码/functions.py": "484e1f7ca3df03f0bf43e1a94c2971a7ecb2e898acf01e30fe0104672d643ef8",
+    "示例代码/hello.py": "888df105cd7cb894d8f60f1ff33baf105c9c3938a43952233987d0617fdf38de",
+    "示例代码/market_lab.py": "e013f4a063bfaa24e226839c34b70a3bb8b6037a7c3321c5a3d1b2656d4724f8",
+    "示例代码/data/prices.csv": "5824c310ffb9363dbb9e50c194f23733928b131edfc78c18a6123ef30a63605c"
+  },
+  "notValidated": [
+    "fresh Python installation",
+    "all Python versions",
+    "browser UI",
+    "full-site build",
+    "macroeconomic models",
+    "real market evidence"
+  ]
+}

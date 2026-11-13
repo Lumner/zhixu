@@ -1,10 +1,10 @@
 {
-  "date": "2026-11-12",
-  "checks": 925,
-  "courses": 5,
-  "chapters": 188,
-  "documents": 450,
-  "localDocumentAndFileLinks": 2023,
+  "date": "2026-11-13",
+  "checks": 1137,
+  "courses": 6,
+  "chapters": 248,
+  "documents": 556,
+  "localDocumentAndFileLinks": 2421,
   "diagrams": 31,
   "browserQA": false
 }

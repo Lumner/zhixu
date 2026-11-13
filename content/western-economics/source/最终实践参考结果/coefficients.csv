@@ -1,0 +1,8 @@
+model,term,coefficient
+simple,intercept,6.9999999999999885
+simple,income,0.3333333333333333
+controlled,intercept,9.999999999999998
+controlled,income,0.20000000000000026
+controlled,background,6.000000000000005
+without_H08,intercept,7.631578947368422
+without_H08,income,0.3157894736842106

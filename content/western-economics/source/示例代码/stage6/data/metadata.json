@@ -1,0 +1,19 @@
+{
+  "kind": "synthetic_teaching_data",
+  "createdFor": "western-economics chapters 33-38",
+  "createdDate": "2026-11-13",
+  "notice": "All six CSV tables and accounts.json are invented teaching data, not official statistics.",
+  "datasets": {
+    "value_added.csv": {"unit": "toy currency per teaching period", "scope": "one domestic production chain; no product-tax valuation adjustment"},
+    "goods.csv": {"unit": "prices: toy currency per unit; quantities: units per period", "scope": "two domestic final goods; fixed base-price volume example"},
+    "producer_prices.csv": {"unit": "prices: toy currency per unit; fixed base quantities", "scope": "independent producer basket, not official PPI weights"},
+    "labour.csv": {"unit": "persons in a common eligible survey population", "scope": "synthetic population; no national demographic estimate"},
+    "quarterly.csv": {"unit": "toy output per quarter at common teaching prices", "frequency": "quarterly", "seasonalAdjustment": "unadjusted", "scope": "invented seasonality and annual step changes"},
+    "vintages.csv": {"unit": "same toy output per quarter", "frequency": "quarterly", "seasonalAdjustment": "unadjusted", "scope": "two fictional publication snapshots, distinct from quarterly.csv"},
+    "accounts.json": {"unit": "toy currency per period", "scope": "independent aggregate economy; G excludes public investment, I includes all capital formation"}
+  },
+  "seasonPattern": [1, 1.1, 1.05, 1.25],
+  "factorNormalization": "Divide the four pattern factors by their arithmetic mean before adjustment.",
+  "syntheticVintageDates": {"initial": "2024-04-30", "revised": "2024-07-31"},
+  "officialReadingFile": "official_reading.json"
+}

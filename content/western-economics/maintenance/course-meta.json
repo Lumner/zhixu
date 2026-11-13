@@ -1,0 +1,32 @@
+{
+  "id": "western-economics",
+  "title": "西方经济学：从零理解与Python实验",
+  "shortTitle": "西方经济学与Python",
+  "category": "social-sciences",
+  "summary": "60章完整入门主线：从经济学与Python零基础，进入微观、宏观核算与政策、开放经济和增长，再完成科学计算、统计与可复现报告。配套练习答案、完整例程和真实验证，明确模型与因果边界。",
+  "level": "经济学与编程零基础",
+  "duration": "约225—320小时，含练习与最终报告",
+  "status": "complete",
+  "updatedAt": "2026-11-13",
+  "tags": ["经济学", "Python", "微观经济学", "宏观经济学", "数据与复现"],
+  "source": "source",
+  "download": "downloads/western-economics-complete.zip",
+  "stats": {"chapters": 60, "examples": 58},
+  "cover": {
+    "eyebrow": "ECONOMICS / PYTHON",
+    "lines": ["西方经济学", "从零理解与计算"],
+    "icon": "book"
+  },
+  "groups": [
+    {"id": "thinking-math", "name": "经济学思维与数学起点", "range": [1, 4], "summary": "从稀缺与机会成本开始，补齐比例、函数、方程和边际思维。"},
+    {"id": "python-start", "name": "Python零基础", "range": [5, 12], "summary": "从文件与终端到函数、数据记录、CSV和调试，每一步都有完整示例。"},
+    {"id": "markets-policy", "name": "供求与政策入门", "range": [13, 18], "summary": "用手算、图解和市场实验台理解均衡、弹性、剩余、税与价格限制。"},
+    {"id": "consumers-producers", "name": "消费者与生产者", "range": [19, 26], "summary": "从偏好、导数和风险到成本最小化、竞争企业、停产退出与劳动需求。"},
+    {"id": "structures-failures", "name": "市场结构与失灵", "range": [27, 32], "summary": "从垄断、博弈和交换均衡，进入外部性、公共品、共有资源和信息问题。"},
+    {"id": "macro-measurement", "name": "宏观指标与核算", "range": [33, 38], "summary": "从GDP、名义实际量、价格和劳动指标，进入部门收支、季度与修订及官方历史数据阅读。"},
+    {"id": "short-run-demand", "name": "短期总需求模型", "range": [39, 44], "summary": "从计划支出与乘数，进入银行账本、货币需求、IS—LM、政策配合和利率下限。"},
+    {"id": "fluctuations-policy", "name": "波动与宏观政策", "range": [45, 50], "summary": "从AD—AS、预期与冲击传播，进入自动稳定器、利率规则和债务动态及其核算边界。"},
+    {"id": "open-growth", "name": "开放经济与长期增长", "range": [51, 56], "summary": "统一汇率与国际收支口径，比较汇率制度、复利、索洛与技术增长，明确宏观模型的假设差异。"},
+    {"id": "data-capstone", "name": "数据分析与完整实践", "range": [57, 60], "summary": "从数组表格和绘图进入统计、抽样、回归与因果边界，完成报告、敏感性和新目录复现。"}
+  ]
+}

@@ -1,0 +1,219 @@
+{
+  "verifiedDate": "2026-11-13",
+  "timezone": "Asia/Shanghai",
+  "stage": 6,
+  "chapters": [
+    33,
+    38
+  ],
+  "python": "3.13.13 (tags/v3.13.13:01104ce, Apr  7 2026, 19:25:48) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "testsRun": 38,
+  "failures": 0,
+  "errors": 0,
+  "successful": true,
+  "subprocessRuns": 19,
+  "preservedPriorFiles": 62,
+  "testLog": "test_cli_bad_parameters_and_help (__main__.FileAndDeliveryChecks.test_cli_bad_parameters_and_help) ... ok\ntest_csv_bom_and_invalid_structure (__main__.FileAndDeliveryChecks.test_csv_bom_and_invalid_structure) ... ok\ntest_integrated_default_with_separate_origins (__main__.FileAndDeliveryChecks.test_integrated_default_with_separate_origins) ... ok\ntest_integrated_independent_parameter_effects (__main__.FileAndDeliveryChecks.test_integrated_independent_parameter_effects) ... ok\ntest_json_shape_account_keys_and_whitelist (__main__.FileAndDeliveryChecks.test_json_shape_account_keys_and_whitelist) ... ok\ntest_previous_chapters_examples_and_data_unchanged (__main__.FileAndDeliveryChecks.test_previous_chapters_examples_and_data_unchanged) ... ok\ntest_six_chapter_entrypoints_from_other_directory (__main__.FileAndDeliveryChecks.test_six_chapter_entrypoints_from_other_directory) ... ok\ntest_zero_volume_and_zero_labor_entrypoint_formatting (__main__.FileAndDeliveryChecks.test_zero_volume_and_zero_labor_entrypoint_formatting) ... ok\ntest_baskets_and_weights (__main__.OutputAndPriceChecks.test_baskets_and_weights) ... ok\ntest_constant_prices_and_constant_quantities (__main__.OutputAndPriceChecks.test_constant_prices_and_constant_quantities) ... ok\ntest_exact_real_rates_and_disinflation (__main__.OutputAndPriceChecks.test_exact_real_rates_and_disinflation) ... ok\ntest_fixed_basket_independent_of_current_quantities (__main__.OutputAndPriceChecks.test_fixed_basket_independent_of_current_quantities) ... ok\ntest_imported_input_changes_domestic_value_added (__main__.OutputAndPriceChecks.test_imported_input_changes_domestic_value_added) ... ok\ntest_inventory_reduction_and_negative_value_added_allowed (__main__.OutputAndPriceChecks.test_inventory_reduction_and_negative_value_added_allowed) ... ok\ntest_nominal_real_and_deflator (__main__.OutputAndPriceChecks.test_nominal_real_and_deflator) ... ok\ntest_price_table_invalid_domains_and_duplicate_goods (__main__.OutputAndPriceChecks.test_price_table_invalid_domains_and_duplicate_goods) ... ok\ntest_production_expenditure_and_double_count (__main__.OutputAndPriceChecks.test_production_expenditure_and_double_count) ... ok\ntest_production_invalid_inputs (__main__.OutputAndPriceChecks.test_production_invalid_inputs) ... ok\ntest_rate_boundaries (__main__.OutputAndPriceChecks.test_rate_boundaries) ... ok\ntest_zero_current_volume_is_not_zero_deflator (__main__.OutputAndPriceChecks.test_zero_current_volume_is_not_zero_deflator) ... ok\ntest_account_known_totals_and_residuals (__main__.PopulationAndAccountsChecks.test_account_known_totals_and_residuals) ... ok\ntest_foreign_income_requires_current_account (__main__.PopulationAndAccountsChecks.test_foreign_income_requires_current_account) ... ok\ntest_inconsistent_accounts_are_reported_not_repaired (__main__.PopulationAndAccountsChecks.test_inconsistent_accounts_are_reported_not_repaired) ... ok\ntest_labor_indicator_identity (__main__.PopulationAndAccountsChecks.test_labor_indicator_identity) ... ok\ntest_labor_invalid_counts_and_population (__main__.PopulationAndAccountsChecks.test_labor_invalid_counts_and_population) ... ok\ntest_labor_zero_denominators (__main__.PopulationAndAccountsChecks.test_labor_zero_denominators) ... ok\ntest_stage_exercises_independent_parameters (__main__.PopulationAndAccountsChecks.test_stage_exercises_independent_parameters) ... ok\ntest_tax_reallocation_does_not_forecast_behavior (__main__.PopulationAndAccountsChecks.test_tax_reallocation_does_not_forecast_behavior) ... ok\ntest_three_labor_scenarios (__main__.PopulationAndAccountsChecks.test_three_labor_scenarios) ... ok\ntest_annual_total_rejects_incomplete_year (__main__.TimeAndProvenanceChecks.test_annual_total_rejects_incomplete_year) ... ok\ntest_annual_totals_and_growth (__main__.TimeAndProvenanceChecks.test_annual_totals_and_growth) ... ok\ntest_cumulative_to_quarterly_resets_at_new_year (__main__.TimeAndProvenanceChecks.test_cumulative_to_quarterly_resets_at_new_year) ... ok\ntest_data_provenance_and_official_manual_excerpt (__main__.TimeAndProvenanceChecks.test_data_provenance_and_official_manual_excerpt) ... ok\ntest_known_factor_adjustment_and_special_annual_preservation (__main__.TimeAndProvenanceChecks.test_known_factor_adjustment_and_special_annual_preservation) ... ok\ntest_normalization_does_not_preserve_arbitrary_annual_totals (__main__.TimeAndProvenanceChecks.test_normalization_does_not_preserve_arbitrary_annual_totals) ... ok\ntest_period_gaps_duplicates_and_invalid_quarters (__main__.TimeAndProvenanceChecks.test_period_gaps_duplicates_and_invalid_quarters) ... ok\ntest_quarterly_yoy_and_qoq_and_initial_missing (__main__.TimeAndProvenanceChecks.test_quarterly_yoy_and_qoq_and_initial_missing) ... ok\ntest_vintage_consistency_and_mixed_error (__main__.TimeAndProvenanceChecks.test_vintage_consistency_and_mixed_error) ... ok\n\n----------------------------------------------------------------------\nRan 38 tests in 2.747s\n\nOK\n",
+  "runs": [
+    {
+      "program": "macro_lab.py",
+      "args": [
+        "--scenario",
+        "unknown"
+      ],
+      "exitCode": 2,
+      "stdout": "",
+      "stderr": "usage: macro_lab.py [-h] [--scenario {base,discouraged,job_growth}]\n                    [--nominal-rate NOMINAL_RATE] [--inflation INFLATION]\n                    [--vintage {initial,revised}]\nmacro_lab.py: error: argument --scenario: invalid choice: 'unknown' (choose from base, discouraged, job_growth)\n"
+    },
+    {
+      "program": "macro_lab.py",
+      "args": [
+        "--vintage",
+        "mixed"
+      ],
+      "exitCode": 2,
+      "stdout": "",
+      "stderr": "usage: macro_lab.py [-h] [--scenario {base,discouraged,job_growth}]\n                    [--nominal-rate NOMINAL_RATE] [--inflation INFLATION]\n                    [--vintage {initial,revised}]\nmacro_lab.py: error: argument --vintage: invalid choice: 'mixed' (choose from initial, revised)\n"
+    },
+    {
+      "program": "macro_lab.py",
+      "args": [
+        "--nominal-rate",
+        "-1"
+      ],
+      "exitCode": 2,
+      "stdout": "",
+      "stderr": "usage: macro_lab.py [-h] [--scenario {base,discouraged,job_growth}]\n                    [--nominal-rate NOMINAL_RATE] [--inflation INFLATION]\n                    [--vintage {initial,revised}]\nmacro_lab.py: error: nominal_rate outside measurement domain\n"
+    },
+    {
+      "program": "macro_lab.py",
+      "args": [
+        "--inflation",
+        "-1"
+      ],
+      "exitCode": 2,
+      "stdout": "",
+      "stderr": "usage: macro_lab.py [-h] [--scenario {base,discouraged,job_growth}]\n                    [--nominal-rate NOMINAL_RATE] [--inflation INFLATION]\n                    [--vintage {initial,revised}]\nmacro_lab.py: error: price_growth outside measurement domain\n"
+    },
+    {
+      "program": "macro_lab.py",
+      "args": [
+        "--inflation",
+        "nan"
+      ],
+      "exitCode": 2,
+      "stdout": "",
+      "stderr": "usage: macro_lab.py [-h] [--scenario {base,discouraged,job_growth}]\n                    [--nominal-rate NOMINAL_RATE] [--inflation INFLATION]\n                    [--vintage {initial,revised}]\nmacro_lab.py: error: price_growth must be a finite number\n"
+    },
+    {
+      "program": "macro_lab.py",
+      "args": [
+        "--nominal-rate",
+        "inf"
+      ],
+      "exitCode": 2,
+      "stdout": "",
+      "stderr": "usage: macro_lab.py [-h] [--scenario {base,discouraged,job_growth}]\n                    [--nominal-rate NOMINAL_RATE] [--inflation INFLATION]\n                    [--vintage {initial,revised}]\nmacro_lab.py: error: nominal_rate must be a finite number\n"
+    },
+    {
+      "program": "macro_lab.py",
+      "args": [
+        "--inflation",
+        "oops"
+      ],
+      "exitCode": 2,
+      "stdout": "",
+      "stderr": "usage: macro_lab.py [-h] [--scenario {base,discouraged,job_growth}]\n                    [--nominal-rate NOMINAL_RATE] [--inflation INFLATION]\n                    [--vintage {initial,revised}]\nmacro_lab.py: error: argument --inflation: invalid float value: 'oops'\n"
+    },
+    {
+      "program": "macro_lab.py",
+      "args": [
+        "--help"
+      ],
+      "exitCode": 0,
+      "stdout": "usage: macro_lab.py [-h] [--scenario {base,discouraged,job_growth}]\n                    [--nominal-rate NOMINAL_RATE] [--inflation INFLATION]\n                    [--vintage {initial,revised}]\n\nSynthetic macro measurement experiments v0.3\n\noptions:\n  -h, --help            show this help message and exit\n  --scenario {base,discouraged,job_growth}\n  --nominal-rate NOMINAL_RATE\n  --inflation INFLATION\n  --vintage {initial,revised}\n",
+      "stderr": ""
+    },
+    {
+      "program": "macro_lab.py",
+      "args": [],
+      "exitCode": 0,
+      "stdout": "{\n  \"version\": \"0.3\",\n  \"scope\": \"Independent synthetic accounting examples; no behavioral forecast; official excerpt kept separate\",\n  \"production_chain\": {\n    \"stages\": [\n      {\n        \"stage\": \"farm\",\n        \"value_added\": 100.0\n      },\n      {\n        \"stage\": \"mill\",\n        \"value_added\": 60.0\n      },\n      {\n        \"stage\": \"bakery\",\n        \"value_added\": 90.0\n      }\n    ],\n    \"gdp\": 250.0,\n    \"naive_output_sum\": 510.0\n  },\n  \"price_volume\": {\n    \"base_nominal\": 1000.0,\n    \"current_nominal\": 1500.0,\n    \"current_real_at_base_prices\": 1200.0,\n    \"deflator_base_100\": 125.0,\n    \"nominal_growth\": 0.5,\n    \"real_growth\": 0.19999999999999996,\n    \"deflator_growth\": 0.25\n  },\n  \"consumer_basket\": {\n    \"base_cost\": 1000.0,\n    \"current_cost_of_base_basket\": 1350.0,\n    \"index_base_100\": 135.0,\n    \"inflation_since_base\": 0.3500000000000001,\n    \"base_expenditure_weights\": {\n      \"bread\": 0.5,\n      \"milk\": 0.5\n    }\n  },\n  \"producer_basket\": {\n    \"base_cost\": 100.0,\n    \"current_cost_of_base_basket\": 108.0,\n    \"index_base_100\": 108.0,\n    \"inflation_since_base\": 0.08000000000000007,\n    \"base_expenditure_weights\": {\n      \"steel\": 0.6,\n      \"chemicals\": 0.4\n    }\n  },\n  \"real_interest\": 0.04761904761904767,\n  \"labour\": {\n    \"population\": 1000.0,\n    \"employed\": 600.0,\n    \"unemployed\": 60.0,\n    \"outside\": 340.0,\n    \"labour_force\": 660.0,\n    \"unemployment_rate\": 0.09090909090909091,\n    \"participation_rate\": 0.66,\n    \"employment_population_ratio\": 0.6\n  },\n  \"accounts\": {\n    \"gdp_expenditure\": 1000,\n    \"gdp_residual\": 0,\n    \"consistent\": true,\n    \"net_exports\": 20,\n    \"gross_national_disposable_income\": 1000,\n    \"private_gross_saving\": 180,\n    \"government_gross_saving\": 40,\n    \"national_gross_saving\": 220,\n    \"investment\": 200,\n    \"current_account\": 20,\n    \"saving_investment_current_account_residual\": 0\n  },\n  \"quarterly\": [\n    {\n      \"year\": 2023,\n      \"quarter\": 1,\n      \"value\": 100.0,\n      \"qoq\": null,\n      \"yoy\": null\n    },\n    {\n      \"year\": 2023,\n      \"quarter\": 2,\n      \"value\": 110.0,\n      \"qoq\": 0.10000000000000009,\n      \"yoy\": null\n    },\n    {\n      \"year\": 2023,\n      \"quarter\": 3,\n      \"value\": 105.0,\n      \"qoq\": -0.045454545454545414,\n      \"yoy\": null\n    },\n    {\n      \"year\": 2023,\n      \"quarter\": 4,\n      \"value\": 125.0,\n      \"qoq\": 0.19047619047619047,\n      \"yoy\": null\n    },\n    {\n      \"year\": 2024,\n      \"quarter\": 1,\n      \"value\": 108.0,\n      \"qoq\": -0.136,\n      \"yoy\": 0.08000000000000007\n    },\n    {\n      \"year\": 2024,\n      \"quarter\": 2,\n      \"value\": 118.8,\n      \"qoq\": 0.09999999999999987,\n      \"yoy\": 0.08000000000000007\n    },\n    {\n      \"year\": 2024,\n      \"quarter\": 3,\n      \"value\": 113.4,\n      \"qoq\": -0.045454545454545414,\n      \"yoy\": 0.08000000000000007\n    },\n    {\n      \"year\": 2024,\n      \"quarter\": 4,\n      \"value\": 135.0,\n      \"qoq\": 0.19047619047619047,\n      \"yoy\": 0.08000000000000007\n    },\n    {\n      \"year\": 2025,\n      \"quarter\": 1,\n      \"value\": 112.32,\n      \"qoq\": -0.16800000000000004,\n      \"yoy\": 0.040000000000000036\n    },\n    {\n      \"year\": 2025,\n      \"quarter\": 2,\n      \"value\": 123.552,\n      \"qoq\": 0.10000000000000009,\n      \"yoy\": 0.040000000000000036\n    },\n    {\n      \"year\": 2025,\n      \"quarter\": 3,\n      \"value\": 117.936,\n      \"qoq\": -0.045454545454545414,\n      \"yoy\": 0.040000000000000036\n    },\n    {\n      \"year\": 2025,\n      \"quarter\": 4,\n      \"value\": 140.4,\n      \"qoq\": 0.19047619047619047,\n      \"yoy\": 0.040000000000000036\n    }\n  ],\n  \"annual_totals\": {\n    \"2023\": 440.0,\n    \"2024\": 475.2,\n    \"2025\": 494.208\n  },\n  \"vintage\": \"revised\",\n  \"vintage_growth\": 0.07920792079207928,\n  \"data_origin\": \"synthetic_teaching_data\",\n  \"official_reading\": {\n    \"kind\": \"official_publication_excerpt\",\n    \"publisher\": \"\\u56fd\\u5bb6\\u7edf\\u8ba1\\u5c40\",\n    \"title\": \"\\u56fd\\u5bb6\\u7edf\\u8ba1\\u5c40\\u5173\\u4e8e2024\\u5e74\\u56fd\\u5185\\u751f\\u4ea7\\u603b\\u503c\\u6700\\u7ec8\\u6838\\u5b9e\\u7684\\u516c\\u544a\",\n    \"url\": \"https://www.stats.gov.cn/sj/zxfbhjd/202512/t20251226_1962144.html\",\n    \"publishedDate\": \"2025-12-26\",\n    \"accessedDate\": \"2026-11-13\",\n    \"referencePeriod\": \"2024 full calendar year\",\n    \"frequency\": \"annual\",\n    \"nominalUnit\": \"\\u4ebf\\u5143\",\n    \"nominalGdpAsPublished\": 1348066,\n    \"nominalRevisionVersusPreliminary\": -1018,\n    \"realGrowthRateAsPublished\": 0.05,\n    \"realGrowthRevisionPercentagePoints\": 0,\n    \"status\": \"final verification in this historical publication\",\n    \"scopeNote\": \"A small manually recorded reading excerpt, not the full official dataset or a claim about the latest available GDP.\",\n    \"usedAsSyntheticModelInput\": false\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "program": "macro_lab.py",
+      "args": [
+        "--scenario",
+        "discouraged",
+        "--vintage",
+        "initial",
+        "--nominal-rate",
+        "0.03",
+        "--inflation",
+        "0.05"
+      ],
+      "exitCode": 0,
+      "stdout": "{\n  \"version\": \"0.3\",\n  \"scope\": \"Independent synthetic accounting examples; no behavioral forecast; official excerpt kept separate\",\n  \"production_chain\": {\n    \"stages\": [\n      {\n        \"stage\": \"farm\",\n        \"value_added\": 100.0\n      },\n      {\n        \"stage\": \"mill\",\n        \"value_added\": 60.0\n      },\n      {\n        \"stage\": \"bakery\",\n        \"value_added\": 90.0\n      }\n    ],\n    \"gdp\": 250.0,\n    \"naive_output_sum\": 510.0\n  },\n  \"price_volume\": {\n    \"base_nominal\": 1000.0,\n    \"current_nominal\": 1500.0,\n    \"current_real_at_base_prices\": 1200.0,\n    \"deflator_base_100\": 125.0,\n    \"nominal_growth\": 0.5,\n    \"real_growth\": 0.19999999999999996,\n    \"deflator_growth\": 0.25\n  },\n  \"consumer_basket\": {\n    \"base_cost\": 1000.0,\n    \"current_cost_of_base_basket\": 1350.0,\n    \"index_base_100\": 135.0,\n    \"inflation_since_base\": 0.3500000000000001,\n    \"base_expenditure_weights\": {\n      \"bread\": 0.5,\n      \"milk\": 0.5\n    }\n  },\n  \"producer_basket\": {\n    \"base_cost\": 100.0,\n    \"current_cost_of_base_basket\": 108.0,\n    \"index_base_100\": 108.0,\n    \"inflation_since_base\": 0.08000000000000007,\n    \"base_expenditure_weights\": {\n      \"steel\": 0.6,\n      \"chemicals\": 0.4\n    }\n  },\n  \"real_interest\": -0.01904761904761909,\n  \"labour\": {\n    \"population\": 1000.0,\n    \"employed\": 600.0,\n    \"unemployed\": 40.0,\n    \"outside\": 360.0,\n    \"labour_force\": 640.0,\n    \"unemployment_rate\": 0.0625,\n    \"participation_rate\": 0.64,\n    \"employment_population_ratio\": 0.6\n  },\n  \"accounts\": {\n    \"gdp_expenditure\": 1000,\n    \"gdp_residual\": 0,\n    \"consistent\": true,\n    \"net_exports\": 20,\n    \"gross_national_disposable_income\": 1000,\n    \"private_gross_saving\": 180,\n    \"government_gross_saving\": 40,\n    \"national_gross_saving\": 220,\n    \"investment\": 200,\n    \"current_account\": 20,\n    \"saving_investment_current_account_residual\": 0\n  },\n  \"quarterly\": [\n    {\n      \"year\": 2023,\n      \"quarter\": 1,\n      \"value\": 100.0,\n      \"qoq\": null,\n      \"yoy\": null\n    },\n    {\n      \"year\": 2023,\n      \"quarter\": 2,\n      \"value\": 110.0,\n      \"qoq\": 0.10000000000000009,\n      \"yoy\": null\n    },\n    {\n      \"year\": 2023,\n      \"quarter\": 3,\n      \"value\": 105.0,\n      \"qoq\": -0.045454545454545414,\n      \"yoy\": null\n    },\n    {\n      \"year\": 2023,\n      \"quarter\": 4,\n      \"value\": 125.0,\n      \"qoq\": 0.19047619047619047,\n      \"yoy\": null\n    },\n    {\n      \"year\": 2024,\n      \"quarter\": 1,\n      \"value\": 108.0,\n      \"qoq\": -0.136,\n      \"yoy\": 0.08000000000000007\n    },\n    {\n      \"year\": 2024,\n      \"quarter\": 2,\n      \"value\": 118.8,\n      \"qoq\": 0.09999999999999987,\n      \"yoy\": 0.08000000000000007\n    },\n    {\n      \"year\": 2024,\n      \"quarter\": 3,\n      \"value\": 113.4,\n      \"qoq\": -0.045454545454545414,\n      \"yoy\": 0.08000000000000007\n    },\n    {\n      \"year\": 2024,\n      \"quarter\": 4,\n      \"value\": 135.0,\n      \"qoq\": 0.19047619047619047,\n      \"yoy\": 0.08000000000000007\n    },\n    {\n      \"year\": 2025,\n      \"quarter\": 1,\n      \"value\": 112.32,\n      \"qoq\": -0.16800000000000004,\n      \"yoy\": 0.040000000000000036\n    },\n    {\n      \"year\": 2025,\n      \"quarter\": 2,\n      \"value\": 123.552,\n      \"qoq\": 0.10000000000000009,\n      \"yoy\": 0.040000000000000036\n    },\n    {\n      \"year\": 2025,\n      \"quarter\": 3,\n      \"value\": 117.936,\n      \"qoq\": -0.045454545454545414,\n      \"yoy\": 0.040000000000000036\n    },\n    {\n      \"year\": 2025,\n      \"quarter\": 4,\n      \"value\": 140.4,\n      \"qoq\": 0.19047619047619047,\n      \"yoy\": 0.040000000000000036\n    }\n  ],\n  \"annual_totals\": {\n    \"2023\": 440.0,\n    \"2024\": 475.2,\n    \"2025\": 494.208\n  },\n  \"vintage\": \"initial\",\n  \"vintage_growth\": 0.08000000000000007,\n  \"data_origin\": \"synthetic_teaching_data\",\n  \"official_reading\": {\n    \"kind\": \"official_publication_excerpt\",\n    \"publisher\": \"\\u56fd\\u5bb6\\u7edf\\u8ba1\\u5c40\",\n    \"title\": \"\\u56fd\\u5bb6\\u7edf\\u8ba1\\u5c40\\u5173\\u4e8e2024\\u5e74\\u56fd\\u5185\\u751f\\u4ea7\\u603b\\u503c\\u6700\\u7ec8\\u6838\\u5b9e\\u7684\\u516c\\u544a\",\n    \"url\": \"https://www.stats.gov.cn/sj/zxfbhjd/202512/t20251226_1962144.html\",\n    \"publishedDate\": \"2025-12-26\",\n    \"accessedDate\": \"2026-11-13\",\n    \"referencePeriod\": \"2024 full calendar year\",\n    \"frequency\": \"annual\",\n    \"nominalUnit\": \"\\u4ebf\\u5143\",\n    \"nominalGdpAsPublished\": 1348066,\n    \"nominalRevisionVersusPreliminary\": -1018,\n    \"realGrowthRateAsPublished\": 0.05,\n    \"realGrowthRevisionPercentagePoints\": 0,\n    \"status\": \"final verification in this historical publication\",\n    \"scopeNote\": \"A small manually recorded reading excerpt, not the full official dataset or a claim about the latest available GDP.\",\n    \"usedAsSyntheticModelInput\": false\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "program": "macro_lab.py",
+      "args": [
+        "--scenario",
+        "job_growth"
+      ],
+      "exitCode": 0,
+      "stdout": "{\n  \"version\": \"0.3\",\n  \"scope\": \"Independent synthetic accounting examples; no behavioral forecast; official excerpt kept separate\",\n  \"production_chain\": {\n    \"stages\": [\n      {\n        \"stage\": \"farm\",\n        \"value_added\": 100.0\n      },\n      {\n        \"stage\": \"mill\",\n        \"value_added\": 60.0\n      },\n      {\n        \"stage\": \"bakery\",\n        \"value_added\": 90.0\n      }\n    ],\n    \"gdp\": 250.0,\n    \"naive_output_sum\": 510.0\n  },\n  \"price_volume\": {\n    \"base_nominal\": 1000.0,\n    \"current_nominal\": 1500.0,\n    \"current_real_at_base_prices\": 1200.0,\n    \"deflator_base_100\": 125.0,\n    \"nominal_growth\": 0.5,\n    \"real_growth\": 0.19999999999999996,\n    \"deflator_growth\": 0.25\n  },\n  \"consumer_basket\": {\n    \"base_cost\": 1000.0,\n    \"current_cost_of_base_basket\": 1350.0,\n    \"index_base_100\": 135.0,\n    \"inflation_since_base\": 0.3500000000000001,\n    \"base_expenditure_weights\": {\n      \"bread\": 0.5,\n      \"milk\": 0.5\n    }\n  },\n  \"producer_basket\": {\n    \"base_cost\": 100.0,\n    \"current_cost_of_base_basket\": 108.0,\n    \"index_base_100\": 108.0,\n    \"inflation_since_base\": 0.08000000000000007,\n    \"base_expenditure_weights\": {\n      \"steel\": 0.6,\n      \"chemicals\": 0.4\n    }\n  },\n  \"real_interest\": 0.04761904761904767,\n  \"labour\": {\n    \"population\": 1000.0,\n    \"employed\": 620.0,\n    \"unemployed\": 40.0,\n    \"outside\": 340.0,\n    \"labour_force\": 660.0,\n    \"unemployment_rate\": 0.06060606060606061,\n    \"participation_rate\": 0.66,\n    \"employment_population_ratio\": 0.62\n  },\n  \"accounts\": {\n    \"gdp_expenditure\": 1000,\n    \"gdp_residual\": 0,\n    \"consistent\": true,\n    \"net_exports\": 20,\n    \"gross_national_disposable_income\": 1000,\n    \"private_gross_saving\": 180,\n    \"government_gross_saving\": 40,\n    \"national_gross_saving\": 220,\n    \"investment\": 200,\n    \"current_account\": 20,\n    \"saving_investment_current_account_residual\": 0\n  },\n  \"quarterly\": [\n    {\n      \"year\": 2023,\n      \"quarter\": 1,\n      \"value\": 100.0,\n      \"qoq\": null,\n      \"yoy\": null\n    },\n    {\n      \"year\": 2023,\n      \"quarter\": 2,\n      \"value\": 110.0,\n      \"qoq\": 0.10000000000000009,\n      \"yoy\": null\n    },\n    {\n      \"year\": 2023,\n      \"quarter\": 3,\n      \"value\": 105.0,\n      \"qoq\": -0.045454545454545414,\n      \"yoy\": null\n    },\n    {\n      \"year\": 2023,\n      \"quarter\": 4,\n      \"value\": 125.0,\n      \"qoq\": 0.19047619047619047,\n      \"yoy\": null\n    },\n    {\n      \"year\": 2024,\n      \"quarter\": 1,\n      \"value\": 108.0,\n      \"qoq\": -0.136,\n      \"yoy\": 0.08000000000000007\n    },\n    {\n      \"year\": 2024,\n      \"quarter\": 2,\n      \"value\": 118.8,\n      \"qoq\": 0.09999999999999987,\n      \"yoy\": 0.08000000000000007\n    },\n    {\n      \"year\": 2024,\n      \"quarter\": 3,\n      \"value\": 113.4,\n      \"qoq\": -0.045454545454545414,\n      \"yoy\": 0.08000000000000007\n    },\n    {\n      \"year\": 2024,\n      \"quarter\": 4,\n      \"value\": 135.0,\n      \"qoq\": 0.19047619047619047,\n      \"yoy\": 0.08000000000000007\n    },\n    {\n      \"year\": 2025,\n      \"quarter\": 1,\n      \"value\": 112.32,\n      \"qoq\": -0.16800000000000004,\n      \"yoy\": 0.040000000000000036\n    },\n    {\n      \"year\": 2025,\n      \"quarter\": 2,\n      \"value\": 123.552,\n      \"qoq\": 0.10000000000000009,\n      \"yoy\": 0.040000000000000036\n    },\n    {\n      \"year\": 2025,\n      \"quarter\": 3,\n      \"value\": 117.936,\n      \"qoq\": -0.045454545454545414,\n      \"yoy\": 0.040000000000000036\n    },\n    {\n      \"year\": 2025,\n      \"quarter\": 4,\n      \"value\": 140.4,\n      \"qoq\": 0.19047619047619047,\n      \"yoy\": 0.040000000000000036\n    }\n  ],\n  \"annual_totals\": {\n    \"2023\": 440.0,\n    \"2024\": 475.2,\n    \"2025\": 494.208\n  },\n  \"vintage\": \"revised\",\n  \"vintage_growth\": 0.07920792079207928,\n  \"data_origin\": \"synthetic_teaching_data\",\n  \"official_reading\": {\n    \"kind\": \"official_publication_excerpt\",\n    \"publisher\": \"\\u56fd\\u5bb6\\u7edf\\u8ba1\\u5c40\",\n    \"title\": \"\\u56fd\\u5bb6\\u7edf\\u8ba1\\u5c40\\u5173\\u4e8e2024\\u5e74\\u56fd\\u5185\\u751f\\u4ea7\\u603b\\u503c\\u6700\\u7ec8\\u6838\\u5b9e\\u7684\\u516c\\u544a\",\n    \"url\": \"https://www.stats.gov.cn/sj/zxfbhjd/202512/t20251226_1962144.html\",\n    \"publishedDate\": \"2025-12-26\",\n    \"accessedDate\": \"2026-11-13\",\n    \"referencePeriod\": \"2024 full calendar year\",\n    \"frequency\": \"annual\",\n    \"nominalUnit\": \"\\u4ebf\\u5143\",\n    \"nominalGdpAsPublished\": 1348066,\n    \"nominalRevisionVersusPreliminary\": -1018,\n    \"realGrowthRateAsPublished\": 0.05,\n    \"realGrowthRevisionPercentagePoints\": 0,\n    \"status\": \"final verification in this historical publication\",\n    \"scopeNote\": \"A small manually recorded reading excerpt, not the full official dataset or a claim about the latest available GDP.\",\n    \"usedAsSyntheticModelInput\": false\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "program": "gdp_accounting.py",
+      "args": [],
+      "exitCode": 0,
+      "stdout": "farm: value added=100.00\nmill: value added=60.00\nbakery: value added=90.00\nGDP=250.00; naive sales sum=510.00\nFinal expenditure: 250.00\nImported-input variant: production=230.00, expenditure=230.00\n",
+      "stderr": ""
+    },
+    {
+      "program": "price_volume.py",
+      "args": [],
+      "exitCode": 0,
+      "stdout": "Nominal GDP: 1000.00 -> 1500.00\nCurrent real GDP at base prices: 1200.00\nGDP deflator (base=100): 125.00\nGrowth: nominal=50.00%, real=20.00%, deflator=25.00%\n",
+      "stderr": ""
+    },
+    {
+      "program": "inflation.py",
+      "args": [],
+      "exitCode": 0,
+      "stdout": "Teaching consumer basket index: 135.00\nIndependent producer basket index: 108.00\nExact real interest at i=10%, inflation=5%: 4.761905%\nReal income change with nominal +10%, prices +35%: -18.518519%\nSeparate index sequence 100 -> 135 -> 140.4: 35.0%, then 4.0%\n",
+      "stderr": ""
+    },
+    {
+      "program": "labour.py",
+      "args": [],
+      "exitCode": 0,
+      "stdout": "base: E=600, U=60, LF=660, unemployment=9.090909%, participation=66.000000%, E/pop=60.000000%\ndiscouraged: E=600, U=40, LF=640, unemployment=6.250000%, participation=64.000000%, E/pop=60.000000%\njob_growth: E=620, U=40, LF=660, unemployment=6.060606%, participation=66.000000%, E/pop=62.000000%\n",
+      "stderr": ""
+    },
+    {
+      "program": "sector_balances.py",
+      "args": [],
+      "exitCode": 0,
+      "stdout": "GDP residual: 0.000000\nSaving: private=180.00, government=40.00, national=220.00\nI + NX = 200.00 + 20.00\nExternal-income variant: GNDI=1005.00, saving=225.00, current account=25.00\n",
+      "stderr": ""
+    },
+    {
+      "program": "data_reading.py",
+      "args": [],
+      "exitCode": 0,
+      "stdout": "Synthetic 2024Q1: raw QoQ=-13.60%, YoY=8.00%, known-factor adjusted QoQ=8.00%\nSynthetic full-year totals: {'2023': 440.0, '2024': 475.2, '2025': 494.208}\nSame-vintage growth: initial=8.000000%, revised=7.920792%\nHistorical official excerpt: period=2024 full calendar year; published=2025-12-26; nominal GDP=1348066 (unit: 100 million yuan)\nOfficial excerpt is not a synthetic model input and is not labeled as latest GDP.\n",
+      "stderr": ""
+    },
+    {
+      "program": "price_volume.py",
+      "args": [],
+      "exitCode": 0,
+      "stdout": "Nominal GDP: 1000.00 -> 0.00\nCurrent real GDP at base prices: 0.00\nGDP deflator (base=100): undefined\nGrowth: nominal=-100.00%, real=-100.00%, deflator=undefined\n",
+      "stderr": ""
+    },
+    {
+      "program": "labour.py",
+      "args": [],
+      "exitCode": 0,
+      "stdout": "base: E=0, U=0, LF=0, unemployment=undefined, participation=0.000000%, E/pop=0.000000%\n",
+      "stderr": ""
+    }
+  ],
+  "sourceHashes": {
+    "示例代码/stage6/data/accounts.json": "82c3d7f40c55f819b03d4a62e1f8bbe34d525f4d2e4dbe635a8c52f42dda51d4",
+    "示例代码/stage6/data/goods.csv": "e5dbf10399831314cf224f9f7e9070049fd448c1968a8e4dcaa07fc5d89eff0f",
+    "示例代码/stage6/data/labour.csv": "3d7a0331ca80f53d2c10e329b5975e2963ebba6a51b0dd57859f0c77ac462257",
+    "示例代码/stage6/data/metadata.json": "f432556824aa855514a8d21226e743d09a7887650ed74dc00e0713dd541f0abf",
+    "示例代码/stage6/data/official_reading.json": "9f95cd4939600745c7a5122222d44bde4861bf8ed55e4ad09448c4b4badb94f0",
+    "示例代码/stage6/data/producer_prices.csv": "f873353f9832bdeeacd4542ee5a6289d11710f4a0692c8e7bd73263b5c873553",
+    "示例代码/stage6/data/quarterly.csv": "a0154504faf9d80187d7a7d83ef7dd0b301f19f10d70477a64e6c087f2fafad2",
+    "示例代码/stage6/data/value_added.csv": "cad4b6bfd22ea1dc4732ec385868d9c9e6fe01a7bc8db793ec3987d1cbfa15f8",
+    "示例代码/stage6/data/vintages.csv": "91b07ef5506b33f4041561182f234612252a3eff818b02aa9b19b053dc71709c",
+    "示例代码/stage6/data_reading.py": "5512268315ed8dc2f6244b1d136250422033084e04a28f20e88cad6789c72e39",
+    "示例代码/stage6/gdp_accounting.py": "7f513b1ebb60ad28a3734b9099b4e1c132518e34c71f8a64a35573aca0450f70",
+    "示例代码/stage6/inflation.py": "b8a2e6424aaaf6dbd74a792f3823cee3dba65be3387bce1ab328bdd2b42fc63a",
+    "示例代码/stage6/labour.py": "8f6ddf99bf676deda29f799aa99aeac383d48e07991e6751bf976a92f3f28567",
+    "示例代码/stage6/macro.py": "3146a4c369bfae000d4dc745920d7b605a679ef8bcb9760762c291068cb026f5",
+    "示例代码/stage6/macro_lab.py": "3d2981774ed6cf485abea7ef99f6fa60688079ec360df3b60a2963dacb9ee71e",
+    "示例代码/stage6/price_volume.py": "e38b5bfa2d4c4c5c724e06e9a9fb3757a5d65b7ebca4723bcb0e010eb24f3ad6",
+    "示例代码/stage6/sector_balances.py": "f1e9aa92f2ef0d898bf34cdb142209d6f07c3e202bb25cee3dc19edd8b2c2f20"
+  },
+  "notValidated": [
+    "fresh installation",
+    "all OS/Python versions",
+    "official seasonal estimation",
+    "full official data snapshot",
+    "live API",
+    "current youth subgroup unemployment",
+    "causal macro forecasts",
+    "chapters 39-60",
+    "site build",
+    "browser UI"
+  ]
+}

@@ -1,0 +1,190 @@
+{
+  "verifiedDate": "2026-11-13",
+  "timezone": "Asia/Shanghai",
+  "stage": 4,
+  "chapters": [
+    19,
+    26
+  ],
+  "python": "3.13.13 (tags/v3.13.13:01104ce, Apr  7 2026, 19:25:48) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "testsRun": 41,
+  "failures": 0,
+  "errors": 0,
+  "successful": true,
+  "subprocessRuns": 17,
+  "preservedPriorFiles": 30,
+  "testLog": "test_budget_residuals_and_first_order_condition (__main__.ConsumerChecks.test_budget_residuals_and_first_order_condition) ... ok\ntest_finite_difference_known_values (__main__.ConsumerChecks.test_finite_difference_known_values) ... ok\ntest_grid_approximation (__main__.ConsumerChecks.test_grid_approximation) ... ok\ntest_grid_endpoint_is_available (__main__.ConsumerChecks.test_grid_endpoint_is_available) ... ok\ntest_invalid_consumer_and_difference_inputs (__main__.ConsumerChecks.test_invalid_consumer_and_difference_inputs) ... ok\ntest_known_choice_and_utility (__main__.ConsumerChecks.test_known_choice_and_utility) ... ok\ntest_linear_corner_and_tie (__main__.ConsumerChecks.test_linear_corner_and_tie) ... ok\ntest_nominal_rescaling_invariant (__main__.ConsumerChecks.test_nominal_rescaling_invariant) ... ok\ntest_slutsky_affordability_and_add_up (__main__.ConsumerChecks.test_slutsky_affordability_and_add_up) ... ok\ntest_slutsky_known_answers (__main__.ConsumerChecks.test_slutsky_known_answers) ... ok\ntest_slutsky_price_rise_and_no_change (__main__.ConsumerChecks.test_slutsky_price_rise_and_no_change) ... ok\ntest_zero_income (__main__.ConsumerChecks.test_zero_income) ... ok\ntest_cli_invalid_inputs_and_help (__main__.DeliveryChecks.test_cli_invalid_inputs_and_help) ... ok\ntest_eight_chapter_entrypoints (__main__.DeliveryChecks.test_eight_chapter_entrypoints) ... ok\ntest_integrated_changed_parameters (__main__.DeliveryChecks.test_integrated_changed_parameters) ... ok\ntest_integrated_default_report (__main__.DeliveryChecks.test_integrated_default_report) ... ok\ntest_prior_chapters_and_examples_unchanged (__main__.DeliveryChecks.test_prior_chapters_and_examples_unchanged) ... ok\ntest_average_total_cost_minimum (__main__.ProducerChecks.test_average_total_cost_minimum) ... ok\ntest_cost_zero_and_known_table (__main__.ProducerChecks.test_cost_zero_and_known_table) ... ok\ntest_firm_known_price_scenarios (__main__.ProducerChecks.test_firm_known_price_scenarios) ... ok\ntest_firm_maximum_against_neighbor_outputs (__main__.ProducerChecks.test_firm_maximum_against_neighbor_outputs) ... ok\ntest_fixed_cost_changes_profit_not_short_run_output (__main__.ProducerChecks.test_fixed_cost_changes_profit_not_short_run_output) ... ok\ntest_invalid_production (__main__.ProducerChecks.test_invalid_production) ... ok\ntest_labor_boundaries_and_no_revenue (__main__.ProducerChecks.test_labor_boundaries_and_no_revenue) ... ok\ntest_labor_known_answers (__main__.ProducerChecks.test_labor_known_answers) ... ok\ntest_labor_optimality_against_neighbors (__main__.ProducerChecks.test_labor_optimality_against_neighbors) ... ok\ntest_long_run_cost_minimum_known_answer (__main__.ProducerChecks.test_long_run_cost_minimum_known_answer) ... ok\ntest_long_run_cost_residuals_scaling_and_invalid_inputs (__main__.ProducerChecks.test_long_run_cost_residuals_scaling_and_invalid_inputs) ... ok\ntest_market_labor_equilibrium (__main__.ProducerChecks.test_market_labor_equilibrium) ... ok\ntest_producer_invalid_inputs (__main__.ProducerChecks.test_producer_invalid_inputs) ... ok\ntest_production_can_show_negative_marginal (__main__.ProducerChecks.test_production_can_show_negative_marginal) ... ok\ntest_production_known_values (__main__.ProducerChecks.test_production_known_values) ... ok\ntest_default_risk_known_answers (__main__.RiskAndTimeChecks.test_default_risk_known_answers) ... ok\ntest_deterministic_risk_boundaries (__main__.RiskAndTimeChecks.test_deterministic_risk_boundaries) ... ok\ntest_expensive_insurance_and_jensen (__main__.RiskAndTimeChecks.test_expensive_insurance_and_jensen) ... ok\ntest_half_probability_independent_geometric_mean (__main__.RiskAndTimeChecks.test_half_probability_independent_geometric_mean) ... ok\ntest_risk_rejects_invalid_states (__main__.RiskAndTimeChecks.test_risk_rejects_invalid_states) ... ok\ntest_two_period_beta_and_negative_rate_domain (__main__.RiskAndTimeChecks.test_two_period_beta_and_negative_rate_domain) ... ok\ntest_two_period_borrowing_and_budget (__main__.RiskAndTimeChecks.test_two_period_borrowing_and_budget) ... ok\ntest_two_period_equal_present_value (__main__.RiskAndTimeChecks.test_two_period_equal_present_value) ... ok\ntest_two_period_invalid_inputs (__main__.RiskAndTimeChecks.test_two_period_invalid_inputs) ... ok\n\n----------------------------------------------------------------------\nRan 41 tests in 1.838s\n\nOK\n",
+  "runs": [
+    {
+      "program": "micro_lab.py",
+      "args": [
+        "--income",
+        "-1"
+      ],
+      "exitCode": 2,
+      "stdout": "",
+      "stderr": "usage: micro_lab.py [-h] [--income INCOME] [--new-px NEW_PX] [--price PRICE]\n                    [--wage WAGE]\nmicro_lab.py: error: income must be >= 0\n"
+    },
+    {
+      "program": "micro_lab.py",
+      "args": [
+        "--income",
+        "nan"
+      ],
+      "exitCode": 2,
+      "stdout": "",
+      "stderr": "usage: micro_lab.py [-h] [--income INCOME] [--new-px NEW_PX] [--price PRICE]\n                    [--wage WAGE]\nmicro_lab.py: error: income must be a finite number\n"
+    },
+    {
+      "program": "micro_lab.py",
+      "args": [
+        "--new-px",
+        "0"
+      ],
+      "exitCode": 2,
+      "stdout": "",
+      "stderr": "usage: micro_lab.py [-h] [--income INCOME] [--new-px NEW_PX] [--price PRICE]\n                    [--wage WAGE]\nmicro_lab.py: error: px must be > 0\n"
+    },
+    {
+      "program": "micro_lab.py",
+      "args": [
+        "--price",
+        "-1"
+      ],
+      "exitCode": 2,
+      "stdout": "",
+      "stderr": "usage: micro_lab.py [-h] [--income INCOME] [--new-px NEW_PX] [--price PRICE]\n                    [--wage WAGE]\nmicro_lab.py: error: price must be >= 0\n"
+    },
+    {
+      "program": "micro_lab.py",
+      "args": [
+        "--wage",
+        "inf"
+      ],
+      "exitCode": 2,
+      "stdout": "",
+      "stderr": "usage: micro_lab.py [-h] [--income INCOME] [--new-px NEW_PX] [--price PRICE]\n                    [--wage WAGE]\nmicro_lab.py: error: wage must be a finite number\n"
+    },
+    {
+      "program": "micro_lab.py",
+      "args": [
+        "--wage",
+        "oops"
+      ],
+      "exitCode": 2,
+      "stdout": "",
+      "stderr": "usage: micro_lab.py [-h] [--income INCOME] [--new-px NEW_PX] [--price PRICE]\n                    [--wage WAGE]\nmicro_lab.py: error: argument --wage: invalid float value: 'oops'\n"
+    },
+    {
+      "program": "micro_lab.py",
+      "args": [
+        "--help"
+      ],
+      "exitCode": 0,
+      "stdout": "usage: micro_lab.py [-h] [--income INCOME] [--new-px NEW_PX] [--price PRICE]\n                    [--wage WAGE]\n\nConsumer and firm teaching experiments v0.2a\n\noptions:\n  -h, --help       show this help message and exit\n  --income INCOME\n  --new-px NEW_PX\n  --price PRICE\n  --wage WAGE\n",
+      "stderr": ""
+    },
+    {
+      "program": "consumer_budget.py",
+      "args": [],
+      "exitCode": 0,
+      "stdout": "x=  0.0 y= 40.0 spending=120.00 U=0.000000\nx=  5.0 y= 30.0 spending=120.00 U=12.247449\nx= 10.0 y= 20.0 spending=120.00 U=14.142136\nx= 15.0 y= 10.0 spending=120.00 U=12.247449\nx= 20.0 y=  0.0 spending=120.00 U=0.000000\nGrid best: x=10.00, y=20.00, U=14.142136\n",
+      "stderr": ""
+    },
+    {
+      "program": "marginal_derivative.py",
+      "args": [],
+      "exitCode": 0,
+      "stdout": "h=1.000, forward difference=7.000000\nh=0.100, forward difference=6.100000\nh=0.010, forward difference=6.010000\nh=0.001, forward difference=6.001000\nq= 0, net benefit=0.00\nq= 2, net benefit=12.00\nq= 4, net benefit=16.00\nq= 6, net benefit=12.00\nq=10, net benefit=-20.00\nLinear-utility corner: x=0.00, y=60.00\n",
+      "stderr": ""
+    },
+    {
+      "program": "consumer_effects.py",
+      "args": [],
+      "exitCode": 0,
+      "stdout": "initial: x=10.00, y=20.00, U=14.142136\ncompensated: x=15.00, y=15.00, U=15.000000\nfinal: x=20.00, y=20.00, U=20.000000\nCompensated income: 90.00\nx effects: substitution=5.00, income=5.00, total=10.00\n",
+      "stderr": ""
+    },
+    {
+      "program": "risk_time.py",
+      "args": [],
+      "exitCode": 0,
+      "stdout": "expected_wealth: 91.000000\ncertainty_equivalent: 89.442719\nrisk_premium: 1.557281\nmax_full_insurance_premium: 10.557281\nFair full insurance weakly preferred: True\nTwo periods: c0=100.00, c1=110.00, saving=-20.00\n",
+      "stderr": ""
+    },
+    {
+      "program": "production_table.py",
+      "args": [],
+      "exitCode": 0,
+      "stdout": "L=0 Q=0 AP=undefined MP=undefined\nL=1 Q=12 AP=12.000 MP=12.000\nL=2 Q=28 AP=14.000 MP=16.000\nL=3 Q=42 AP=14.000 MP=14.000\nL=4 Q=52 AP=13.000 MP=10.000\nL=5 Q=60 AP=12.000 MP=8.000\nL=6 Q=66 AP=11.000 MP=6.000\nL=7 Q=70 AP=10.000 MP=4.000\nL=8 Q=72 AP=9.000 MP=2.000\nSeparate scale example: 12.00 -> 24.00\n",
+      "stderr": ""
+    },
+    {
+      "program": "cost_table.py",
+      "args": [],
+      "exitCode": 0,
+      "stdout": "q= 0 VC=0.00 TC=100.00 AVC=undefined ATC=undefined MC=4.00\nq= 5 VC=45.00 TC=145.00 AVC=9.000 ATC=29.000 MC=14.00\nq=10 VC=140.00 TC=240.00 AVC=14.000 ATC=24.000 MC=24.00\nq=15 VC=285.00 TC=385.00 AVC=19.000 ATC=25.667 MC=34.00\nSeparate long-run cost minimum: L=12.00, K=3.00, cost=72.00\n",
+      "stderr": ""
+    },
+    {
+      "program": "competition.py",
+      "args": [],
+      "exitCode": 0,
+      "stdout": "P=30 q=13.00 profit=69.00 operate=True exit_signal=False\nP=24 q=10.00 profit=0.00 operate=True exit_signal=False\nP=20 q=8.00 profit=-36.00 operate=True exit_signal=True\nP= 4 q=0.00 profit=-100.00 operate=False exit_signal=True\nP= 3 q=0.00 profit=-100.00 operate=False exit_signal=True\n",
+      "stderr": ""
+    },
+    {
+      "program": "labor.py",
+      "args": [],
+      "exitCode": 0,
+      "stdout": "w=16 L=6.00 Q=84.00 MRPL=16.00 surplus_before_other_costs=72.00\nw=20 L=5.00 Q=75.00 MRPL=20.00 surplus_before_other_costs=50.00\nw=40 L=0.00 Q=0.00 MRPL=40.00 surplus_before_other_costs=0.00\nw=50 L=0.00 Q=0.00 MRPL=40.00 surplus_before_other_costs=0.00\nSeparate labor market: wage=20.00, labor=60.00\n",
+      "stderr": ""
+    },
+    {
+      "program": "micro_lab.py",
+      "args": [
+        "--income",
+        "180",
+        "--new-px",
+        "12",
+        "--price",
+        "20",
+        "--wage",
+        "20"
+      ],
+      "exitCode": 0,
+      "stdout": "{\n  \"version\": \"0.2a\",\n  \"scope\": \"Independent synthetic models; no market structures or macroeconomics yet\",\n  \"consumer\": {\n    \"x\": 15.0,\n    \"y\": 30.0,\n    \"spending\": 180.0,\n    \"utility\": 21.213203435596427\n  },\n  \"price_effects\": {\n    \"initial\": {\n      \"x\": 15.0,\n      \"y\": 30.0,\n      \"spending\": 180.0,\n      \"utility\": 21.213203435596427\n    },\n    \"compensated\": {\n      \"x\": 11.25,\n      \"y\": 45.0,\n      \"spending\": 270.0,\n      \"utility\": 22.5\n    },\n    \"final\": {\n      \"x\": 7.5,\n      \"y\": 30.0,\n      \"spending\": 180.0,\n      \"utility\": 15.0\n    },\n    \"compensated_income\": 270.0,\n    \"substitution_x\": -3.75,\n    \"income_x\": -3.75,\n    \"total_x\": -7.5,\n    \"substitution_y\": 15.0,\n    \"income_y\": -15.0,\n    \"total_y\": 0.0\n  },\n  \"risk\": {\n    \"expected_wealth\": 91.0,\n    \"expected_loss\": 9.0,\n    \"expected_log_utility\": 4.4935984103309865,\n    \"certainty_equivalent\": 89.44271909999159,\n    \"risk_premium\": 1.5572809000084078,\n    \"max_full_insurance_premium\": 10.557280900008408,\n    \"insured_wealth\": 91,\n    \"insured_log_utility\": 4.51085950651685,\n    \"insurance_weakly_preferred\": true\n  },\n  \"two_periods\": {\n    \"present_value_resources\": 200.0,\n    \"c0\": 100.0,\n    \"c1\": 110.00000000000001,\n    \"saving\": -20.0,\n    \"utility\": 9.30565055178051\n  },\n  \"long_run_cost\": {\n    \"target_output\": 12,\n    \"labor\": 12.0,\n    \"capital\": 3.0,\n    \"cost\": 72.0,\n    \"average_cost\": 6.0,\n    \"marginal_rate_of_technical_substitution\": 0.25\n  },\n  \"competitive_firm\": {\n    \"quantity\": 8.0,\n    \"fixed_cost\": 100,\n    \"variable_cost\": 96.0,\n    \"total_cost\": 196.0,\n    \"marginal_cost\": 20.0,\n    \"average_fixed_cost\": 12.5,\n    \"average_variable_cost\": 12.0,\n    \"average_total_cost\": 24.5,\n    \"price\": 20.0,\n    \"revenue\": 160.0,\n    \"profit\": -36.0,\n    \"operate\": true,\n    \"shutdown_profit\": -100,\n    \"break_even_price\": 24.0,\n    \"long_run_exit_signal_at_unchanged_prices\": true\n  },\n  \"labor_demand\": {\n    \"labor\": 5.0,\n    \"output\": 75.0,\n    \"marginal_product\": 10.0,\n    \"marginal_revenue_product\": 20.0,\n    \"revenue\": 150.0,\n    \"wage_bill\": 100.0,\n    \"surplus_before_other_costs\": 50.0\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "program": "micro_lab.py",
+      "args": [],
+      "exitCode": 0,
+      "stdout": "{\n  \"version\": \"0.2a\",\n  \"scope\": \"Independent synthetic models; no market structures or macroeconomics yet\",\n  \"consumer\": {\n    \"x\": 10.0,\n    \"y\": 20.0,\n    \"spending\": 120.0,\n    \"utility\": 14.142135623730951\n  },\n  \"price_effects\": {\n    \"initial\": {\n      \"x\": 10.0,\n      \"y\": 20.0,\n      \"spending\": 120.0,\n      \"utility\": 14.142135623730951\n    },\n    \"compensated\": {\n      \"x\": 15.0,\n      \"y\": 15.0,\n      \"spending\": 90.0,\n      \"utility\": 15.0\n    },\n    \"final\": {\n      \"x\": 20.0,\n      \"y\": 20.0,\n      \"spending\": 120.0,\n      \"utility\": 20.0\n    },\n    \"compensated_income\": 90.0,\n    \"substitution_x\": 5.0,\n    \"income_x\": 5.0,\n    \"total_x\": 10.0,\n    \"substitution_y\": -5.0,\n    \"income_y\": 5.0,\n    \"total_y\": 0.0\n  },\n  \"risk\": {\n    \"expected_wealth\": 91.0,\n    \"expected_loss\": 9.0,\n    \"expected_log_utility\": 4.4935984103309865,\n    \"certainty_equivalent\": 89.44271909999159,\n    \"risk_premium\": 1.5572809000084078,\n    \"max_full_insurance_premium\": 10.557280900008408,\n    \"insured_wealth\": 91,\n    \"insured_log_utility\": 4.51085950651685,\n    \"insurance_weakly_preferred\": true\n  },\n  \"two_periods\": {\n    \"present_value_resources\": 200.0,\n    \"c0\": 100.0,\n    \"c1\": 110.00000000000001,\n    \"saving\": -20.0,\n    \"utility\": 9.30565055178051\n  },\n  \"long_run_cost\": {\n    \"target_output\": 12,\n    \"labor\": 12.0,\n    \"capital\": 3.0,\n    \"cost\": 72.0,\n    \"average_cost\": 6.0,\n    \"marginal_rate_of_technical_substitution\": 0.25\n  },\n  \"competitive_firm\": {\n    \"quantity\": 13.0,\n    \"fixed_cost\": 100,\n    \"variable_cost\": 221.0,\n    \"total_cost\": 321.0,\n    \"marginal_cost\": 30.0,\n    \"average_fixed_cost\": 7.6923076923076925,\n    \"average_variable_cost\": 17.0,\n    \"average_total_cost\": 24.692307692307693,\n    \"price\": 30,\n    \"revenue\": 390.0,\n    \"profit\": 69.0,\n    \"operate\": true,\n    \"shutdown_profit\": -100,\n    \"break_even_price\": 24.0,\n    \"long_run_exit_signal_at_unchanged_prices\": false\n  },\n  \"labor_demand\": {\n    \"labor\": 6.0,\n    \"output\": 84.0,\n    \"marginal_product\": 8.0,\n    \"marginal_revenue_product\": 16.0,\n    \"revenue\": 168.0,\n    \"wage_bill\": 96.0,\n    \"surplus_before_other_costs\": 72.0\n  }\n}\n",
+      "stderr": ""
+    }
+  ],
+  "sourceHashes": {
+    "示例代码/stage4/competition.py": "5e7ceae41884617d3e39807596a56cc1505d00a599124da4dcb828860a0f5caa",
+    "示例代码/stage4/consumer_budget.py": "3b02e34b9c976affc40c03d54c315014d016c943865cdc4432bdbecea64c5415",
+    "示例代码/stage4/consumer_effects.py": "6ccc6b8358b28ec56fd4f7e6942b7c260d64cb002f4a07e3bf029e2bd1697c36",
+    "示例代码/stage4/cost_table.py": "febb4eb34bc41c9ab71c0e2e956a41f8fa28b1f1a1def9b89161cc194e7d3ed1",
+    "示例代码/stage4/labor.py": "a65409c6ade976f072160b9bc0d15a9f2a063381021e8263b8871610610912ba",
+    "示例代码/stage4/marginal_derivative.py": "1acd826f1d5d1ddefece3372d7c0cd32fc8c79cbed31e87946ab84de8e21c215",
+    "示例代码/stage4/micro.py": "94daf1bda562357b65ca731cdbbe937600c81c7a2d55e5c0a160ca41d5feb1bf",
+    "示例代码/stage4/micro_lab.py": "4527fff7b0174cf49253b9e8601f38684eebb00d7aa534c280fbb432aad4d745",
+    "示例代码/stage4/production_table.py": "57d644b0f27147368f08ef966dbbf094569194e682e70d86da5ee5c35132eca3",
+    "示例代码/stage4/risk_time.py": "f535d5ba49bc2dddb5d931649858bfe226e420b7ceff63ceb2f308f9903d9453"
+  },
+  "notValidated": [
+    "fresh Python installation",
+    "all platforms/versions",
+    "borrowing constraints",
+    "general-equilibrium economy",
+    "market structures 27-32",
+    "macroeconomic models",
+    "browser UI",
+    "full-site build"
+  ]
+}

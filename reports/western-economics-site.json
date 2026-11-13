@@ -1,0 +1,61 @@
+{
+  "date": "2026-11-13",
+  "courseId": "western-economics",
+  "category": "social-sciences",
+  "chapters": 60,
+  "groups": 10,
+  "documents": 106,
+  "build": {
+    "courses": 6,
+    "chapters": 248,
+    "documents": 556,
+    "rawFiles": 3456,
+    "diagrams": 31,
+    "brokenMarkdownLinks": []
+  },
+  "siteChecks": {
+    "date": "2026-11-13",
+    "checks": 1137,
+    "courses": 6,
+    "chapters": 248,
+    "documents": 556,
+    "localDocumentAndFileLinks": 2421,
+    "diagrams": 31,
+    "browserQA": false
+  },
+  "searchTerms": [
+    "索洛",
+    "机会成本",
+    "国际收支",
+    "NumPy",
+    "标准误",
+    "独立复现"
+  ],
+  "progressIsolation": "Fresh in-memory store tested against all other courses",
+  "download": {
+    "httpServedSha256": "767de660d0d3a9c662d916dbabd9a4c18d3a3c1f33d8328bb833f99ca87f917c",
+    "matchesSourceAndDist": true,
+    "bytes": 5513366
+  },
+  "browserQA": {
+    "category": true,
+    "courseOverview": true,
+    "solowSearch": true,
+    "chapter54TwoImagesLoaded": true,
+    "desktopScreenshot": "reports/western-economics-desktop.jpg",
+    "mobileScreenshot": "reports/western-economics-mobile.jpg",
+    "mobileViewport": {
+      "width": 390,
+      "height": 844
+    },
+    "mobileDocumentClientWidth": 375,
+    "mobileDocumentScrollWidth": 375
+  },
+  "publication": "Pre-deployment local evidence; deployment result is verified separately through Actions and online resources",
+  "successful": true,
+  "sourceByteIntegrity": {
+    "stagedManifestFiles": 344,
+    "mismatches": 0,
+    "courseAttributes": "* -text"
+  }
+}

@@ -1,0 +1,203 @@
+{
+  "verifiedDate": "2026-11-13",
+  "timezone": "Asia/Shanghai",
+  "stage": 10,
+  "chapters": [
+    57,
+    60
+  ],
+  "python": "3.13.9 | packaged by Anaconda, Inc. | (main, Oct 21 2025, 19:09:58) [MSC v.1929 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "versions": {
+    "numpy": "2.3.5",
+    "pandas": "2.3.3",
+    "matplotlib": "3.10.6"
+  },
+  "testsRun": 25,
+  "failures": 0,
+  "errors": 0,
+  "successful": true,
+  "directSubprocessRuns": 14,
+  "nestedSubprocessRuns": 2,
+  "subprocessRuns": 16,
+  "preservedPriorFiles": 127,
+  "testLog": "test_bad_numeric_not_treated_as_missing (__main__.DataChecks.test_bad_numeric_not_treated_as_missing) ... ok\ntest_cleaning_ledger_and_known_rows (__main__.DataChecks.test_cleaning_ledger_and_known_rows) ... ok\ntest_conflicting_ids_refused (__main__.DataChecks.test_conflicting_ids_refused) ... ok\ntest_insufficient_complete_rows_refused (__main__.DataChecks.test_insufficient_complete_rows_refused) ... ok\ntest_observed_invalid_domain_not_hidden_by_missing (__main__.DataChecks.test_observed_invalid_domain_not_hidden_by_missing) ... ok\ntest_schema_and_invalid_ids_refused (__main__.DataChecks.test_schema_and_invalid_ids_refused) ... ok\ntest_whitespace_and_blank_missing_are_explicit (__main__.DataChecks.test_whitespace_and_blank_missing_are_explicit) ... ok\ntest_alternative_parameters_change_owned_fields (__main__.DeliveryChecks.test_alternative_parameters_change_owned_fields) ... ok\ntest_chapter_57_and_58_entrypoints (__main__.DeliveryChecks.test_chapter_57_and_58_entrypoints) ... ok\ntest_frozen_old_content_and_reference_manifest (__main__.DeliveryChecks.test_frozen_old_content_and_reference_manifest) ... ok\ntest_invalid_cli_writes_no_output_and_help (__main__.DeliveryChecks.test_invalid_cli_writes_no_output_and_help) ... ok\ntest_report_from_clean_copy_matches_reference_artifacts (__main__.DeliveryChecks.test_report_from_clean_copy_matches_reference_artifacts) ... ok\ntest_two_run_clean_copy_reproduction (__main__.DeliveryChecks.test_two_run_clean_copy_reproduction) ... ok\ntest_bootstrap_constant_and_valid_range (__main__.StatisticsChecks.test_bootstrap_constant_and_valid_range) ... ok\ntest_conditional_change_is_not_causal_and_support_flag (__main__.StatisticsChecks.test_conditional_change_is_not_causal_and_support_flag) ... ok\ntest_controlled_known_construction_and_normal_equations (__main__.StatisticsChecks.test_controlled_known_construction_and_normal_equations) ... ok\ntest_ddof_and_invalid_descriptive_inputs (__main__.StatisticsChecks.test_ddof_and_invalid_descriptive_inputs) ... ok\ntest_deleted_row_independent_fraction (__main__.StatisticsChecks.test_deleted_row_independent_fraction) ... ok\ntest_independent_descriptive_answers (__main__.StatisticsChecks.test_independent_descriptive_answers) ... ok\ntest_omitted_variable_formula_independent (__main__.StatisticsChecks.test_omitted_variable_formula_independent) ... ok\ntest_other_line_and_constant_y (__main__.StatisticsChecks.test_other_line_and_constant_y) ... ok\ntest_parameter_domains (__main__.StatisticsChecks.test_parameter_domains) ... ok\ntest_pooled_hand_sums_and_known_ols (__main__.StatisticsChecks.test_pooled_hand_sums_and_known_ols) ... ok\ntest_population_sampling_theory_and_reproducibility (__main__.StatisticsChecks.test_population_sampling_theory_and_reproducibility) ... ok\ntest_singular_and_invalid_regression_inputs (__main__.StatisticsChecks.test_singular_and_invalid_regression_inputs) ... ok\n\n----------------------------------------------------------------------\nRan 25 tests in 17.532s\n\nOK\n",
+  "runs": [
+    {
+      "program": "report_project.py",
+      "args": [
+        "--output",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\western-economics\\stage10-verify-temp-e7ee29_m\\alternative",
+        "--income-change",
+        "-10",
+        "--seed",
+        "7",
+        "--replications",
+        "100"
+      ],
+      "exitCode": 0,
+      "stdout": "{\"version\": \"1.0\", \"origin\": \"synthetic_teaching_data\", \"outputs\": 10}\n",
+      "stderr": ""
+    },
+    {
+      "program": "arrays_tables.py",
+      "args": [],
+      "exitCode": 0,
+      "stdout": "shape: (3,) dtype: float64\nrevenues: [20.0, 24.0, 24.0] sum: 68.0\nmatrix shape: (3, 2)\naudit: {'raw_rows': 10, 'exact_duplicates_removed': 1, 'missing_rows_removed': 1, 'missing_ids': ['H09'], 'clean_rows': 8}\n id  income  consumption  background\nH01    20.0           15           0\nH02    30.0           15           0\nH03    40.0           17           0\nH04    50.0           21           0\nH05    40.0           25           1\nH06    50.0           25           1\nH07    60.0           27           1\nH08    70.0           31           1\nmean income: 45.0\n",
+      "stderr": ""
+    },
+    {
+      "program": "statistics_demo.py",
+      "args": [],
+      "exitCode": 0,
+      "stdout": "{\n  \"version\": \"1.0\",\n  \"origin\": \"synthetic_teaching_data\",\n  \"audit\": {\n    \"raw_rows\": 10,\n    \"exact_duplicates_removed\": 1,\n    \"missing_rows_removed\": 1,\n    \"missing_ids\": [\n      \"H09\"\n    ],\n    \"clean_rows\": 8\n  },\n  \"parameters\": {\n    \"seed\": 20261113,\n    \"replications\": 2000,\n    \"income_change\": 10.0\n  },\n  \"income\": {\n    \"n\": 8,\n    \"mean\": 45.0,\n    \"median\": 45.0,\n    \"sample_variance\": 257.14285714285717,\n    \"sample_std\": 16.035674514745462,\n    \"min\": 20.0,\n    \"max\": 70.0,\n    \"mean_se_iid\": 5.669467095138407\n  },\n  \"consumption\": {\n    \"n\": 8,\n    \"mean\": 22.0,\n    \"median\": 23.0,\n    \"sample_variance\": 35.42857142857143,\n    \"sample_std\": 5.9521904731427595,\n    \"min\": 15.0,\n    \"max\": 31.0,\n    \"mean_se_iid\": 2.1044171232366047\n  },\n  \"simple\": {\n    \"predictors\": [\n      \"income\"\n    ],\n    \"coefficients\": {\n      \"intercept\": 6.9999999999999885,\n      \"income\": 0.3333333333333333\n    },\n    \"n\": 8,\n    \"parameters\": 2,\n    \"degrees_of_freedom\": 6,\n    \"sse\": 48.00000000000001,\n    \"r_squared\": 0.8064516129032258,\n    \"correlation\": 0.8980265101338745,\n    \"rmse\": 2.4494897427831783,\n    \"residual_std\": 2.8284271247461903,\n    \"fitted\": [\n      13.666666666666654,\n      16.99999999999999,\n      20.33333333333332,\n      23.666666666666654,\n      20.33333333333332,\n      23.666666666666654,\n      26.99999999999999,\n      30.33333333333332\n    ],\n    \"residuals\": [\n      1.3333333333333464,\n      -1.9999999999999893,\n      -3.3333333333333215,\n      -2.6666666666666536,\n      4.6666666666666785,\n      1.3333333333333464,\n      1.0658141036401503e-14,\n      0.6666666666666785\n    ],\n    \"residual_sum\": 9.592326932761353e-14,\n    \"normal_equation_max_abs\": 4.298783551348606e-12\n  },\n  \"controlled\": {\n    \"predictors\": [\n      \"income\",\n      \"background\"\n    ],\n    \"coefficients\": {\n      \"intercept\": 9.999999999999998,\n      \"income\": 0.20000000000000026,\n      \"background\": 6.000000000000005\n    },\n    \"n\": 8,\n    \"parameters\": 3,\n    \"degrees_of_freedom\": 5,\n    \"sse\": 8.0,\n    \"r_squared\": 0.967741935483871,\n    \"correlation\": null,\n    \"rmse\": 1.0,\n    \"residual_std\": 1.2649110640673518,\n    \"fitted\": [\n      14.000000000000004,\n      16.000000000000007,\n      18.000000000000007,\n      20.00000000000001,\n      24.000000000000014,\n      26.000000000000014,\n      28.00000000000002,\n      30.00000000000002\n    ],\n    \"residuals\": [\n      0.9999999999999964,\n      -1.000000000000007,\n      -1.000000000000007,\n      0.9999999999999893,\n      0.9999999999999858,\n      -1.0000000000000142,\n      -1.0000000000000213,\n      0.9999999999999787\n    ],\n    \"residual_sum\": -9.947598300641403e-14,\n    \"normal_equation_max_abs\": 5.144329406903125e-12\n  },\n  \"without_H08\": {\n    \"predictors\": [\n      \"income\"\n    ],\n    \"coefficients\": {\n      \"intercept\": 7.631578947368422,\n      \"income\": 0.3157894736842106\n    },\n    \"n\": 7,\n    \"parameters\": 2,\n    \"degrees_of_freedom\": 5,\n    \"sse\": 47.15789473684211,\n    \"r_squared\": 0.6965944272445821,\n    \"correlation\": 0.834622326111986,\n    \"rmse\": 2.5955427380922007,\n    \"residual_std\": 3.0710875837996583,\n    \"fitted\": [\n      13.947368421052634,\n      17.10526315789474,\n      20.263157894736846,\n      23.421052631578952,\n      20.263157894736846,\n      23.421052631578952,\n      26.57894736842106\n    ],\n    \"residuals\": [\n      1.0526315789473664,\n      -2.10526315789474,\n      -3.263157894736846,\n      -2.4210526315789522,\n      4.736842105263154,\n      1.5789473684210478,\n      0.42105263157894157\n    ],\n    \"residual_sum\": -2.842170943040401e-14,\n    \"normal_equation_max_abs\": 1.3073986337985843e-12\n  },\n  \"conditional_fitted_change\": {\n    \"income_change\": 10.0,\n    \"simple\": 3.333333333333333,\n    \"controlled\": 2.0000000000000027,\n    \"outside_income_support\": 1,\n    \"causal\": false\n  },\n  \"sampling\": {\n    \"4\": {\n      \"mean_of_means\": 4.9635,\n      \"variance_of_means\": 2.7262808904452225,\n      \"theoretical_mean\": 5.0,\n      \"theoretical_variance\": 2.9166666666666665\n    },\n    \"64\": {\n      \"mean_of_means\": 4.99228125,\n      \"variance_of_means\": 0.17311682305996745,\n      \"theoretical_mean\": 5.0,\n      \"theoretical_variance\": 0.18229166666666666\n    }\n  },\n  \"bootstrap\": {\n    \"method\": \"iid empirical-distribution bootstrap demonstration; not a real survey CI\",\n    \"mean\": 22.0,\n    \"percentile_025\": 18.24375,\n    \"percentile_975\": 25.756249999999966,\n    \"seed\": 20261114,\n    \"replications\": 2000\n  }\n}\n",
+      "stderr": ""
+    },
+    {
+      "program": "report_project.py",
+      "args": [
+        "--output",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\western-economics\\stage10-verify-temp-e7ee29_m\\invalid0",
+        "--seed",
+        "-1"
+      ],
+      "exitCode": 2,
+      "stdout": "",
+      "stderr": "usage: report_project.py [-h] --output OUTPUT [--seed SEED]\n                         [--replications REPLICATIONS]\n                         [--income-change INCOME_CHANGE]\nreport_project.py: error: seed must be an integer in [0,4294967294]\n"
+    },
+    {
+      "program": "report_project.py",
+      "args": [
+        "--output",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\western-economics\\stage10-verify-temp-e7ee29_m\\invalid1",
+        "--seed",
+        "nan"
+      ],
+      "exitCode": 2,
+      "stdout": "",
+      "stderr": "usage: report_project.py [-h] --output OUTPUT [--seed SEED]\n                         [--replications REPLICATIONS]\n                         [--income-change INCOME_CHANGE]\nreport_project.py: error: argument --seed: invalid int value: 'nan'\n"
+    },
+    {
+      "program": "report_project.py",
+      "args": [
+        "--output",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\western-economics\\stage10-verify-temp-e7ee29_m\\invalid2",
+        "--replications",
+        "0"
+      ],
+      "exitCode": 2,
+      "stdout": "",
+      "stderr": "usage: report_project.py [-h] --output OUTPUT [--seed SEED]\n                         [--replications REPLICATIONS]\n                         [--income-change INCOME_CHANGE]\nreport_project.py: error: replications must be an integer in [100,20000]\n"
+    },
+    {
+      "program": "report_project.py",
+      "args": [
+        "--output",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\western-economics\\stage10-verify-temp-e7ee29_m\\invalid3",
+        "--replications",
+        "20001"
+      ],
+      "exitCode": 2,
+      "stdout": "",
+      "stderr": "usage: report_project.py [-h] --output OUTPUT [--seed SEED]\n                         [--replications REPLICATIONS]\n                         [--income-change INCOME_CHANGE]\nreport_project.py: error: replications must be an integer in [100,20000]\n"
+    },
+    {
+      "program": "report_project.py",
+      "args": [
+        "--output",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\western-economics\\stage10-verify-temp-e7ee29_m\\invalid4",
+        "--income-change",
+        "nan"
+      ],
+      "exitCode": 2,
+      "stdout": "",
+      "stderr": "usage: report_project.py [-h] --output OUTPUT [--seed SEED]\n                         [--replications REPLICATIONS]\n                         [--income-change INCOME_CHANGE]\nreport_project.py: error: income_change must be finite and between -20 and 20\n"
+    },
+    {
+      "program": "report_project.py",
+      "args": [
+        "--output",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\western-economics\\stage10-verify-temp-e7ee29_m\\invalid5",
+        "--income-change",
+        "21"
+      ],
+      "exitCode": 2,
+      "stdout": "",
+      "stderr": "usage: report_project.py [-h] --output OUTPUT [--seed SEED]\n                         [--replications REPLICATIONS]\n                         [--income-change INCOME_CHANGE]\nreport_project.py: error: income_change must be finite and between -20 and 20\n"
+    },
+    {
+      "program": "report_project.py",
+      "args": [
+        "--help"
+      ],
+      "exitCode": 0,
+      "stdout": "usage: report_project.py [-h] --output OUTPUT [--seed SEED]\n                         [--replications REPLICATIONS]\n                         [--income-change INCOME_CHANGE]\n\nSynthetic economics report v1.0; no causal policy forecast\n\noptions:\n  -h, --help            show this help message and exit\n  --output OUTPUT       new directory; existing paths are refused\n  --seed SEED\n  --replications REPLICATIONS\n  --income-change INCOME_CHANGE\n",
+      "stderr": ""
+    },
+    {
+      "program": "report_project.py",
+      "args": [
+        "--output",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\western-economics\\stage10-verify-temp-e7ee29_m\\base"
+      ],
+      "exitCode": 0,
+      "stdout": "{\"version\": \"1.0\", \"origin\": \"synthetic_teaching_data\", \"outputs\": 10}\n",
+      "stderr": ""
+    },
+    {
+      "program": "report_project.py",
+      "args": [
+        "--output",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\western-economics\\stage10-verify-temp-e7ee29_m\\base"
+      ],
+      "exitCode": 2,
+      "stdout": "",
+      "stderr": "usage: report_project.py [-h] --output OUTPUT [--seed SEED]\n                         [--replications REPLICATIONS]\n                         [--income-change INCOME_CHANGE]\nreport_project.py: error: [WinError 183] 当文件已存在时，无法创建该文件。: 'C:\\\\Users\\\\17597\\\\Desktop\\\\tutorial\\\\content\\\\western-economics\\\\stage10-verify-temp-e7ee29_m\\\\base'\n"
+    },
+    {
+      "program": "reproduce.py",
+      "args": [
+        "--output",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\western-economics\\stage10-verify-temp-e7ee29_m\\reproduction"
+      ],
+      "exitCode": 0,
+      "stdout": "{\"successful\": true, \"runs\": 2, \"matchingArtifacts\": 11}\n",
+      "stderr": ""
+    },
+    {
+      "program": "reproduce.py",
+      "args": [
+        "--output",
+        "C:\\Users\\17597\\Desktop\\tutorial\\content\\western-economics\\stage10-verify-temp-e7ee29_m\\reproduction"
+      ],
+      "exitCode": 2,
+      "stdout": "",
+      "stderr": "usage: reproduce.py [-h] --output OUTPUT\nreproduce.py: error: output path already exists\n"
+    }
+  ],
+  "sourceHashes": {
+    "示例代码/stage10/arrays_tables.py": "a894509bcccef600a7d7b12c3141798936dcce52b55ca9adbc39c23a2ea6dd1c",
+    "示例代码/stage10/data/config.json": "c2ac409dfc2ea61fe2a2baa83fd6f083c750c6f889ee409464433d12889abac1",
+    "示例代码/stage10/data/households_raw.csv": "ae0ee4dd1eccc86362dc22cba15c276910246462964462fe3d7f2f4ec9b3f518",
+    "示例代码/stage10/data/metadata.json": "ec652c76a723019947565f8462f4fd0366837af9b651712e4009b99c0980e598",
+    "示例代码/stage10/lab.py": "b80fb6bd7f2a6349c3df0ece6ce629715b1ad6a94e27df6cb44cd4629e580a9d",
+    "示例代码/stage10/report_project.py": "972fc7db76253f92dac478f4ff0205b73006c75ebe121b8dd9573db33ded758a",
+    "示例代码/stage10/reproduce.py": "cb4b1e7ddab6ee219e4334d2f233aa6ada357435110fd5766490b0cf0c9a5161",
+    "示例代码/stage10/requirements.txt": "7967b75cf18000eee06df9cc2464badf703001c3522f7a3df4df157a80a19618",
+    "示例代码/stage10/statistics_demo.py": "b009819b3c3959f9b98aa634a78782f0b510b667278b65650d3241dc6f98b79c"
+  },
+  "referenceHashes": {
+    "最终实践参考结果/clean.csv": "a55386dcda4751e3841848ada9c24e77425185d48233337569d30b438ac3996d",
+    "最终实践参考结果/coefficients.csv": "d4e569dc8bd34b8e364b9d9a7bc201f4c01ff0031215f15dd3aaf3b08e061bf1",
+    "最终实践参考结果/regression.png": "320efedba3075d28fd56ab570d78db08b588df8ca9ec5976faf3f4881090c734",
+    "最终实践参考结果/regression.svg": "e8f8effe01d9cd2f9e02bf95eb8588f18faca9af884218c1f8f16e5fba413b94",
+    "最终实践参考结果/report.md": "1a0ea7e504e163dda464d5a3da4f023c2a04adc2f7229d20d9f41bf8071c4fe0",
+    "最终实践参考结果/run-manifest.json": "8fba648c2c15c2889e14351cb8853ae3a1dae4db497b524dc286b5b3e1cd27d9",
+    "最终实践参考结果/sampling.png": "b9df28ee5ea2168ee118e6cbbbfafd7e7ca576128724e418eb9f0f2667fe199d",
+    "最终实践参考结果/sampling.svg": "f15202587c7551ad7b67216a0c3763b4f69be60013775f26740b865fa6184484",
+    "最终实践参考结果/sensitivity.png": "d3fdacab469f33af887554a1fc83e785bd154ee85b293ff31ad4b219dada1a90",
+    "最终实践参考结果/sensitivity.svg": "0d53d92a90851be57df3f93361c4ea7a9d2fb99e4cd18c56b4583a8e0bc8783b",
+    "最终实践参考结果/summary.json": "950eaef64c488a166ff98a2cbff204df40660e1bcfa5308ff31b359e860c19f3"
+  },
+  "scope": "Existing Anaconda environment; no fresh pip installation, site build or cross-platform byte identity claim"
+}

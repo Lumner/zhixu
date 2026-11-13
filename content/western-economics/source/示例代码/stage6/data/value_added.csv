@@ -1,0 +1,4 @@
+stage,output,intermediate
+farm,100,0
+mill,160,100
+bakery,250,160

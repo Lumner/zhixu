@@ -1,0 +1,29 @@
+{
+  "successful": true,
+  "scope": "same interpreter/libraries; new project copy and different cwd; not a fresh dependency install",
+  "runs": [
+    {
+      "run": "first",
+      "exitCode": 0,
+      "stdout": "{\"version\": \"1.0\", \"origin\": \"synthetic_teaching_data\", \"outputs\": 10}"
+    },
+    {
+      "run": "second",
+      "exitCode": 0,
+      "stdout": "{\"version\": \"1.0\", \"origin\": \"synthetic_teaching_data\", \"outputs\": 10}"
+    }
+  ],
+  "artifactHashes": {
+    "clean.csv": "a55386dcda4751e3841848ada9c24e77425185d48233337569d30b438ac3996d",
+    "coefficients.csv": "d4e569dc8bd34b8e364b9d9a7bc201f4c01ff0031215f15dd3aaf3b08e061bf1",
+    "regression.png": "320efedba3075d28fd56ab570d78db08b588df8ca9ec5976faf3f4881090c734",
+    "regression.svg": "e8f8effe01d9cd2f9e02bf95eb8588f18faca9af884218c1f8f16e5fba413b94",
+    "report.md": "1a0ea7e504e163dda464d5a3da4f023c2a04adc2f7229d20d9f41bf8071c4fe0",
+    "run-manifest.json": "8fba648c2c15c2889e14351cb8853ae3a1dae4db497b524dc286b5b3e1cd27d9",
+    "sampling.png": "b9df28ee5ea2168ee118e6cbbbfafd7e7ca576128724e418eb9f0f2667fe199d",
+    "sampling.svg": "f15202587c7551ad7b67216a0c3763b4f69be60013775f26740b865fa6184484",
+    "sensitivity.png": "d3fdacab469f33af887554a1fc83e785bd154ee85b293ff31ad4b219dada1a90",
+    "sensitivity.svg": "0d53d92a90851be57df3f93361c4ea7a9d2fb99e4cd18c56b4583a8e0bc8783b",
+    "summary.json": "950eaef64c488a166ff98a2cbff204df40660e1bcfa5308ff31b359e860c19f3"
+  }
+}
